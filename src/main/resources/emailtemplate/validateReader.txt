@@ -1,0 +1,105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head></head>
+<body>
+<!--Header - Begin-->
+
+<table style="padding: 20px 50px 5px;" width="100%" cellpadding="0" cellspacing="0"><td> <!--wrapper -->
+<center>
+	<table><tr><td align="right" style="padding-right: 8px;">
+				<a style="font: 10px arial; color:#999; text-decoration: none;" href="">Click here to view e-mail in browser</a>
+	</td></tr></table>
+
+
+	<table style="border: 2px solid #f2f2f2;" cellpadding="0" cellspacing="0"><td style="border: 16px solid #d9d9d9;"><!-- dropshadow border -->
+				
+	<table width="600" cellpadding="0" cellspacing="0">
+			<td height="64">
+			<a href="http://www.magme.cn"><img style="border: 2px solid white; display:block; background-color: black;" src="images/mm.email.header.png" alt="MagMe.com" width="596" height="64" /></a>
+			</td>
+		</tr>
+	</table>
+<!--Header -End-->
+	
+
+<!--modals - Begin -->
+	<table cellpadding="0" cellspacing="0" width="600" style="font-family:Arial, Helvetica, sans-serif; color: #333333; font-size: 12px; line-height: 16px; padding: 24px 32px 8px;" bgcolor="#ffffff">
+		<tr>
+			<td colspan="2" style="text-align:left;">
+			<span style="font-style: italic; font-weight: bold;">
+				您好 <em style="color: #d66b28;">{userName}</em>,</span>
+			<p>
+			<strong> 精彩的数字体验从这里开始  </strong><br/>
+			欢迎来到麦米网
+			感谢您使用我们的网站，我们希望你会喜欢我们全新的在线社交阅读体验。
+			</p>
+			<p>
+			<strong>账户激活t</strong><br/>
+
+			在你开始之前，你需要通过点击下面的链接来激活你的帐户。 </p>
+
+		    <p align="center"><a href="{host}/register!validateUser.action?id={id}&validateCode={validateCode}" style="font-weight: bold; color: #d66b28;">点击完成验证!</a></p>
+			
+			<p>如果您有任何疑问，请通过电子邮件在线咨询我们的客服人员  <a style="color: #d66b28; text-decoration: none;" href="info@magme.cn">info@magme.cn</a><br/>
+			
+			感谢您使用麦米平台	  </p>
+			</td>
+		</tr>
+	</table>
+			
+	<table cellpadding="0" cellspacing="0" width="600"><td><img style="display:block;" height="8" src="images/email_divider.png" alt="Divider" width="600"></td></table>
+
+	<!--modals - End-->
+
+
+<!--Signature - Begin-->
+	<table cellpadding="0" cellspacing="0" width="600" style="font-family:Arial, Helvetica, sans-serif; color: #333333; font-size: 12px; line-height: 14px; padding: 16px 32px 8px;" bgcolor="#ffffff">
+		<tr>
+			<td><span style="font-style: italic; font-weight: bold;">麦米网</span></td>
+			<td>
+				<p style="text-align:right; padding: 0 24px;">
+					<img style="padding-right: 4px;" src="images/followus_image.png" width="71" height="34" alt="Follow us!">
+					<a href="http://www.twitter.com/magme"><img src="images/followus_twitter.png" alt="Twitter" width="34" height="34" style="border-style: none" /></a> 
+					<a href="http://www.facebook.com/group.php?gid=72855055557"><img src="images/followus_fb.png" alt="facebook" width="34" height="34" style="border-style: none" /></a>
+				</p>
+			</td>
+		</tr>
+	</table>
+<!--Signature - End-->
+
+<!--Terms - Begin-->
+	<table width="600"  cellpadding="0" cellspacing="0" style="font-family:Arial, Helvetica, sans-serif; font-size: 9px; line-height: 10px; padding: 10px 24px; text-align:center; border: 2px solid white; color: #d66b28;" bgcolor="#2a2b2b" >
+		<tr>
+			<td>
+			</td>
+		</tr>
+	</table>
+<!--Terms - End-->
+
+</td></table> <!-- end drop shadow border -->
+
+
+</center>
+</td>
+</table> <!-- wrapper -->
+
+
+<!--Footer -begin-->
+
+	<table width="100%"  cellpadding="0" cellspacing="0"><td><center>
+		<table width="600" style="color:#d9d9d9; font-family: Helvetica, Arial,sans-serif; font-size: 9px; line-height: 10px; padding: 0px 16px 32px; text-align:center;">
+		<tr>
+			<td>
+			This e-mail is intended only for the addressee. It is confidential and may contain legally privileged information. If you are not the addressee indicated in this message (or responsible for delivery of the message to such person), you may not copy or deliver this message to anyone as it may be considered unlawful.  You should destroy this message and kindly notify the sender by reply e-mail. Confidentiality and legal privilege are not waived or lost by reason of mistaken delivery to you.<br/>
+			<strong>Please do not reply this email</strong>
+			</td>
+		</tr>		
+	</table>
+</center>
+</td></table>
+
+
+<!--Footer - end-->
+</body>
+</html> 

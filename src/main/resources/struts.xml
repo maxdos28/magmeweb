@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">    
+
+<struts>
+	<constant name="struts.action.extension" value="action" />   
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.objectFactory.spring.autoWire" value="auto" />
+    <constant name="struts.locale" value="zh_CN" />
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.custom.i18n.resources" value="/message/messageResource" />
+	<constant name="struts.freemarker.manager.classname"      
+			  value="cn.magme.web.freemarker.ExtendedFreemarkerManager" />     
+    <!--  <constant name="struts.multipart.parser" value="magMultiPartRequest" />-->
+    
+    <!-- 重写文件上传解析方法  -->  
+	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest" name="myRequestParser"  
+	class="cn.magme.web.upload.MagMultiPartRequest" scope="default" optional="true" />    
+	<constant name="struts.multipart.handler" value="myRequestParser" />
+    <constant name="struts.multipart.maxSize" value="10000000000"/>
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+    
+    <!-- 零配置设置 -->
+    <constant name="struts.convention.package.locators" value="action" />
+    <constant name="struts.convention.result.path" value="/WEB-INF/pages" />
+    <constant name="struts.convention.package.locators.basePackage" value="cn.magme.web.action" />
+	<constant name="struts.convention.action.name.separator" value="-" />
+	<constant name="struts.convention.default.parent.package" value="magmecn-default" />
+	
+    <package name="magmecn-default" extends="struts-default">
+        <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult">
+            <param name="excludeNullProperties">true</param> 
+            </result-type>
+        </result-types>
+		<interceptors>
+			<interceptor name="auth" class="cn.magme.web.interceptor.AuthInterceptor">
+				<param name="excludeActionMethods">
+					cn.magme.web.action.ResizeWidthAction.loop,
+					cn.magme.web.action.AuthcodeAction.execute,
+					cn.magme.web.action.IndexAction.execute,
+					cn.magme.web.action.IndexAction.showUserSettings,
+					cn.magme.web.action.IndexAction.preview,
+					cn.magme.web.action.IndexAction.publish,
+					cn.magme.web.action.IndexAction.eventAjax,
+					cn.magme.web.action.IndexAction.eventAjaxPreview,
+					cn.magme.web.action.IndexAction.eventAjaxPatch,
+					cn.magme.web.action.SystemPropAction.execute,
+					cn.magme.web.action.ConfigXmlAction.execute,
+					cn.magme.web.action.UserFindpwdAction.toFindpwd,
+					cn.magme.web.action.UserFindpwdAction.doFindpwdJson,
+					cn.magme.web.action.UserFindpwdAction.toResetPassword,
+					cn.magme.web.action.UserFindpwdAction.resetPasswordJson,
+					cn.magme.web.action.UserAction.validateUserJson,
+					cn.magme.web.action.UserAction.registerJson,
+					cn.magme.web.action.UserAction.loginJson,
+					cn.magme.web.action.UserAction.autoLoginJson,
+					cn.magme.web.action.UserAction.logoutJson,
+					cn.magme.web.action.UserAction.visit,
+					cn.magme.web.action.UserAction.moreUserFeedAjax,
+					cn.magme.web.action.UserAction.getReaderJson,
+					cn.magme.web.action.UserTagAction.getTagListJson,
+					cn.magme.web.action.UserTagAction.getTagWallListJson,
+					cn.magme.web.action.UserTagAction.tagWall,
+					cn.magme.web.action.UserTagAction.show,
+					cn.magme.web.action.UserTagAction.addTagJson2,
+					cn.magme.web.action.UserTagAction.clickJson,
+					cn.magme.web.action.UserTagAction.getTagCommentListJson,
+					cn.magme.web.action.UserTagAction.getTagWallListAjax,
+					cn.magme.web.action.UserTagAction.getShowTagListJson,
+					cn.magme.web.action.TagCommentAction.loginCommentJson,
+					cn.magme.web.action.UserFriendAction.getFriendListJson,
+					cn.magme.web.action.UserFollowAction.getFollowListJson,
+					cn.magme.web.action.publish.FrontPublisherAction.validatePublisher,
+					cn.magme.web.action.publish.FrontPublisherAction.loginJson,
+					cn.magme.web.action.publish.FrontPublisherAction.logoutJson,
+					cn.magme.web.action.publish.FrontPublisherAction.registerJson,
+					cn.magme.web.action.publish.FrontPublisherAction.getPublisherJson,
+					cn.magme.web.action.publish.MagReadAction.execute,
+					cn.magme.web.action.publish.MagReadAction.adminReader,
+					cn.magme.web.action.publish.KmFamilyIssueAction.execute,
+					cn.magme.web.action.publish.KmFamilyIssueAction.kmCategoryJson,
+					cn.magme.web.action.publish.KmFamilyIssueAction.kanmi2,
+					cn.magme.web.action.publish.IssueAction.queryIssueInfo,
+					cn.magme.web.action.publish.IssueAction.test,
+					cn.magme.web.action.publish.AuthcodeAction.execute,
+					cn.magme.web.action.publish.AdposMappingAction.queryReaderAdJson,
+					cn.magme.web.action.publish.AdposMappingAction.queryPublisherAdJson,
+					cn.magme.web.action.publish.KanmiAction.execute,
+					cn.magme.web.action.publish.KanmiAction.reviewIssuesJson,
+					cn.magme.web.action.publish.MagazineAction.execute,
+					cn.magme.web.action.publish.MagazineAction.magJson,
+					cn.magme.web.action.publish.MagazineAction.magazineAjax,
+					cn.magme.web.action.publish.MagazineAction.publicationBySortJson,
+					cn.magme.web.action.publish.MagazineAction.publicationSortList,
+					cn.magme.web.action.publish.MagazineAction.appPicStart,
+					cn.magme.web.action.publish.MagazineAction.creativeRecommend,
+					cn.magme.web.action.publish.PublisherHome.execute,
+					cn.magme.web.action.publish.PublisherHome.addFollow,
+					cn.magme.web.action.publish.PublisherPicAction.execute,
+					cn.magme.web.action.publish.PublisherPicAction.picJson,
+					cn.magme.web.action.publish.IssueAction.getIssueById,
+					cn.magme.web.action.publish.IssueAction.queryPublicationByIssueId,
+					cn.magme.web.action.publish.PublicationAction.getPublicationById,
+					cn.magme.web.action.app.DeviceReadAction.execute,
+					cn.magme.web.action.EventAction.index,
+					cn.magme.web.action.EventAction.introduction,
+					cn.magme.web.action.EventAction.join,
+					cn.magme.web.action.EventAction.qa,
+					cn.magme.web.action.EventAction.opusList,
+					cn.magme.web.action.EventAction.opusListJson,
+					cn.magme.web.action.EventAction.toEditOpus,
+					cn.magme.web.action.SearchAction.execute,
+					cn.magme.web.action.SearchAction.searchAjax,
+					cn.magme.web.action.SearchAction.updIdx,
+					cn.magme.web.action.SearchAction.byPublisherId,
+					cn.magme.web.action.SearchAction.byPublicationId,
+					cn.magme.web.action.SearchAction.byTagName,
+					cn.magme.web.action.EventAction.toEditOpus,
+					cn.magme.web.action.EventAction.opusShow,
+					cn.magme.web.action.EventAction.loginCommentJson,
+					cn.magme.web.action.EventAction.show,
+					cn.magme.web.action.EventAction.read,
+					cn.magme.web.action.EventAction.commentListJson,
+					cn.magme.web.action.UserTagAction.topJson,
+					cn.magme.web.action.StaticPageAction.execute,
+					cn.magme.web.action.VideoParserAction.handlerAjax,
+					cn.magme.web.action.FeedBackAction.edit,
+					cn.magme.web.action.FeedBackAction.editAjax,
+					cn.magme.web.action.FeedBackAction.saveJson,
+					cn.magme.web.action.widget.WidgetAction.magzine,	
+					cn.magme.web.action.widget.WidgetAction.magzineShow,
+					cn.magme.web.action.widget.WidgetAction.magzineShowJson,
+					cn.magme.web.action.widget.WidgetAction.magzineJsonAjax,
+					cn.magme.web.action.widget.WidgetAction.magzineAjax,
+					cn.magme.web.action.widget.WidgetAction.newEvent,
+					cn.magme.web.action.widget.WidgetAction.newEventAjax,					
+					cn.magme.web.action.widget.WidgetAction.newTag,
+					cn.magme.web.action.widget.WidgetAction.hotTag,
+					cn.magme.web.action.widget.WidgetAction.showTag,
+					cn.magme.web.action.widget.WidgetAction.weibo,
+					cn.magme.web.action.widget.WidgetPassAction.execute,
+					cn.magme.web.action.widget.WidgetSearchAction.execute,
+					cn.magme.web.action.widget.WidgetReadAction.execute,
+					cn.magme.web.action.widget.SnsReadAction.execute,
+					cn.magme.web.action.widget.SnsPassAction.execute,
+					cn.magme.web.action.widget.QplusAction.execute,
+					cn.magme.web.action.widget.QplusAction.pub,
+					cn.magme.web.action.widget.QplusAction.event,
+					cn.magme.web.action.widget.QplusAction.enjoy,
+					cn.magme.web.action.widget.QplusAction.read,
+					cn.magme.web.action.widget.QplusAction.categoryAjax,
+					cn.magme.web.action.widget.QplusAction.saveCategory,
+					cn.magme.web.action.widget.QplusAction.enjoyChangeAjax,
+					cn.magme.web.action.widget.QplusAction.statusAjax,
+					cn.magme.web.action.widget.QplusAction.search,
+					cn.magme.web.action.widget.QplusAction.searchAjax,
+					cn.magme.web.action.widget.QplusReadAction.execute,
+					cn.magme.web.action.widget.GleasyAction.execute,
+					cn.magme.web.action.widget.GleasyAction.pub,
+					cn.magme.web.action.widget.GleasyAction.event,
+					cn.magme.web.action.widget.GleasyAction.enjoy,
+					cn.magme.web.action.widget.GleasyAction.read,
+					cn.magme.web.action.widget.GleasyAction.categoryAjax,
+					cn.magme.web.action.widget.GleasyAction.saveCategory,
+					cn.magme.web.action.widget.GleasyAction.enjoyChangeAjax,
+					cn.magme.web.action.widget.GleasyAction.statusAjax,
+					cn.magme.web.action.widget.GleasyAction.search,
+					cn.magme.web.action.widget.GleasyAction.searchAjax,
+					cn.magme.web.action.widget.GleasyReadAction.execute,
+					cn.magme.web.action.third.ThirdLoginAction.sina,
+					cn.magme.web.action.third.ThirdLoginAction.renren,
+					cn.magme.web.action.third.ThirdLoginAction.kaixin,
+					cn.magme.web.action.third.ThirdLoginAction.baidu,
+					cn.magme.web.action.third.IssueCommAction.newIssue,
+					cn.magme.web.action.ReaderToolsBtnAction.clickStatic,
+					cn.magme.web.action.UserImageAction.now,
+					cn.magme.web.action.UserImageAction.nowJson,
+					cn.magme.web.action.UserImageAction.hot,
+					cn.magme.web.action.UserImageAction.hotJson,
+					cn.magme.web.action.UserImageAction.commend,
+					cn.magme.web.action.UserImageAction.commendJson,				
+					cn.magme.web.action.UserImageAction.show,	
+					cn.magme.web.action.ClickTryAction.execute,
+					cn.magme.web.action.ClickTryAction.clickLogin,
+					cn.magme.web.action.UserMessageAction.sendCommonJson,
+					cn.magme.web.action.UserVisitAction.index,
+					cn.magme.web.action.UserVisitAction.enjoyImage,
+					cn.magme.web.action.UserVisitAction.enjoyImageJson,
+					cn.magme.web.action.UserVisitAction.enjoyIssue,
+					cn.magme.web.action.UserVisitAction.enjoyIssueJson,
+					cn.magme.web.action.UserVisitAction.userImage,
+					cn.magme.web.action.UserVisitAction.userImageJson,
+					cn.magme.web.action.UserVisitAction.friend,
+					cn.magme.web.action.publish.PublishMessage.batchSendMessageJson,
+					cn.magme.web.action.publish.PublishMessage.batchDeleteJson,
+					cn.magme.web.action.publish.PublishMessage.deleteJson,
+					cn.magme.web.action.ad.AdvertiseAction.queryAdsById,
+					cn.magme.web.action.publish.MagazineAction.pub,
+					cn.magme.web.action.ad.AdAgencyAction.registerJson,
+					cn.magme.web.action.ad.AdAgencyAction.validateAdAgency,
+					cn.magme.web.action.UserImageMasterAction.index,
+					cn.magme.web.action.UserImageMasterAction.introduce,
+					cn.magme.web.action.UserEventAction.index,
+					cn.magme.web.action.IssueImageAction.show,
+					cn.magme.web.action.publish.IssueAction.queryPublicationInfoJson,
+					cn.magme.web.action.publish.PublicationHomeAction.mag,
+					cn.magme.web.action.publish.PublicationHomeAction.newmag,
+					cn.magme.web.action.publish.PublicationHomeAction.magList,
+					cn.magme.web.action.publish.PublicationHomeAction.image,
+					cn.magme.web.action.publish.PublicationHomeAction.imageJson,
+					cn.magme.web.action.CookieAction.getMuid,
+					cn.magme.web.action.ChannelAction.index,
+					cn.magme.web.action.ChannelAction.preview,
+					cn.magme.web.action.admin.DmPublicationAction.areaLst,
+					cn.magme.web.action.third.RssFor114Action.execute,
+					cn.magme.web.action.third.RssForKindle.execute,
+					cn.magme.web.action.third.RssEventDetail.execute,
+					cn.magme.web.action.third.RssArticleAction.execute,
+					cn.magme.web.action.third.RssIssueAction.execute,
+					cn.magme.web.action.third.GetSystemVersion.execute,
+					cn.magme.web.action.publish.InteractiveContentAction.execute,
+					cn.magme.web.action.sns.SnsIndexAction.invite,
+					cn.magme.web.action.sns.SnsIndexAction.ckInvite,
+					cn.magme.web.action.sns.SnsIndexAction.confirm,
+					cn.magme.web.action.sns.SnsIndexAction.checked,
+					cn.magme.web.action.sns.SnsIndexAction.execute,
+					cn.magme.web.action.sns.SnsIndexAction.ckUsernameInvite,
+					cn.magme.web.action.sns.UserIndexAction.execute,
+					cn.magme.web.action.sns.UserIndexAction.attention,
+					cn.magme.web.action.sns.UserIndexAction.fans,
+					cn.magme.web.action.sns.CreativeCommentAction.execute,
+					cn.magme.web.action.sns.CreativeCommentAction.commentList,
+					cn.magme.web.action.sns.PublicSnsAction.uInfo,
+					cn.magme.web.action.sns.SearchAction.execute,
+					cn.magme.web.action.sns.RssAction.execute,
+					cn.magme.web.action.sns.M1RegisterAndLoginAction.execute,
+					cn.magme.web.action.sns.M1RegisterAndLoginAction.registerJson,
+					cn.magme.web.action.sns.M1RegisterAndLoginAction.registerJson,
+					cn.magme.web.action.sns.SquareAction.execute,
+					cn.magme.web.action.sns.SquareAction.squareList,
+					cn.magme.web.action.sns.SquareAction.changeUserList,
+					cn.magme.web.action.publish.NvIssueAction.execute,
+					cn.magme.web.action.publish.NvIssueAction.issueJson,
+					cn.magme.web.action.publish.NvIssueAction.rigtJson,
+					cn.magme.web.action.publish.NvIssueAction.registerJson,
+					cn.magme.web.action.publish.NvIssueAction.loginJson,
+					cn.magme.web.action.publish.NvIssueAction.logoutJson,
+					cn.magme.web.action.UserSettingsAction.execute,
+					cn.magme.web.action.IndexDetailAction.execute,
+					cn.magme.web.action.IndexDetailAction.getCommentList,
+					cn.magme.web.action.IndexDetailAction.getContent,
+					cn.magme.web.action.IndexDetailAction.getDetailContent,
+					cn.magme.web.action.IndexDetailAction.toVideoPlay,
+					cn.magme.web.action.CommonCommentAction.execute,
+					cn.magme.web.action.CommonCommentAction.golfCreativeCount,
+					cn.magme.web.action.CommonCommentAction.issueCommentByUser,
+					cn.magme.web.action.CommonCommentAction.commentByUser,
+					cn.magme.web.action.CommonCommentAction.commonCommentByPublicationId,
+					cn.magme.web.action.CommonCommentAction.commonCommentByPublicationIdCount,
+					cn.magme.web.action.SecondContentAction.execute,
+					cn.magme.web.action.SubscribeAction.execute,
+					cn.magme.web.action.newPublisher.AccountAliveAction.execute,
+					cn.magme.web.action.sns.ActivityAction.execute,
+					cn.magme.web.action.sns.ActivityAction.activity,
+					cn.magme.web.action.sns.SnsDetailAction.execute,
+					cn.magme.web.action.sns.SnsDetailAction.empty,
+					cn.magme.web.action.NorthAmericaAppAction.registerJson,
+					cn.magme.web.action.NorthAmericaAppAction.subscribeJson,
+					cn.magme.web.action.NorthAmericaAppAction.delPurchaseJson,
+					cn.magme.web.action.SiteMapGenerateAction.execute,
+					cn.magme.web.action.sns.ArticleAction.mindex,
+					cn.magme.web.action.sns.ArticleAction.mindexMore,
+					cn.magme.web.action.sns.ArticleAction.execute,
+					cn.magme.web.action.sns.CreativeCategoryAction.queryByPCidJson,
+					cn.magme.web.action.sns.ArticleAction.queryByCid,
+					cn.magme.web.action.sns.CreativeCategoryRelAction.execute,
+					cn.magme.web.action.sns.ArticleAction.queryPicJson,
+					cn.magme.web.action.NorthAmericaAppAction.registerReceiptJson,
+					cn.magme.web.action.widget.GolfAction.firstType,
+					cn.magme.web.action.widget.GolfAction.secondType,
+					cn.magme.web.action.widget.GolfAction.queryByCCategoryId,
+					cn.magme.web.action.widget.GolfAction.queryByCreativeId,
+					cn.magme.web.action.widget.GolfAction.enjoyCountByCreativeId,
+					cn.magme.web.action.widget.GolfAction.enjoyByCreativeId,
+					cn.magme.web.action.sms.SmsUserAction.execute,
+					cn.magme.web.action.sms.SmsUserAction.loginJson,
+					cn.magme.web.action.sms.SmsSeeAction.execute,
+					cn.magme.web.action.me.PubAssetsAction.execute,
+					cn.magme.web.action.SysParameterAction.incJson,
+					cn.magme.web.action.SysParameterAction.execute,
+					cn.magme.web.action.event.EventJxjyAction.addJson,
+					cn.magme.web.action.event.EventJxjyAction.queryCount,
+					cn.magme.web.action.phoenix.StartPicAction.execute,
+					cn.magme.web.action.phoenix.FeedBackAction.show,
+					cn.magme.web.action.phoenix.PhoenixUserAction.execute,
+					cn.magme.web.action.phoenix.PhoenixUserAction.loginJson,
+					cn.magme.web.action.phoenix.PhoenixUserAction.registerJson,
+					cn.magme.web.action.phoenix.PhoenixArticleAction.execute,
+					cn.magme.web.action.phoenix.PhoenixArticleAction.queryCoverArticle,
+					cn.magme.web.action.phoenix.PhoenixArticleAction.download,
+					cn.magme.web.action.phoenix.PhoenixArticleAction.queryJustIdJson,
+					cn.magme.web.action.phoenix.PhoenixArticleAction.index,
+					cn.magme.web.action.phoenix.PhoenixArticleAction.execute,
+					cn.magme.web.action.phoenix.PhoenixOrderAction.newOrderJson,
+					cn.magme.web.action.phoenix.PhoenixOrderAction.updateOrderJson,
+					cn.magme.web.action.phoenix.PhoenixOrderAction.queryPaidCategoryJson,
+					cn.magme.web.action.phoenix.PhoenixOrderAction.revertJson,
+					cn.magme.web.action.phoenix.PhoenixOrderAction.iosNewOrderJson,
+					cn.magme.web.action.phoenix.PhoenixOrderAction.iosQueryPaidCategoryJson,
+					cn.magme.web.action.phoenix.AppStartAction.addJson,
+					cn.magme.web.action.phoenix.ArticleReadAction.addJson,
+					cn.magme.web.action.phoenix.PhoenixOrderAction.iosRevertJson,
+					cn.magme.web.action.phoenix.PhoenixCategoryAdAction.categoryAdJson,
+					cn.magme.web.action.xiaozi.AppInterfaceAction.startPictureList,
+					cn.magme.web.action.xiaozi.AppInterfaceAction.publicationsList,
+					cn.magme.web.action.xiaozi.AppInterfaceAction.issuesList,
+					cn.magme.web.action.xiaozi.AppInterfaceAction.issuesContentsList,
+					cn.magme.web.action.xiaozi.AppInterfaceAction.issueCatalogList,
+					cn.magme.web.action.xiaozi.AppInterfaceAction.issueCategoryAndCatalogList,
+					cn.magme.web.action.ad.AdChannelAction.execute,
+					cn.magme.web.action.me.MagicEditorStatAction.genericMuid,
+					cn.magme.web.action.me.MagicEditorStatAction.getAdList,
+					cn.magme.web.action.look.LookAdminUserAction.execute,
+					cn.magme.web.action.look.LookAdminUserAction.loginJson,
+					cn.magme.web.action.ma.LoginAction.execute,
+					cn.magme.web.action.ma.LoginAction.loginJson,
+				</param>
+			</interceptor>
+					
+			<interceptor name="exception" class="cn.magme.web.interceptor.ExceptionInterceptor"/>
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="auth" /> 
+				<interceptor-ref name="exception" />
+                <interceptor-ref name="alias"/>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="i18n"/>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="debugging"/>
+                <interceptor-ref name="scopedModelDriven"/>
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="multiselect"/>
+                <interceptor-ref name="staticParams"/>
+                <interceptor-ref name="actionMappingParams"/>
+                <interceptor-ref name="params">
+                  <param name="excludeParams">dojo\..*,^struts\..*</param>
+                </interceptor-ref>
+                <interceptor-ref name="conversionError"/>
+                <interceptor-ref name="validation">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="workflow">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="exception">
+                  <param name="logEnabled">true</param>
+                  <param name="logLevel">info</param>             
+              </interceptor-ref>
+                
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myStack" />
+		<global-results>
+			<result name="login" type="redirect">/</result>
+			<result name="no_login" type="redirect">/</result>
+			<result name="publisher_no_login" type="redirectAction">front-publisher</result>
+			<result name="admin_no_login" type="redirect">/admin_login.html</result>
+			<result name="ad_no_login" type="redirect">/publish/front-publisher.action</result>
+			<result name="new_publisher_login" type="redirect">/new-publisher/login!to.action</result>
+			<result name="golf_login" type="redirect">/golf/login!to.action</result>
+			<result name="sms_user_login" type="redirect">/sms/sms-user.action</result>
+			<result name="phoenix_user_login" type="redirect">/phoenix/phoenix-user.action</result>
+			<result name="look_user_login" type="redirect">/look/look-admin-user.action</result>
+			<result name="ma_user_login" type="redirect">/ma/login.action</result>
+			<!-- 
+			<result name="exception">/WEB-INF/pages/common/exception.ftl</result>
+			<result name="error">/WEB-INF/pages/common/error.ftl</result> -->
+			<result name="no_permission" type="redirect">/</result>
+			<!-- 阅读器跳转 -->
+			<result name="reader_redirect" type="redirect">/publish/mag-read!reader.action?id=${#request.id}&amp;pageId=${#request.pageId}&amp;desType=${#request.desType}</result>
+			<result name="detail_redirect" type="redirect">/sns/sns-detail.action?id=${#request.itemId}</result>
+		</global-results>
+    </package>
+    
+    <include file="struts-default.xml"/>
+</struts>

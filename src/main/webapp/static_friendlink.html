@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelHtmlpage.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+
+<!--[if lte IE 6]>
+<link href="style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="inner">
+        <!--logo-->
+        <h1 class="logo"><a href="javascript:void(0)">麦米-Magme</a></h1>
+        <!--nav-->
+        <ul class="nav">
+            <li class="home"><a href="index.html">首页</a></li>
+            <li class="kanmi"><a href="kanmi.html">杂志</a></li>
+            <li class="qiemi"><a href="qiemi.html">发现</a></li>
+            <li class="sns"><a href="sns.html">米客中心</a></li>
+        </ul>
+        <!--userBar-->
+        <ul class="userBar" id="logInForm">
+            <li class="reg"><a class="sub" href="javascript:void(0)">注册</a>
+                <div class="box">
+                	<sub></sub>
+                	<div class="con">
+                        <fieldset class="png">
+                            <div class="input">
+                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名" /></em>
+                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="email" name="email" type="text" tipsSpan="邮箱" /></em>
+                                <em id="checkEmail" class="tipsWrong" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+                            </div>
+                            <div class="input">
+                            	<em><input class="in" id="password" name="password" type="password" tipsSpan="确认密码" /></em>
+                                <em id="checkPassword" class="tipsRight"></em>
+                            </div>
+                            <!--<div code="getcode">
+                                <em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tipsSpan="验证码" /></em>
+                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+                            </div>-->
+                            <div class="last">
+                                <em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+                                <em class="loading"></em>
+                                <em class="tipsError">请填写相关信息</em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>            </li>
+            <li class="login"><a class="sub" href="javascript:void(0)">登录</a>
+            	<div class="box">
+                	<sub></sub>
+                	<ul class="select">
+                    	<li class="current"><a href="javascript:void(0)"><img src="images/icon/sns32/32-magme.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qq.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-renren.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-weibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-163weibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-douban.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-sohuweibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-baidu.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qqweibo.gif" /></a></li>
+                    </ul>
+                	<div class="con">
+                        <fieldset class="png">
+                            <div class="input">
+                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名/邮箱" /></em>
+                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+                                <em class="tipsWrong" style="display:block;"></em>
+                            </div>
+                            <!--<div code="getcode">
+                                <em class="m0"><input code="getcode" class="input g60" name="authcode" type="text" tipsSpan="验证码" /></em>
+                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+                            </div>-->
+                            <div>
+                                <em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+                                <em class="loading"></em>
+                                <em class="remanber"><label><input type="checkbox" />下次自动登录</label></em>
+                                <em class="tipsError">请填写相关信息</em>
+                            </div>
+                            <div class="last">
+                                <em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+                                <em><a href="javascript:void(0)">新用户注册</a></em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <a class="userFeedBack" href="javascript:void(0)">意见反馈</a>
+</div>
+
+
+
+<!--body-->
+<div class="body">
+<div class="body980 pageStatic pageFriendLink clearFix">
+    <div class="conLeftMiddleRight">
+    	<div class="conB">
+        	<h2>友情链接</h2>
+            <div class="conBody">
+                <ul class="ul clearFix">
+                	<li><a href="http://www.6665.com" target="_blank" >上海滩</a></li>
+                	<li><a href="http://www.jimi.com" target="_blank">积米网</a></li>
+                	<li><a href="http://www.huangjiaw.com" target="_blank">黄嘉网</a></li>
+                	<li><a href="http://www.topleaderwang.com" target="_blank">全球精英杂志俱乐部</a></li>
+                	<li><a href="http://www.sh-softbase.com" target="_blank">上海数字娱乐中心</a></li>
+                	<li><a href="http://www.sjvc.com.cn" target="_blank">盛景创投</a></li>
+                	<li><a href="http://www.rito.cn" target="_blank">里外</a></li>
+                	<li><a href="http://www.house365.com" target="_blank">南京楼市</a></li>
+                	<li><a href="http://www.jsjgprjyyy.com" target="_blank">《计算机光盘软件与应用》</a></li>
+                	<li><a href="http://www.gurubear.com.cn" target="_blank">《咕噜熊小报》</a></li>
+                	<li><a href="http://www.thatsmags.com" target="_blank">that's beijing</a></li>
+                	<li><a href="http://www.amt.com.cn" target="_blank">ATM《前沿论丛》</a></li>
+                	<li><a href="http://www.ihongpan.com" target="_blank">中国投资专刊</a></li>
+                	<li><a href="http://www.ivgolf.com" target="_blank">国际高尔夫</a></li>
+                	<li><a href="http://www.oohope.cn" target="_blank">oohope</a></li>
+                	<li><a href="http://www.chinaxiaokang.com" target="_blank">小康</a></li>
+                	<li><a href="http://www.chinafilm.com" target="_blank">电视指南</a></li>
+                	<li><a href="http://www.jiayongqiche.net" target="_blank">家用汽车</a></li>
+                	<li><a href="http://happy_2000.com.cn" target="_blank">幸福悦读</a></li>
+                	<li><a href="http://www.c4work.com" target="_blank">hi-low</a></li>
+                	<li><a href="http://www.carservice.com.cn" target="_blank">汽车与驾驶维修</a></li>
+                	<li><a href="http://www.dlbfhy.com" target="_blank">融资</a></li>
+                	<li><a href="http://www.worldart1997.com" target="_blank">世界艺术</a></li>
+                	<li><a href="http://blog.sina.com.cn/yuyongxianrenl" target="_blank">纯粹</a></li>
+                	<li><a href="http://www.teamhello.com" target="_blank">团队热线</a></li>                	
+                </ul>            
+            </div>
+        </div>
+    </div>
+</div>   
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

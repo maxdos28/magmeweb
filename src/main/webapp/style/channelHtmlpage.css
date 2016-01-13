@@ -1,0 +1,90 @@
+﻿@charset "utf-8";
+/*body{background:#404D58;}*/
+
+/*-Standard Definitions----------------------------------------*/
+#tagPassword{ margin-bottom:20px;}
+#tagPassword .ctrl{ margin-bottom:10px;}
+#tagPassword .doorList .item{ padding:10px;}
+#tagPassword .doorList fieldset div{ margin-bottom:15px;}
+#tagPassword .doorList fieldset div em.title{ text-align:left; width:94px; padding-left:3px;}
+#tagPassword .doorList .item .tips{ padding-left:20px; margin-top:50px; color:#333; line-height:1.6em; background:url(../images/icon/comment.gif) 0 2px no-repeat;}
+
+
+
+/*总静态页样式*/
+.pageStatic{ padding:20px 0;}
+.pageStatic .conLeft{ background:#f5f5f5; border-radius:5px;}
+.pageStatic .conLeft .nav{ margin:5px;}
+.pageStatic .conLeft .nav ul li{ line-height:22px; background:url(../images/icon/arrowR.gif) 0 4px no-repeat; padding-left:16px; font-weight:bold;}
+.pageStatic .conLeft .nav ul li a{ color:#666}
+.pageStatic .conLeft .nav ul li a:hover,
+.pageStatic .conLeft .nav ul li a.current{ color:#f60}
+.pageStatic .conLeft .nav ul li li{ background:none; padding-left:0; font-weight:normal;}
+.pageStatic .conLeft .nav ul li li a{ color:#999}
+/*contentPage*/
+.pageStatic .conMiddleRight .conBig h2{ font-size:22px; line-height:2em; height:auto; text-align:left;}
+.pageStatic .conMiddleRight .conBig h3{ font-size:16px; line-height:1.5em; margin-top:1em;}
+.pageStatic .conMiddleRight .conBig .conBody p{ font-size:14px; margin-top:15px; line-height:1.8em;}
+.pageStatic .conMiddleRight .conBig .conBody strong{ display:block;}
+.pageStatic .conMiddleRight .conBig .conBody p strong{ color:#f60; font-weight:normal; font-size:16px; margin-top:0; display:inline;}
+.pageStatic .conMiddleRight .conBig .conBody p span{font-weight:bold;}
+
+
+
+.pagePassword{ padding-top:20px;}
+.pagePassword .conLeft{ background:none; border-radius:0;}
+.pagePassword .leftNav{ border-top:1px solid #ccc; margin-bottom:20px;}
+.pagePassword .leftNav a{ height:30px; line-height:30px; text-indent:10px; display:block; background:#f5f5f5; border-bottom:1px solid #ccc;}
+
+.pageMedia .conLeftMiddleRight .conB{ margin-bottom:0; padding-bottom:10px;}
+.pageMedia .conLeftMiddleRight ul{ padding-left:15px;}
+.pageMedia .conLeftMiddleRight ul li{ float:left; width:33%; line-height:2em; height:2em;}
+
+.pageFriendLink .conLeftMiddleRight .conB{ margin-bottom:0; padding-bottom:10px;}
+.pageFriendLink .conLeftMiddleRight ul{ padding-left:15px;}
+.pageFriendLink .conLeftMiddleRight ul li{ float:left; width:33%; line-height:2em; height:2em;}
+
+
+.page404{ padding-bottom:30px;}
+.page404 .conLeftMiddleRight{ height:250px; padding-top:200px; background:url(../images/404.jpg) 30px 100px no-repeat; padding-left:300px;}
+.page404 .conLeftMiddleRight strong{ display:block; font-size:30px;}
+
+.pageLogin{ padding-bottom:20px;}
+.pageLogin .login{ float:left; width:360px; margin-left:60px; margin-right:60px; padding:20px; background:#f7f7f7; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+.pageLogin .login div em.title{ text-align:left; width:80px;}
+.pageLogin .register{ float:left; width:360px; padding:20px; background:#f7f7f7; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+.pageLogin .register div em.title{ text-align:left; width:60px;}
+.pageLogin .register h2{ color:#f60;}
+.pageLogin fieldset div{ margin-bottom:15px;}
+.pageLogin fieldset h2{ font-size:14px; margin-bottom:20px;}
+
+
+
+
+/*pageNews*/
+.pageNews .conB{ border:none;}
+.pageNews .item{ margin-bottom:20px; padding-top:20px; border-top:1px solid #eee; position:relative;}
+.pageNews .item .type{ float:right; width:150px;}
+.pageNews .item .type span{ width:64px; height:64px; margin-left:110px; margin-top:20px; display:block; text-indent:-9999em; overflow:hidden; background-repeat:no-repeat;}
+.pageNews .item .type span.typeDoc{ background-image:url(../images/icon/64document.gif); background-position:-12px -12px; }
+.pageNews .item .type span.typeImage{ background-image:url(../images/icon/64image.gif); background-position:-12px -16px;}
+.pageNews .item .type span.typeVideo{ background-image:url(../images/icon/64tv.gif); background-position:-12px -12px;}
+.pageNews .item .content{ float:left; width:600px;}
+.pageNews .item .content h2{ font-size:16px; line-height:16px; margin-bottom:10px; color:#f60;}
+.pageNews .item .date{ position:absolute; right:0; top:18px; width:85px; margin-left:20px; background:url(../images/icon/time.gif) 0 1px no-repeat;}
+.pageNews .item .date span{ margin-left:16px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

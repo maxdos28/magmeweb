@@ -1,0 +1,166 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ieOld ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="idOld ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="idOld ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/pop.css" rel="stylesheet" type="text/css" />
+
+<script src="js/jquery-1.6.2.min.js"></script>
+<script src="js/jquery.lightbox.js"></script>
+
+<script>
+
+$(function(){
+	//alert(1)
+});
+
+
+var isIE6 = $.browser.msie && $.browser.version < 7 && !window.XMLHttpRequest;
+function fnReadyTable(){
+	var tableID=1;
+	var tdID =1;
+	var tableNum = $('table.table').size();
+	for(tableID;tableID<=tableNum;tableID++) {
+		$('table.table').get(tableID-1).lang='table'+tableID;
+		var tdNum = $('table.table[lang*=table'+tableID+'] tr:first td').size();
+		for(tdID; tdID <= tdNum; tdID++) {
+			$('table.table tr td:nth-child('+tdID+')').addClass('t'+tdID);
+		};
+	};
+}
+
+</script>
+
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.scrollphoto.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/jquery.colorpicker.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/jquery.smartSearch.js"></script>
+<script src="js/global.js"></script>
+<script src="js/admin.js"></script>
+<script>
+$(function(){
+	$('#colorSelector').ColorPicker({
+		color: '#0000ff',
+		onShow: function (colpkr) {
+			$(colpkr).fadeIn(500);
+			return false;
+		},
+		onHide: function (colpkr) {
+			$(colpkr).fadeOut(500);
+			return false;
+		},
+		onChange: function (hsb, hex, rgb) {
+			$('#colorSelector div').css('backgroundColor', '#' + hex);
+		}
+	});
+	
+	
+	$("#selectDate").unbind("focus").focus(function(){
+		$(this).next().slideDown(400);
+	});
+	$("#selectDate").blur(function(){
+		setTimeout(function(){$("#selectDateBox").slideUp(200)},100)
+	});
+	$("#selectDateBox a").bind('click',function(){
+		$("#selectDate").val($(this).html());
+	})
+});
+</script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js" charset="utf-8"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+<style>
+.body{ background:#666}
+#fancybox-wrap {  display:block; position:relative; margin:20px auto;}
+#fancybox-content {  display:block; width:auto;}
+#fancybox-content .popContent{ display:block;}
+</style>
+</head>
+<body>
+<div class="main">
+<div class="body">
+
+
+<div id="fancybox-wrap" class="popAdmin" style="width:400px;">
+    <a title="关闭" class="del"></a>
+    <div id="fancybox-content" style="height:296px;">
+        <div class="popContent" id="contentModDialog">
+            <h6>内容修改</h6>
+            <fieldset>
+               <div>
+                    <em class="g50">标题</em>
+                    <em><input type="text" class="input g300" /></em>
+                </div>
+                <div>
+                    <em class="g50">描述</em>
+                    <em><input type="text" class="input g300" /></em>
+                </div>
+                <div>
+                    <em class="g50">栏目</em>
+                    <em><input type="text" class="input g300" /></em>
+                </div>
+                <div>
+                    <em class="g50">图片</em>
+                    <em><input type="file" class="inputFile g300" /></em>
+                </div>
+                <div>
+                    <em class="g50">zip包</em>
+                    <em><input type="file" class="inputFile g300" /></em>
+                </div>
+            </fieldset>
+            <div class="actionArea tRight">
+                 <em class="g50">&nbsp;</em>
+                    <em><a href="#" class="btnAM">修改</a></em>
+                    <em><a href="内容管理.html" class="btnWM">取消</a></em>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fancybox-wrap" class="popAdmin" style="width:245px;">
+    <a title="关闭" class="del"></a>
+    <div id="fancybox-content" style="height:224px;">
+        <div class="popContent" id="newAccountDialog">
+            <h6>新增账号</h6>
+            <fieldset>
+               <div>
+                    <em class="g50">用户名</em>
+                    <em><input type="text" class="input g150" /></em>
+                </div>
+                <div>
+                    <em class="g50">密码</em>
+                    <em><input type="password" class="input g150" /></em>
+                </div>
+                <div>
+                    <em class="g50">确认密码</em>
+                    <em><input type="password" class="input g150" /></em>
+                </div>
+            </fieldset>
+            <div class="actionArea tRight">
+                 <em class="g50">&nbsp;</em>
+                    <em><a href="#" class="btnAS">确定</a></em>
+                    <em><a href="内容管理.html" class="btnWS">取消</a></em>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+
+</body>
+</html>

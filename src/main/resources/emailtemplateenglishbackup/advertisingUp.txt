@@ -1,0 +1,6 @@
+﻿ 您好!<br/>
+	杂志名:{publicationName}<br/>
+	期刊号:{issueNum}<br/>
+	广告类型为:{adType}<br/>
+	广告链接地址为:{adAddress}<br/>
+	此广告已经上架,特此邮件通知!

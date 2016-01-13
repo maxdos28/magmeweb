@@ -1,0 +1,6 @@
+.header .outer .search{ right:100px; top:12px;}
+.header .outer .conUser{ right:155px;}
+.header .outer .welcomeApp{ width:95px; height:95px; display:block; position:absolute; right:0; top:0; background:url(../images/toIphone.png) 0 0 no-repeat; text-indent:-999em;}
+.header .outer .welcomeApp:hover{ background-position:0 -100px;}
+.header .homeNav .navOuter .navInner .rssFeed{right:176px;}
+.header .homeNav .navOuter .navInner .rssTo{right:100px;}

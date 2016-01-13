@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "spring-beans.dtd" >
+
+<beans>
+	<bean id="mailSenderReader" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host"><value>${mail.host}</value></property>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+			</props>
+		</property>
+		<property name="username"><value>${mail.username.reader}</value></property>
+		<property name="password"><value>${mail.password.reader}</value></property>
+	</bean>
+
+	<bean id="mailSenderPublisher" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host"><value>${mail.host}</value></property>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+			</props>
+		</property>
+		<property name="username"><value>${mail.username.publisher}</value></property>
+		<property name="password"><value>${mail.password.publisher}</value></property>
+	</bean>
+
+
+	<!-- 简单的message -->
+	<bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from"><value>${mail.from.publisher}</value></property>
+		<property name="subject"><value>${mail.subject}</value></property>
+	</bean>
+	<!-- 发送的类 -->
+	<bean id="senderMail" class="cn.magme.common.SenderMail">
+		<property name="mailMessage">
+			<ref bean="mailMessage" />
+		</property>
+		<property name="fromReader">
+			<value>${mail.from.reader}</value>
+		</property>	
+		<property name="fromNameReader">
+			<value>${mail.from.name.reader}</value>
+		</property>	
+		<property name="fromPublisher">
+			<value>${mail.from.publisher}</value>
+		</property>	
+		<property name="fromNamePublisher">
+			<value>${mail.from.name.publisher}</value>
+		</property>
+		<property name="to">
+			<value>${mail.to}</value>
+		</property>
+		<property name="mailSenderReader">
+			<ref bean="mailSenderReader" />
+		</property>
+		<property name="mailSenderPublisher">
+			<ref bean="mailSenderPublisher" />
+		</property>
+	</bean>
+</beans>

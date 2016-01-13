@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/pages/decorators">
+	<excludes>
+		<pattern>*Json.action*</pattern>
+		<pattern>*Ajax.action*</pattern>
+		<pattern>/publish/front-publisher.action*</pattern>
+		<pattern>/admin/*</pattern>
+		<pattern>/click-try*.action*</pattern>
+	</excludes>
+	
+    <decorator name="user_center" page="user_center_decorator.ftl" >
+    	<pattern>/user*.action*</pattern>
+    </decorator>
+    <decorator name="user_visit" page="user_visit_decorator.ftl" >
+    	<pattern>/user!visit.action*</pattern>
+    </decorator>
+    <decorator name="user_findpwd" page="user_findpwd_decorator.ftl" >
+    	<pattern>/user-findpwd!*.action*</pattern>
+    </decorator>    
+    
+    <decorator name="publication_home" page="publication_home_decorator.ftl" >
+    	<pattern>/publish/publication-home!*.action*</pattern>
+    </decorator> 
+    
+    <decorator name="search" page="search_decorator.ftl" >
+    	<pattern>/search*.action*</pattern>
+    </decorator>     
+    
+    <decorator name="static_page" page="static_page_decorator.ftl" >
+    	<pattern>/static*.action*</pattern>
+    </decorator>
+    
+    <decorator name="stat_page" page="stat_decorator.ftl" >
+    	<pattern>/stat/*.action*</pattern>
+    </decorator>
+      
+    <!-- 
+    <decorator name="publisher_center" page="publisher_center_decorator.ftl" >
+    	<pattern>/publish/pcenter*.action*</pattern>
+    	<pattern>/publish/publisher-upload*.action*</pattern>
+    </decorator>     -->
+
+    <!--  
+    <decorator name="publisher_login_center" page="publisher_login_decorator.ftl" >
+    	<pattern>/publish/front-publisher*.action*</pattern>
+    </decorator>  
+    
+    <decorator name="publish_mag_read" page="reader_decorator.ftl" >
+    	<pattern>/publish/mag-read*.action*</pattern>
+    </decorator>  -->
+    
+    <!-- 统计数据使用阅读器的装饰器 -->
+    <decorator name="issue-static" page="static_decorator.ftl" >
+    	<pattern>/publish/issue-static.action</pattern>
+    </decorator> 
+    
+    <decorator name="km_center" page="publish_km_decorator.ftl" >
+    	<pattern>/publish/km*.action*</pattern>
+    	<pattern>/publish/kanmi*.action*</pattern>
+    </decorator> 
+    
+    <decorator name="just_header_decorator" page="header_decorator.ftl" >
+    	<pattern>/publish/magazine.action*</pattern>
+    	<pattern>/publish/magazine!*.action*</pattern>
+    	<pattern>/publish/publisher-home.action*</pattern>
+    	<pattern>/publish/publisher-home!pubHome.action*</pattern>
+    	<pattern>/publish/publisher-pic.action*</pattern>
+    	<pattern>/page/d/page-d.action*</pattern>
+<!--   	<pattern>/user-center!*.action*</pattern>
+    	<pattern>/user-visit!*.action*</pattern> -->
+    </decorator>
+    
+    <decorator name="user_image_decorator" page="user_image_decorator.ftl" >
+		<pattern>/user-image!*.action*</pattern>
+    </decorator>      
+    
+    <decorator name="issue_image_decorator" page="issue_image_decorator.ftl" >
+		<pattern>/issue-image!*.action*</pattern>
+    </decorator> 
+        
+    <decorator name="user_config_decorator" page="user_config_decorator.ftl" >
+		<pattern>/user-center!config.action</pattern>
+		<pattern>/user-center!readMessage.action</pattern>
+		<pattern>/user-center!writeMessage.action</pattern>
+		<pattern>/user-center!message.action</pattern>
+    </decorator> 
+    
+    <decorator name="user_view_decorator" page="user_view_decorator.ftl" >
+    	<pattern>/user-center!index.action</pattern>
+		<pattern>/user-center!enjoyImage.action</pattern>
+		<pattern>/user-center!enjoyIssue.action</pattern>
+		<pattern>/user-center!userImage.action</pattern>
+		<pattern>/user-center!friend.action</pattern>
+    </decorator>
+    
+    <decorator name="user_visit_decorator" page="user_visit_decorator.ftl" >
+    	<pattern>/user-visit!index.action</pattern>
+		<pattern>/user-visit!enjoyImage.action</pattern>
+		<pattern>/user-visit!enjoyIssue.action</pattern>
+		<pattern>/user-visit!userImage.action</pattern>
+		<pattern>/user-visit!friend.action</pattern>
+    </decorator>    
+                 
+    <decorator name="master_decorator" page="master_decorator.ftl" >
+    	<pattern>/user-image-master!*.action*</pattern>
+    </decorator>     
+    
+    <decorator name="event_decorator" page="event_decorator.ftl" >
+    	<pattern>/user-event!*.action*</pattern>
+    </decorator>    
+    
+    <decorator name="publish_admin_decorator" page="publishadmin_decorator.ftl">
+        <pattern>/publish/pcenter-publisher*.action*</pattern>
+        <pattern>/publish/publish-message*.action*</pattern>
+        <pattern>/publish/publisher-upload*.action*</pattern>
+    </decorator>
+    
+    <decorator name="ad_admin_decorator" page="ad_decorator.ftl">
+        <pattern>/ad/*.action*</pattern>
+    </decorator>
+    <!-- 
+    <decorator name="ad_center" page="ad_manager_decorator.ftl" >
+    	<pattern>/publish/adpos*.action*</pattern>
+    </decorator>   -->
+    
+    <decorator name="tag_wall" page="tagWall_decorator.ftl" >
+    	<pattern>/user-tag!tagWall.action*</pattern>
+    </decorator>
+    
+    <decorator name="tag_show" page="tagShow_decorator.ftl" >
+    	<pattern>/user-tag!show.action*</pattern>
+    </decorator>             
+    
+    <decorator name="event_20110720" page="event_20110720_decorator.ftl" >
+    	<pattern>/event!*.action*</pattern>
+    </decorator>
+    
+    <decorator name="widget" page="widget_decorator_v2.ftl" >
+    	<pattern>/widget/widget!*.action*</pattern>
+    	<pattern>/widget/widget-search.action*</pattern>
+    	<pattern>/widget/widget-read.action*</pattern>
+    </decorator>
+    
+    <decorator name="qplus" page="widget_decorator_qplus.ftl" >
+    	<pattern>/widget/qplus.action*</pattern>
+    	<pattern>/widget/qplus!*.action*</pattern>
+    	<pattern>/widget/qplus-read.action*</pattern>
+    	<pattern>/widget/gleasy.action*</pattern>
+    	<pattern>/widget/gleasy!*.action*</pattern>
+    	<pattern>/widget/gleasy-read.action*</pattern>
+    </decorator>
+    
+     <!-- login publisher Management  -->
+    <decorator name="newPublisher_simple" page="newPublisher_simple_decorator.ftl" >
+    	<pattern>/new-publisher/login!to.action</pattern>
+    	<pattern>/new-publisher/register!to.action</pattern>
+    	<pattern>/new-publisher/account-alive.action</pattern>
+    </decorator> 
+    <!-- login golf Management  -->
+    <decorator name="newPublisher_simple_golf" page="newPublisher_simple_decorator.ftl" >
+    	<pattern>/golf/login!to.action</pattern>
+    </decorator>
+    
+    <!-- common publisher Management -->
+    <decorator name="newPublisher_common" page="newPublisher_common_decorator.ftl" >
+    	<pattern>/new-publisher/publisher-config!to.action</pattern>
+    	<pattern>/new-publisher/publication-config!to.action</pattern>
+    	<pattern>/new-publisher/magazine-list!to.action</pattern>
+    	<pattern>/new-publisher/issue-category-manage.action</pattern>
+    	<pattern>/new-publisher/start-pic!index.action</pattern>
+    	<pattern>/new-publisher/advertising-list!to.action</pattern>
+    	<pattern>/new-publisher/magazine-list!textWrite.action</pattern>
+    	<pattern>/new-publisher/em-reader!to.action</pattern>
+    	<pattern>/new-publisher/ios-manage.action</pattern>
+    	<pattern>/new-publisher/netease-cloud-reader-manage.action</pattern>
+    </decorator>
+    
+     <!-- edit golf Management -->
+    <decorator name="newPublisher_common_golf" page="golf_common_decorator.ftl" >
+		<pattern>/golf/work-publish.action</pattern>
+		<pattern>/golf/work-publish!auditedPage.action</pattern>
+		<pattern>/golf/work-publish!publishedPage.action</pattern>
+		<pattern>/golf/news-type.action</pattern>
+		<pattern>/golf/ios-manage.action</pattern>
+    </decorator>
+    
+    
+    <!-- edit publisher Management -->
+    <decorator name="newPublisher_complete" page="newPublisher_complete_decorator.ftl" >
+    	<pattern>/new-publisher/channel!to.action</pattern>
+    	<pattern>/new-publisher/edit-publisher!to.action</pattern>
+    	<pattern>/new-publisher/edit-advertising!to.action</pattern>
+		<pattern>/new-publisher/edit-event!to.action</pattern>
+		<pattern>/new-publisher/edit-link!to.action</pattern>
+		<pattern>/new-publisher/edit-magazine!to.action</pattern>
+		<pattern>/new-publisher/edit-sidebar!to.action</pattern>
+		<pattern>/new-publisher/advertise-video.action</pattern>
+		<pattern>/new-publisher/activity-album.action</pattern>
+		<pattern>/new-publisher/activity-album!appPicStart.action</pattern>
+		<pattern>/new-publisher/release-audit.action</pattern>
+		<pattern>/new-publisher/page-d.action</pattern>
+		<pattern>/new-publisher/work-publish.action</pattern>
+		<pattern>/new-publisher/work-publish!auditedPage.action</pattern>
+		<pattern>/new-publisher/work-publish!publishedPage.action</pattern>
+		<pattern>/new-publisher/work-publish!publishedPageAdmin.action</pattern>
+		<pattern>/new-publisher/work-publish!noEditorPage.action</pattern>
+		<pattern>/new-publisher/creative-recommed.action</pattern>
+    </decorator>
+    
+    <!-- edit publisher Management iosManage -->
+    <decorator name="newPublisher_complete_ios" page="newPublisher_complete_ios_decorator.ftl" >
+		<pattern>/new-publisher/app-manage.action</pattern>
+		<pattern>/new-publisher/app-message.action</pattern>
+		<pattern>/new-publisher/app-new.action</pattern>
+    </decorator>
+    <decorator name="newpublisher_stat_editor_decorator" page="newpublisher_stat_editor_decorator.ftl" >
+		<pattern>/newpublisherstat/*!editorExecute.action</pattern>
+    </decorator>  
+    
+    <decorator name="newpublisher_stat_decorator.xml" page="newpublisher_stat_decorator.ftl">
+    	<pattern>/publish/dm-publication.action</pattern>
+		<pattern>/publish/dm-publication-area.action</pattern>
+		<pattern>/publish/dm-issue-page.action</pattern>
+		<pattern>/publish/dm-issue-page!activeRead.action</pattern>
+		<pattern>/publish/dm-refer-publication.action</pattern>
+		<pattern>/publish/dm-refer-publication!referDetail.action</pattern>
+		<pattern>/publish/dm-issue-page!activeRead.action</pattern>
+		<pattern>/publish/dm-issue-page!newActiveRead.action</pattern>
+		<pattern>/publish/dm-pv-uv-publication.action</pattern>
+		<pattern>/publish/dm-issue-page.action</pattern>
+		<pattern>/publish/dm-sns-pv-uv.action</pattern>
+		<pattern>/newpublisherstat/*.action</pattern>
+		<pattern>/new-publisher/app-start!index.action</pattern>
+		<pattern>/new-publisher/app-start.action</pattern>
+    </decorator>
+
+	
+	<decorator name="sms_decorator" page="sms_decorator.ftl">
+    	<pattern>/sms/project-manage.action*</pattern>
+    	<pattern>/sms/project-manage!stepFirst.action*</pattern>
+    	<pattern>/sms/project-manage!stepSecond.action*</pattern>
+    	<pattern>/sms/project-manage!stepThird.action*</pattern>
+    	<pattern>/sms/project-manage!stepFourth.action*</pattern>
+    	<pattern>/sms/project-manage!stepFifth.action*</pattern>
+    	<pattern>/sms/sms-user!edit.action*</pattern>
+    	<pattern>/sms/sms-phone-group.action*</pattern>
+    	<pattern>/sms/sms-dm-user-area.action*</pattern>
+    	<pattern>/sms/sms-dm-remain.action*</pattern>
+    	<pattern>/sms/sms-dm-click-time-dis.action*</pattern>
+    	<pattern>/sms/sms-dm-ezz-stat.action*</pattern>
+    </decorator>
+    <!-- LOO客后台管理 -->
+    <decorator name="look_admin_decorator" page="look_decorator.ftl">
+    	<pattern>/look/look-start-pic.action*</pattern>
+    	<pattern>/look/look-category.action*</pattern>
+    	<pattern>/look/look-item.action*</pattern>
+    	<pattern>/look/look-article.action*</pattern>
+    	<pattern>/look/look-article!viewEditArticle.action*</pattern>
+    	<pattern>/look/look-plan-article.action*</pattern>
+    	<pattern>/look/look-user*.action*</pattern>
+    	<pattern>/look/look-gift-manager.action*</pattern>
+    	<pattern>/look/look-limit-manager.action*</pattern>
+    	<pattern>/look/look-lucky-manager.action*</pattern>
+    	<pattern>/look/look-lucky-card-manager.action*</pattern>
+    	<pattern>/look/look-egg-manager.action*</pattern>
+    	<pattern>/look/look-ad-manager*.action*</pattern>
+    	<pattern>/look/look-stat*.action*</pattern>
+    	<pattern>/look/look-message.action*</pattern>
+    	<pattern>/look/look-send.action*</pattern>
+    </decorator>
+	<!-- MA后台管理 -->
+    <decorator name="ma_admin_decorator" page="ma_decorator.ftl">
+    	<pattern>/ma/ad-trade.action*</pattern>
+    	<pattern>/ma/ad-trade-new-of-pub.action*</pattern>
+    	<pattern>/ma/ad-trade-new-of-article.action*</pattern>
+    	<pattern>/ma/keyword.action*</pattern>
+    	<pattern>/ma/size.action*</pattern>
+    	<pattern>/ma/ad-trade-report.action*</pattern>
+    </decorator>
+</decorators>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style/royalslider.css"/>
+<link rel="stylesheet" type="text/css" href="style/rs-default.css"/>
+<link rel="stylesheet" type="text/css" href="style/tpl.css"/>
+<title>短信系统</title>
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.royalslider.min.js"></script>
+<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.js"></script>
+<script src="js/jquery.scrollto.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script>
+$(function(){
+
+//设置面面加载后地址栏收起
+window.addEventListener('load', function() {
+setTimeout(scrollTo, 0, 0, 1);
+}, false);
+
+
+
+$('.royalSlider').royalSlider({
+    fullscreen: {
+      enabled: true,
+      nativeFS: true
+    },
+    controlNavigation: 'none',		//thumbnails,bullets,none
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 4,     
+    autoScaleSliderHeight: 2.8,
+	arrowsNav: false,
+    loop: false,
+    imageScaleMode: 'fit',	//fill,fit-if-smaller
+    navigateByClick: true,
+    numImagesToPreload:3,
+	slidesSpacing:20,
+	slidesOrientation:'horizontal',		//vertical,horizontal
+	transitionType:'move',
+	controlsInside:true,
+    arrowsNavAutoHide: true,
+    arrowsNavHideOnTouch: true,
+    keyboardNavEnabled: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
+    globalCaptionInside: false,
+    thumbs: {
+      orientation: 'vertical',			//vertical,horizontal
+      appendSpan: true,
+      firstMargin: true,
+	  fitInViewport: true,
+      paddingBottom: 0
+    }
+});
+
+
+});
+</script>
+  </head>
+  <body>
+    <div class="main tpl3">
+    	<h1 class="header">汤臣别墅</h1>
+        <div class="nav">
+        	<a href="default.html">汤臣别墅</a><a href="demo2.html">地理位置</a><a href="demo3.html" class="current">设计理念</a><a href="demo4.html">建材设备</a><a href="demo5.html">户型图集</a>
+        </div>
+    	<div class="body">
+            <div id="gallery-1" class="royalSlider rsDefault">
+            <a class="rsImg" data-rsw="320" data-rsh="223"  data-rsBigImg="ui/p6.jpg" href="ui/p6.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p6.jpg" /></a>
+            </div>
+
+            
+        	<div class="content">
+                <strong>美学建筑，不动声色的优雅</strong><br>
+                <p>独栋 珍稀15席 傲立天地间独栋是身份，城市独栋则是身份与智慧的完美结晶。 城市内环的金钻地段，专业大师的智慧之作， 凝练上游尊崇时尚，汇聚城市浓郁人文， 湯臣15墅，只为15位风云领袖，传书立志。<br><br>
+					深入细节的解读才能解析品味，看的见内心才能读懂生活，“新亚洲风格”是一种语言，以东方特有的文化内涵，述说着来自心灵的感触。 </p>
+            </div>
+            <br>
+
+            <div id="gallery-2" class="royalSlider rsDefault">
+            <a class="rsImg" data-rsw="320" data-rsh="220"  data-rsBigImg="ui/p7.jpg" href="ui/p7.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p7.jpg" /></a>
+            </div>
+            
+        	<div class="content">
+                <p>历久弥新的外立面，是满载风雨依旧对自我的坚持洗尽纤尘唯有故我光彩照人，退却繁华谁能鲜亮如新；那一如既往的柔美，在律动的百叶窗上更显飘逸；那始终如一的光洁，在平整的墙面上倍觉静雅。花岗石、优质石材、保温、保洁，唯有品质过人才能经久不变。</p>
+            </div>
+            
+            
+            
+        </div>
+    	<div class="pagedock">
+        	<ul>
+            	<li class="mail"><a href="#"></a></li>
+            	<li class="qq"><a href="#"></a></li>
+            	<li class="phone400"><a href="tel:40000000000"></a></li>
+            	<li class="weibo"><a href="#"></a></li>
+            	<li class="weixin"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	metadata-complete="true">
+	<display-name>magmecn-web</display-name>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring/ctx-*.xml</param-value>
+	</context-param>
+	
+	<distributable />
+
+	<filter>
+		<filter-name>SessionTimeoutFilter</filter-name>  
+		<filter-class>cn.magme.web.interceptor.SessionTimeoutFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>SessionTimeoutFilter</filter-name>  
+	    <url-pattern>/admin/*</url-pattern>  
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    </filter>
+	 <filter-mapping>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    	
+	<filter>
+		<filter-name>StrutsPrepareFilter</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>StrutsPrepareFilter</filter-name>
+		<url-pattern>*.action</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>		
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>org.apache.struts2.sitemesh.FreemarkerPageFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>*.action</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+
+	
+	<filter>
+		<filter-name>StrutsExecuteFilter</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>StrutsExecuteFilter</filter-name>
+		<url-pattern>*.action</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>JspSupportServlet</servlet-name>
+		<servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>remoting</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>remoting</servlet-name>
+		<url-pattern>/remoting/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>flashUpload</servlet-name>
+		<servlet-class>cn.magme.web.action.ad.AdvertiseUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>flashUpload</servlet-name>
+		<url-pattern>/ad/flashUpload.ser</url-pattern>
+	</servlet-mapping>
+    <!-- 
+	<servlet>
+        <servlet-name>InitDataServlet</servlet-name>
+        <servlet-class>cn.magme.web.servlet.InitDataServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet> -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>	
+
+	<listener>
+		<listener-class>cn.magme.web.listener.ApiInitListener</listener-class>
+	</listener>
+	
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+    							
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<!-- 400错误 -->
+	<error-page>
+	<error-code>400</error-code>
+	<location>/static_404.html</location>
+	</error-page>
+	<!-- 404 页面不存在错误 -->
+	<error-page>
+	<error-code>404</error-code>
+	<location>/static_404.html</location>
+	</error-page>
+	<!-- 500 服务器内部错误 -->
+	<error-page>
+	<error-code>500</error-code>
+	<location>/static_404.html</location>
+	</error-page>
+	<!-- java.lang.Exception异常错误,依据这个标记可定义多个类似错误提示 -->
+	<error-page>
+	<exception-type>java.lang.Exception</exception-type>
+	<location>/static_404.html</location>
+	</error-page>	
+	<resource-ref>
+       <description>maindb</description>
+       <res-ref-name>jdbc/magmecn</res-ref-name>
+       <res-type>javax.sql.DataSource</res-type>
+       <res-auth>Container</res-auth>
+    </resource-ref>	
+    <resource-ref>
+       <description>statdb</description>
+       <res-ref-name>jdbc/stat</res-ref-name>
+       <res-type>javax.sql.DataSource</res-type>
+       <res-auth>Container</res-auth>
+    </resource-ref>
+</web-app>

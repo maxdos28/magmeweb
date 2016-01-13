@@ -1,0 +1,58 @@
+﻿/*link*/
+a.btnOS:link, a.btnOS:visited,
+a.btnBS:link, a.btnBS:visited, 
+a.btnWS:link, a.btnWS:visited, 
+a.btnOB:link, a.btnOB:visited, 
+a.btnBB:link, a.btnBB:visited, 
+a.btnWB:link, a.btnWB:visited{ color:#fff; text-decoration:none; }
+/*global*/
+html body fieldset div em select { margin-left:2px;}
+html body .header{ position:absolute;}
+html body .header .userBar li .box .con fieldset div.password{ width:167px; margin-right:7px;}
+html body .header .userBar li .box .con fieldset div.repassword{ width:165px;}
+
+/*popWindow*/
+html body .lightboxTips .popClose{ background-image:url(../images/tips/close.gif);}
+html body .pop{ background:#ccc;}
+html body .popContent{background:#fff;}
+html body .popContent fieldset hr{ margin:3px 0;}
+html body #shareEventDialog .right h3,
+html body #shareEventDialog .right h4,
+html body #shareMgzDialog .right h3,
+html body #shareMgzDialog .right h4,
+html body #shareTagDialog .right h3,
+html body #shareTagDialog .right h4{ padding-top:1px; height:11px;}
+/*index*/
+html body .body .bodyContent .typeTag em span{ position:relative; top:-4px;}
+/*kanmi*/
+html body .body .bodyKanmi .item{ width:172px;}
+html body .body .bodyKanmi .typeNav{ width:182px;}
+html body .body .bodyKanmi .deskBig .item{ width:374px;}
+html body .body .bodyKanmi .deskBig .typeNav{ width:172px;}
+html body .body .bodyContent .item h6 span.click,
+html body .body .bodyContent .item h5 em{ padding-top:1px;}
+html body .body .bodyContent .item h5 a{padding-top:2px; height:10px;}
+/*qiemi*/
+html body .body .bodyContent .item a.name{ padding-top:1px;;}
+html body .pageQiemiDetail .right h3,
+html body .pageQiemiDetail .right h4{ padding-top:1px; height:11px;}
+.pageQiemiDetail .right .iconList span{ padding-left:16px; background-position:0 center;}
+/*sns*/
+.body .bodyContent .itemUser h3{ padding-top:1px; height:11px;}
+.body .bodyContent .itemUser h4{ padding-top:1px; }
+.body .bodyContent .itemUser .control{ margin-top:20px;}
+
+
+
+
+
+
+/*header footer*/
+html body .header .leftNav{ position:absolute; top:300px;}
+html body .footer p a:hover{ color:#ccc;}
+html body .footer .nav{ width:332px;}
+html body .footerMini .nav ul li{ background-position:55px 11px;}
+html body .footerMini .nav ul li.current{ background-position:55px -28px;}
+html body .footerMini .nav ul li ul{bottom:26px; left:-11px;}
+html body .footerMini .nav ul li.current li{ background:none;}
+html body .footerStatic{position:relative;}

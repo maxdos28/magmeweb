@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url(../../style/_userInfo.css);
+
+/* CSS Document */
+
+body{ font-family:"微软雅黑"; background:#fff url(headerBg.gif) 0 0 repeat-x;}
+html body .footer{ background:#787878 url(footerBg.gif) 0 0 repeat-x; height:100px; padding:10px; }
+
+
+
+.cRed{ color:#f60;}
+ol.top10 li a			{display:block;}
+ol.top10 li span		{width:12px; height:10px; line-height:10px; float:left; font-size:8px; margin-right:5px; font-family:Arial; text-align:center; background:#eee; color:#999; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+ol.top10 li.top span	{background:#f60; color:#fff; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+
+
+
+
+.body{ background:url(img6.jpg) center bottom no-repeat; padding-bottom:100px;}
+.body .left{ width:150px; float:left; }
+.body .right{ width:830px; float:left; padding-top:10px; }
+.body .rightHome{background:url(img5.jpg) right 45px no-repeat; }
+.body .rightJob{background:url(imgChar.jpg) right 50px no-repeat; }
+
+.body .side300{ width:300px; float:left; margin-top:20px; padding-top:20px; position:relative;}
+.body .side490{ width:490px; float:left; margin:20px; padding-top:20px;}
+
+
+.body .side300 .btnBack{ position:absolute; right:0; top:-15px; padding:5px 0; background:url(../../images/icon/arrowL.gif) left center no-repeat; padding-left:14px;}
+/*conReportDetail*/
+.main .body .conReportDetail{ padding:6px; background:#f5f5f5; margin-bottom:0; margin-bottom:20px; width:478px; overflow:hidden;}
+.main .body .conReportDetail h2{ color:#f60; background:none; padding:0; cursor:pointer;}
+.main .body .conReportDetail h2 span{ color:#999; float:right; font-weight:normal;}
+.main .body .conReportDetail h2 em{ color:#aaa; margin-left:6px;}
+.main .body .conReportDetail .iconDig{ margin-top:8px; padding:5px 10px 5px 20px; background:url(../../images/icon/dig_w.gif) 4px center no-repeat #f60; color:#fff; text-decoration:none; border-radius:5px; display:inline-block;}
+.main .body .conReportDetail .iconDig strong{ margin-left:5px; font-weight:normal;}
+.main .body .conReportDetail .iconDig:hover{  background-color:#333; background-image:url(../../images/icon/dig.gif)}
+.main .body .conReportDetail .content{ display:none;}
+.main .body .conReportDetail .content p{ margin-top:5px; line-height:1.8em; word-wrap:break-word; word-break:break-all;}
+.main .body .conReportDetail .content .comment{ padding-top:6px; clear:both;}
+.main .body .conReportDetail .content .comment .item{ padding:6px 0; border-top:1px dotted #ccc;}
+.main .body .conReportDetail .content .comment .item a{ text-decoration:none;}
+.main .body .conReportDetail .content .comment .item span{ color:#ccc; float:right; height:12px; line-height:12px;}
+.main .body .conReportDetail .content .comment .item .userHead{ width:46px; height:46px; float:left; margin-right:6px; position:relative; *position:static; _position:static; }
+.main .body .conReportDetail .content .comment .item .userHead img{ width:46px; height:46px; }
+.main .body .conReportDetail .content .comment .item .userHead sub{ width:46px; height:46px; display:block; position:absolute; left:0; top:0; background:url(../images/headMask.png) 0 0 no-repeat;}
+.main .body .conReportDetail .content .comment .item strong{ height:12px; line-height:12px; margin-bottom:4px; color:#f60;}
+.main .body .conReportDetail .content .comment .item p{ margin-top:5px; line-height:1.8em; padding-left:52px;}
+.main .body .conReportDetail .content .comment .itemTitle span{ float:none; margin-left:5px; font-weight:normal;}
+.main .body .conReportDetail .content .comment .inputArea textarea,
+.main .body .conReportDetail .content .comment .inputArea .in,
+.main .body .conReportDetail .content .comment .inputArea .code{ border:1px solid #ddd; border-left-color:#999; border-top-color:#999; padding:4px; height:14px; line-height:15px; width:462px; margin-bottom:5px; float:left; }
+.main .body .conReportDetail .content .comment .inputArea .in{ width:105px; line-height:14px; margin-right:5px;}
+.main .body .conReportDetail .content .comment .inputArea .code{ width:50px;}
+.main .body .conReportDetail .content .comment .inputArea a{ vertical-align:middle; line-height:22px;}
+.main .body .conReportDetail .content .comment .inputArea textarea{ float:none;}
+.main .body .conReportDetail .content .comment .tCenter{ padding:20px 0;}
+
+
+
+
+
+
+
+.body .left .menu{ margin-top:25px; padding:5px 0; background:url(img7.jpg) left 0 no-repeat; }
+.body .left .menu li{ float:left; width:100%;}
+.body .left .menu li a{ line-height:30px; display:block; font-size:14px; color:#000; text-indent:10px; text-decoration:none;}
+.body .left .menu li a:hover{ font-weight:bold;}
+.body .left .menu li a.important{ color:#f60;}
+.body .left .top10{ margin-top:30px; padding-top:60px; background:url(img1.jpg) left top no-repeat; display:none;}
+.body .left .top10 li{ background:url(img8.gif) left bottom no-repeat; padding-left:10px; line-height:25px; height:30px;}
+.body .left .top10 li a{ text-decoration:none; color:#333;}
+.body .left .top10 li a:hover{ color:#f60;}
+.body .left .top10 li span{ margin-top:7px;}
+
+.body .left .registerLink{ width:150px; height:150px; display:block; margin-top:30px; background:url(label.gif) no-repeat; text-indent:-9999em; overflow:hidden;}
+
+
+.body .right .con{ margin-bottom:10px; font-size:13px;}
+.body .right .con p{ padding-left:67px; line-height:2em;  color:#333;}
+.body .right .con h2{ text-indent:-9999em; overflow:hidden; height:65px; margin-bottom:10px; background-repeat:no-repeat; background-position:0 0;}
+.body .right .con1 h2{ background-image:url(img3.gif);}
+.body .right .con2 h2{ background-image:url(img4.gif);}
+.body .right .con2 p strong{ width:80px; display:inline-block; font-weight:normal;}
+
+.body .right .con3{ margin-left:-2px;}
+.body .right .con3 .item{ width:190px; height:230px; margin:10px 0 25px 18px; float:left; position:relative; display:inline;}
+.body .right .con3 .item img{ width:180px; height:180px; margin:5px;}
+.body .right .con3 .item a{ text-align:center; height:210px; display:block; }
+.body .right .con3 .item strong{ width:190px; height:20px; line-height:20px; overflow:hidden; padding-top:190px; text-align:center; position:absolute; left:0; top:0; background:url(frame.png) 0 0 no-repeat; *background-image:url(frame.gif);}
+.body .right .con3 .item h6{ height:20px; line-height:20px; overflow:hidden; text-align:center; font-weight:normal; }
+.body .right .con3 .item h6 a{ display:inline; }
+.body .right .con3 .item span{ display:block; text-align:center; }
+.body .right .con3 .item span a{ display:inline; margin-left:10px; color:#f60; font-size:11px; text-decoration:none;}
+.body .right .con3 .item span a:hover{ font-weight:bold;}
+
+.body .right .con4{ margin-bottom:40px;}
+.body .right .con4 h2{ background-image:url(login1.gif);}
+.body .right .con5{ margin-bottom:40px;}
+.body .right .con5 h2{ background-image:url(login2.gif);}
+.body .right .con6 h2{ background-image:url(login3.gif);}
+
+.body .right .con7{ margin-top:35px;}
+.body .right .con7 .item{ margin-bottom:20px;}
+.body .right .con7 .item .userHead{ width:60px; float:left;}
+.body .right .con7 .item .content{ width:730px; margin-left:20px; float:left; background:#f5f5f5; padding:6px 10px; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; }
+.body .right .con7 .item .content a{ color:#f60;}
+.body .right .con7 .item .content strong{ font-weight:normal; color:#f60; }
+.body .right .con7 .item .content span{ padding-left:20px; font-size:11px; }
+.body .right .con7 .item .content p{ padding-left:0; padding-top:3px; margin-top:3px; word-wrap:break-word; word-break:break-all;}
+.body .right .con7 .item .content p strong{ color:#333;}
+.body .right .con7 .item .content p.answer{ border-top:1px dotted #ccc; color:#bbb;}
+.body .right .con7 .item .content p.answer strong{ color:#bbb;}
+
+.body .right .con7 .itemQuestion{ display:none;}
+.body .right .con7 .itemQuestion .content fieldset div{ margin:12px 0;}
+.body .right .con7 .itemQuestion .content fieldset div em.title{ width:40px; text-align:left;}
+.body .right .con7 .itemQuestion .content fieldset div textarea{ height:80px;}
+.body .right .con7 .itemQuestion .content fieldset div em a{ color:#fff;}
+
+.body .right .con8 { padding-left:2px; width:828px; }
+.body .right .con8 .ctrl{ margin-left:20px; margin-top:20px;}
+.body .right .con8 .box{ width:256px; height:150px; margin:10px 0 40px 20px; float:left; position:relative; display:inline;}
+.body .right .con8 .box img{ width:250px; height:140px; margin:5px 3px;}
+.body .right .con8 .box a{ position:absolute; left:0; top:0; width:256px; height:150px; display:block; background:url(frame256.png) 0 0 no-repeat;}
+.body .right .con8 .box p{ padding-left:5px; height:40px; line-height:20px; overflow:hidden; color:#999;}
+
+.body .right .con9 h2{ background-image:url(titleJob.gif);}
+
+.body .right .con10 h2{ background-image:url(titleJoin.gif); margin-bottom:20px;}
+.body .right .con10 fieldset div{ margin-bottom:15px;}
+.body .right .con10 fieldset div em.title{ width:40px; text-align:left; padding-left:20px;}
+
+.body .right .con11 h2{ background-image:url(titleRead.gif);}
+.body .right .con11 .ol{ margin-left:68px; color:#333;}
+
+
+.body .right .con12{ margin:15px 0; padding-left:20px;}
+.body .right .con12 a{ display:inline-block; padding:0 12px; height:20px; line-height:20px; text-decoration:none;}
+.body .right .con12 a.current{ background:#f60; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px; color:#fff;}
+
+
+.body .right .con13 h2{ background-image:url(titlePro1.gif);}
+.body .right .con14 h2{ background-image:url(titlePro2.gif);}
+.body .right .con15 h2{ background-image:url(titlePro3.gif);}
+.body .right .con16{ width:580px; }
+.body .right .con16 h2{ background-image:url(titleDelivery.gif);}
+.body .right .con16 ul{ margin-left:68px;}
+.body .right .con16 ul li{ width:160px; float:left; height:2.4em; line-height:2.4em;}
+.body .right .con17{ width:240px; float:left; margin-left:10px; overflow:hidden; padding-top:60px;}
+.body .right .con17 img{ margin-bottom:10px; width:240px; display:block;}
+
+
+
+.conUserInfo .userHead{ float:left; margin-right:10px;}
+.conUserInfo .userInfo{ padding:0; margin-left:10px; overflow:hidden;}
+

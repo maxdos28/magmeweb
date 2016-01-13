@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<script src="${systemProp.staticServerUrl}/js/systemProp.js"></script>
+<link href="${systemProp.staticServerUrl}/v3/sms/style/reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${systemProp.staticServerUrl}/v3/sms/style/royalslider.css"/>
+<link rel="stylesheet" type="text/css" href="${systemProp.staticServerUrl}/v3/sms/style/rs-default.css"/>
+<link rel="stylesheet" type="text/css" href="${systemProp.staticServerUrl}/v3/sms/style/tpl.css"/>
+<title>阿斯顿发生的</title>
+<script src="${systemProp.staticServerUrl}/v3/sms/js/jquery-new.min.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/sms/js/jquery.royalslider.min.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/sms/js/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/sms/js/jquery.mCustomScrollbar.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/sms/js/jquery.scrollto.min.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/sms/js/jquery.mousewheel.min.js"></script>
+
+<script>
+$(function(){
+$('#gallery-1').royalSlider({
+    fullscreen: {
+      enabled: true,
+      nativeFS: true
+    },
+    controlNavigation: 'bullets',		//thumbnails,bullets,none
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 4,     
+    autoScaleSliderHeight: 2.5,
+	arrowsNav: false,
+    loop: false,
+    imageScaleMode: 'fill',	//fill,fit-if-smaller
+    navigateByClick: true,
+    numImagesToPreload:3,
+	slidesSpacing:20,
+	slidesOrientation:'horizontal',		//vertical,horizontal
+	transitionType:'move',
+	controlsInside:true,
+    arrowsNavAutoHide: true,
+    arrowsNavHideOnTouch: true,
+    keyboardNavEnabled: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
+    globalCaptionInside: false,
+    thumbs: {
+      orientation: 'vertical',			//vertical,horizontal
+      appendSpan: true,
+      firstMargin: true,
+	  fitInViewport: true,
+      paddingBottom: 0
+
+    },
+	autoPlay: {
+		enabled: true,
+		pauseOnHover: true,
+		delay:3000
+	}
+});
+
+
+});
+</script>
+  </head>
+  <body>
+    <div class="main ${classUl!''}" >
+    	<h1 class="header">asdf都市封神的</h1>
+    	<div class="body">
+            <div id="gallery-1" class="royalSlider rsDefault">
+            		<a class="rsImg" data-rsBigImg="http://static.magme.cn/activityalbum${contentEx.url}" href="http://static.magme.cn/activityalbum${contentEx.url}"><img width="50" height="50" class="rsTmb" src="http://static.magme.cn/activityalbum${contentEx.url}" /></a>		
+            </div>
+        	<div class="content">
+               阿斯顿发生地发撒旦发阿斯顿发士大夫阿斯顿阿斯顿
+            </div>
+        </div>
+    	<div class="pagedock">
+        	<ul>
+            	<li class="mail"><a href="#"></a></li>
+            	<li class="qq"><a href="#"></a></li>
+            	<li class="phone400"><a id="telEvent" href="#"></a></li>
+            	<li class="weibo"><a href="#"></a></li>
+            	<li class="weixin"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>

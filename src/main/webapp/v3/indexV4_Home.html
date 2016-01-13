@@ -1,0 +1,993 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ieOld ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ieOld ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ieOld ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<title>(SEO)事件精选&nbsp;[分类名]&nbsp;麦米网Magme&nbsp;-&nbsp;世界新杂志&nbsp;发现新内容</title>
+<meta name="Keywords" content="(SEO)麦米网,Magme,电子杂志,在线杂志,免费电子杂志,电子杂志下载,数码杂志,时尚杂志,汽车杂志,财经杂志">
+<meta name="Description" content="(SEO)麦米网提供数百种最新杂志在线免费阅读，财经，旅游，娱乐，时尚，汽车，体育，数码生活等。在麦米看书，交流，分享，交友，新的阅读生活由此开启">
+<meta charset="utf-8">
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelHomev5.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="../js/systemProp.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.lazyload.mini.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/scrolltopcontrol.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/jquery.coverImg.js"></script>
+<script src="js/jquery.color.js"></script>
+<script src="js/header.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<!--<script src="js/home.js"></script>-->
+
+
+<script>
+$(function(){
+	
+	
+
+	//订阅到
+	$(".rssTo").mouseenter(function(){
+		$(this).addClass("hover").find("p").stop(true,true).fadeIn(200);
+	}).mouseleave(function(){
+		$(this).removeClass("hover").find("p").fadeOut(200);
+	});
+	
+	//右侧热门文章执行
+	$(".sideRight .conListBig a .pic img").coverImg();
+	
+	//item移入
+	if(isIE6){
+		$(".body>.item").not(".itemFirst,.itemSpace").mouseenter(function(){
+			$(this).find(".tools").addClass("toolsOn").find("em").css({display:"inline-block"});
+		}).mouseleave(function(){
+			$(this).find(".tools").removeClass("toolsOn").find("em").not(".favCurrent").css({display:"none"});
+		});
+	}
+	
+	//排列item
+	$('#homeWall').masonry({itemSelector: '.item'});
+	
+	
+	// 首页顶banner打开关闭
+	var topBanner = {
+		init : function() {
+			$("#topBanner>.inner>.close").bind("click", topBanner.hide);
+			topBanner.show();
+		},
+		show : function() {
+			$("#topBanner").show().css({"height" : 0}).animate({"height" : 240},500);
+		},
+		hide : function() {
+			$("#topBanner").animate({"height" : 0},500);
+			setTimeout(function(){$("#topBanner").hide()},500);
+		}
+	}
+	topBanner.init();
+
+	//设置随机显示
+	fnRandom("#videoAd");
+	fnRandom("#latestMgz");
+
+	//首页左侧高度设置，每次加载更多时需要执行
+	setTimeout(fnSetHomeHeight,100);
+	function fnSetHomeHeight(){
+		var rightH = $(".sideRight").height();
+		if($("#homeWall").height()<rightH){
+			$("#homeWall").height(rightH);
+		}
+	}
+	
+});
+
+//随机显示方法
+function fnRandom(id){
+	$(id).find("a").css({display:"none"});
+	var ran = Math.floor(Math.random()*$(id).find("a").length+1);
+	$(id).find("a").eq(ran-1).css({display:"block"});
+}
+
+</script>
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body class="subNavOnx">
+
+<!--header-->
+<div class="header20120905 clearFix">
+	<div class="outer headerTop">
+    	<div class="inner">
+            <a href="javascript:void(0)" class="rssFeed" title="RSS订阅"></a>
+            <div class="rssTo">订阅到<p>
+                <a title="有道" href="http://reader.youdao.com/b.do?keyfrom=163&url=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="有道" src="images/rssto/icon_subshot02_youdao.gif">
+                </a>
+                <a title="google" href="http://fusion.google.com/add?feedurl=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="google" src="images/rssto/icon_subshot02_google.gif">
+                </a>
+                <a title="netvibes" href="http://www.netvibes.com/subscribe.php?url=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="netvibes" src="images/rssto/icon_subshot02_netvibes.gif">
+                </a>
+                <a title="bloglines" href="http://www.bloglines.com/sub/http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="bloglines" src="images/rssto/icon_subshot02_bloglines.gif">
+                </a>
+                <a title="newsgator" href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="newsgator" src="images/rssto/icon_subshot02_newsgator.gif">
+                </a>
+                <a title="yahoo" href="http://add.my.yahoo.com/rss?url=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="yahoo" src="images/rssto/icon_subshot02_yahoo.gif">
+                </a>
+                <a title="鲜果" href="http://www.xianguo.com/subscribe.php?url=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="鲜果" src="images/rssto/icon_subshot02_xianguo.gif">
+                </a>
+                <a title="抓虾" href="http://www.zhuaxia.com/add_channel.php?url=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="抓虾" src="images/rssto/icon_subshot02_zhuaxia.gif">
+                </a>
+                <a title="qq" href="http://mail.qq.com/cgi-bin/feed?u=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="qq" src="images/rssto/icon_subshot02_qq.gif">
+                </a>
+                <a title="rojo" href="http://www.rojo.com/add-subscription?resource=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="50" height="14" alt="rojo" src="images/rssto/icon_subshot02_rojo.gif">
+                </a>
+                <a title="msn" href="http://my.msn.com/addtomymsn.armx?id=rss&ut=http://www.magme.cn/third/rssforkindle.xml">
+                <img width="44" height="14" alt="msn" src="images/rssto/msn.jpg">
+                </a>
+            </p>
+            </div>
+            <div class="logo" id="logo"><a class="png" href="javascript:void(0)" title="世界新杂志 发现新内容">麦米网Magme</a></div>
+            <!--nav-->
+            <ul class="nav">
+                <li class="home"><a href="indexV4.html">首页</a></li>
+                <li class="magazine"><a href="magazineV4.html">杂志</a></li>
+                <li class="m1"><a href="m1DashBoardV4.html">M1</a></li>
+            </ul>
+            <!--userBar-->
+            <ul class="conUser" id="loginBar" style="display:none;">
+                <li class="reg"><a href="javascript:void(0)">注册</a></li>
+                <li class="login"><a href="javascript:void(0)">登录</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="head"><a href="javascript:void(0)"><img id="avatar30" src="images/head30.gif" /></a></li>
+                <li class="name"><a href="javascript:void(0)"><strong id="nickName">Lewis</strong></a></li>
+                <li class="message messageNew"><a href="javascript:void(0)" class="png" id="newMessageNum" title="5条新消息">消息</a></li>
+                <li class="setup"><a href="snsMyConfig.html" class="png" title="设置">设置</a></li>
+                <li class="logout" id="logout"><a href="javascript:void(0)" class="png" title="退出">退出</a></li>
+            </ul>
+            <div class="search clearFix">
+            	<input type="text" tips="search" accesskey="s" autofocus autocomplete="off" x-webkit-speech x-webkit-grammar="builtin:translate" />
+                <a href="javascript:void(0)" class="png">搜索</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="outer headerNav">
+    	<div class="inner clearFix">
+            <div class="logo" id="logo"><a class="png" href="javascript:void(0)" title="世界新杂志 发现新内容">麦米网Magme</a></div>
+            <div class="subNav">
+                <ul class="classification clearFix">
+                    <li class="current"><a href="indexV4_newHeader.html">丽人</a>
+                    	<ul>
+                        	<li><a href="#">时尚</a></li>
+                        	<li><a href="#">时尚</a></li>
+                        	<li><a href="#">时尚</a></li>
+                        	<li><a href="#">时尚</a></li>
+                        	<li><a href="#">时尚</a></li>
+                        	<li><a href="#">时尚</a></li>
+                        	<li><a href="#">时尚</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="indexV4_newHeader.html">绅士</a></li>
+                    <li><a href="indexV4_newHeader.html">玩味</a></li>
+                    <li><a href="indexV4_newHeader.html">座驾</a></li>
+                    <li><a href="indexV4_newHeader.html">财界</a></li>
+                    <li><a href="indexV4_newHeader.html">情商</a></li>
+                    <li><a href="indexV4_newHeader.html">美图</a></li>
+                    <li><a href="indexV4_newHeader.html">专题</a></li>
+                    <!--<li id="customizeNav"><a href="javascript:void(0)" class="btnSS">定制导航</a></li>-->
+                </ul>
+            </div>
+            <!--<div class="showAll"><a href="javascript:void(0)">更多</a></div>-->
+        </div>
+    </div>
+    <div class="outer headerSubNav navC1 hide">
+        <div class="inner">
+        	<strong class="png"><span class="png">麦米丽人</span></strong>
+            <div class="list">
+                <a href="#" class="current png">全部</a>
+                <a href="#">时尚</a>
+                <a href="#">美妆</a>
+                <a href="#">萌宠</a>
+                <a href="#">娱乐</a>
+                <a href="#">婚礼</a>
+                <a href="#">图库</a>
+            </div>
+        </div>
+    </div>
+    <div class="outer headerCustomize" id="headerCustomize">
+        <div class="inner">
+            <h2>定制我的菜单</h2>
+            <p>您可以将喜欢的分类添加到“我的菜单”一栏（登录后可以将在其它移动设备上使用已定制好的菜单）</p>
+            <div class="myNav">
+                <strong>我的菜单<span>（拖动排序）</span></strong>
+                <div class="myNavInner" id="myNavInner">
+                    <div class="clearFix"></div>
+                </div>
+            </div>
+            <div class="allNav">
+                <strong>未添加分类</strong>
+                <div class="clearFix">
+                        <div class="item"><a href="javascript:void(0)">分类1<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类2<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类3<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类4<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类5<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类6<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类7<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类8<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类9<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类10<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类11<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类12<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类13<span></span></a></div>
+                        <div class="item"><a href="javascript:void(0)">分类14<span></span></a></div>
+                </div>
+            </div>
+            <div class="action tRight">
+                <a href="javascript:void(0)" class="btnAB">完成定制</a>
+                <a href="javascript:void(0)" class="btnWB">取消</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="outer headerBanner" id="headerBanner">
+        <div class="inner">
+            <a href="#" class="img hide"><img src="images/temp/homeBanner.jpg" /></a>
+            <a href="javascript:void(0)" class="close"></a>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+<div class="body bodyHome clearFix" id="homeWall">
+	<div class="item">
+		<a href="http://www.baidu.com">
+            <div class="class"><strong class="navC3">玩味</strong></div>
+	    	<div class="photo"><img src="images/temp/home/944040692_na-switch-fo-res-lobby-view-1.jpg" alt="永远的传奇"></div>
+	    	<div class="info png clearFix">
+                <h2>一二三四五六七八九十一二三四五六七八</h2>
+	            <p>有人说上帝想听唱歌，于是带走了迈克尔·杰克逊，听久了男声之后，上帝又想找一个出色的女声合唱，于是带走了惠特尼·休斯顿……</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart favCurrent png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a href="javascript:void(0)">
+            <div class="class"><strong class="navC3">玩味</strong></div>
+	    	<div class="photo"><img src="images/temp/home/1132350110_na-switch-fo-20-copy.jpg" alt="黑白黄的新渐变"></div>
+	    	<div class="info png">
+                <h2>一二三四五六七八九十一二三四五六七</h2>
+	            <p>不要简单地认为色彩的格式只有黑白灰这种单调的渐变，动动脑子你完全可以创造自己的渐变色，或者一周七天，每一天你的同事朋友们都能发现你在悄悄地改变。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2760" clickEventId="3121_20"  href="javascript:void(0)">
+            <div class="class"><strong class="navC5">财界</strong><strong class="navC4">座驾</strong><strong class="navC3">玩味</strong><strong class="navC6">情商</strong></div>
+	    	<div class="photo"><img src="images/temp/home/1471398394_na-switch-fo-04.jpg" alt="邱可儿"></div>
+	    	<div class="info png">
+                <h2>永远的传奇很长很长很长</h2>
+	            <p>邱可儿（Trubo）身材高挑、外形甜美，年仅22岁的她已是城中多项模特比赛的常客，曾经担任多本刊物、品牌的特约模特。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2764" clickEventId="3121_50"  href="javascript:void(0)">
+            <div class="class"><strong class="navC6">情商</strong></div>
+	    	<div class="photo"><img src="images/temp/home/115697443_na-switch-fo-36.jpg" alt="轻松自制养生茶"></div>
+	    	<div class="info png">
+                <h2>llllllllll llll lllll</h2>
+	            <p>生活中随处可见中药，如枸杞、菊花等，用它们在春季里自制中药茶，能起到防病祛病、保健养生的功效。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2780" clickEventId="3131_26"  href="javascript:void(0)">
+            <div class="class"><strong class="navC7">美图</strong></div>
+	    	<div class="photo"><img src="images/temp/home/1275170473_na-switch-fo-35.jpg" alt="瞄准“溃堤之穴”攻坚客户"></div>
+	    	<div class="info png">
+                <h2>给女人设陷</h2>
+	            <p>渗透一个大客户，就如挖一个大堤，必须先找到第一个导致大堤溃塌的“穴”，内线是小穴，赞助者是中穴，教练是大穴。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2684" clickEventId="3081_104"  href="javascript:void(0)">
+            <div class="class"><strong class="navC8">专题</strong></div>
+	    	<div class="photo"><img src="images/temp/home/1435747248_na-switch-fo-res-lobby-view-3.jpg" alt="印花复古迷情风"></div>
+	    	<div class="info png">
+                <h2>享受都市慢生活</h2>
+	            <p>延续了前一季的花卉热潮，印花仍然是这一季炙手可热的元素。只不过印花不再局限于单一的平面设计，而是将更多的自然元素及几何图形融入其中。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2983" clickEventId="3184_30"  href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/144079781_na-switch-fo-22.jpg" alt="付辛博，一个人的坚持"></div>
+	    	<div class="info png">
+                <h2>美味享受尽在威斯汀</h2>
+	            <p>一个人的舞台也许空旷，多出的空间却包容最大的世界，一个人的身影也许孤单，但比以前更加懂得坚定的意义。再难的歌，只要好听，就要唱；再难的舞，只要精彩，就要跳。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+
+	<div class="item">
+		<a eventId="2918" clickEventId="3183_12" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/232208204_na-switch-fo-16.jpg" alt="缤纷来袭，冰激凌之夏！"></div>
+	    	<div class="info png">
+                <h2>池畔嬉戏</h2>
+	            <p>薄荷、柠檬、蜜桃、橘橙...这不仅是你爱的四球冰激凌，也可以是你夏天最IN的时装和彩妆色盘！这些五颜六色花哨灵动的色彩，最适合偶尔卖萌走清新甜美风的少女们...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2869" clickEventId="3170_2" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/29128276_na-switch-fo-res-lobby-view-2.jpg" alt="画皮Ⅱ"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>多少新愁成旧恨？多少往事成烟云？多少柔情诉不尽？空余一曲《笑红尘》。白纱衣，紫罗裙，奈何令我销断魂？今生一场荷花梦，来生还做护花人。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2905" clickEventId="3109_96" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/319238279_na-switch-fo-32.jpg" alt="疯玩瑞士小镇  感受画中之城"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>位于欧洲西部的瑞士，享有“小欧洲”的美誉，历来被称为欧洲的十字路口。瑞士被秀丽的阿尔卑斯山包围，具有仙境般的美景，同时这里还聚了欧洲各国的文化。湖光山色的小镇，阿尔卑斯山脉雪景，发达的铁路系统，高端奢华的酒店集团，还有奶酪火锅的甜蜜，世界上最好的巧克力。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2889" clickEventId="3129_88" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/406437997_na-switch-na-11.jpg" alt="复古妆容新时尚"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>复古妆容已成为今年的流行趋势，展现女性性感，妩媚的一面。统一色调的配饰，高雅的妆容，一下子就进入人们的视线，华贵而不娇艳。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2721" clickEventId="3083_76" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/456108499_na-switch-fo-05.jpg" alt="HIFIMAN 旗舰耳机"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>在高端发烧耳机领域，国内品牌是没有地位的，直到HIFIMAN的出现，才打破了这个尴尬的局面。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2909" clickEventId="3178_1" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/790376822_na-switch-fo-34.jpg" alt="为您的成就卓越——凯美瑞"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>彰显优雅、大气的空气动力学外观设计、尊贵、宽大的车内空间感；同级别最顶级的动力和最经济的油耗表现；同级别最顶级的安全性能和表现。媲美雷克萨斯的静谧性和驾乘舒适性，更加出色的直线行驶稳定性，傲视同级的豪</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2867" clickEventId="3100_56" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/944040692_na-switch-fo-res-lobby-view-1.jpg" alt="“富二代”的财富管理规划"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>富二代的消费较高，奢侈品和高端产品成为消费时尚，因此，银行信用卡的授信消费额度往往达到百万以上。在留出流动性好的金融资产时，可以按现在的银行存款灵活储备，其他备用资金可采用类活期理财产品的配置保持投资资金的充足性和收益性。</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/964576643_na-switch-na-14.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-a-bar-interior-design.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-bar-blue-interior-lighting.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-bar-stools-and-interior.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-bar-violet-light-accent.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-entrance-view.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-lobby-interior-view.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-lobby-view-interior.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-lounge-interior-furnishing-selection.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-lounge-modern-furnitures.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-lounge-modern-interior-view.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+	<div class="item">
+		<a eventId="2917" clickEventId="3183_83" href="javascript:void(0)">
+            <div class="class"><strong class="navC9">其它</strong></div>
+	    	<div class="photo"><img src="images/temp/home/nisha-men-washroom-entrance.jpg" alt="轻动指尖，尽享丽思卡尔顿手机客户端"></div>
+	    	<div class="info png">
+                <h2>永远的传奇</h2>
+	            <p>预见来自世界各地的旅行者未表达的需求，丽思卡尔顿手机端超越基本的酒店预订和搜索功能，让您在入住之前便开启一段与众不同的旅居体验...</p>
+	        </div>
+        </a>
+        <div class="tools png"><em title="喜欢" class="iconHeart png"></em><em class="iconShare png"></em></div>
+    </div>
+    
+    
+    
+    <div class="sideRight">
+    	<!--<div class="con topBannerMini" id="topBannerMini">
+        	<a href="javascript:void(0)"><img src="images/temp/homeBannerMini.jpg" /></a>
+        </div>-->
+        <div class="con conAd">
+        	<a href="javascript:void(0);">
+                <img src="images/temp/demo (9).jpg" width="238" />
+            </a>
+        </div>
+        <div class="con conVideoAd" id="videoAd">
+        	<a href="javascript:void(0);">
+                <img src="images/temp/temp5.jpg" width="456" height="320" />
+                <span class="png"></span>
+            </a>
+        	<a href="javascript:void(0);">
+                <img src="images/temp/temp10.jpg" width="456" height="320" />
+                <span class="png"></span>
+            </a>
+        </div>
+        <div class="con conTopic">
+        	<h2>专题推荐</h2>
+            <a href="javascript:void(0)"><img src="images/temp/topic1.jpg" /></a>
+            <a href="javascript:void(0)"><img src="images/temp/topic2.jpg" /></a>
+            <a href="javascript:void(0)"><img src="images/temp/topic3.jpg" /></a>
+        </div>
+    	<div class="con conMagezine">
+        	<div class="book"><a href="javascript:void(0)" class="png"><img src="images/temp/mz4.jpg" title="杂志名称" /></a></div>
+            <strong>推荐阅读</strong>
+        </div>
+    	<div class="con conUser">
+            <a href="javascript:void(0)">
+                <img src="images/temp/temp11.jpg" />
+                <strong>泡沫圆舞曲很长很长很长很长很长很长</strong>
+                <p><span>999</span>作品</p>
+                <em>加关注</em>
+            </a>
+            <a href="javascript:void(0)">
+                <img src="images/temp/temp12.jpg" />
+                <strong>泡沫圆舞曲</strong>
+                <p><span>999</span>作品</p>
+                <em>加关注</em>
+            </a>
+            <a href="javascript:void(0)">
+                <img src="images/temp/temp13.jpg" />
+                <strong>泡沫圆舞曲</strong>
+                <p><span>999</span>作品</p>
+                <em>加关注</em>
+            </a>
+            <a href="javascript:void(0)">
+                <img src="images/temp/temp14.jpg" />
+                <strong>泡沫圆舞曲</strong>
+                <p><span>999</span>作品</p>
+                <em>加关注</em>
+            </a>
+            <a href="javascript:void(0)" class="last">
+                <img src="images/temp/temp15.jpg" />
+                <strong>泡沫圆舞曲</strong>
+                <p><span>999</span>作品</p>
+                <em>加关注</em>
+            </a>
+            <a href="javascript:void(0)" class="more">换一批&nbsp;作者</a>
+        </div>
+    	<div class="con conListBig">
+            <a href="javascript:void(0)" class="title">热门文章推荐</a>
+            <a href="javascript:void(0)" class="topBig">
+                <div class="pic"><img src="images/temp/temp10.jpg" width="200" height="130" /></div>
+                <h3>泡沫圆舞曲</h3>
+                <p>内容内容内容内容内容内容内容内容内容内容</p>
+                <em>阅读</em>
+            </a>
+            <a href="javascript:void(0)">
+                <div class="pic"><img src="images/temp/temp11.jpg" width="200" height="131" /></div>
+                <h3>泡沫圆舞曲</h3>
+                <p>内容内容内容内容内容内容内容内容内容内容</p>
+                <em>阅读</em>
+            </a>
+            <a href="javascript:void(0)">
+                <div class="pic"><img src="images/temp/temp12.jpg" width="200" height="301" /></div>
+                <h3>泡沫圆舞曲</h3>
+                <p>内容内容内容内容内容内容内容内容内容内容</p>
+                <em>阅读</em>
+            </a>
+            <a href="javascript:void(0)">
+                <div class="pic"><img src="images/temp/temp13.jpg" width="200" height="276" /></div>
+                <h3>泡沫圆舞曲</h3>
+                <p>内容内容内容内容内容内容内容内容内容内容</p>
+                <em>阅读</em>
+            </a>
+            <a href="javascript:void(0)">
+                <div class="pic"><img src="images/temp/temp14.jpg" width="200" height="296" /></div>
+                <h3>泡沫圆舞曲</h3>
+                <p>内容内容内容内容内容内容内容内容内容内容</p>
+                <em>阅读</em>
+            </a>
+            <a href="javascript:void(0)" class="last">
+                <div class="pic"><img src="images/temp/temp15.jpg" width="200" height="189" /></div>
+                <h3>泡沫圆舞曲</h3>
+                <p>内容内容内容内容内容内容内容内容内容内容</p>
+                <em>阅读</em>
+            </a>
+        </div>
+    	<div class="con conList">
+
+            <a href="javascript:void(0)" class="title"><p class="navC3">丽人&nbsp;&nbsp;周排行榜</p></a>
+            <a href="javascript:void(0)">
+                <h3><span class="a1">1</span>泡沫圆舞曲泡沫圆舞曲泡沫圆舞曲泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)">
+                <h3><span class="a2">2</span>泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)">
+                <h3><span class="a3">3</span>泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)">
+                <h3><span>4</span>泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)">
+                <h3><span>5</span>泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)">
+                <h3><span>6</span>泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)">
+                <h3><span>7</span>泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)">
+                <h3><span>8</span>泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)">
+                <h3><span>9</span>泡沫圆舞曲</h3>
+            </a>
+            <a href="javascript:void(0)" class="last">
+                <h3><span>10</span>泡沫圆舞曲</h3>
+            </a>
+        </div>
+    	<div class="con conMagezine" id="latestMgz">
+            <a href="javascript:void(0)" class="png"><img src="images/temp/mz10.jpg" title="杂志名称" /></a>
+            <a href="javascript:void(0)" class="png"><img src="images/temp/mz9.jpg" title="杂志名称" /></a>
+            <a href="javascript:void(0)" class="png"><img src="images/temp/mz8.jpg" title="杂志名称" /></a>
+            <a href="javascript:void(0)" class="png"><img src="images/temp/mz7.jpg" title="杂志名称" /></a>
+            <a href="javascript:void(0)" class="png"><img src="images/temp/mz6.jpg" title="杂志名称" /></a>
+            <strong>最新上架</strong>
+        </div>
+    	<div class="con conReply" id="conReply">
+            <a href="javascript:void(0)" class="title">热门评论</a>
+            <a href="javascript:void(0)" class="current">
+            	<div class="topic">
+                	<div class="photo"><img src="images/temp/home11.jpg" /></div>
+                    <strong>钓鱼岛地理知识</strong>
+                    <p>钓鱼岛是钓鱼岛列岛的主岛，是中国固有领土，位于中国东</p>
+                    <span>999</span>
+                </div>
+                <div class="clearFix">
+                    <div class="bl"><img class="head" src="images/temp/home15.jpg" /><p><span>钓鱼岛是中国的</span></p><em></em></div>
+                    <div class="br"><img class="head" src="images/temp/home16.jpg" /><p><span>肯定是他妈中国的。。。</span></p><em></em></div>
+                    <div class="bl"><img class="head" src="images/temp/home15.jpg" /><p><span>楼上说的好</span></p><em></em></div>
+                    <div class="br"><img class="head" src="images/temp/home16.jpg" /><p><span>烧了日本车。。。。</span></p><em></em></div>
+                    <div class="more">参加讨论</div>
+                </div>
+            </a>
+            <a href="javascript:void(0)">
+            	<div class="topic">
+                	<div class="photo"><img src="images/temp/home9.jpg" /></div>
+                    <strong>钓鱼岛地理知识</strong>
+                    <p>钓鱼岛是钓鱼岛列岛的主岛，是中国固有领土，位于中国东</p>
+                    <span>999</span>
+                </div>
+                <div class="clearFix">
+                    <div class="bl"><img class="head" src="images/temp/home15.jpg" /><p><span>钓鱼岛是中国的</span></p><em></em></div>
+                    <div class="br"><img class="head" src="images/temp/home16.jpg" /><p><span>肯定是他妈中国的。。。</span></p><em></em></div>
+                    <div class="bl"><img class="head" src="images/temp/home15.jpg" /><p><span>楼上说的好</span></p><em></em></div>
+                    <div class="br"><img class="head" src="images/temp/home16.jpg" /><p><span>烧了日本车。。。。</span></p><em></em></div>
+                    <div class="more">参加讨论</div>
+                </div>
+            </a>
+            <a href="javascript:void(0)">
+            	<div class="topic">
+                	<div class="photo"><img src="images/temp/home6.jpg" /></div>
+                    <strong>钓鱼岛地理知识</strong>
+                    <p>钓鱼岛是钓鱼岛列岛的主岛，是中国固有领土，位于中国东</p>
+                    <span>999</span>
+                </div>
+                <div class="clearFix">
+                    <div class="bl"><img class="head" src="images/temp/home15.jpg" /><p><span>钓鱼岛是中国的</span></p><em></em></div>
+                    <div class="br"><img class="head" src="images/temp/home16.jpg" /><p><span>肯定是他妈中国的。。。</span></p><em></em></div>
+                    <div class="bl"><img class="head" src="images/temp/home15.jpg" /><p><span>楼上说的好</span></p><em></em></div>
+                    <div class="br"><img class="head" src="images/temp/home16.jpg" /><p><span>烧了日本车。。。。</span></p><em></em></div>
+                    <div class="more">参加讨论</div>
+                </div>
+            </a>
+            <a href="javascript:void(0)">
+            	<div class="topic">
+                	<div class="photo"><img src="images/temp/temp15.jpg" /></div>
+                    <strong>钓鱼岛地理知识</strong>
+                    <p>钓鱼岛是钓鱼岛列岛的主岛，是中国固有领土，位于中国东</p>
+                    <span>999</span>
+                </div>
+                <div class="clearFix">
+                    <div class="bl"><img class="head" src="images/temp/home15.jpg" /><p><span>钓鱼岛是中国的</span></p><em></em></div>
+                    <div class="br"><img class="head" src="images/temp/home16.jpg" /><p><span>肯定是他妈中国的。。。</span></p><em></em></div>
+                    <div class="bl"><img class="head" src="images/temp/home15.jpg" /><p><span>楼上说的好</span></p><em></em></div>
+                    <div class="br"><img class="head" src="images/temp/home16.jpg" /><p><span>烧了日本车。。。。</span></p><em></em></div>
+                    <div class="more">参加讨论</div>
+                </div>
+            </a>
+            <script>
+            	$(function(){
+					$("#conReply>a").not(".title").mouseenter(function(){
+						$(this).addClass("current").siblings().removeClass("current");
+					});
+				
+				});
+            </script>
+        </div>
+    
+    </div>
+
+</div>
+
+
+
+
+<a href="javascript:void(0);" class="clickLoadMore"><span>狂点这里&nbsp;&nbsp;查看更多</span></a>
+<a href="javascript:void(0);" class="loading32">loading...</a>
+
+
+
+
+<div class="footerBig footerBigWidther">
+    <div class="inner clearFix">
+    
+    	<div class="clearFix">
+<!--            <a href="#" class="footerBanner">
+            	<div style="width:900px; height:90px; line-height:90px; color:#333; font-size:26px; font-weight:bold; text-align:center;">Banner 900-90</div>
+            </a>-->
+            <div class="quickLink">
+                <h6>快速导航</h6>
+                <ul class="clearFix">
+                	<li><a href="http://www.magme.cn/static_join_us.html" rel="nofollow" >加入我们</a></li>
+                	<li><a href="http://www.magme.cn/static_friendlink.html">友情链接</a></li>
+                	<li><a href="http://www.magme.cn/static_policy.html" rel="nofollow" >法律声明</a></li>
+                	<li><a id="userFeedBack" href="javascript:void(0);" rel="nofollow" >意见反馈</a></li>
+                	<li><a href="http://interactive.magme.cn">广告合作</a></li>
+                </ul>
+            </div>
+            <div class="magmeWeiBo">
+                <ul class="clearFix">
+                	<li class="sina"><a href="http://e.weibo.com/magme" target="_blank"><span class="png"></span>新浪微博</a></li>
+                	<li class="qq"><a href="http://e.t.qq.com/magme2011" target="_blank"><span class="png"></span>腾讯微博</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h6>联系我们</h6>
+                <p>上海：黄浦区延安东路222号外滩中心4502室<br>北京：朝阳区建国门外大街乙12号双子座大厦<br>　　　东塔10层1021室</p>
+            </div>
+            <div class="contactForm">
+                <div class="sendBox clearFix">
+                    <textarea tips="意见反馈" color="#3a3a3a,#707070"></textarea>
+                    <a href="javascript:void(0);" class="send">提交</a>
+                </div>
+            </div>
+        </div>
+        <div class="clear letterIndex">
+            <dl class="clearFix">
+                <dt><a href="javascript:void(0);">麦米专题</a></dt>
+                <dd><a href="javascript:void(0);">A</a></dd>
+                <dd><a href="javascript:void(0);">B</a></dd>
+                <dd><a href="javascript:void(0);">C</a></dd>
+                <dd><a href="javascript:void(0);">D</a></dd>
+                <dd><a href="javascript:void(0);">E</a></dd>
+                <dd><a href="javascript:void(0);">F</a></dd>
+                <dd><a href="javascript:void(0);">G</a></dd>
+                <dd><a href="javascript:void(0);">H</a></dd>
+                <dd><a href="javascript:void(0);">I</a></dd>
+                <dd><a href="javascript:void(0);">J</a></dd>
+                <dd><a href="javascript:void(0);">K</a></dd>
+                <dd><a href="javascript:void(0);">L</a></dd>
+                <dd><a href="javascript:void(0);">M</a></dd>
+                <dd><a href="javascript:void(0);">N</a></dd>
+                <dd><a href="javascript:void(0);">O</a></dd>
+                <dd><a href="javascript:void(0);">P</a></dd>
+                <dd><a href="javascript:void(0);">Q</a></dd>
+                <dd><a href="javascript:void(0);">R</a></dd>
+                <dd><a href="javascript:void(0);">S</a></dd>
+                <dd><a href="javascript:void(0);">T</a></dd>
+                <dd><a href="javascript:void(0);">U</a></dd>
+                <dd><a href="javascript:void(0);">V</a></dd>
+                <dd><a href="javascript:void(0);">W</a></dd>
+                <dd><a href="javascript:void(0);">X</a></dd>
+                <dd><a href="javascript:void(0);">Y</a></dd>
+                <dd><a href="javascript:void(0);">Z</a></dd>
+            </dl>
+        </div>
+        <div class="clear footerLink">
+            <dl class="clearFix">
+                <dt><a href="javascript:void(0);">友情链接</a></dt>
+                <dd><a href="javascript:void(0);">一二三四五六七八</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+                <dd><a href="javascript:void(0);">一二三四</a></dd>
+            </dl>
+        </div>
+        <p class="copyright">Copyright © 2005-2013 <strong><span>麦米网</span> (www.magme.cn)</strong> 沪ICP证：沪B2-20120009 </p>
+        <div class="icon">
+        	<a class="shgs" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20121113150613536" target="_blank">上海工商</a>
+        	<a class="wlshzx" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20121113150613536" target="_blank">风格社会征信</a>
+        	<a class="shwj110" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20121113150613536" target="_blank">上海网警110</a>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

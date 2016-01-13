@@ -1,0 +1,168 @@
+@charset "utf-8";
+@import url("jquery.colorpicker.css");
+@import url("pop.css");
+html{ height:100%;}
+body{ height:100%; background:#ddd; padding-top:0; min-width:800px; min-height:600px;}
+
+
+
+
+/*link*/
+a			{text-decoration:none;cursor:pointer; font-family:\5FAE\8F6F\96C5\9ED1, Arial, Helvetica, sans-serif; }
+a:link 		{color:#08c;} 
+a:visited	{color:#08c;}
+a:active	{color:#333;star:expression(this.onFocus=this.blur());}
+a:hover		{color:#333;}
+
+
+
+
+.body{ zoom:1; margin:0 auto 20px auto; width:980px; background:#fff; box-shadow:4px 4px 1px rgba(0,0,0,0.05); border:1px solid #bbb; position:relative;}
+.body:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.bodyHome{ background:none; box-shadow:none;}
+
+.conB{border-top:0; margin:15px 0 0 0;}
+.conB h2{ font-weight:bold; color:#000;}
+
+em.icon16question{ width:16px; height:16px; display:inline-block; margin-left:4px; cursor:pointer; background:url(../../images/ma/icon/bgWhite16.gif) 0 -64px no-repeat;}
+em.icon16question:hover{ background-position:0 -80px;}
+
+
+/*table*/
+.table td a.btn{ background:#DCDFE7; color:#8C96B0; padding:2px 5px; font-size:11px; border-radius:3px; margin:2px 5px; display:inline-block;}
+.table td a.del{ background:#EBD8D8; color:#C58B8B; padding:2px 5px; font-size:11px; border-radius:3px; margin:2px 5px; display:inline-block;}
+.table td a.btn:hover{ background:#08c; color:#fff;}
+.table td a.del:hover{ background:#900; color:#fff;}
+.table thead tr td{ padding:0 5px; height:30px; line-height:30px;}
+.table thead td em{ width:16px; height:16px; display:inline-block; position:relative; top:3px; margin-left:4px; cursor:pointer; background-repeat:no-repeat; background-image:url(../../images/ma/icon/bgWhite16.gif);}
+.table thead td em.icon16question{ background-position:0 -64px; float:right; top:7px;}
+.table thead td em.icon16question:hover{ background-position:0 -80px;}
+.table thead td em.icon16ascending{ background-position:0 0;}
+.table thead td em.icon16ascending:hover,
+.table thead td em.icon16ascendingSelect{ background-position:0 -16px;}
+.table thead td em.icon16descending{ background-position:0 -32px;}
+.table thead td em.icon16descending:hover,
+.table thead td em.icon16descendingSelect{ background-position:0 -48px;}
+.ie7 .table thead td em{ top:0px;}
+.ie7 .table thead td em.icon16question{ margin-top:5px;}
+.ie6 .table thead td em.icon16question{ top:2px;}
+
+
+
+/*header*/
+.header{ position:static; margin-bottom:20px; height:auto; left:auto; top:auto;}
+html.ie6 body .header{ position:static; }
+.header .outer{ background:url(../../images/ma/admin/bgBody20120816.png) 0 0 repeat-x; position:static; height:auto;}
+.header .inner{ width:990px; height:66px; background:none;}
+.header .inner .logo{ width:140px; height:66px; float:left; margin-right:10px; text-indent:-999em;}
+.header .inner .logo a{ width:59px; height:62px; display:block; background:url(../../images/ma/admin/logo2.png) 0 center no-repeat;}
+.header .inner .logo a:hover{ background-position:0 center;}
+.header .menu{ margin-top:3px;}
+.header .menu li a{ height:55px; line-height:55px; padding:0 30px; font-size:14px; letter-spacing:0}
+.header .menu li a:hover{ background:#661A00;}
+.header .menu li.current a,
+.header .menu li.current a:hover{background:#661A00;}
+.header .conUser{ right:0;}
+.header .conUser li a{ height:55px; line-height:55px;}
+.header #userBar .name{ padding-right:0;}
+.header #userBar .name strong{ line-height:55px; font-size:12px; font-weight:normal; padding-right:0; }
+.header #userBar .logout a { background-image:url(../../images/ma/admin/iconLogout.gif); font-size:11px;}
+.header .subNav{ position:relative; top:-8px; height:32px; padding-bottom:8px; line-height:32px; background:#661A00; border-top:1px solid #5B1700; border-bottom:1px solid #fff;}
+.header .subNav .inner{ width:820px; padding-left:160px; height:42px;}
+.header .subNav .inner li{ display:inline-block; margin:0 15px; position:relative;}
+.header .subNav .inner li a{ height:40px; line-height:40px; padding:0; display:inline-block; color:#fff; text-shadow:1px 1px 1px rgba(0,0,0,0.3); font-size:14px;}
+.header .subNav .inner li a:hover{ text-decoration:underline;}
+.header .subNav .inner li.current a,
+.header .subNav .inner li.current a:hover{ font-weight:bold; font-size:16px;}
+.header .subNav .inner li ul{ position:absolute; left:-12px; top:39px; width:150px; margin:0; padding:0; background:#434850; color:#fff; display:none;}
+.header .subNav .inner li ul li{ width:150px; margin:0; }
+.header .subNav .inner li ul li a{ text-indent:13px; display:block;}
+.header .subNav .inner li.current ul li a{ color:#aaa;}
+.header .subNav .inner li.current ul li a:hover{ color:#ddd; background:#272D39;}
+
+
+
+.conTools{background:url(../../images/ma/admin/adminToolsBg.gif) 0 0 repeat-x #e4e4e4; border-bottom:1px solid #8F9BA1; padding:15px 8px; color:#454B52; position:relative; left:-15px; top:0; width:964px;}
+.conTools h2{ margin-bottom:5px; font-size:14px; color:#000; }
+.conTools fieldset hr{border-color:#fff;}
+.conFooter{ background:#f5f5f5; width:950px; padding:15px; margin:15px 0 -15px -15px; border-top:1px solid #BEC5C9;}
+.ie6 .conFooter,
+.ie7 .conFooter{ margin-bottom:0;}
+
+
+
+.conMiddleRight{ width:789px; min-height:600px; padding-top:0;}
+.conLeftMiddleRight{ padding-top:0;}
+.ie6 .conLeftMiddleRight,
+.ie7 .conLeftMiddleRight{ padding-bottom:0; width:950px; overflow:hidden;}
+
+
+
+
+/*bookBar set*/
+.bookBar{ overflow:hidden; display:none; position:absolute; z-index:102; left:0; color:#fff; background:url(../../images/ma/alpha70.png) 0 0 repeat;}
+.bookBar p{ height:18px; margin:0; padding:0; }
+.bookBar p em:hover{ color:#999;}
+
+
+/*slideDown set*/
+.slideDown{ position:absolute; z-index:102; color:#fff; }
+.slideDown span{ padding:2px 5px; display:inline-block; background:#333; border-radius:4px; display:none;}
+.slideDown p{ width:100px; margin:0; padding:0; display:none; position:absolute;}
+.slideDown p em:hover{ color:#999;}
+
+
+/*changePage*/
+.changePage{ text-align:right; padding:5px 0;}
+.changePage a{ display:inline-block; margin:0 2px; height:20px; padding:0 6px; line-height:20px; background:#ccc; color:#fff; font-size:12px; font-family:\5FAE\8F6F\96C5\9ED1;text-decoration:none; border-radius:5px;}
+.changePage a:hover{ background:#820000;}
+.changePage a:link,
+.changePage a:visited{ color:#fff;}
+.changePage a.current,
+.changePage a.current:hover{background: #5B1700;}
+.gotoPage{ float:right; margin-left:10px; padding:5px 0;}
+.gotoPage input.input{ height:12px; line-height:12px; margin:0 2px; font-size:10px; text-align:center;}
+.gotoPage a.btnBS{ padding:0 10px;}
+
+
+
+
+
+/*login*/
+.pageAdminLogin{ background:url(../../images/ma/admin/loginBg.jpg) center center no-repeat #485E1C; background-size:cover;}
+.pageAdminLogin .copyright{ font-size:11px; text-align:center; width:100%; position:absolute; bottom:0px; color:#fff; text-shadow:0 1px 1px rgba(0,0,0,0.3)}
+.conLogin{ width:420px; position:absolute; z-index:1; left:50%; top:50%; margin-left:-210px; height:300px; margin-top:-120px; }
+.conLogin .logo{ width:122px; height:89px; position:absolute; left:50%; margin-left:-61px; top:-80px; text-indent:-999em; overflow:hidden;}
+.conLogin .logo a{ width:122px; height:89px; background:url(../../images/ma/admin/logo.png) 0 center no-repeat; display:block;}
+.conLogin fieldset div{ margin:8px 0;}
+.conLogin fieldset h6{ font-size:18px; line-height:60px; text-align:center; font-weight:normal; color:#fff;}
+.conLogin fieldset div input.g250{ height:32px; line-height:32px; text-indent:10px; background:#fff; border:1px solid #5d664c; border-radius:5px; box-shadow:0 0 10px rgba(0,0,0,0.3) inset; margin:4px 0;}
+.conLogin fieldset div.action{ margin:20px; border-top:1px dotted #4E596B; padding-top:20px; position:relative;}
+.conLogin fieldset div.action em{ margin:0 9px;}
+.conLogin fieldset div.action .floatr{ position:absolute; top:40px; right:70px; color:#fff;}
+.conLogin fieldset div.action .floatr:hover{ text-decoration:underline;}
+
+
+
+
+
+.con002 fieldset em.tRight{ color:#000; font-size:14px; font-weight:bold; line-height:28px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.copyright{ margin-bottom:30px; text-align:center; font-size:11px; color:#333;}
+
+
+
+
+

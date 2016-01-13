@@ -1,0 +1,1 @@
+广告类别为"<b>{categoryName}</b>"、描述为“<b>{description}</b>”的广告{status}了。

@@ -1,0 +1,174 @@
+﻿@charset "utf-8";
+@import url("conM1.css");
+@import url("conNav.css");
+@import url("conReply.css");
+
+
+/*设置导航位置*/
+body{ padding-top:60px; background:none;}
+.header .menu .kanmi a,
+.header .menu .kanmi a:hover{background:#334455;}
+.header .homeNav .navOuter{ width:928px;}
+
+.header20120905 .outer .inner{ width:1024px; }
+.header20120905 .headerNav .subNav{ width:830px;}
+.header20120905 .headerNav ul.clearFix li#customizeNav{ display:none;}
+
+
+
+.body:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.body {zoom:1;} 
+.sideLeft{ width:780px; margin:0 auto; margin-bottom:50px;}
+#body{ position:relative; width:100%; background:url(../images/bgHtml20120331.gif) 0 0 repeat;}
+#body .header20120905{ position:absolute; top:-60px;}
+
+
+
+.con{ zoom:1; background:#fff; margin-bottom:20px; box-shadow:0px 1px 3px rgba(0,0,0,0.25);}
+.con:after {content:"\0020";display:block;height:0;clear:both; visibility:hidden;}
+
+
+.topReader{ height:600px; overflow:hidden; background:url(../images/detailTopBg.png) 0 0 repeat-x;}
+.topReader .innerHtml{ width:944px; height:600px; margin:0 auto; overflow-y:auto;}
+.topReader .innerHtml h1{ font-size:28px; font-weight:normal; color:#000; text-align:center; margin:20px 0;}
+.topReader .innerHtml .content{-webkit-column-count:3; -webkit-column-gap:40px; -moz-column-count:3; -moz-column-gap:40px; height:530px; margin-top:40px;}
+.topReader .innerHtml .content p{ color:#222; margin:0; padding:0; margin-bottom:15px; text-indent:2em; line-height:1.8em; font-size:16px; text-align:justify; }
+
+
+/*顶部阅读器*/
+.topReaderNull{ padding:120px 0; font-size:20px; text-align:center; background:url(../images/detailTopBg.png) 0 bottom repeat-x #F7F7F7;}
+
+.topReader20121108{ height:748px; padding:60px 0 30px 0; overflow:hidden; background:url(../images/detailTopBg.png) 0 bottom repeat-x #F7F7F7;}
+.topReader20121108 .ctrlPage a{ position:absolute; left:50%; top:355px; text-indent:-999em; overflow:hidden; width:64px; height:128px; background-repeat:no-repeat; background-image:url(../template/images/turnBtn.png); filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity:0.3;opacity:0.3;}
+.topReader20121108 .ctrlPage a.turnLeft{ margin-left:-626px; background-position:0 0;}
+.topReader20121108 .ctrlPage a.turnRight{ margin-left:562px; background-position:-64px 0;}
+.topReader20121108 .ctrlPage a:hover{filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+.topReader20121108 .ctrlPage a.disable{filter:alpha(opacity=10);-moz-opacity:0.1;-khtml-opacity:0.1;opacity:0.1; cursor:no-drop;}
+
+.topReader20121108 .tools{ width:1024px; height:58px; position:absolute; left:50%; margin-left:-512px; top:750px; background-color:transparent; z-index:20;}
+.topReader20121108 .tools p{ width:80px; height:58px; line-height:58px; text-align:center; color:#dcdcdc; font-size:14px; font-weight:bold; position:absolute; left:50%; margin-left:-40px;}
+.topReader20121108 .tools p span{ display:inline-block; margin:0 3px;}
+.topReader20121108 .tools a{ height:58px; display:block; float:right; text-indent:-999em; overflow:hidden; background-position:center center; background-repeat:no-repeat;}
+.topReader20121108 .tools a.turnRight{ width:70px; background-image:url(../template/images/iconRight.png);}
+.topReader20121108 .tools a.turnLeft{ width:70px; background-image:url(../template/images/iconLeft.png);}
+.topReader20121108 .tools a.comment{ width:70px; background-image:url(../template/images/iconComment.png);}
+.topReader20121108 .tools a.hide{ display:none;}
+
+.conOtherRead { width:1024px; margin:0 auto 20px auto; padding-top:55px; position:relative;}
+.conOtherRead h2{ width:95px; height:45px; background:url(../images/detailFlagBlue.gif) 0 0 no-repeat; text-indent:-999em; position:absolute; top:-3px; left:0;}
+.conOtherRead .inner{ width:1038px; height:180px; overflow:hidden;}
+.conOtherRead .inner .item{ width:145px; padding:6px; border:1px solid #eee; background:#fff; overflow:hidden; margin-right:14px; float:left; box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.conOtherRead .inner .item a{ color:#069; height:145px; display:block; overflow:hidden;}
+.conOtherRead .inner .item a:hover{ text-decoration:underline;}
+.conOtherRead .inner .item a img{ width:145px; display:block;}
+.conOtherRead .inner .item a div{ width:145px; height:100px; overflow:hidden; margin-bottom:4px; background:#eee url(../images/logo20120308.png) 10px center no-repeat;}
+.conOtherRead .inner .item a p{ line-height:20px; overflow:hidden;}
+
+
+
+
+
+.sideLeft .sendBox { padding:20px; background:#f9f9f9; border-bottom:1px solid #ebebeb;}
+.sideLeft .sendBox .head { float:left; width:75px; height:75px; border-radius:3px;}
+.sideLeft .sendBox .right { float:left; width:645px; margin-left:10px;}
+.sideLeft .sendBox .right .input { border:1px solid #c7dbb5; background:none; padding:0; height:73px; width:643px; position:relative; border-radius:3px; margin-bottom:10px;}
+.sideLeft .sendBox .right .input textarea { border:1px solid #f2f8e6; background:#e7f2d1; color:#7c8865; padding:5px; width:631px; position:relative; height:61px; border-radius:3px; overflow:auto; font-size:14px;}
+.sideLeft .sendBox .right .input em { width:10px; height:6px; display:block; position:absolute; left:-7px; top:-1px; z-index:1; background:url(../images/icon/m1ReplyArrow.gif) 0 -10px no-repeat;}
+.sideLeft .sendBox .shareWeiBo { float:left; line-height:20px; padding:5px 0 5px 14px; color:#919191; display:block; position:relative;}
+.sideLeft .sendBox .shareWeiBo sup { width:12px; height:12px; overflow:hidden; display:block; background:url(../images/iconCheckbox.gif) 0 0; position:absolute; left:0; top:8px;}
+.sideLeft .sendBox .shareWeiBo:hover { color:#666;}
+.sideLeft .sendBox .shareWeiBo:hover sup { background:url(../images/iconCheckbox.gif) 0 -24px;}
+.sideLeft .sendBox .shareWeiBoChecked sup,
+.sideLeft .sendBox .shareWeiBoChecked:hover sup { background:url(../images/iconCheckbox.gif) 0 -12px;}
+.sideLeft .sendBox .txtNum { float:right; font-weight:normal; color:#b3b3b3; line-height:28px; padding: 0; margin-right:10px;}
+.sideLeft .sendBox .txtNum span { padding:0 5px; font-size:16px; color:#999; font-family:Constantia,Georgia;}
+.sideLeft .sendBox .btnGB { float:right;}
+.sideLeft .conReply { padding:30px 30px 5px 30px;}
+.sideLeft .conReplyMore { background:url(../images/icon/m1ReplyMore.gif) center center no-repeat; width:100px; height:30px; display:block; margin:0 auto;}
+.sideLeft .conReplyMore:hover { background:url(../images/icon/m1ReplyMoreHover.gif) center center no-repeat;}
+
+.ieOld .sideLeft{border:1px solid #e5e5e5;}
+.ie6 .sideLeft .sendBox .right .input textarea,
+.ie7 .sideLeft .sendBox .right .input textarea { margin-top:-1px;}
+
+
+
+
+
+.body{ width:1024px; padding:0;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+.footerBig .inner { width:900px;}
+.footerBig .inner .contactForm { display:none;}
+
+
+
+/* 设备判断 */
+.padStyle{min-width: auto;}
+.padStyle .header20120905 .headerTop{display: none;}
+.padStyle .header20120905 .headerNav{top:0;}
+.padStyle .topReader20121108{padding-top: 30px;background: none;}
+.padStyle .topReader20121108 .ctrlPage a.turnLeft{margin-left: -586px;}
+.padStyle .topReader20121108 .ctrlPage a.turnRight{margin-left: 522px;}
+.padStyle .footerBig {padding:70px 0}
+.padStyle .body .sideLeft{display: none;}
+.padStyle .topReader20121108 .tools{top:720px;}
+.padStyle .conOtherRead{margin-bottom: 0;}
+.padStyle #imageView{-webkit-overflow-scrolling:touch;}
+
+.phoneStyle{min-width: 320px;}
+.phoneStyle .header20120905 .headerTop{display: none;}
+.phoneStyle .header20120905 .headerNav{top:0;}
+.phoneStyle .header20120905 .headerNav .logo,
+.phoneStyle .header20120905 .outer .inner{width: 100%;}
+.phoneStyle .header20120905 .headerNav .logo a{margin: 0 auto;}
+.phoneStyle .header20120905 .headerNav .subNav{display: none;}
+.phoneStyle #logo{float: none;margin-right: 0;}
+.phoneStyle .topReader20121108{padding-top:0;height: auto;padding-bottom: 30px;}
+.phoneStyle .topReader20121108 .ctrlPage{overflow:hidden;}
+.phoneStyle .topReader20121108 .ctrlPage a.turnLeft,.phoneStyle .topReader20121108 .ctrlPage a.turnRight{position: fixed;
+	background:url(../images/turnBtn20130509.png) no-repeat;
+	background-size:60px 60px;height: 60px;width: 60px;top: 80px;margin-left: 0;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;
+	z-index: 999;
+}
+.phoneStyle .topReader20121108 .ctrlPage a.turnLeft{left:0;background-position:-30px 0;}
+.phoneStyle .topReader20121108 .ctrlPage a.turnRight{right:0;left: auto;background-position:30px 0;}
+.phoneStyle .topReader20121108 .ctrlPage a.disable{cursor: default;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+
+.phoneStyle .topReader20121108 .tools{display: none;}
+.phoneStyle .footerBig {display: none;}
+.phoneStyle .body .sideLeft{display: none;}
+.phoneStyle .mainContent .pic{position:relative;display:block;}
+.phoneStyle .mainContent .pic div{overflow: visible;padding: 15px;}
+.phoneStyle .mainContent h6{display: none;}
+.phoneStyle .mainContent #mainText .pic div{padding:0;padding-bottom: 15px;}
+.phoneStyle .mainContent .pic div img{position:relative;display: block;width: 100%;height: auto;}
+.phoneStyle .mainContent .content{position: static;padding:0;}
+.phoneStyle .mainContent .pic span{display: none;}
+.phoneStyle .mainContent h1{font-size: 22px;padding: 0 15px; font-weight:bold;}
+.phoneStyle .mainContent .source{padding: 0 15px;padding-bottom: 20px;display: none;}
+.phoneStyle .mainContent .content .text{padding-left: 15px;padding-right: 15px;}
+.phoneStyle .conOtherRead{width: auto;margin: 0;padding: 15px;padding-top: 58px;}
+.phoneStyle .conOtherRead h2{left: 15px;}
+.phoneStyle .conOtherRead .inner .item a div{display: none;}
+.phoneStyle .body{width: 100%;}
+.phoneStyle .conOtherRead .inner{width: 100%;height: auto;}
+.phoneStyle .conOtherRead .inner .item {background: none repeat scroll 0 0 #FAFAFA; border-bottom: 1px solid #E6E6E6; border-top: 1px solid #FFFFFF; display: block; height: 24px; line-height: 24px; overflow: hidden; padding: 5px 10px; position: relative; float: none; width: auto;margin-right: 0; }
+.phoneStyle .conOtherRead .inner .item a{height: auto;white-space: nowrap;}
+.phoneStyle .mainContent .content .text .pic div img{margin-bottom: 20px;}
+
+
+
+
+

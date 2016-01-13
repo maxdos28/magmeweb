@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelManage.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<!--[if lte IE 6]>
+<link href="style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="inner">
+        <!--logo-->
+        <h1 class="logo"><a href="javascript:void(0)">麦米-Magme</a></h1>
+        <!--nav-->
+        <ul class="nav">
+            <li><a href="manageHome.html">首页</a></li>
+            <li><a href="manageServices.html">产品与服务</a></li>
+            <li class="current"><a href="manageMgzHome.html">杂志商中心</a></li>
+            <li><a href="manageAdHome.html">广告商中心</a></li>
+        </ul>
+        <!--loginBar-->
+        <ul class="userBar" id="logInForm">
+            <li class="reg"><a class="sub" href="javascript:void(0)">注册</a>
+                <div class="box">
+                	<sub></sub>
+                	<div class="con">
+                        <fieldset class="png">
+                            <div class="input">
+                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名" /></em>
+                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="email" name="email" type="text" tipsSpan="邮箱" /></em>
+                                <em id="checkEmail" class="tipsWrong" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+                            </div>
+                            <div class="input">
+                            	<em><input class="in" id="password" name="password" type="password" tipsSpan="确认密码" /></em>
+                                <em id="checkPassword" class="tipsRight"></em>
+                            </div>
+                            <div code="getcode">
+                                <em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tipsSpan="验证码" /></em>
+                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+                            </div>
+                            <div class="last">
+                                <em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+                                <em class="loading"></em>
+                                <em class="tipsError">请填写相关信息</em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+            <li class="login"><a class="sub" href="javascript:void(0)">登录</a>
+            	<div class="box">
+                	<sub></sub>
+                	<ul class="select">
+                    	<li class="current"><a href="javascript:void(0)"><img src="images/icon/sns32/32-magme.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qq.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-renren.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-weibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-163weibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-douban.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-sohuweibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-baidu.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qqweibo.gif" /></a></li>
+                    </ul>
+                	<div class="con">
+                        <fieldset class="png">
+                            <div class="input">
+                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名/邮箱" /></em>
+                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+                                <em class="tipsWrong" style="display:block;"></em>
+                            </div>
+                            <div code="getcode">
+                                <em class="m0"><input code="getcode" class="input g60" name="authcode" type="text" tipsSpan="验证码" /></em>
+                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+                            </div>
+                            <div>
+                                <em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+                                <em class="loading"></em>
+                                <em class="remanber"><label><input type="checkbox" />下次自动登录</label></em>
+                                <em class="tipsError">请填写相关信息</em>
+                            </div>
+                            <div class="last">
+                                <em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+                                <em><a href="javascript:void(0)">新用户注册</a></em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--loginBar-->
+        <ul class="loginBar" style="display:none;">
+        	<li><a href="javascript:void(0)"><img src="images/head30.gif" /></a></li>
+        	<li class="user"><strong>Lewis</strong><a href="javascript:void(0)"><sub></sub><em>(5)</em></a></li>
+        	<li class="logout"><a href="javascript:void(0)">退出</a></li>
+        	<li class="setup"><a href="snsMyConfig.html">设置</a></li>
+        </ul>
+
+    </div>
+</div>
+<!--body-->
+<div class="body">
+	<div class="body980">
+	<!--topBar-->
+	<div class="topBar clearFix">
+        <ul class="subNav">
+            <li><a href="javascript:void(0)">杂志商中心</a></li>
+        </ul>
+    </div>
+	<!--bodyContent-->
+	<div class="bodyContent clearFix">
+    	<!--conLeft-->
+        <div class="conLeft">
+        	<div class="itemUser">
+            	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>用户名-很长很长很长很长很长很长</h3>
+                <div class="control clearFix">
+                    <a class="iconEdit" href="javascript:void(0)">编辑账号</a>
+                    <a class="iconChange" href="javascript:void(0)">更换头像</a>
+                </div>
+                <ul class="clear listB clearFix">
+                    <li><a class="current" href="javascript:alert('弹出层')">创建杂志</a></li>
+                    <li><a href="javascript:alert('弹出层')">上传期刊</a></li>
+                    <li><a href="manageMgzList.html">杂志管理</a></li>
+                    <li><a href="manageMgzData.html">数据分析</a></li>
+                    <li><a href="manageMgzUploadStatus.html">上传状态</a></li>
+                    <li><a href="ManageMgzMsg.html">消息<span>(99)</span></a></li>
+                    <li><a href="publisherHome.html">前台主页</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--conMiddleRight-->
+        <div class="conMiddleRight">
+            <!--conMyMessageDetail-->
+            <div class="conB conMyMessageDetail">
+            	<h2>我的消息 - <strong>来自某某</strong></h2>
+                <div class="topBar clearFix">
+                    <div class="floatr">
+                        <input type="text" class="input" tips="search" />
+                        <a href="#" class="btnBS" >搜索</a>
+                    </div>
+                    <div class="floatl">
+                    <a href="javascript:history.go(-1)" class="btnWS" >收件箱</a>
+                    <a href="snsMyMessageWrite.html" class="btnOS" >新建</a>
+                    </div>
+                </div>
+                <div class="conBody">
+                    <div class="item clearFix">
+                        <div class="userHead"><img src="images/head60.gif" /><sub></sub></div>
+                        <div class="right">
+                            <strong>好友姓名</strong>
+                            <span>发送于：2011-11-11</span>
+                            <p>但它是塞勒涅、阿耳忒弥斯、黛安娜、伊希斯<em>这些</em>月亮女神的化身；它是衡量我们生长与繁殖力的可怕时钟；它在西方是一位老人的家，在东方是一只兔子的家。</p>
+                            
+                        </div>
+                        <del></del>
+                    </div>
+                    <div class="item itemOwn clearFix">
+                        <div class="userHead"><img src="images/head60.gif" /><sub></sub></div>
+                        <div class="right">
+                            <strong>本人姓名</strong>
+                            <span>发送于：2011-11-11</span>
+                            <p>在所有宗教与各种传统中，月亮都是极为重要的图腾；在占星术中，它具有神秘的力量——潜意识、通灵、梦境、想象、情感世界，以及一切瞬息万变的事物都由它掌控。根据《企鹅符号词典》的说法，月亮的光芒来自太阳，"它代表了思考后获得的知识，也就是理论或者概念。"</p>
+                            <p><em>这些</em>表明，月球不再只是一块冷冰冰的石头，它更是一个抽象的概念，让人琢磨不透。</p>
+                            
+                        </div>
+                    </div>
+                    <div class="item clearFix">
+                        <div class="userHead"><img src="images/head60.gif" /><sub></sub></div>
+                        <div class="right">
+                            <strong>好友姓名</strong>
+                            <span>发送于：2011-11-11</span>
+                            <p>那么，该怎样将38.6万千米外的月亮融入你的作品呢？艺术家如何说服那些控制生杀大权的爱国军工研究机构，让自己也有机会触摸这个离我们最近的天体呢？似乎没有直接的办法。</p>
+                            
+                        </div>
+                    </div>
+                    <div class="item itemOwn clearFix">
+                        <div class="userHead"><img src="images/head60.gif" /><sub></sub></div>
+                        <div class="right">
+                            <strong>本人姓名</strong>
+                            <span>发送于：2011-11-11</span>
+                            <p>在所有宗教与各种传统中，月亮都是极为重要的图腾；在占星术中，它具有神秘的力量——潜意识、通灵、梦境、想象、情感世界，以及一切瞬息万变的事物都由它掌控。根据《企鹅符号词典》的说法，月亮的光芒来自太阳，"它代表了思考后获得的知识，也就是理论或者概念。"</p>
+                            <p><em>这些</em>表明，月球不再只是一块冷冰冰的石头，它更是一个抽象的概念，让人琢磨不透。</p>
+                            
+                        </div>
+                    </div>
+                    <div class="item clearFix">
+                        <div class="userHead"><img src="images/head60.gif" /><sub></sub></div>
+                        <div class="right">
+                            <strong>好友姓名</strong>
+                            <span>发送于：2011-11-11</span>
+                            <p>那么，该怎样将38.6万千米外的月亮融入你的作品呢？艺术家如何说服那些控制生杀大权的爱国军工研究机构，让自己也有机会触摸这个离我们最近的天体呢？似乎没有直接的办法。</p>
+                            
+                        </div>
+                    </div>
+                    <div class="item reply clearFix">
+                        <textarea class="input" tips="回复内容："></textarea>
+                        <a href="#" class="btnBS">回复</a>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+    </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer footerMini footerStatic">
+	<div class="inner">
+    	<p>Copyright &copy; 2011 麦米版权所有 | 沪ICP备 <a href="http://www.miibeian.gov.cn" target="_blank">10217320</a></p>
+        <div class="nav">
+        	<ul class="m1">
+            	<li><a href="javascript:void(0)">公司信息</a>
+                	<ul>
+                        <li><a href="static_join_us.html">关于我们</a></li>
+                        <li><a href="static_about_us.html">加入我们</a></li>
+                        <li><a href="static_bulletin.html">麦米号外</a></li>
+                        <li><a href="static_policy.html">法律声明</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m2">
+            	<li><a href="javascript:void(0)">商务合作</a>
+               		<ul>
+                        <li><a href="javascript:void(0)">上传杂志</a></li>
+                        <li><a href="javascript:void(0)">合作媒体</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m3">
+            	<li><a href="javascript:void(0)">获取更新</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">邮件订阅</a></li>
+                        <li><a href="javascript:void(0)">麦米RSS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m4">
+            	<li><a href="javascript:void(0)">帮助中心</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">意见反馈</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

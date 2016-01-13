@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelManage.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<!--[if lte IE 6]>
+<link href="style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="inner">
+        <!--logo-->
+        <h1 class="logo"><a href="javascript:void(0)">麦米-Magme</a></h1>
+        <!--nav-->
+        <ul class="nav">
+            <li><a href="manageHome.html">首页</a></li>
+            <li><a href="manageServices.html">产品与服务</a></li>
+            <li><a href="manageMgzHome.html">杂志商中心</a></li>
+            <li class="current"><a href="manageAdHome.html">广告商中心</a></li>
+        </ul>
+        <!--loginBar-->
+        <ul class="userBar" id="logInForm">
+            <li class="reg"><a class="sub" href="javascript:void(0)">注册</a>
+                <div class="box">
+                	<sub></sub>
+                	<div class="con">
+                        <fieldset class="png">
+                            <div class="input">
+                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名" /></em>
+                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="email" name="email" type="text" tipsSpan="邮箱" /></em>
+                                <em id="checkEmail" class="tipsWrong" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+                            </div>
+                            <div class="input">
+                            	<em><input class="in" id="password" name="password" type="password" tipsSpan="确认密码" /></em>
+                                <em id="checkPassword" class="tipsRight"></em>
+                            </div>
+                            <div code="getcode">
+                                <em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tipsSpan="验证码" /></em>
+                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+                            </div>
+                            <div class="last">
+                                <em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+                                <em class="loading"></em>
+                                <em class="tipsError">请填写相关信息</em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+            <li class="login"><a class="sub" href="javascript:void(0)">登录</a>
+            	<div class="box">
+                	<sub></sub>
+                	<ul class="select">
+                    	<li class="current"><a href="javascript:void(0)"><img src="images/icon/sns32/32-magme.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qq.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-renren.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-weibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-163weibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-douban.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-sohuweibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-baidu.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qqweibo.gif" /></a></li>
+                    </ul>
+                	<div class="con">
+                        <fieldset class="png">
+                            <div class="input">
+                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名/邮箱" /></em>
+                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+                                <em class="tipsWrong" style="display:block;"></em>
+                            </div>
+                            <div code="getcode">
+                                <em class="m0"><input code="getcode" class="input g60" name="authcode" type="text" tipsSpan="验证码" /></em>
+                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+                            </div>
+                            <div>
+                                <em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+                                <em class="loading"></em>
+                                <em class="remanber"><label><input type="checkbox" />下次自动登录</label></em>
+                                <em class="tipsError">请填写相关信息</em>
+                            </div>
+                            <div class="last">
+                                <em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+                                <em><a href="javascript:void(0)">新用户注册</a></em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--loginBar-->
+        <ul class="loginBar" style="display:none;">
+        	<li><a href="javascript:void(0)"><img src="images/head30.gif" /></a></li>
+        	<li class="user"><strong>Lewis</strong><a href="javascript:void(0)"><sub></sub><em>(5)</em></a></li>
+        	<li class="logout"><a href="javascript:void(0)">退出</a></li>
+        	<li class="setup"><a href="snsMyConfig.html">设置</a></li>
+        </ul>
+
+    </div>
+</div>
+<!--body-->
+<div class="body">
+	<div class="body980">
+	<!--topBar-->
+	<div class="topBar clearFix">
+        <ul class="subNav">
+            <li><a href="javascript:void(0)">广告商中心</a></li>
+        </ul>
+    </div>
+	<!--bodyContent-->
+	<div class="bodyContent clearFix">
+    	<!--conLeft-->
+        <div class="conLeft">
+        	<div class="itemUser">
+            	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>用户名-很长很长很长很长很长很长</h3>
+                <div class="control clearFix">
+                    <a class="iconEdit" href="javascript:void(0)">编辑账号</a>
+                    <a class="iconChange" href="javascript:void(0)">更换头像</a>
+                </div>
+                <ul class="clear listB clearFix">
+                    <li><a class="current" href="manageAdPosition.html">广告位管理</a></li>
+                    <li><a href="manageAdCreate.html">创建广告</a></li>
+                    <li><a href="manageAdMyAd.html">我创建的广告</a></li>
+                    <li><a href="manageAdData.html">广告数据</a></li>
+                    <li><a href="manageAdMyMgzAd.html">我期刊的广告</a></li>
+                    <li><a href="manageAdMagmeAd.html">麦米广告</a></li>
+                    <li><a href="manageAdSideAd.html">侧栏广告</a></li>
+                    <li><a href="manageAdMsg.html">消息<span>(99)</span></a></li>
+                </ul>
+            </div>
+        </div>
+		<!--conMiddleRight-->
+        <div class="conMiddleRight">
+            <!--conMyMessageWrite-->
+            <div id="conMessageWrite" class="conB conMyMessageWrite">
+                <h2>发送短消息</h2>
+                <div class="topBar clearFix">
+                    <div class="floatl">
+                    <a href="snsMyMessage.html" class="btnWS" >收件箱</a>
+                    </div>
+                </div>
+                <div class="conBody">
+                    <div id="wirteMessage" class="wirteMessage">
+                        <div id="chooseFriend" class="nameList clearFix">
+                            <input id="sendNames" name="toUserNickNames" class="input" tips="选择好友" />
+                            <ul id="friends" class="clearFix scroll-pane">
+                                <li><label><input type="checkbox" />好友名1</label></li>
+                                <li><label><input type="checkbox" />好友名2</label></li>
+                                <li><label><input type="checkbox" />好友名3</label></li>
+                                <li><label><input type="checkbox" />好友名4</label></li>
+                                <li><label><input type="checkbox" />好友名5</label></li>
+                                <li><label><input type="checkbox" />好友名6</label></li>
+                                <li><label><input type="checkbox" />好友名7</label></li>
+                                <li><label><input type="checkbox" />好友名8</label></li>
+                                <li><label><input type="checkbox" />好友名9</label></li>
+                                <li><label><input type="checkbox" />好友名10</label></li>
+                                <li><label><input type="checkbox" />好友名11</label></li>
+                                <li><label><input type="checkbox" />好友名12</label></li>
+                            </ul>
+                            <a href="javascript:void(0)" id="chooseOK" class="submit">确定</a>
+                            <a href="javascript:void(0)" id="checkBack" class="checkBack">反选</a>
+                            <a href="javascript:void(0)" id="checkAll" class="checkAll">全选</a>
+                        </div>
+                        <div class="reply clearFix">
+                            <textarea class="input" tips="消息内容："></textarea>
+                            <a href="#" class="btnBS">发送</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+    </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer footerMini footerStatic">
+	<div class="inner">
+    	<p>Copyright &copy; 2011 麦米版权所有 | 沪ICP备 <a href="http://www.miibeian.gov.cn" target="_blank">10217320</a></p>
+        <div class="nav">
+        	<ul class="m1">
+            	<li><a href="javascript:void(0)">公司信息</a>
+                	<ul>
+                        <li><a href="static_join_us.html">关于我们</a></li>
+                        <li><a href="static_about_us.html">加入我们</a></li>
+                        <li><a href="static_bulletin.html">麦米号外</a></li>
+                        <li><a href="static_policy.html">法律声明</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m2">
+            	<li><a href="javascript:void(0)">商务合作</a>
+               		<ul>
+                        <li><a href="javascript:void(0)">上传杂志</a></li>
+                        <li><a href="javascript:void(0)">合作媒体</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m3">
+            	<li><a href="javascript:void(0)">获取更新</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">邮件订阅</a></li>
+                        <li><a href="javascript:void(0)">麦米RSS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m4">
+            	<li><a href="javascript:void(0)">帮助中心</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">意见反馈</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

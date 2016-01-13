@@ -1,0 +1,1507 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/pop.css" rel="stylesheet" type="text/css" />
+<link href="style/en.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/systemProp.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<!--[if lte IE 6]>
+<link href="style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js" charset="utf-8"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+<script>
+	$(function(){
+		$("#selectDate").unbind("focus").focus(function(){
+			$(this).next().slideDown(400);
+		});
+		$("#selectDate").blur(function(){
+			setTimeout(function(){$("#selectDateBox").slideUp(200)},100)
+		});
+		$("#selectDateBox a").bind('click',function(){
+			$("#selectDate").val($(this).html());
+		})
+	});
+</script>
+
+<style>
+.body{ background:#666}
+#fancybox-wrap {  display:block; position:static; margin:20px auto;}
+#fancybox-content {  display:block; width:auto;}
+#fancybox-content .popContent{ display:block;}
+
+
+
+</style>
+</head>
+<body>
+<div class="main">
+<div class="body">
+
+<a href="javascript:$.lightBox('SubmitDelete？');">弹出</a>
+
+
+
+
+
+
+
+
+<div class="popContent popRegister" style="display:none;">
+	<div class="content">
+    	<fieldset>
+        	<h6>表单名称</h6>
+            <div>
+            	<em class="title">每行一个</em><em><input class="input g150" type="text" tips="提示内容" /></em>
+            </div>
+            <div class="auto">
+            	<em class="title">更换头像</em><em><img src="" width="150" height="150" style="background:#ccc;" /><input type="file" class="clear" /></em>
+            </div>
+            <div>
+            	<em class="title">每行多个</em><em><input class="input g130" type="text" tips="提示" /></em><em class="title">每行多个</em><em><input class="input g130" type="text" tips="提示" /></em>
+            </div>
+	  		<div>
+            	<em class="title">每行多个（对齐）</em><em><input class="input g130" type="text" tips="提示" /></em><em class="title">每行多个</em><em><input class="input g130" type="text" tips="提示" /></em>
+            </div>
+            <div>
+            	<em class="title">每行多个（不对齐）</em><em class="g170"><input class="input g130" type="text" tips="提示" /></em><em>每行多个</em><em><input class="input g130" type="text" tips="提示" /></em>
+            </div>
+            <div>
+            	<em class="title">每行多个</em><em><input class="input g50" type="text" tips="提示" /></em>
+                <em>每行多个</em><em><input class="input g50" type="text" tips="提示" /></em>
+            	<em>每行多个</em><em><input class="input g50" type="text" tips="提示" /></em>
+              <em>每行多个</em><em><input class="input g50" type="text" tips="提示" /></em>
+            </div>
+            <div>
+            	<em class="title">密码</em><em><input class="input g150" type="password" tips="提示内容" /></em>
+            </div>
+            <div>
+            	<em class="title">重复密码</em><em><input class="input g150" type="password" tips="提示内容" /></em>
+            </div>
+            <div>
+            	<em class="title">单选</em><em><label><input type="radio" />Male</label></em><em><label><input type="radio" />Female</label></em>
+            </div>
+            <div>
+            	<em class="title">多选</em>
+                <em><label><input type="checkbox" />选项一</label></em>
+                <em><label><input type="checkbox" />选项二</label></em>
+                <em><label><input type="checkbox" />选项三</label></em>
+                <em><label><input type="checkbox" />选项四</label></em>
+                <em><label><input type="checkbox" />选项五</label></em>
+            </div>
+            <div>
+            	<em class="title">多选</em>
+                <em><label><input type="checkbox" />选项六</label></em>
+                <em><label><input type="checkbox" />选项七</label></em>
+                <em><label><input type="checkbox" />选项八</label></em>
+                <em><label><input type="checkbox" />选项九</label></em>
+                <em><label><input type="checkbox" />选项十</label></em>
+            </div>
+            <div>
+            	<em class="title">跨行排列</em><em><input class="input g420" type="text" tips="text" /></em>
+            </div>
+            <div>
+            	<em class="title">跨行排列</em><em><textarea rows="4" class="input g420" type="text" tips="textArea"></textarea></em>
+            </div>
+            <div>
+            	<em class="title">下拉</em>
+                <em><select class="g150"></select></em>
+            </div>
+            <div>
+            	<em class="title"></em><em><label><input type="checkbox" />我已同意并遵守</label></em><em><a href="javascript:void(0)">注册协议</a></em>
+            </div>
+            <div>
+            	<em class="title">&nbsp;</em><em><input type="button" value="Submit" /></em><em><input type="reset" value="Cancel" /></em>
+            </div>
+            <div>
+                <em><input type="button" class="btnOS" value="SubmitSubmit" /></em>
+                <em><input type="button" class="btnBS" value="Cancel" /></em>
+                <em><input type="button" class="btnWS" value="Back" /></em>
+                <em><input type="button" class="btnOB" value="Submit" /></em>
+                <em><input type="button" class="btnBB" value="Cancel" /></em>
+                <em><input type="button" class="btnWB" value="Back" /></em>
+            </div>
+            <div>
+                <em><a class="btnOS" href="javascript:void(0)">SubmitSubmit</a></em>
+                <em><a class="btnBS" href="javascript:void(0)">Cancel</a></em>
+                <em><a class="btnWS" href="javascript:void(0)">Back</a></em>
+                <em><a class="btnOB" href="javascript:void(0)">Submit</a></em>
+                <em><a class="btnBB" href="javascript:void(0)">Cancel</a></em>
+                <em><a class="btnWB" href="javascript:void(0)">Back</a></em>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
+<div class="popContent popNewMessage" style="display:none;">
+	<div class="content">
+    	<fieldset>
+        	<h6>New Message</h6>
+            <div>
+            	<em class="title">收件人</em><em><input class="input g290" type="text" tips="提示内容" /></em>
+            </div>
+            <div>
+            	<em class="title">Message</em><em><textarea rows="3" class="input g290" type="text" tips="提示内容"></textarea></em>
+            </div>
+            <div>
+            	<em class="title">&nbsp;</em><em><a href="#" class="btnBS">Send</a></em><em><a href="#" class="btnWS" >Cancel</a></em>
+            </div>
+        </fieldset>
+	</div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:320px;">
+    <a class="del" title="Close"></a>
+    <div id="fancybox-content" style="height:373px;">
+        <div class="popContent" id="uploadUserAvatarDialog">
+            <fieldset>
+                <h6>Change Icon</h6>
+                <form method="post" action="" onsubmit="return false;">
+                    <div class="imgArea">
+                        <a href="#" class="hide"><span><img src="images/tempMagazineBig4.jpg" /></span></a>
+                    </div>
+                    <div class="tCenter">
+                        <a id="submit" href="#" class="btnBS" >Submit</a>
+                        <a id="cancel" href="#" class="btnWS" >Cancel</a>
+                        <a class="btnOB" href="#"><span>Upload Picture</span><input type="file" class="inputFile" /></a>
+                        <span class="tipsError" id="tipsError">Select Picture</span>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:230px;">
+        <div class="popContent" id="editTagDialog">
+            <fieldset>
+	        	<h6>Edit Tags</h6>
+	        	<form method="post" id="editTagForm">
+	        	<input type="hidden" name="id">
+	            <div>
+	            	<em class="title">Title</em>
+	            	<em><input type="text" class="input g350" name="title"></em>
+	            </div>
+	            <div>
+	            	<em class="title">Keywords</em>
+	            	<em><input type="text" class="input g350" name="keyword"></em>
+	            </div>
+	            <div>
+	            	<em class="title">Description</em>
+	            	<em><textarea class="input g350" name="description"></textarea></em>
+	            </div>
+	            <div>
+	            	<em class="title"></em>
+	            	<a id="editTagFormDeleteBtn" href="javascript:void(0)" class="btnOS">Delete</a>
+	                <em ><a id="editTagFormSubmitBtn" href="javascript:void(0)" class="btnBS" >Edit</a></em>
+	                <em ><a id="editTagFormCancelBtn" href="javascript:void(0)" class="btnWS" >Cancel</a></em>
+	                <em id ="tipError" class="tipsError">Please fill out</em>
+	            </div>
+	            </form>
+	        </fieldset>
+        </div>
+    </div>
+</div>
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:230px;">
+        <div class="popContent" id="editTagDialog">
+            <fieldset>
+	        	<h6>Advertising Content Editing</h6>
+	        	<form method="post" id="editTagForm">
+	        	<input type="hidden" name="id">
+	            <div>
+	            	<em class="title">Name</em>
+	            	<em><input type="text" class="input g350" name="title"></em>
+	            </div>
+	            <div>
+	            	<em class="title">Brand</em>
+	            	<em><input type="text" class="input g350" name="keyword"></em>
+	            </div>
+	            <div>
+	            	<em class="title">Description</em>
+	            	<em><textarea class="input g350" name="description"></textarea></em>
+	            </div>
+	            <div>
+	            	<em class="title"></em>
+	            	<a id="editTagFormDeleteBtn" href="javascript:void(0)" class="btnOS">Delete</a>
+	                <em ><a id="editTagFormSubmitBtn" href="javascript:void(0)" class="btnBS" >Edit</a></em>
+	                <em ><a id="editTagFormCancelBtn" href="javascript:void(0)" class="btnWS" >Cancel</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+        </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:255px;">
+        <div id="createPublicationDialog"  class="popContent">
+            <fieldset>
+            	<h6>Create Magazine</h6>
+                <form method="post" id="createPublicationDialogForm">
+                <div>
+                    <em class="title">Name</em>
+                    <em><input type="text" class="input g330" name="name"></em>
+                </div>
+                <div>
+                    <em class="title">Category</em>
+                    <em><select><option>childcategory.name</option></select></em>
+                </div>
+	            <div class="clip">
+	            	<em class="title">Cutting</em>
+	            	<em class="type1"><label><input type="radio" checked="true"><span></span></label></em>
+	            	<em class="type2"><label><input type="radio" ><span></span></label></em>
+	            </div>
+                <div>
+                    <em class="title">Description</em>
+                    <em><input type="text" class="input g330" name="description"></em>
+                </div>
+                
+                <div>
+                    <em class="title">Language</em>
+                    <em>
+                     <select name="languageId">
+                        <option  value="1">Chinese</option>
+                        <option  value="2">English</option>
+                     </select>
+                    </em>
+                </div>
+                
+                <div>
+                	<em class="title"></em>
+                    <em ><a href="#"  class="btnBS" id ="createPublicationSubmit">Submit</a></em>
+                    <em ><a href="#"  class="btnWS">Cancel</a></em>
+                    <em id ="tipError" class="tipsError">Please fill out</em>
+                </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="fancybox-wrap" class="pop" style="width:600px;">
+	<del id="fancybox-close" title="Close"></del>
+    <div id="fancybox-content" style="height:498px;">
+        <div id="userInfoDialog" class="popContent">
+	    	<fieldset>
+            	<h6>Edit Account</h6>
+	        	<form id="editForm" method="post" action="" onsubmit="return false;">
+                <div class="important">
+	            	<em class="title">Old Password</em>
+                    
+	            	<em><input id="oldPassword" name="oldPassword" class="input g130" type="password"></em>
+                    <em class="tips">Please leave it if you don't want to change your password</em>
+	            </div>
+                <div class="important">
+	            	<em class="title">New Password</em>
+	            	<em class="g180"><input id="password" name="password" class="input g130" type="password"></em>
+	            	<em class="title">Confirm Password</em>
+	            	<em><input id="password2" name="password2" class="input g130" type="password"></em>
+	            </div>
+                <hr />
+	            <div>
+	            	<em class="title">User Name</em>
+	            	<em class="g180"><input id="userName" name="userName" value="test" class="input g130" type="text" disabled=""></em>
+	            	<em class="title">Nick Name</em>
+	            	<em><input id="nickName" name="nickName" value="tell" class="input g130" type="text"></em>
+	            </div>
+	            <div>
+	            	<em class="title">Email</em>
+	            	<em class="g180"><input id="email" name="email" value="test123@126.com" class="input g130" type="text"></em>
+	            	<em class="title">Tel</em>
+	            	<em><input id="phone" name="phone" value="138796465498" class="input g130" type="text"></em>
+	            </div>
+	            <div>
+	            	<em class="title">Sex</em>
+	            	<em class="g40"><label><input type="radio" name="gender" value="1" checked="true">Male</label></em>
+	            	<em class="g40"><label><input type="radio" name="gender" value="2">Female</label></em>
+	            	<em class="g90"><label><input type="radio" name="gender" value="0">Secrecy</label></em>
+	            	<em class="title titleBirthday">Birthday</em>
+	            	<em><input id="birthdate" name="birthdate" value="" class="input g130 gBirthday" type="text"></em>
+	            	<em>(1985-01-11)</em>
+	            </div>
+                <hr />
+	            <div>
+	            	<em class="title">Occupation</em>
+	            	<em class="g180"><input id="occupation" name="occupation" value="Student" class="input g130" type="text"></em>
+	            	<em class="title">Education</em>
+	            	<em><select id="education" name="education" >
+                    	<option>Doctor</option>
+                    	<option>Master</option>
+                    	<option>本科</option>
+                    	<option>专科</option>
+                    	<option>高中</option>
+                    </select></em>
+	            </div>
+	            <div>
+	            	<em class="title">Zodiac</em>
+	            	<em><select id="astro" name="astro" >
+                    	<option selected="selected">Select</option>
+                    	<option>水瓶座</option>
+                    	<option>双鱼座</option>
+                    	<option>白羊座</option>
+                    	<option>金牛座</option>
+                    	<option>双子座</option>
+                    	<option>巨蟹座</option>
+                    	<option>狮子座</option>
+                    	<option>处Female座</option>
+                    	<option>天枰座</option>
+                    	<option>天蝎座</option>
+                    	<option>射手座</option>
+                    	<option>摩羯座</option>
+                    </select>
+                    </em>
+	            </div>
+	            <div>
+	            	<em class="title">Favorite</em>
+	            	<em><input id="hobbies" name="hobbies" rows="4" class="input g380" value="12321" type="text"></em>
+	            </div>
+                <hr />
+	            <div>
+	            	<em class="title">State</em>
+	            	<em><select id="province" name="province" >
+                    	<option selected="selected">Select</option>
+                    </select>
+                    </em>
+	            	<em>City</em>
+	            	<em><select id="city" name="city" >
+                    	<option selected="selected">Select</option>
+                    </select></em>
+	            </div>
+
+	            <div>
+                	<em class="title"></em>
+	                <em><a id="submit" href="#" class="btnBS">Submit</a></em>
+	                <em><a id="cancel" href="#" class="btnWS">Cancel</a></em>
+	                <em id="tipError" class="tipsError">Please fill out</em>
+	            </div>
+	            </form>
+	        </fieldset>
+		</div>
+    </div>
+</div>
+
+
+
+<div id="fancybox-wrap" class="pop" style="width:600px;">
+	<del id="fancybox-close" title="Close"></del>
+    <div id="fancybox-content" style="height:370px;">
+        <div id="uploadIssueDialog" class="popContent">
+	    	<fieldset>
+	    		<h6>Upload Issues</h6>
+	        	<form method="post" id="uploadIssueForm"  enctype="multipart/form-data">
+	            <div>
+	            	<em class="title">Files</em>
+	            	<em><input type="file" id="issueFile" name="issueFile" /></em>
+	            </div>
+	            <div>
+	            	<em class="title">Keywords</em>
+	            	<em><input type="text" class="input" name="keyword" /></em>
+	            </div>
+	            <div>
+	            	<em class="title">Date</em>
+	            	<em><input type="text" id="publishDate" name="publishDate" class="input" /></em>
+	            	<em>(1985-03-21)</em>
+	            </div>
+	            <div>
+	            	<em class="title">Magazine Name</em>
+	            	<em><select id="publicationId" name="publicationId"></select></em>
+	            </div>
+	            <div>
+	            	<em class="title">Issues No.</em>
+                    <em class="g100"><select id="astro" name="astro" class="g70" >
+                    	<option selected="selected">2010</option>
+                    	<option>2011</option>
+                    	<option>2012</option>
+                    	<option>2013</option>
+                    	<option>2014</option>
+                    </select>
+                    &nbsp;Year
+                    </em>
+                    <em class="g80"><select id="astro" name="astro" class="g50" >
+                    	<option selected="selected">1</option>
+                    	<option>2</option>
+                    	<option>3</option>
+                    	<option>4</option>
+                    	<option>5</option>
+                    	<option>6</option>
+                    	<option>7</option>
+                    	<option>8</option>
+                    	<option>9</option>
+                    	<option>10</option>
+                    	<option>11</option>
+                    	<option>12</option>
+                    </select>
+                    &nbsp;Month
+                    </em>
+	            	<em class="date"><input type="text" class="g70 input" id="selectDate" />
+                    	<div id="selectDateBox">
+                        	<a>1</a>
+                        	<a>2</a>
+                        	<a>3</a>
+                        	<a>4</a>
+                        	<a>5</a>
+                        	<a>6</a>
+                        	<a>7</a>
+                        	<a>8</a>
+                        	<a>9</a>
+                        	<a>10</a>
+                        	<a>11</a>
+                        	<a>12</a>
+                        	<a>13</a>
+                        	<a>14</a>
+                        	<a>15</a>
+                        	<a>16</a>
+                        	<a>17</a>
+                        	<a>18</a>
+                        	<a>19</a>
+                        	<a>20</a>
+                        	<a>21</a>
+                        	<a>22</a>
+                        	<a>23</a>
+                        	<a>24</a>
+                        	<a>25</a>
+                        	<a>26</a>
+                        	<a>27</a>
+                        	<a>28</a>
+                        	<a>29</a>
+                        	<a>30</a>
+                        	<a>31</a>
+                            <a class="text clear">增刊</a>
+                            <a class="text">增刊22</a>
+                            <a class="text">增刊23</a>
+                            <a class="text">增刊245</a>
+                        </div>
+                    </em>
+	            </div>
+	            <div>
+	            	<em class="title">Description</em>
+	            	<em><textarea rows="4" class="input g400" name="description"></textarea></em>
+	            </div>
+	            <div>
+                	<em class="title"><input type="hidden" name="fileName" id="fileName" value=""/></em>
+	                <em ><a id ="uploadIssueSubmit" href="javascript:void(0)" class="btnBS">Submit</a></em>
+	                <em ><a id="cancel" href="javascript:void(0)" class="btnWS" >Cancel</a></em>
+	                <em id ="tipError" class="tipsError">Please fill out</em>
+	            </div>
+	            
+	            </form>
+	        </fieldset>
+		</div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:290px;">
+        <div id="editPublicationDialog"  class="popContent">
+	    	<fieldset>
+	    		<h6>Edit Magazine</h6>
+	        	<form method="post" id="editPublicationDialogForm">
+	            <div>
+	            	<em class="title">Magazine Name</em>
+	            	<em><input id="publicationName" type="text" name="name" class="input g240" value=""></em>
+	            </div>
+	            <div>
+	            	<em class="title">Category</em>
+	            	<em>
+	            	    <select class="col-8" id="categoryId" name="categoryId" value="">
+	            	       <#if categoryList??>
+	            	            <#list categoryList as childcategory>
+								    <option  value="${childcategory.id}">${childcategory.name}</option>
+								</#list>
+							</#if>
+						</select>
+					</em>
+	            </div>
+				<div class="clip">
+					<em class="title">Cutting</em>
+					<em class="type1">
+						<label>
+							<input type="radio" name="whratio" value="0" checked="true">
+							<span></span>
+						</label>
+					</em>
+	            	<em class="type2">
+	            		<label>
+	            			<input type="radio" name="whratio" value="1"  >
+	            			<span></span>
+            			</label>
+    				</em>
+				</div>
+	                       
+	            <div>
+	            	<em class="title">Description</em>
+	            	<em><input id="description" type="text" name="description" class="input g240" value=""></em>
+	            </div>
+	            
+	            <div>
+                	<em class="title">Issues Type</em>
+                    <em>
+	                     <select name="issueType" id="issueType">
+	                        <option  value="2">周刊</option>
+	                        <option  value="3">半月刊</option>
+	                        <option  value="4">月刊</option>
+	                        <option  value="5">双月刊</option>
+	                        <option  value="6">季刊</option>
+	                        <option  value="7">半年刊</option>
+	                        <option  value="1">日报</option>
+	                        <option  value="20">其它</option>
+	                     </select>
+                    </em>
+                </div>
+	            
+	            <div>
+	            	<em class="title">Language</em>
+	            	<em>
+	            	 <select class="col-8" id="languageId" name="languageId" value="">
+						<option  value="1">Chinese</option>
+						<option  value="2">English</option>
+					 </select>
+					</em>
+	            </div>
+	            
+	            <div>
+                	<em class="title"></em>
+	                <em><a href="javascript:void(0)" class="btnBS" id ="editPublicationSubmit">Submit</a></em>
+	                <em><a id="cancel" href="javascript:void(0)" class="btnWS" >Cancel</a></em>
+	                <em id ="tipError" class="tipsError">Please fill out</em>
+	                <input type="hidden" name="id" value="">
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:265px;">
+        <div id="editIssueDialog" class="popContent">
+	    	<fieldset>
+	        	<h6>Edit Magazine</h6>
+	        	<form method="post" id="editIssueForm">
+	            <div>
+	            	<em class="title">Keywords</em>
+	            	<em><input type="text" name="keyword" class="input g220" /></em>
+	            </div>
+	            <div>
+	            	<em class="title">Date</em>
+	            	<em><input type="text" name="publishDate" class="input g220" /></em><em>(1985-03-21)</em>
+	            </div>
+	            <div>
+	            	<em class="title">Issues No.</em>
+	            	<em><input type="text" name="issueNumber" class="input g220" /></em>
+	            </div>
+	            <!-- 
+	            <div>
+	            	<em class="title">是否切割</em>
+	            	<em><select class="col-8" name="chop">
+							<option  value="0">否</option>
+							<option  value="1">是</option>
+						</select>
+					</em>
+	            </div>
+	            -->
+	            <div>
+	            	<em class="title">Description</em>
+	            	<em><textarea rows="4" class="input g280" name="description" value=""></textarea></em>
+	            </div>
+	            <!--
+	            <div>
+	            	<em class="title">文件名</em>
+	            	<em><input type="text" name="fileName" id="fileName" value=""/></em>
+	            </div>
+	            <input type="hidden" name="publicationId" id="publicationId" value=""/>-->
+	            <!-- 
+	             <div>
+	            	<em class="title">Magazine Name</em>
+	            	<em>
+	            	   <select class="col-8" name="publicationId">
+	            	       <#if publicationList??>
+	            	            <#list publicationList as publication>
+								    <option  value="${publication.id}">${publication.name}</option>
+								</#list>
+							</#if>
+						</select>
+					</em>
+	            </div>-->
+	            <!-- 
+	             <div>
+	            	<em class="title">Language</em>
+	            	<em> 
+		            	<select class="col-8" name="languageId" value="">
+							<option  value="1">Chinese</option>
+							<option  value="2">English</option>
+						 </select>
+					 </em>
+	            </div>
+	            -->
+	            <div>
+                	<em class="title"></em>
+	                <em><a href="javascript:void(0)" class="btnBS" id ="editIssueFormSubmit">Submit</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS" >Cancel</a></em>
+	                <em id ="tipError" class="tipsError">Please fill out</em>
+	                <input type="hidden" name="id" value=""></input>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:600px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:440px;">
+        <div id="editPublisherDialog" class="popContent">
+	    	<fieldset>
+	        	<h6>Edit Account</h6>
+	        	<form id="editPublisherForm" method="post" action="" onsubmit="return false;">
+	            <div>
+	            	<em class="title">User Name</em>
+	            	<em class="g200"><input id="userName" name="userName" value="" class="input g150" type="text" disabled/></em>
+	            	<em class="title">Publisher Name</em>
+	            	<em><input id="publishName" name="publishName" value="" class="input g150" type="text" disabled/></em>
+	            </div>
+	            <div>
+	            	<em class="title">Email</em>
+	            	<em class="g200"><input id="email" name="email" value="" class="input g150" type="text" /></em>
+	            	<em class="title">法人</em>
+	            	<em><input id="owner" name="owner" value="" class="input g150" type="text" /></em>
+	            </div>
+                <hr />
+	            <div>
+	            	<em class="title">Contact 1</em>
+	            	<em class="g200"><input id="contact1" name="contact1" value="" class="input g150" type="text"/></em>
+	            	<em class="title">Tel 1</em>
+	            	<em><input id="contactPhone1" name="contactPhone1" value="" class="input g150" type="text"/></em>
+	            </div>
+	            <div>
+	            	<em class="title">Contact 2</em>
+	            	<em class="g200"><input id="contact2" name="contact2" value="" class="input g150" type="text"/></em>
+	            	<em class="title">Tel 2</em>
+	            	<em><input id="contactPhone2" name="contactPhone2" value="" class="input g150" type="text"/></em>
+	            </div>
+	            <div>
+	            	<em class="title">Company Tel</em>
+	            	<em class="g200"><input id="companyPhone" name="companyPhone" value="" class="input g150" type="text"/></em>
+	            	<em class="title">Fax</em>
+	            	<em><input id="fax" name="fax" value="" class="input g150" type="text"/></em>
+	            </div>
+	            <div>
+	            	<em class="title">State</em>
+	            	<em class="g200"><input id="provinceId" name="provinceId" value="" class="input g150" type="text" /></em>
+	            	<em class="title">City</em>
+	            	<em><input id="cityId" name="cityId" value="" class="input g150" type="text"/></em>
+	            </div>
+	            <div>
+	            	<em class="title">WebSite</em>
+	            	<em class="g200"><input id="provinceId" name="provinceId" value="" class="input g150" type="text" /></em>
+	            	<em class="title">Contact</em>
+                    <em><select class="g70"><option value="0">Select</option></select></em>
+	            	<em><input value="" class="input g80" type="text"/></em>
+	            </div>
+                <hr />
+	            <div class="important">
+	            	<em class="title">Old Password</em>
+	            	<em><input id="oldPassword" name="oldPassword" class="input g150" type="password" /></em>
+	            </div>
+	            <div class="important">
+	            	<em class="title">New Password</em>
+	            	<em class="g200"><input id="password" name="password" class="input g150" type="password"/></em>
+	            	<em class="title">Confirm Password</em>
+	            	<em><input id="password2" name="password2" class="input g150" type="password"/></em>
+	            </div>
+	            <div>
+	            	<em class="title"></em>
+	                <em ><a id="editPublisherFormSubmit" href="#" class="btnBS" >Submit</a></em>
+	                <em ><a id="cancel" href="#" class="btnWS" >Cancel</a></em>
+	                <em id ="tipError" class="tipsError">Please fill out</em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:798px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:335px;">
+        <div id="shareEventDialog" class="popContent" >
+             <h6><span>Share Tag</span><div id='ckepop'><a class='jiathis_button_tsina'></a><a class='jiathis_button_tqq'></a><a class='jiathis_button_renren'></a><a class='jiathis_button_kaixin'></a></div></h6>
+             <div class="left">
+             	<a class="img" href="javascript:void(0)"><img src="images/temp/temphome4.jpg" /></a>
+                <h5>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</h5>
+                <h6><span class="create">Created in 2011/09/02 15:52:19</span><span class="fav" onclick="">99</span><span class="top">99</span><span class="chat">99</span></h6>
+             </div>
+             <div class="right">
+             	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>User Name-很长很长很长很长很长很长很长很长很长很长很长很长</h3>
+                <a class="btn addFriend">Follow</a>
+                <a class="btn message">Send Message</a>
+                <h5>Tags</h5>
+                <ul class="clear clearFix listB listTag">
+                    <li><a href="javascript:void(0)" class="tag1">TagsTags</a></li>
+                    <li><a href="javascript:void(0)" class="tag2">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag3">Tags签</a></li>
+                    <li><a href="javascript:void(0)" class="tag4">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag5">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag6">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags标</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                </ul>
+                <div class="addTag"><input type="text" class="input" tips="Add My Tags, use comma to add more" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >Add</a></div>
+             </div>
+             <div class="clear"></div>
+	    </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:596px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:335px;">
+        <div id="shareMgzDialog" class="popContent" >
+             <h6><span>Share Magazine</span><div id='ckepop'><a class='jiathis_button_tsina'></a><a class='jiathis_button_tqq'></a><a class='jiathis_button_renren'></a><a class='jiathis_button_kaixin'></a></div></h6>
+             <div class="left">
+             	<a class="img" href="javascript:void(0)"><img src="images/temp/tempKanmi3.jpg" /></a>
+                <h5>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</h5>
+                <h6><span class="fav" onclick="">99</span><span class="fans">99</span><span class="chat">99</span><span class="mgz">99</span></h6>
+             </div>
+             <div class="right">
+             	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>Magazine name</h3>
+                <a class="btn" id="btnSendMsgMgz">给它意见</a>
+                <a class="btn">我要关注</a>
+                <a class="btn">我要订阅</a>
+                <a class="btn">我要收藏</a>
+                <div class="sendMsg" id="sendMsgMgz">
+                    <input type="text" class="input" tips="请输入消息内容" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >Send</a>
+                </div>
+                <script>
+                $(function() {
+                    //弹出站内消息Send框
+                    $("#btnSendMsgMgz").click(function(){
+                        if($(this).nextAll(".sendMsg").hasClass("current")){
+                            $(this).nextAll(".sendMsg").slideUp(300).removeClass("current");
+                        }else{
+                            $(this).nextAll(".sendMsg").slideDown(300).addClass("current");
+                        }
+                    });
+                    $("#sendMsgMgz a").click(function(){
+                        $(this).parent().fadeOut(500).removeClass("current");
+                        setTimeout(function(){$.jqueryInputTips()},500);
+                    });
+                });
+                </script>
+                <h5>Tags</h5>
+                <ul class="clear clearFix listB listTag">
+                    <li><a href="javascript:void(0)" class="tag1">TagsTags</a></li>
+                    <li><a href="javascript:void(0)" class="tag2">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag3">Tags签</a></li>
+                    <li><a href="javascript:void(0)" class="tag4">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag5">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag6">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags标</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                </ul>
+                <div class="addTag"><input type="text" class="input" tips="Add我的Tags，多Tags请使用逗号分隔" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >Add</a></div>
+             </div>
+             <div class="clear"></div>
+	    </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:596px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:335px;">
+        <div id="shareTagDialog" class="popContent" >
+             <h6><span>Share Tag</span><div id='ckepop'><a class='jiathis_button_tsina'></a><a class='jiathis_button_tqq'></a><a class='jiathis_button_renren'></a><a class='jiathis_button_kaixin'></a></div></h6>
+             <div class="left">
+             	<a class="img" href="javascript:void(0)"><img src="images/temp/tempTag4.jpg" /></a>
+                <h5>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</h5>
+                <h6><span class="fav" onclick="">99</span><span class="top">99</span><span class="chat">99</span><span class="addFav" onclick="">Like</span></h6>
+             </div>
+             <div class="right">
+             	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>Nickname</h3>
+                <a class="btn message" id="btnSendMsgTag">Send Message</a>
+                <a class="btn addFriend">Follow</a>
+                <div class="sendMsg" id="sendMsgTag">
+                    <input type="text" class="input" tips="请输入消息内容" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >Send</a>
+                </div>
+				<script>
+                $(function() {
+                    //弹出站内消息Send框
+                    $("#btnSendMsgTag").click(function(){
+                        if($(this).nextAll(".sendMsg").hasClass("current")){
+                            $(this).nextAll(".sendMsg").slideUp(300).removeClass("current");
+                        }else{
+                            $(this).nextAll(".sendMsg").slideDown(300).addClass("current");
+                        }
+                    });
+                    $("#sendMsgTag a").click(function(){
+                        $(this).parent().fadeOut(500).removeClass("current");
+                        setTimeout(function(){$.jqueryInputTips()},500);
+                    });
+                });
+                </script>
+                <h5>Tags</h5>
+                <ul class="clear clearFix listB listTag">
+                    <li><a href="javascript:void(0)" class="tag1">TagsTags</a></li>
+                    <li><a href="javascript:void(0)" class="tag2">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag3">Tags签</a></li>
+                    <li><a href="javascript:void(0)" class="tag4">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag5">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag6">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags标</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                </ul>
+                <div class="addTag"><input type="text" class="input" tips="Add My Tags，多Tags请使用逗号分隔" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >Add</a></div>
+             </div>
+             <div class="clear"></div>
+	    </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:596px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:335px;">
+        <div id="shareTagDialog" class="popContent" >
+             <h6><span>Share Tag</span><div id='ckepop'><a class='jiathis_button_tsina'></a><a class='jiathis_button_tqq'></a><a class='jiathis_button_renren'></a><a class='jiathis_button_kaixin'></a></div></h6>
+             <div class="left">
+             	<a class="img" href="javascript:void(0)"><img src="images/temp/tempTag4.jpg" /></a>
+                <textarea class="input" type="text">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</textarea>
+                <h6><span class="fav" onclick="">99</span><span class="top">99</span><span class="chat">99</span><span class="addFav" onclick="">Dislike</span></h6>
+             </div>
+             <div class="right">
+             	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>Nickname</h3>
+                <a class="btn message">Send Message</a>
+                <a class="btn addFriend">Follow</a>
+                <h5>Tags</h5>
+                <ul class="clear clearFix listB listTag">
+                    <li><a href="javascript:void(0)" class="tag1">TagsTags</a></li>
+                    <li><a href="javascript:void(0)" class="tag2">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag3">Tags签</a></li>
+                    <li><a href="javascript:void(0)" class="tag4">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag5">Tags</a></li>
+                    <li><a href="javascript:void(0)" class="tag6">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags标</a></li>
+                    <li><a href="javascript:void(0)">Tags签</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">Tags</a></li>
+                    <li><a href="javascript:void(0)">TagsTags</a></li>
+                </ul>
+                <div class="addTag"><input type="text" class="input" tips="Add My Tags，多Tags请使用逗号分隔" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >Add</a></div>
+             </div>
+             <div class="clear"></div>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:215px;">
+        <div id="feedBackDialog" class="popContent" >
+             <fieldset class="formFeedback">
+             	<h6>Feedback</h6>
+                <p>您好，欢迎提出宝贵建议和意见，您留下的每个字都将被用来改善我们的服务。</p>
+                <div>
+                    <em class="title">Category:</em>
+                    <em><select id="education" name="education" class="g200" >
+                        <option selected="selected">Select</option>
+                        <option>Improve Current Function</option>
+                        <option>Add New Function</option>
+                        <option>Others</option>
+                    </select></em>
+                </div>
+                <div>
+                    <em class="title">Feedback:</em>
+                    <em><textarea class="input g340" /></textarea></em>
+                </div>
+                <div>
+                    <em class="title">&nbsp;</em>
+                    <em><a href="javascript:void(0)" class="btnBS" >Submit</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS" >Cancel</a></em>
+                </div>
+            </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:300px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:110px;">
+        <div id="viewAdType" class="popContent">
+	    	<fieldset>
+	        	<h6>Select Ad Type</h6>
+	        	<form method="post" id="editIssueForm">
+	            <div>
+                    <em class="g80"><label><input type="radio" />Image</label></em>
+                    <em class="g80"><label><input type="radio" />Video</label></em>
+                    <em><label><input type="radio" />Text</label></em>
+                </div>
+                <div>
+	                <em><a href="javascript:void(0)" class="btnBS">View</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS">Cancel</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:390px;">
+        <div id="addAdvertiseDialog" class="popContent">
+	    	<fieldset>
+	        	<h6>Edit Ad</h6>
+                 <form>
+	         		<div id="addAdIdTab">
+		            	<em class="title">Select material</em>
+		            	<em>
+		            		<select id="addAdId" name="addAdId">
+		            		    <option  value="0">Select</option>
+							</select>
+						</em>
+		            </div>
+                    <hr />
+		            <div>
+		            	<em class="title">Title</em>
+		            	<em><input type="text" name="title" class="input g280" /><font color="red">*</font></em>
+		            </div>
+		            <div>
+		            	<em class="title">Ad Type</em>
+		            	<em class="g80"><label><input type="radio" />Image</label></em>
+                        <em class="g80"><label><input type="radio" />Video</label></em>
+                        <em><label><input type="radio" />Text</label></em>
+		            </div>
+		            <div>
+		            	<em class="title">Upload Image</em>
+		            	<em><input type="file" id="jpgFile" name="jpgFile" class="g290"  /></em>
+		            </div>
+		            <div>
+		            	<em class="title">Image Link</em>
+		            	<em><input type="text" name="mediaurl" class="input g280 disabled" disabled="disabled" value="禁用样式" /></em>  
+		            </div>
+		            <div id="startTime">
+		            	<em class="title">Period</em>
+		            	<em class="g50"><label><input type="radio" />Permanent</label></em>
+                        <em><label><input type="radio" />Limit</label></em>
+                        <em><input type="text" class="input g80" />--</em>
+                        <em><input type="text" class="input g80" /></em>
+		            </div>
+		            <div>
+		            	<em class="title">Description</em>
+		            	<em><textarea class="input g280" /></textarea></em>
+		            </div>
+		            <div>
+                        <input type="hidden" id="adposIds" name="adposIds" value=""/>
+                        <input type="hidden" id="adId" name="adId" value=""/>
+                        <input type="hidden" name="fileName" id="fileName" value=""/>
+                        <em class="title"></em>
+		                <em ><a id="addsubmit" href="javascript:void(0)" class="btnBS" >Submit</a></em>
+		                <em ><a id="addcancel" href="javascript:void(0)" class="btnWS" >Cancel</a></em>
+		                <em id ="tipError" class="tipsError">Please fill out</em>
+		            </div>
+	           </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:505px;">
+        <div id="viewAdDetail" class="popContent">
+	    	<fieldset>
+	        	<h6>Ad Info</h6>
+	        	<form method="post">
+	            <div>
+                	<em class="title">Ad No.</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告位添加人</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告所属期刊</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+                <hr />
+	            <div>
+                	<em class="title">ID</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告内容添加人</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">Title</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告类型</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">Vaild Date</em>
+                    <em><input type="text" class="input g130" />--</em>
+                    <em><input type="text" class="input g130" /></em>
+                </div>
+                <div>
+                    <em class="title">Description</em>
+                    <em><textarea class="input g280" /></textarea></em>
+                </div>
+                <div>
+                    <em class="title">广告状态</em>
+                    <em>待发布</em>
+                </div>
+                <div>
+                    <em class="title"></em>
+                    <em><a href="javascript:void(0)" class="btnWS">Close</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:280px;">
+        <div id="postAd" class="popContent">
+	    	<fieldset>
+	        	<h6>您的发布内容将会通过系统消息以及EmailSend给对方</h6>
+	        	<form method="post">
+	            <div>
+                    <em><textarea class="input g400" /></textarea></em>
+                </div>
+	            <div>
+                    <em class="g60"><label><input type="radio" />Agree</label></em>
+                    <em><label><input type="radio" />Opposition</label></em>
+                </div>
+                <div>
+                    <em ><a id="addsubmit" href="javascript:void(0)" class="btnBS" >Submit</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS">Close</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<script>
+$(function(){
+	$.jquerytagbox("#popLoginTab",0);
+})
+</script>
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="Close"></del>
+    <div id="fancybox-content" style="height:280px;">
+        <div id="popLoginRegister" class="popContent">
+	    	<div class="jqueryTagBox" id="popLoginTab">
+                <div class="ctrl">
+                    <div>Login</div>
+                    <div>Sign In</div>
+                </div>
+                <div class="doorList">
+                    <div class="item">
+                        <form id="popLoginForm" action="" onsubmit="return false;" method="post">
+                            <ul class="select">
+                                <li class="current"><a href="javascript:void(0)"><img src="images/icon/sns32/32-magme.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_qq"><img src="images/icon/sns32/32-qq.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_renren"><img src="images/icon/sns32/32-renren.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_weibo"><img src="images/icon/sns32/32-weibo.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_baidu"><img src="images/icon/sns32/32-baidu.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_kqixin"><img src="images/icon/sns32/32-kaixin001.gif" /></a></li>
+                            </ul>
+                            <div class="con">
+                                <fieldset>
+                                    <div>
+                                        <em class="title" >User Name/Email</em>
+                                        <em><input class="input" name="userName" type="text" /></em>
+                                        <em class="tipsRight" style="display:block;"></em>
+                                        <em class="tipsError" style="display:block;">Please fill out</em>
+                                    </div>
+                                    <div>
+                                        <em class="title" >Password</em>
+                                        <em><input class="input" name="password" type="password" /></em>
+                                        <em class="tipsWrong" style="display:block;"></em>
+                                    </div>
+                                    <div>
+                                        <em class="title" ></em>
+                                        <em class="m0"><a class="btnOS" name="signIn" href="#" >Login</a></em>
+                                        <em class="remanber"><label><input type="checkbox" checked/>Remember Me</label></em>
+                                        <em class="tipsError">Please fill out</em>
+                                    </div>
+                                    <div>
+                                        <em class="title" ></em>
+                                        <em><a id="popForgetPassword" href="javascript:void(0)">Forget Password？</a></em>
+                                        <em><a id="popNewUserReg"href="javascript:void(0)">Register</a></em>
+                                        <script>
+                                        	$(function(){
+												$("#popNewUserReg").click(function(){
+													$("#popLoginTab>.ctrl>div:eq(1)").click();
+												})
+											})
+                                        </script>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </form>                        
+                    </div>
+                    <div class="item" style="display:none;">
+                        <form id="popRegisterForm" action="" onsubmit="return false;" method="post">
+                            <div class="con">
+                                <fieldset>
+                                    <div>
+                                        <em class="title" >User Name</em>
+                                        <em><input class="input" name="userName" type="text" /></em>
+                                        <em class="tipsRight" style="display:block;"></em>
+                                        <em class="tipsError" style="display:block;">Please fill out</em>
+                                    </div>
+                                    <div>
+                                        <em class="title" >Email</em>
+                                        <em><input class="input" name="email" type="text" /></em>
+                                        <em class="tipsWrong" style="display:block;"></em>
+                                    </div>
+                                    <div>
+                                        <em class="title" >Password</em>
+                                        <em><input class="input" name="password" type="password" /></em>
+                                    </div>
+                                    <div>
+                                        <em class="title" >Confirm Password</em>
+                                        <em><input class="input" name="password" type="password" /></em>
+                                        <em class="tipsRight"></em>
+                                    </div>
+                                    <div>
+                                        <em class="title" ></em>
+                                        <em class="m0"><a class="btnBS" name="subimt" href="#" >Sign In</a></em>
+                                        <em class="loading"></em>
+                                        <em class="tipsError" style="display:block;">Please fill out</em>
+                                    </div>
+                                </fieldset>
+                            </div>
+                         </form>                                   
+                    </div>
+                </div>
+        	</div>
+    	</div>
+    </div>
+</div>
+
+
+
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+</div>
+</div>
+
+</body>
+</html>

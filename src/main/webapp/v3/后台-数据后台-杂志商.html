@@ -1,0 +1,230 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelAdmin.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.scrollphoto.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<script>
+$(function(){
+fnReadyTable();
+var $JQtableBg = $("table.JQtableBg");
+var $JQtableHover = $("table.JQtableBg tbody tr");
+$JQtableBg.each(function(){
+	$(this).find("tbody tr:odd").addClass('bgColorTable');
+});
+$JQtableHover.live("mouseover",function(){
+$(this).addClass("bgTrHover");
+});
+$JQtableHover.live("mouseout",function(){
+	$(this).removeClass("bgTrHover");
+});
+})
+</script>
+
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header headerAdmin clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="后台-首页.html">(SEO)麦米 Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li><a href="后台-杂志管理.html">杂志管理</a></li>
+                <li><a href="后台-广告管理.html">广告管理</a></li>
+                <li><a href="后台-嵌入式阅读器.html">嵌入式阅读器</a></li>
+                <li><a href="后台-用户设置.html">用户设置</a></li>
+                <li><a href="后台-编辑管理-出版商管理.html">编辑管理</a></li>
+                <li class="current"><a href="#">数据后台</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="name"><strong id="nickName">Lewis</strong></li>
+                <li class="logout" id="logout"><a href="后台-登录.html" title="退出">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<!--body-->
+<div class="body bodyDataPage">
+	<div class="conLeft">
+        <h2><img src="images/temp/temp10.jpg" /></h2>
+        <ul class="leftNav clear">
+            <li><a href="#">菜单菜单</a></li>
+            <li><a href="#">菜单菜单</a></li>
+            <li><a href="#">菜单菜单</a>
+            	<ul>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                </ul>
+            </li>
+            <li class="current"><a href="#">菜单菜单</a>
+            	<ul>
+                    <li class="current"><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                </ul>
+            </li>
+            <li><a href="#">菜单菜单</a>
+            	<ul>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                    <li><a href="#">菜单菜单</a></li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+        	$(function(){
+				fnSetLeftNav();
+				$(".bodyDataPage .leftNav>li:has(ul)>a").bind("click",function(){
+					fnClickLeftNav($(this));
+				});
+				
+				
+				
+				function fnSetLeftNav(){
+					$(".bodyDataPage .leftNav>li").each(function(){
+						if($(this).find("ul").length==0){
+							$(this).find("a").css({background:"none"});
+						}else{
+							$(this).addClass("hasUl").find(">a").addClass("title");
+							if($(this).hasClass("current")){
+								$(this).find("ul").show();
+							}
+						}
+					});
+				}
+				function fnClickLeftNav($this){
+					if(!$this.parent().hasClass("current")){
+						$this.parent().addClass("current").find("ul").slideDown(300);
+					}else{
+						$this.parent().removeClass("current").find("ul").slideUp(300);
+					}
+				}
+					
+			});
+        </script>
+    </div>
+	<div class="conMiddleRight">
+        <div class="conB">
+        	<h2>表单名称</h2>
+            <fieldset>
+                <div>
+                    <em>开始日期</em><em><input type="text" class="input g100" /></em>
+                    <em>结束日期</em><em><input type="text" class="input g100" /></em>
+                    <em>条件</em><em><select><option>select</option></select></em>
+                    <em><label><input type="radio" />单选</label></em>
+                    <em><label><input type="radio" />单选</label></em>
+                    <em><label><input type="checkbox" />复选</label></em>
+                    <em><label><input type="checkbox" />复选</label></em>
+                    <em><a href="#" class="btnWS">取消</a></em>
+                    <em><a href="#" class="btnBS">确定</a></em>
+                </div>
+                <hr />
+                <div>
+                    <em>条件</em><em><input type="text" class="input g100" /></em>
+                    <em>条件</em><em><select><option>select</option></select></em>
+                    <em><label><input type="radio" />单选</label></em>
+                    <em><label><input type="radio" />单选</label></em>
+                    <em><label><input type="checkbox" />复选</label></em>
+                    <em><label><input type="checkbox" />复选</label></em>
+                    <em><a href="#" class="btnWS">取消</a></em>
+                    <em><a href="#" class="btnBS">确定</a></em>
+                </div>
+                <hr />
+            </fieldset>
+        </div>
+
+        <div class="conB">
+        	<h2 class="tCenter">某某某某某某某某某某访问报表</h2>
+        	<div class="conBody">
+            	<img src="" width="790" height="400" style="background:#f1f1f1;" />
+            </div>
+        </div>
+        
+        <div class="conB">
+            <table width="100%" class="table JQtableBg table1">
+                <thead>
+                  <tr>
+                    <td>Title</td>
+                    <td>Title</td>
+                    <td>Title</td>
+                    <td>Title</td>
+                    <td>Title</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td><a href="#" class="btn">按钮</a></td>
+                  </tr>
+                  <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td><a href="#" class="btn">按钮</a></td>
+                  </tr>
+                  <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td><a href="#" class="btn">按钮</a></td>
+                  </tr>
+                  <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td><a href="#" class="btn">按钮</a></td>
+                  </tr>
+                  <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td><a href="#" class="btn">按钮</a></td>
+                  </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+
+        
+
+</div>
+
+</body>
+</html>

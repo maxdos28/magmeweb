@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Copyright" content="Copyright &copy; 2010-2011 MagMe Media Ltd." /> 
+<meta name ="keywords" content="麦米，电子杂志，在线杂志，免费电子杂志，电子杂志下载，数码杂志，时尚杂志，汽车杂志，财经杂志">
+<meta name ="description" content="麦米网提供数百种最新杂志在线免费阅读，财经，旅游，娱乐，时尚，汽车，体育，数码生活等。在麦米看书，交流，分享，交友，新的阅读生活由此开启">
+<title>麦米网-极速电子杂志免费在线阅读平台</title> 
+<link href="../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../style/global.css" rel="stylesheet" type="text/css" />
+<link href="20110706/style.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-new.min.js"></script>
+<script src="20110706/jquery.backgroundPosition.js"></script>
+<style>
+.body .left .menu{ background-position:0 210px;}
+
+</style>
+<!--[if lte IE 6]>
+<link href="../style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div class="main">
+<!--header-->
+<div id="header" class="header">
+    <h1 class="logo"><a href="javascript:void(0)">麦米magme</a></h1>
+    <!--nav-->
+    <ul id="menu" class="nav">
+        <li id="homePage"><a href="javascript:void(0)">首页</a></li>
+        <li id="kanmi"><a id="" href="javascript:void(0)">看米</a></li>
+        <li><a href="javascript:void(0)">切米</a></li>
+        <li class="current"><a href="javascript:void(0)">麦米活动</a></li>
+    </ul>
+    <!--search-->
+    <div class="search">
+        <input type="text" class="in" tips="输入您想看的杂志" /><a class="btn"></a>
+    </div>
+    <!--userBar-->
+    <ul id="userBar" class="userBar">
+        <li class="l3"><a id="help" class="help png" href="javascript:void(0)">帮助</a></li>
+       <li class="l2"><a id="login" class="exit png" href="javascript:void(0)">登录</a>
+        	<div class="dropBox">
+                <div class="dropBoxhead png"></div>
+                <fieldset class="png">
+                	<form id="logInForm" action="">
+	                    <div class="input">
+	                    	<em><input class="in" id="userName" name="userName" type="text" tips="用户名/邮箱" /></em>
+	                    	<em class="tipsRight"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" name="password" type="text" tips="密码" />
+	                    		<input class="in hide" id="password" name="password" type="password" tips="密码" />
+	                    	</em>
+	                    	<em class="tipsRight"></em>
+	                    </div>
+	                    <div code="getcode">
+	                    	<em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tips="验证码" /></em>
+	                    	<em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+	                    </div>
+	                    <div>
+	                    	<em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+	                    	<em class="loading"></em>
+                            <em class="remanber"><label><input type="checkbox" />下次自动登录</label></em>
+	                    	<em class="tipsError">请填写相关信息</em>
+	                    </div>
+                        <div class="last">
+                        	<em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+                        	<em><a href="javascript:void(0)">新用户注册</a></em>
+                        </div>
+                    </form>
+                </fieldset>
+                <div class="dropBoxfoot png">
+                	<a href="javascript:void(0)" class="loginqq">腾讯QQ登录</a>
+                </div>
+            </div>
+        </li>
+        <li class="l1"><a id="register" class="reg png" href="javascript:void(0)">注册</a>
+        	<div class="dropBox">
+                <div class="dropBoxhead png"></div>
+                <fieldset class="png">
+					<form id="registerForm" action="">
+	                    <div class="input">
+	                    	<em><input class="in" id="userName" name="userName" type="text" tips="用户名" /></em>
+	                    	<em id="checkName" class="tipsRight" style="display:block;"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em><input class="in" id="email" name="email" type="text" tips="邮箱" /></em>
+	                    	<em id="checkEmail" class="tipsRight"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" type="text" tips="密码" />
+	                    		<input class="in" id="password" name="password" style="display:none;" type="password" tips="密码" />
+	                    	</em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" type="text" tips="确认密码"/>
+	                    		<input class="in" id="password2" name="password2" style="display:none;" type="password" tips="确认密码" />
+	                    	</em>
+	                    	<em id="checkPassword" class="tipsRight"></em>
+	                    </div>
+	                    <div code="getcode">
+	                    	<em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tips="验证码" /></em>
+	                    	<em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+	                    </div>
+	                    <div class="last">
+	                    	<em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+	                    	<em class="loading"></em>
+	                    	<em class="tipsError">请填写相关信息</em>
+	                    </div>
+					</form>
+                </fieldset>
+                <div class="dropBoxfoot png">
+                	<a href="javascript:void(0)" class="loginqq">腾讯QQ登录</a>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+<!--body-->
+<div class="body clearFix">
+	<div class="left">
+    	<ul class="menu clearFix">
+        	<li><a href="index.html">活动首页</a></li>
+        	<li><a href="info.html">活动介绍</a></li>
+        	<li><a href="join.html">我要参与</a></li>
+        	<li><a href="questions.html">活动问答</a></li>
+        	<li><a href="photos.html">体验作品</a></li>
+        	<li><a href="show.html">现场照片</a></li>
+        	<li><a href="process.html">招聘现场流程</a></li>
+        	<li><a href="delivery.html" class="important">杂志派送</a></li>
+        </ul>
+        <a class="registerLink">参与即送精美杂志</a>
+    	<ol class="top10">
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        </ol>
+    </div>
+	<div class="right">
+    	<div class="con con16 floatl">
+          <h2>杂志派送名录</h2>
+          <p><strong>杂志已派送，请以下网友注意查收。</strong></p>
+          <ul>
+          	<li>阿司匹林</li><li>
+zpp517</li><li>
+江北小农</li><li>
+talo</li><li>
+zhgcno1</li><li>
+sportgirls</li><li>
+Timtang</li><li>
+rainmanldl</li><li>
+米志fan</li><li>
+freeboygxl263</li><li>
+落魄先生</li><li>
+一叶扁舟·飘</li><li>
+xiaoniren</li><li>
+C.Krenzel</li><li>
+颜枫晓露</li><li>
+lvyun</li><li>
+听话滴香蕉</li><li>
+光遇阳的文化</li><li>
+6666</li><li>
+zhuanger1982</li><li>
+mwqsky</li><li>
+kennole</li><li>
+黄Kafi</li><li>
+yongnan</li><li>
+nana</li><li>
+sandelara</li><li>
+zhu4981829</li><li>
+weihongyu23</li><li>
+查无小白</li><li>
+七夜雪七</li><li>
+belial110</li><li>
+狐言狼语</li><li>
+^喵蜜蜜^</li><li>
+lpfj0102</li><li>
+ldyh1988</li><li>
+gogogo1204</li><li>
+jieshuen</li><li>
+muzilanxin166</li><li>
+爱米小拉</li><li>
+466138182</li><li>
+wangchihuizi</li><li>
+左岸右转</li><li>
+jjmjesse</li><li>
+simin531</li><li>
+沫瑟贝锦</li><li>
+dustin0310</li><li>
+kobeghy</li><li>
+yvaineso</li><li>
+tony19900723</li><li>
+刺猬的岭雾</li><li>
+莉儿爱乐</li><li>
+emo_0610</li><li>
+649880462</li><li>
+51.com</li><li>
+慧慧阿里</li><li>
+meysha</li><li>
+王一涵2011</li><li>
+jsjj525212</li><li>
+向日葵111</li><li>
+ldy羽</li><li>
+GaoMengdie</li><li>
+亦落夏歌</li><li>
+爱麦米magme</li><li>
+nelrain</li><li>
+哑巴酷酷</li><li>
+yummy debbie</li><li>
+464712235</li><li>
+87850296</li><li>
+爱看杂-好奇心</li><li>
+我爱米米</li><li>
+yjhaha</li><li>
+Archers</li><li>
+ilxzlove</li><li>
+lik202</li><li>
+park</li>
+          </ul>
+      </div>
+      <div class="con17">
+      	<img src="20110706/11.jpg" />
+      	<img src="20110706/10.jpg" />
+      	<img src="20110706/01.jpg" />
+      	<img src="20110706/04.jpg" />
+      	<img src="20110706/02.jpg" />
+      	<img src="20110706/05.jpg" />
+      </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="inner">
+    	<p>Copyright &copy; 2011 麦米版权所有 | 沪ICP备 <a href="http://www.miibeian.gov.cn" target="_blank">10217320</a></p>
+        <div class="nav">
+        	<ul class="m1">
+            	<li><a href="javascript:void(0)">公司信息</a>
+                	<ul>
+                        <li><a href="static_join_us.html">关于我们</a></li>
+                        <li><a href="static_about_us.html">加入我们</a></li>
+                        <li><a href="static_bulletin.html">麦米号外</a></li>
+                        <li><a href="static_policy.html">法律声明</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m2">
+            	<li><a href="javascript:void(0)">商务合作</a>
+               		<ul>
+                        <li><a href="javascript:void(0)">上传杂志</a></li>
+                        <li><a href="javascript:void(0)">合作媒体</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m3">
+            	<li><a href="javascript:void(0)">获取更新</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">邮件订阅</a></li>
+                        <li><a href="javascript:void(0)">麦米RSS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m4">
+            	<li><a href="javascript:void(0)">帮助中心</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">意见反馈</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="shareTools">
+        	<a href="javascript:void(0)" class="sinaweibo" title="新浪微博"></a>
+        	<a href="javascript:void(0)" class="qqweibo" title="腾讯微博"></a>
+        	<a href="javascript:void(0)" class="sohuweibo" title="搜狐微博"></a>
+        	<a href="javascript:void(0)" class="neteasyweibo" title="网易微博"></a>
+        	<a href="javascript:void(0)" class="baidu" title="百度"></a>
+        	<a href="javascript:void(0)" class="kaixin" title="开心网"></a>
+        	<a href="javascript:void(0)" class="renren" title="人人网"></a>
+        	<a href="javascript:void(0)" class="douban" title="豆瓣"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="mobileimages/iconApp.png" />
+<link rel="stylesheet" type="text/css" href="style/html5Reset.css"/>		
+<link rel="stylesheet" type="text/css" href="style/global.css"/>
+<link rel="stylesheet" type="text/css" href="style/phone.css"/>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script>
+$(function(){
+	$(".read").animate({left:0},500);
+	$(".img").toggle(function(){
+		$(this).find("span").fadeOut(200);
+		$(this).find("img").css({position:"absolute"}).animate({width:$("body").width()-20},300);
+	},function(){
+		$(this).find("span").fadeIn(500);
+		$(this).find("img").css({position:"static"}).animate({width:120},300);
+	});
+	
+});
+</script>
+<title>Magme Mobile</title>
+</head>
+
+<body class="phone" id="body">
+<div class="header" id="header">
+	<a class="logo" href="phone.html">Magme</a>
+	<a class="back" href="phone.html">back</a>
+	<a class="share" href="javascript:void(0)">share</a>
+    <div class="viewSize">
+        <a class="big" href="javascript:void(0)">big</a>
+        <a class="small" href="javascript:void(0)">small</a>
+    </div>
+	<div class="nav">
+    	<ul>
+        	<li class="l1"><a class="current" href="javascript:void(0)"><span>汽车旅游</span></a></li>
+        	<li class="l2"><a href="javascript:void(0)"><span>商业财经</span></a></li>
+        	<li class="l3"><a href="javascript:void(0)"><span>时尚娱乐</span></a></li>
+        	<li class="l4"><a href="javascript:void(0)"><span>人文情感</span></a></li>
+        	<li class="l5"><a href="javascript:void(0)"><span>数码科技</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="tools clearFix">
+	<a href="phoneRead.html" class="btnB floatr mgl5 btnR">下一篇</a>
+	<a href="phoneRead.html" class="btnB floatl btnL">上一篇</a>
+</div>
+<div class="read phoneRead clearFix">
+	<a class="img" href="javascript:void(0)"><img src="temp/320/320_0.jpg" width="100%" /><span>+</span></a>
+    <div class="content">
+        <h1>文章标题</h1>
+            <p>生命中的那些第一次
+    说到第一次，你会想到什么？</p>
+    <p>大学时代，我的闺蜜认识了一个很可爱的军官。那个军官曾在浪漫的月色下对她说，我要给你三个第一次。听到第一次，闺蜜浮想联翩，心跳加速，瞬间羞红了脸，幸好月朦胧，鸟朦胧，那个军官没看见。闺蜜让我帮她分析这话到底是什么意思。其实，闺蜜是想让我来确认她内心的猜测和期待，而我也和闺蜜一样，想当然地认为，肯定是初吻、初夜、初孕，女人一生中的三个最重要时刻。</p>
+    <p>结果呢，闺蜜迟迟没有等来军官的亲吻或求婚，当然也没法越过前两步直接开始造人，然而，她却跟男人一起去体检了：第一坐热气球，第一次潜水，第一次玩降落伞。三个第一次体检之后，男人消失了。虽然没能与心仪的男人体验女人传统意义上的第一次，闺蜜却对他念念不忘。闺蜜至今还会偶尔自嘲，奶牛（英文等于COW，中文谐音“靠”），原来，人生有很多第一次。</p>
+    <p>第一次看萤火虫，第一次看昙花绽放，第一次看海，第一次心动，第一次心疼，第一次暗恋，第一次亲吻，第一次拥抱，第一次怀孕，第一次生子，第一次见证死亡，第一次醉酒，第一次穿文胸和高跟鞋，第一次旅行，第一次用手机，第一次烫头发……诸多鲜美愉悦的第一次基本都在30岁以前体验完毕，到此，人生剩下的似乎只是重复和回味。其实，30岁以后，人生依然有很多第一次在等着我。</p>
+    </div>
+</div>
+<div class="tools clearFix">
+	<a href="phoneRead.html" class="btnB floatr mgl5 btnR">下一篇</a>
+	<a href="phoneRead.html" class="btnB floatl btnL">上一篇</a>
+	<a href="javascript:void(0)" class="btnB floatL mgl5 btnShare">分享到新浪微博</a>
+</div>
+</body>
+</html>

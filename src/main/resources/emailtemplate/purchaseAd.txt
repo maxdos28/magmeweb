@@ -1,0 +1,2 @@
+	尊敬的麦米网客户{publisherName}您好，品牌商{adAgencyName}在您{issueName}期刊上添加了ID为{adId},名称为{title}的广告，请您尽快登录http://www.magme.cn/new-publisher.action，在<br/>内容管理>>功能中找到相应广告内容并进行审核操作，如72小时内未进行审核，则默认审核通过，谢谢<br/>
+																				麦米网客户服务部

@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+#fancybox-wrap,
+#fancybox-mag,
+#fancybox-pic,
+#fancybox-eve,
+#fancybox-overlay { position: absolute; top:0; left:0; z-index:1101; display:none;}
+#fancybox-overlay { z-index:1100;}
+#fancybox-content { width:0; height:0; position:relative; overflow:hidden; z-index:1102; }
+.pop{ display:none; margin:20px auto; border:none; background:#fff; box-shadow:0px 3px 5px rgba(0,0,0,0.3); }
+.pop a.del{ width:35px; height:35px; display:block; background:url(../images/popClose.gif) 0 0 no-repeat; position:absolute; right:0; top:0; cursor:pointer; z-index: 1103;}
+.pop a.del:hover{ background-position:0 -35px;}
+.popContent{ padding:15px; background:#fff; display:none;}
+.popContent h6{ height:22px; line-height:16px; margin-bottom:6px; font-size:14px; color:#333; font-weight:normal; }
+.popContent fieldset div{ padding:6px 0;}
+.popContent fieldset div.important{ background-color:#f5f5f5;}
+.popContent fieldset div em.title{ padding-right:5px;}
+.popContent textarea.input{ height:auto;}
+.popContent fieldset.new h6{ height:30px; line-height:20px; font-size:20px;}
+
+
+.popAdmin{ display:none; margin:20px auto; border:6px solid #1D1E23; border-radius:8px; box-shadow:0 0 30px rgba(0,0,0,0.3); background:#1D1E23;}
+.popAdmin .popContent{ padding:0; border-radius:4px; overflow:hidden;}
+.popAdmin .popContent h6{ background:url(../images/bgBody20120816.png) 0 -1px repeat-x #32353C; height:43px; overflow:hidden; line-height:42px; text-indent:16px; border-bottom:1px solid #2A2D38; color:#fff; font-size:14px; position:relative; box-shadow:0 0 15px rgba(0,0,0,0.8); text-shadow:0 -1px 1px rgba(0,0,0,0.5)}
+.popAdmin .popContent fieldset{ padding:5px 15px; border-bottom:1px solid #BEC5C9;}
+.popAdmin .popContent .actionArea{ padding:12px; background:#ECEEF0; border-top:1px solid #fff;}
+.popAdmin .popContent .actionArea a{ margin:0 4px;}
+.popAdmin a.del{ width:24px; height:24px; display:block; background:url(../images/icon/close.gif) center center no-repeat; position:absolute; right:9px; top:9px; cursor:pointer; z-index: 1103;}
+.popAdmin a.del:hover{ background-image:url(../images/icon/close_w.gif);}
+
+/*editTagDialog*/
+#editTagDialog{ width:400px;}
+#mergeList{ width:400px;}
+#mergeList fieldset em{ margin:0 15px 15px 0;}
+
+
+/*lightbox*/
+.lightbox{ display:none; width:240px; padding:6px; border:none; background:#fff; position:relative; box-shadow:0px 3px 5px rgba(0,0,0,0.3);}
+.lightbox .popBody:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.lightbox .popBody{ padding:30px 10px 10px 10px; background:#fff; text-align:center; }
+.lightbox .popBody p{ line-height:20px; min-height:40px; color:#666; text-align:center;}
+.lightbox .popClose{ width:25px; height:25px; display:block; background:url(../images/popCloseSmall.gif) 0 0 no-repeat; cursor:pointer; position:absolute; right:0; top:0; z-index:1103;}
+.lightbox .popClose:hover{ background-position:0 -25px;}
+
+
+
+
+
+
+

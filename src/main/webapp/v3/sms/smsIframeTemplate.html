@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style/royalslider.css"/>
+<link rel="stylesheet" type="text/css" href="style/rs-default.css"/>
+<link rel="stylesheet" type="text/css" href="style/tpl.css"/>
+<title>短信系统</title>
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.royalslider.min.js"></script>
+<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.js"></script>
+<script src="js/jquery.scrollto.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+
+<script>
+var tplVal="tpl1";//初始值
+var jsVal ="a";//初始值
+$(function(){
+	var sbody = $(window.parent.document).find("#smsProjectTemplateValue").val();
+	var tt= sbody.split("_");
+	tplVal = tt[0];
+	jsVal = tt[1];
+	$("#tplId").addClass(tplVal);
+	$("#smsIframmeWebTitle").html($(window.parent.document).find("#webTitle").val());
+	$("#smsIframmeWebContent").html($(window.parent.document).find("#webContentHidden").val());
+	
+	showPicUrlComm();
+	function showPicUrlComm(){
+		$.each($(window.parent.document).find("a[name='fileDel']"),function(i,v){
+			var path = $(this).attr("path");
+			if(path){
+				$("#gallery-1").append(
+						"<a class=\"rsImg\" data-rsBigImg=\"http://static.magme.cn/activityalbum"+path+"\" href=\"http://static.magme.cn/activityalbum"+path+"\" ><img width=\"50\" height=\"50\" class=\"rsTmb\" src=\"http://static.magme.cn/activityalbum"+path+"\" /></a>"
+						);
+			}
+		});
+		
+	}
+	
+	
+	if(jsVal=='a'){
+		$('#gallery-1').royalSlider({
+		    fullscreen: {
+		      enabled: true,
+		      nativeFS: true
+		    },
+		    controlNavigation: 'bullets',		//thumbnails,bullets,none
+		    autoScaleSlider: true, 
+		    autoScaleSliderWidth: 4,     
+		    autoScaleSliderHeight: 2.5,
+			arrowsNav: false,
+		    loop: false,
+		    imageScaleMode: 'fill',	//fill,fit-if-smaller
+		    navigateByClick: true,
+		    numImagesToPreload:3,
+			slidesSpacing:20,
+			slidesOrientation:'horizontal',		//vertical,horizontal
+			transitionType:'move',
+			controlsInside:true,
+		    arrowsNavAutoHide: true,
+		    arrowsNavHideOnTouch: true,
+		    keyboardNavEnabled: true,
+		    fadeinLoadedSlide: true,
+		    globalCaption: true,
+		    globalCaptionInside: false,
+		    thumbs: {
+		      orientation: 'vertical',			//vertical,horizontal
+		      appendSpan: true,
+		      firstMargin: true,
+			  fitInViewport: true,
+		      paddingBottom: 0
+
+		    },
+			autoPlay: {
+				enabled: true,
+				pauseOnHover: true,
+				delay:3000
+			}
+		});
+	}else if(jsVal=='b'){
+		var si = $('#gallery-1').royalSlider({
+		    fullscreen: {
+		      enabled: true,
+		      nativeFS: true
+		    },
+		    addActiveClass: true,
+		    arrowsNav: false,
+		    controlNavigation: 'none',
+		    imageScaleMode: "fit-if-smaller",
+		    autoScaleSlider: true, 
+		    autoScaleSliderWidth: 4,     
+		    autoScaleSliderHeight:2.5,
+		    loop: false,
+		    fadeinLoadedSlide: false,
+		    globalCaption: true,
+		    keyboardNavEnabled: true,
+		    globalCaptionInside: false,
+		    visibleNearby: {
+		      enabled: true,
+		      centerArea: 0.5,
+		      center: true,
+		      breakpoint: 650,
+		      breakpointCenterArea: 0.8,
+		      navigateByCenterClick: true
+		    }
+		  });
+	}else if(jsVal=='c'){
+		$('#gallery-1').royalSlider({
+		    fullscreen: {
+		      enabled: true,
+		      nativeFS: true
+		    },
+		    controlNavigation: 'thumbnails',		//thumbnails,bullets
+		    autoScaleSlider: true, 
+		    autoScaleSliderWidth: 4,     
+		    autoScaleSliderHeight: 2,
+			arrowsNav: false,
+		    loop: false,
+		    imageScaleMode: 'fill',
+		    navigateByClick: true,
+		    numImagesToPreload:3,
+			slidesSpacing:0,
+			slidesOrientation:'horizontal',		//vertical,horizontal
+			transitionType:'move',
+			controlsInside:true,
+		    arrowsNavAutoHide: true,
+		    arrowsNavHideOnTouch: true,
+		    keyboardNavEnabled: true,
+		    fadeinLoadedSlide: true,
+		    globalCaption: true,
+		    globalCaptionInside: false,
+		    thumbs: {
+		      orientation: 'vertical',			//vertical,horizontal
+		      appendSpan: true,
+		      firstMargin: true,
+			  fitInViewport: true,
+		      paddingBottom: 0
+
+		    },
+			autoPlay: {
+				enabled: true,
+				pauseOnHover: true,
+				delay:3000
+			}
+		});
+
+	}
+});
+</script>
+  </head>
+  <body>
+    <div id="tplId" class="main" >
+    	<h1 class="header" id="smsIframmeWebTitle" ></h1>
+    	<div class="body">
+            <div id="gallery-1" class="royalSlider rsDefault">
+            </div>
+        	<div class="content" id="smsIframmeWebContent" >
+            </div>
+        </div>
+    	<div class="pagedock">
+        	<ul>
+            	<li class="mail"><a href="#"></a></li>
+            	<li class="qq"><a href="#"></a></li>
+            	<li class="phone400"><a id="telEvent" href="#"></a></li>
+            	<li class="weibo"><a href="#"></a></li>
+            	<li class="weixin"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>

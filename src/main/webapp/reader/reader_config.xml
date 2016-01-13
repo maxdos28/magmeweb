@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<config>
+		<data>
+			<tagServerUrl>
+<![CDATA[
+http://192.168.1.31:8080/ImgEncoderServer/ImgEncoderServlet
+]]>
+			</tagServerUrl>
+		</data> 
+	</config>
+</root>

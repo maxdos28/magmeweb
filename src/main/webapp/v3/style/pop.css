@@ -1,0 +1,322 @@
+@charset "utf-8";
+@import url("jquery.colorpicker.css");
+@import url("jquery.datepicker.css");
+
+
+
+#fancybox-wrap,
+#fancybox-mag,
+#fancybox-pic,
+#fancybox-eve,
+#fancybox-overlay { position: absolute; top:0; left:0; z-index:1101; display:none;}
+#fancybox-overlay { z-index:1100;}
+#fancybox-content { width:0; height:0; position:relative; overflow:hidden; z-index:1102; }
+.pop{ display:none; margin:20px auto; border:none; background:#fff; box-shadow:0px 3px 5px rgba(0,0,0,0.3); }
+.pop a.del{ width:35px; height:35px; display:block; background:url(../images/popClose.gif) 0 0 no-repeat; position:absolute; right:0; top:0; cursor:pointer; z-index: 1103;}
+.pop a.del:hover{ background-position:0 -35px;}
+.popContent{ padding:15px; background:#fff; display:none;}
+.popContent h6{ height:22px; line-height:16px; margin-bottom:6px; font-size:14px; color:#333; font-weight:normal; }
+.popContent fieldset div{ padding:6px 0;}
+.popContent fieldset div.important{ background-color:#f5f5f5;}
+.popContent fieldset div em.title{ padding-right:5px;}
+.popContent textarea.input{ height:auto;}
+.popContent fieldset.new h6{ height:30px; line-height:20px; font-size:20px;}
+
+
+.popAdmin{ display:none; margin:20px auto; border:6px solid #1D1E23; border-radius:8px; box-shadow:0 0 30px rgba(0,0,0,0.3); background:#1D1E23;}
+.popAdmin .popContent{ padding:0; border-radius:4px; overflow:hidden;}
+.popAdmin .popContent h6{ background:url(../images/admin/popTitleBg.gif) 0 0 repeat-x #32353C; height:43px; overflow:hidden; line-height:42px; text-indent:16px; border-bottom:1px solid #2A2D38; color:#fff; font-size:14px; position:relative; box-shadow:0 0 15px rgba(0,0,0,0.8); text-shadow:0 -1px 1px rgba(0,0,0,0.5)}
+.popAdmin .popContent fieldset{ padding:5px 15px; border-bottom:1px solid #BEC5C9;}
+.popAdmin .popContent .actionArea{ padding:12px; background:#ECEEF0; border-top:1px solid #fff;}
+.popAdmin .popContent .actionArea a{ margin:0 4px;}
+.popAdmin a.del{ width:24px; height:24px; display:block; background:url(../images/icon/close.gif) center center no-repeat; position:absolute; right:9px; top:9px; cursor:pointer; z-index: 1103;}
+.popAdmin a.del:hover{ background-image:url(../images/icon/close_w.gif);}
+
+
+/*popUploadHead*/
+#uploadUserAvatarDialog{ width:300px;}
+#uploadUserAvatarDialog .imgArea { padding:0; width:300px; height:300px; text-align:center; line-height:1.5em; display:table-cell; vertical-align:middle; position: relative; overflow:hidden; background:#f5f5f5;}
+#uploadUserAvatarDialog .imgArea a:active {star:expression(this.onFocus=this.blur());}
+#uploadUserAvatarDialog .imgArea a{ position:inherit !important ; position: absolute; top: 50%; left: 50%;text-decoration:none;}
+#uploadUserAvatarDialog .imgArea a span{ position:inherit !important ;  position: relative; top: -50%; left: -50%;}
+#uploadUserAvatarDialog .imgArea a span img{max-width:300px;max-height:300px;}
+#uploadUserAvatarDialog .tCenter{ position:relative; height:0; line-height:0;}
+#uploadUserAvatarDialog .tCenter a{ margin:0 2px; }
+#uploadUserAvatarDialog .tCenter a.btnAB{ width:100px; overflow:hidden; position:absolute; left:50%; margin-left:-70px; top:-180px; text-indent:0; letter-spacing:normal;}
+#uploadUserAvatarDialog .tCenter a.btnAB .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:50px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer; }
+#uploadUserAvatarDialog .tCenter a.btnAB span{ width:100px; display:block;}
+#uploadUserAvatarDialog .tCenter a.btnAS{ width:80px; padding:0 8px; text-align:center; overflow:hidden; position:relative; }
+#uploadUserAvatarDialog .tCenter a.btnAS .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:40px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer; }
+#uploadUserAvatarDialog .tCenter a span{ display:block; width:75px; text-align:center;}
+#uploadUserAvatarDialog .tCenter .tipsError{ display:block; margin-top:5px; text-align:center; color:#900; display:none;}
+#uploadUserAvatarDialog .tCenter a.fileEdit{ width:140px; overflow:hidden; position:absolute; left:50%; margin-left:-70px; top:-180px; cursor:pointer; text-align:right;}
+.ie6 #uploadUserAvatarDialog .tCenter a.btnWS .inputFile{ font-size:12px; width:90px; height:24px;}
+.ie6 #uploadUserAvatarDialog .tCenter a.btnWB .inputFile{ font-size:12px; width:180px; height:30px;}
+.ie6 #uploadUserAvatarDialog .tCenter a.btnWB span{ display:none;}
+/*uploadPublisherLogoDialog*/
+#uploadPublisherLogoDialog{ width:300px;}
+#uploadPublisherLogoDialog .imgArea { padding:0; width:300px; height:300px; text-align:center; line-height:1.5em; display:table-cell; vertical-align:middle; position: relative; overflow:hidden; background:#f5f5f5;}
+#uploadPublisherLogoDialog .imgArea a:active {star:expression(this.onFocus=this.blur());}
+#uploadPublisherLogoDialog .imgArea a{ position:inherit !important ; position: absolute; top: 50%; left: 50%;text-decoration:none;}
+#uploadPublisherLogoDialog .imgArea a span{ position:inherit !important ;  position: relative; top: -50%; left: -50%;}
+#uploadPublisherLogoDialog .imgArea a span img{max-width:300px;max-height:300px;}
+#uploadPublisherLogoDialog .tCenter{ position:relative; height:0; line-height:0;}
+#uploadPublisherLogoDialog .tCenter a{ margin:0 2px; }
+#uploadPublisherLogoDialog .tCenter a.btnWB{ width:100px; text-align:center; overflow:hidden; position:absolute; left:50%; margin-left:-70px; top:-180px;}
+#uploadPublisherLogoDialog .tCenter a.btnWB .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:50px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer; }
+#uploadPublisherLogoDialog .tCenter a.btnWS{ width:80px; padding:0 8px; text-align:center; overflow:hidden; position:relative; }
+#uploadPublisherLogoDialog .tCenter a.btnWS .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:40px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer; }
+#uploadPublisherLogoDialog .tCenter a span{ display:block; width:75px; text-align:center;}
+#uploadPublisherLogoDialog .tCenter .tipsError{ display:block; margin-top:5px; text-align:center; color:#900; display:none;}
+#uploadPublisherLogoDialog .tCenter a.fileEdit{ width:140px; overflow:hidden; position:absolute; left:50%; margin-left:-70px; top:-180px; cursor:pointer; text-align:right;}
+
+/*editPublicationDialog*/
+#editPublicationDialog{ width:430px; }
+#editPublicationDialog div.clip em span{ height:15px; width:20px; overflow:hidden; background-image:url(../images/iconMgzClip.gif); background-repeat:no-repeat; float:none; display:inline-block; margin-top:2px;}
+#editPublicationDialog div.clip em.type1,
+#editPublicationDialog div.clip em.type2{ margin-top:3px;}
+#editPublicationDialog div.clip em.type1 span{ background-position:0 0;}
+#editPublicationDialog div.clip em.type2 span{ background-position:0 -15px; }
+
+/*addAdvertiseDialog*/
+#addAdvertiseDialog{ width: 430px; display:none;}
+#addAdvertiseDialog div em.title{ width:90px;}
+#addAdvertiseDialog div textarea{ height:60px;}
+/*createPublicationDialog*/
+#createPublicationDialog{ width:430px;}
+#createPublicationDialog div em.title{ width:50px;}
+#createPublicationDialog div.clip em span{ height:15px; width:20px; overflow:hidden; background-image:url(../images/iconMgzClip.gif); background-repeat:no-repeat; float:none; display:inline-block; margin-top:2px;}
+#createPublicationDialog div.clip em.type1,
+#createPublicationDialog div.clip em.type2{ margin-top:3px;}
+#createPublicationDialog div.clip em.type1 span{ background-position:0 0;}
+#createPublicationDialog div.clip em.type2 span{ background-position:0 -15px; }
+/*userInfoDialog*/
+#userInfoDialog{ width:700px;}
+#userInfoDialog fieldset{ position:relative;}
+#userInfoDialog strong.changePWD{ position:absolute; right:0; top:0;}
+/*adContentEdit*/
+#adContentEdit{ width:460px;}
+/*editTagDialog*/
+#editTagDialog{ width:460px;}
+#editTagDialog div textarea{ height:65px;}
+#editTagDialog div .btnWS{ float:right; margin-right:18px;}
+/*userInfoDialog2*/
+#userInfoDialog2{ width:250px;}
+#userInfoDialog2 div em.title{ width:40px;}
+/*uploadIssueDialog*/
+#uploadIssueDialog{ width:600px; display:block;}
+#uploadIssueDialog div textarea{ height:65px;}
+#uploadIssueDialog div em.date{ position:relative;}
+#uploadIssueDialog div em.date div{ width:246px; height:auto; border:1px solid #ccc; background:#f9f9f9; padding:3px 8px; position:absolute; right:0; top:25px; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; display:none; }
+#uploadIssueDialog div em.date div a{ width:16px; height:16px; line-height:16px; text-decoration:none; padding:3px 7px; cursor:pointer; text-align:center; WHITE-SPACE:nowrap; display:inline-block; float:left; vertical-align:middle; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; }
+#uploadIssueDialog div em.date div a:hover{ background:#f60; color:#fff;}
+#uploadIssueDialog div em.date div a.text{ width:auto;}
+#uploadIssueDialog .upload{height:30px; line-height:30px; position:absolute; right:10px; top:1px;}
+#uploadIssueDialog .upload strong{ margin-right:5px; float:left;}
+#uploadIssueDialog .upload span{ color:#f60; float:left;}
+#uploadIssueDialog .upload a{ float:left; margin-left:5px; color:#ccc;}
+#uploadIssueDialog .upload a:hover{ color:#f60;}
+#uploadIssueDialog .upload .inner{ width:300px; float:left; margin:14px 5px 0 5px; height:4px; background:#ccc; overflow:hidden;}
+#uploadIssueDialog .upload .inner sub{ height:4px; width:0%; display:block; background:#f60; max-width:300px; }
+#uploadIssueDialog .tips{ position:absolute; right:10px; bottom:10px; color:#f60}
+/*editIssueDialog*/
+#editIssueDialog{ width:430px;}
+#editIssueDialog div em.title{ width:70px;}
+#editIssueDialog div em textarea{ height:65px;}
+/*editPublisherDialog*/
+#editPublisherDialog{ width:600px;}
+#editPublisherDialog div em.title{ width:80px;}
+/*feedBackDialog*/
+#feedBackDialog{ width:680px;}
+#feedBackDialog p{ margin-bottom:5px;}
+#feedBackDialog fieldset div em.title{ text-align:left; width:50px;}
+#feedBackDialog fieldset div textarea{ height:120px;}
+#feedBackDialog fieldset div em .btnBB{ margin-right:8px;}
+#feedBackSmall{ width:420px}
+#feedBackSmall fieldset div textarea{ height:80px;}
+/*viewAdType*/
+#viewAdType{ width:300px;}
+/*viewAdDetail*/
+#viewAdDetail{ width:430px;}
+#viewAdDetail fieldset div textarea{ height:65px;}
+/*postAd*/
+#postAd{ width:430px;}
+#postAd fieldset div textarea{ height:150px; width:418px;}
+/*addAd*/
+#addAd{ width:430px;}
+#addAd fieldset div textarea{ height:80px;}
+/*popLogin*/
+#popLogin {width:580px; height:280px; padding:0;}
+#popLogin h6{ font-size:24px; color:#e5e5e5;}
+#popLogin .popLeft{ width:330px; height:250px; padding:15px; overflow:hidden; float:left; border-right:1px solid #eee;}
+#popLogin .popLeft .input{ width:320px; height:30px; line-height:30px; text-indent:28px;}
+#popLogin .popLeft .tipsRight,
+#popLogin .popLeft .tipsWrong{ position:absolute; right:5px; top:14px; clear:both;}
+#popLogin .popLeft fieldset div{ position:relative; margin:10px 0;}
+#popLogin .popLeft fieldset div .tips{ position:absolute; left:35px; top:14px;}
+#popLogin .popLeft fieldset div .tipsError{ position:absolute; left:13px; top:40px;}
+#popLogin .popLeft fieldset div .icon{ width:16px; height:16px; position:absolute; left:10px; top:16px; background-position:center center; background-repeat:no-repeat;}
+#popLogin .popLeft fieldset div.username .icon{ background-image:url(../images/icon/user.gif);}
+#popLogin .popLeft fieldset div.password .icon{ background-image:url(../images/icon/passcode.gif);}
+#popLogin .popRight{ width:188px; height:250px; padding:15px; overflow:hidden; float:left; border-left:1px solid #fff; background:url(../images/bgHtml.gif);}
+#popLogin .popRight .select{ height:138px; margin-top:10px; }
+#popLogin .popRight .select li{ width:32px; height:32px; margin:0 5px 5px 0; float:left; }
+#popLogin .popRight .select li a{ display:block; filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity:0.3;opacity:0.3; -webkit-transition: opacity 0.2s; -moz-transition: opacity 0.2s; transition: opacity 0.2s;}
+#popLogin .popRight .select li a:hover{ filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1; }
+#popLogin .popRight .btnWB{ margin-top:24px; filter:alpha(opacity=60);-moz-opacity:0.6;-khtml-opacity:0.6;opacity:0.6; -webkit-transition: opacity 0.2s; -moz-transition: opacity 0.2s; transition: opacity 0.2s;}
+#popLogin .popRight .btnWB:hover{ filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1; }
+.ie6 #popLogin .popLeft fieldset div{ margin:8px 0;}
+.ie6 #popLogin .popLeft fieldset div .icon{ display:none;}
+.ie6 #popLogin .popLeft .input{ text-indent:6px;}
+.ie6 #popLogin .popLeft fieldset div em{ margin-left:0;}
+.ie6 #popLogin .popLeft .tipsRight,
+.ie6 #popLogin .popLeft .tipsWrong{ right:15px;}
+/*popRegister*/
+#popRegister {width:580px; height:350px; padding:0;}
+#popRegister h6{ font-size:24px; color:#e5e5e5;}
+#popRegister .popLeft{ width:330px; height:320px; padding:15px; overflow:hidden; float:left; border-right:1px solid #eee;}
+#popRegister .popLeft .input{ width:320px; height:30px; line-height:30px; text-indent:8px;}
+#popRegister .popLeft .tipsRight,
+#popRegister .popLeft .tipsWrong{ position:absolute; right:5px; top:14px; clear:both;}
+#popRegister .popLeft fieldset div{ position:relative; margin:10px 0;}
+#popRegister .popLeft fieldset div .tips{ position:absolute; left:15px; top:14px;}
+#popRegister .popLeft fieldset div .tipsError{ position:absolute; left:13px; top:40px;}
+#popRegister .popRight{ width:188px; height:320px; padding:15px; overflow:hidden; float:left; border-left:1px solid #fff; background:url(../images/bgHtml.gif);}
+#popRegister .popRight .select{ height:208px; margin-top:10px; }
+#popRegister .popRight .select li{ width:32px; height:32px; margin:0 5px 5px 0; float:left; }
+#popRegister .popRight .select li a{ display:block; filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity:0.3;opacity:0.3; -webkit-transition: opacity 0.2s; -moz-transition: opacity 0.2s; transition: opacity 0.2s;}
+#popRegister .popRight .select li a:hover{ filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1; }
+#popRegister .popRight .btnWB{ margin-top:24px; filter:alpha(opacity=60);-moz-opacity:0.6;-khtml-opacity:0.6;opacity:0.6; -webkit-transition: opacity 0.2s; -moz-transition: opacity 0.2s; transition: opacity 0.2s;}
+#popRegister .popRight .btnWB:hover{ filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1; }
+.ie6 #popRegister .popLeft fieldset div{ margin:6px 0;}
+.ie6 #popRegister .popLeft fieldset div em{ margin-left:0;}
+.ie6 #popRegister .popLeft .tipsRight,
+.ie6 #popRegister .popLeft .tipsWrong{ right:15px;}
+/*publisherAgreement*/
+#publisherAgreement{ height:475px; margin:5px; width:775px; overflow-y:scroll; display:block;}
+#publisherAgreement h1{ color:#000; font-size:20px; line-height:2em; text-align:center;}
+#publisherAgreement h2{ color:#000; font-size:14px; line-height:2em; margin-top:10px;}
+#publisherAgreement p{ line-height:1.8em; color:#666;}
+/*userNewMsg*/
+#userNewMsg { width:680px;}
+#userNewMsg textarea{ width:654px; height:180px; font-size:14px; padding:10px;}
+#userNewMsg .floatr a{ margin-left:8px;}
+/*embedCode*/
+#embedCode{ width:620px;}
+#embedCode textarea{ width:609px; height:204px;}
+.ie6 #embedCode textarea{ width:609px; height:190px;}
+#embedCode div{ padding:4px 0;}
+#embedCode div.color{ overflow:hidden}
+#embedCode div em.title{ width:auto;}
+#embedCode div .floatr{ margin-left:8px;}
+#embedCode div input.input{ height:18px; line-height:18px; text-indent:2px}
+#embedCode div em.g80 input{ position:relative; top:2px;}
+#embedCode #colorSelector{ padding:8px; height:20px; width:20px; overflow:hidden; position:relative; top:-6px;}
+#embedCode #colorSelector div{ width:20px; height:20px; background:#333; padding:0;}
+#embedCode #colorSelector span{ width:36px; height:36px; background:url(../images/colorpicker/select2.png); position:absolute; left:0; top:0; cursor:pointer;}
+/*sinaWeibo*/
+#sinaWeibo{ width:760px;}
+#sinaWeibo .link{ margin-left:-10px; width:770px; height:160px; overflow:hidden;}
+#sinaWeibo .link a{ width:100px; display:block; float:left; overflow:hidden; margin-left:10px;}
+#sinaWeibo .link a img{ width:100px; height:100px; display:block;}
+#sinaWeibo .link a strong{ height:20px; line-height:20px; display:block; text-align:center;}
+#sinaWeibo .link a span{ height:20px; line-height:19px; width:70px; display:block; text-align:center; margin:10px auto 0 auto; background:#e3ffd5; color:#389a0a; border:1px solid #d5f7c5}
+#sinaWeibo .link a:hover span{ background:#81d300; color:#fff; border-color:#4ec000}
+/*sinaWeiboFarward*/
+#sinaWeiboFarward{ width:320px;}
+#sinaWeiboFarward textarea{ width:300px; height:100px;}
+/*adminMgzTarget*/
+#adminMgzTarget{ width:600px;}
+/*adminMgzEdit*/
+#adminMgzEdit{ width:930px;}
+#adminMgzEdit #category{ position:relative;}
+#adminMgzEdit #category .selectBox{ position:absolute; width:456px; padding:10px; background:#787E84; color:#fff; border:1px solid #eee; left:110px; top:28px; border-radius:0 0 10px 10px; overflow:hidden;}
+#adminMgzEdit #category .selectBox label{ width:90px; height:24px; line-height:24px; display:block; float:left; margin-bottom:6px;}
+/*adminEventEdit*/
+#adminEventEdit{ width:760px;}
+#adminEventEdit .g360 textarea{ height:35px;}
+#adminEventEdit .g340 em.pic{ width:180px; height:180px; display:block; overflow:hidden; background:#f5f5f5;}
+#adminEventEdit .g340 em.pic img.size11{ width:90px; height:90px;}
+#adminEventEdit .g340 em.pic img.size12{ width:90px; height:180px;}
+#adminEventEdit .g340 em.pic img.size21{ width:180px; height:90px;}
+#adminEventEdit .g340 em.pic img.size22{ width:180px; height:180px;}
+#adminEventEdit .tagList{ height:60px; overflow-y:scroll;}
+/*adminEmailNotification*/
+#adminEmailNotification{ width:450px;}
+#adminEmailNotification .table .t2{ width:300px; text-align:left;}
+#adminEmailNotification .table .t1{ width:40px;}
+#adminEmailNotification .table .t3{ width:30px;}
+#adminEmailNotification .list{ margin-bottom:10px; height:160px; overflow-y:scroll; overflow-x:hidden; padding:0;}
+/*applyCertification*/
+#applyCertification{ width:530px}
+#applyCertification .smartSearch .list { width:298px;}
+#applyCertification .smartSearch .list .inner { width:294px;} 
+#applyCertification .smartSearch .list .inner { max-height:200px; height:auto; _height:200px;} 
+#applyCertification .smartSearch .jspVerticalBar *,
+#applyCertification .smartSearch .jspHorizontalBar *{ float:none; margin:0; padding:0;}
+/*videoPlay*/
+#videoAdvertiseDialog{ width:600px; height:450px; padding:0; background:#333;}
+/*emailSubscribe*/
+#emailSubscribe{ width:320px;}
+/*forwardM1*/
+#forwardM1{ width:400px; position:relative;}
+#forwardM1 textarea{ height:120px;}
+#forwardM1 .count{ position:absolute; right:15px; top:15px;}
+#forwardM1 .count span{ font-family:Constantia,Georgia; font-size:16px; padding:0 5px;}
+/*adminCon1*/
+#adminCon1{ width:630px;}
+#adminCon1 textarea.g360{ height:134px;}
+#adminCon1 textarea.g590{ height:70px;}
+/*adminTiming*/
+#adminTiming{ width:400px;}
+/*adminQuestion*/
+#adminQuestion{ width:750px;}
+#adminQuestion .conBody{ padding:15px; height:400px; overflow-y:scroll;}
+/*adminIosMessage*/
+#adminIosMessage textarea{ height:100px; font-size:20px; line-height:1.8em;}
+/*adminAppConfirm*/
+#adminAppConfirm fieldset div em.important{ color:#000;}
+/*adminContentEdit*/
+#adminContentEdit{ width:810px;}
+#adminContentEdit dl{ width:101px; margin-right:10px; float:left; }
+#adminContentEdit dl label{ width:101px; height:26px; position:relative; line-height:26px; display:block; text-align:center;}
+#adminContentEdit dl label input{ margin-right:5px; position:absolute; top:4px; left:8px;}
+#adminContentEdit dl dt,
+#adminContentEdit dl dd{ margin-bottom:10px;}
+#adminContentEdit dl dt label{ color:#fff; height:29px; line-height:24px; font-size:14px; letter-spacing:6px; text-indent:6px; border-top-width:3px; border-style:solid;}
+#adminContentEdit dl dd label{ background:#eee; color:#333; font-size:14px; text-align:left; text-indent:32px;}
+#adminContentEdit dl dd.album label{ background:#ddd;}
+#adminContentEdit fieldset textarea.g300{ height:80px;}
+#adminContentEdit fieldset .tagList{ height:174px; overflow-y:scroll; margin-right:20px;}
+#adminContentEdit fieldset .tagList ul li.add input{ width:150px;}
+#adminContentEdit fieldset .topicList{ height:174px; overflow-y:scroll; padding-right:10px;}
+#adminContentEdit fieldset .topicList li label{ line-height:2.2em; display:block;}
+#adminContentEdit fieldset .topicList li label input{ position:relative; top:2px; margin-right:3px;}
+/*templateSelect*/
+#templateSelect{ width:800px; padding:0;}
+#templateSelect .actionArea{ padding:15px 0;}
+#templateSelect #tplList{ width:800px; height:550px;}
+#templateSelect #tplList ul{ clear:both; margin-bottom:10px; padding-bottom:10px;}
+#templateSelect #tplList ul li.title{ float:none; height:30px; line-height:30px; clear:both;}
+#templateSelect #tplList ul li.title a{ width:auto; height:30px;}
+#templateSelect #tplList ul li{ width:166px; height:126px; float:left; margin:10px;}
+#templateSelect #tplList ul li a{ background:#ddd; width:160px; height:120px; display:block; padding:3px; cursor:pointer;}
+#templateSelect #tplList ul li a:hover,
+#templateSelect #tplList ul li a.current{ background:#08c;}
+
+
+
+/*lightbox*/
+.lightbox{ display:none; width:240px; padding:6px; border:none; background:#fff; position:relative; box-shadow:0px 3px 5px rgba(0,0,0,0.3);}
+.lightbox .popBody:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.lightbox .popBody{ padding:30px 10px 10px 10px; background:#fff; text-align:center; }
+.lightbox .popBody p{ line-height:20px; min-height:40px; color:#666; text-align:center;}
+.lightbox .popClose{ width:25px; height:25px; display:block; background:url(../images/popCloseSmall.gif) 0 0 no-repeat; cursor:pointer; position:absolute; right:0; top:0; z-index:1103;}
+.lightbox .popClose:hover{ background-position:0 -25px;}
+
+
+
+
+
+
+

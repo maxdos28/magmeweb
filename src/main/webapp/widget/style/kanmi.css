@@ -1,0 +1,320 @@
+@charset "utf-8";
+@import url("jquery.jscrollpane.css");
+
+/*layout-------------------*/
+.side236{ width:236px; float:left;}
+.side484{ width:484px; float:left; margin:0 12px 20px 12px; }
+/*kanmi-------------------*/
+.pageKanmi .kanmiTopBar{ margin-bottom:0;}/*reset pageKanmi topBar height*/
+.kanmiTopBar{ height:60px; padding-top:5px; margin-bottom:10px; position:relative; z-index:888; }
+.kanmiTopBar .conCategoryV2{ position:absolute; left:-6px; top:0; width:162px; }
+.kanmiTopBar .conCategoryV2 .btn{ line-height:30px; height:36px; width:147px; color:#f60; padding-left:15px; position:relative; display:block; background:url(../images/kanmiBgMenu.png) -10px 0 no-repeat; text-decoration:none;}
+.kanmiTopBar .conCategoryV2 .btn span{ width:18px; height:10px; overflow:hidden; position:absolute; left:130px; top:10px; display:block; background-image:url(../images/iconArrow.gif); background-repeat:no-repeat; background-position:-18px -10px}
+.kanmiTopBar .conCategoryV2 .btn:hover span{ background-position: 0 -10px; }
+.kanmiTopBar .conCategoryV2 .btn span.up{ background-position: 0 0; }
+.kanmiTopBar .conCategoryV2 .conBody{ display:none; width:522px; padding:0 15px; background:url(../images/kanmiBgMenu.png) -724px 0 repeat-y;}
+.kanmiTopBar .conCategoryV2 .conBody .item{ line-height:24px; padding-bottom:3px; margin-bottom:3px; border-bottom:1px dotted #ccc;}
+.kanmiTopBar .conCategoryV2 .conBody .itemLast{ margin-bottom:0; padding-bottom:0; border-bottom:none;}
+.kanmiTopBar .conCategoryV2 .conBody .letter{ margin-bottom:0; padding-bottom:0; border-bottom:none;}
+.kanmiTopBar .conCategoryV2 .conBody .item h3{ width:72px; height:24px; line-height:24px; overflow:hidden; float:left; clear:left; }
+.kanmiTopBar .conCategoryV2 .conBody .item h3 a{ color:#999;}
+.kanmiTopBar .conCategoryV2 .conBody .item a:hover,
+.kanmiTopBar .conCategoryV2 .conBody .item a.current{ color:#f60;}
+.kanmiTopBar .conCategoryV2 .conBody .item div{ width:440px; float:left; }
+.kanmiTopBar .conCategoryV2 .conBody .item div li{ float:left; margin:0 14px 0 6px; display:inline;}
+.kanmiTopBar .conCategoryV2 .conBody .item div li a{ color:#aaa;}
+.kanmiTopBar .conCategoryV2 .conBody .item div li a.current{ color:#f60;}
+.kanmiTopBar .conCategoryV2 .conBody .letter div li{ margin:4px 0 0 6px;}
+.kanmiTopBar .conCategoryV2 .conBody .letter div li a{ width:14px; height:14px; line-height:14px; font-size:10px; display:block; text-align:center; text-decoration:none; border:1px solid #ccc;}
+.kanmiTopBar .conCategoryV2 .conBody .letter div li a:hover,
+.kanmiTopBar .conCategoryV2 .conBody .letter div li a.current{ border:none; width:16px; height:16px; line-height:16px; background-image:url(../images/iconLetterBg.gif); color:#fff;}
+.kanmiTopBar .conCategoryV2 .conBody .letter div li a.current{ background-position:0 -16px;}
+.kanmiTopBar .conCategoryV2 .conFooter{ height:20px; background:url(../images/kanmiBgMenu.png) -1276px -30px no-repeat; display:none;}
+.kanmiTopBar .conCategoryOn{ width:552px;}
+.kanmiTopBar .conCategoryOn .btn{ width:537px; height:50px; color:#f60; font-weight:bold; background:url(../images/kanmiBgMenu.png) -172px 0 no-repeat;}
+.kanmiTopBar .conCategoryOn .conFooter{ display:block;}
+.kanmiTopBar .conCategoryOn .conBody{ display:block;}
+.kanmiTopBar .categoryList{ width:500px; position:absolute; top:8px; left:160px; height:20px; overflow:hidden;}
+.kanmiTopBar .categoryList a{ width: float:left; display:inline-block; height:20px; line-height:20px; padding:0 4px; font-size:12px; margin-right:2px; text-decoration:none;}
+.kanmiTopBar .categoryList a:hover{ color:#f60;}
+.kanmiTopBar .categoryList a.home{ color:#787878; cursor:default; margin-right:0;}
+.kanmiTopBar .categoryList a.current,
+.kanmiTopBar .categoryList a.orderT,
+.kanmiTopBar .categoryList a.orderB{ color:#fff; background-color:#f60; background-position:35px center; background-repeat:no-repeat; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px; }
+.kanmiTopBar .categoryList a.orderT{ background-image:url(../images/icon/awT_w.gif); padding-right:20px;}
+.kanmiTopBar .categoryList a.orderB{ background-image:url(../images/icon/awB_w.gif); padding-right:20px;}
+.kanmiTopBar .btnBack{ position:absolute; right:0; top:5px; padding:5px 0; background:url(../images/icon/arrowL.gif) left center no-repeat; padding-left:14px;}
+
+
+
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item{ width:255px; margin-right:12px; height:24px; display:block; overflow:hidden; float:left;}
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item2{ margin-right:0;}
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item h3{ width:70px;}
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item div{ width:185px;}
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item div li{ margin-right:5px; width:45px;}
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item div li a{height:20px; line-height:20px; display:block; padding:0 14px 0 6px; }
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item div li a.orderT,
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item div li a.orderB{ color:#fff; background-color:#999; background-position:28px center; background-repeat:no-repeat; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px;}
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item div li a.orderT{ background-image:url(../images/icon/awT_w.gif);}
+.pageTagWall .kanmiTopBar .conCategoryV2 .conBody .item div li a.orderB{ background-image:url(../images/icon/awB_w.gif);}
+
+
+
+
+
+
+
+
+
+
+
+
+.main .body .kanmiCon{ overflow:visible; height:370px; position:relative; z-index:99; background:url(../images/magezineDesk980.gif) left 320px no-repeat;}
+.main .body .kanmiConLast{ background:none; height:360px;}
+.kanmiCon .bigShow{ width:530px; float:left; display:inline; margin-left:10px;}
+.kanmiCon .bigShow .textList{ float:right; width:272px; height:330px; padding-right:10px; background:url(../images/imgShadow320a.png) right bottom no-repeat;}
+.kanmiCon .bigShow .textList a{ width:252px; height:42px; overflow:hidden; padding:5px 10px; display:block; background:url(../images/kanmiBg0.jpg) 0 0 repeat-y; color:#ddd; text-decoration:none;}
+.kanmiCon .bigShow .textList a:hover{ color:#fff;}
+.kanmiCon .bigShow .textList a strong{ font-size:14px; line-height:23px; height:23px;}
+.kanmiCon .bigShow .textList a span{ display:none;}
+.kanmiCon .bigShow .textList a.current{ height:60px; display:block; color:#fff; }
+.kanmiCon .bigShow .textList a.current span{ display:block;}
+.kanmiCon .bigShow .textList a.current strong{ line-height:23px; height:23px;}
+.kanmiCon .bigShow .doorList{ width:248px; height:330px; float:left; position:relative; overflow:visible;}
+.kanmiCon .bigShow .doorList .item{ width:248px; height:330px; position:absolute; display:none; }
+.kanmiCon .bigShow .doorList .item a { text-decoration:none; }
+.kanmiCon .bigShow .doorList .item a img { width:248px; height:330px; }
+.kanmiCon .bigShow .doorList .item a span{ position:absolute; top:0; left:0; width:248px; padding-top:330px; height:20px; line-height:20px; display:block; text-align:center; background:url(../images/mask330.png) 0 0 no-repeat; overflow:hidden;}
+.kanmiCon .bigShow .doorList .item a:hover span{ background-position:-248px 0;}
+.kanmiCon .bigShow .doorList .current{ display:block;}
+.kc1 .bigShow .textList a.current{background-image:url(../images/kanmiBg1.jpg);}
+.kc2 .bigShow .textList a.current{background-image:url(../images/kanmiBg2.jpg);}
+.kc3 .bigShow .textList a.current{background-image:url(../images/kanmiBg3.jpg);}
+.kanmiConLast .bigShow .textList{ background-image:url(../images/imgShadow320b.png);}
+.kanmiConLast .bigShow .doorList .item a span{padding-top:333px; }
+
+.kanmiCon .smallShow{ position:relative; width:430px; height:350px; float:right; overflow:hidden;}
+.kanmiCon .smallShow .desk{ height:55px; width:430px; background:url(../images/magezineDesk980.gif) left 0 no-repeat; position:absolute; top:135px; right:0; z-index:-1;}
+.kanmiCon .smallShow .desk span{ width:20px; height:55px; display:block; float:right; background:url(../images/magezineDesk980.gif) right 0 no-repeat; }
+.kanmiCon .smallShow .item{ display:none;}
+.kanmiCon .smallShow .magezineBox{ width:420px; height:178px; padding:0 5px;}
+.kanmiCon .smallShow .magezineBox a{ position:absolute; z-index:10; top:0; text-decoration:none; width:110px; height:145px; float:left; display:inline-block; padding-right:10px; background:url(../images/imgShadow145a.png) right top no-repeat;}
+.kanmiCon .smallShow .magezineBoxLast a{ top:185px;}
+.kanmiCon .smallShow .magezineBox a.m1{ left:20px;}
+.kanmiCon .smallShow .magezineBox a.m2{ left:160px;}
+.kanmiCon .smallShow .magezineBox a.m3{ left:300px;}
+.kanmiCon .smallShow .magezineBox a img{ width:110px; height:145px;}
+.kanmiCon .smallShow .magezineBox a span{ position:absolute; top:0; left:0; width:110px; padding-top:145px; height:20px; line-height:20px; display:block; text-align:center; background:url(../images/mask145.png) 0 0 no-repeat; overflow:hidden;}
+.kanmiCon .smallShow .magezineBox a span em{ position:absolute; top:145px; left:0; height:20px; line-height:20px; display:block; }
+.kanmiCon .smallShow .magezineBox a:hover span{ background-position:-110px 0;}
+.kanmiCon .smallShow .magezineBox a sub.history{ width:16px; height:16px; display:block; background:url(../images/icon/folder_w.gif) center center no-repeat; position:absolute; right:12px; top:1px; z-index:103}
+.kanmiCon .smallShow .ctrl{ position:absolute; z-index:98; top:105px; height:100px; width:20px; overflow:hidden; background-image:url(../images/btnHoverBig.png); background-repeat:no-repeat;}
+.kanmiCon .smallShow .ctrl span{ width:120px; height:100px; display:block; overflow:hidden; }
+.kanmiCon .smallShow .ctrl img{ width:31px; height:41px; margin:6px 0 0 6px; background:#fff; float:left; display:none;}
+.kanmiCon .smallShow .ctrl:hover{ width:120px; }
+.kanmiCon .smallShow .ctrl:hover img{ display:block;}
+.kanmiCon .smallShow .turnLeft{ background-position:0 -110px; left:0; }
+.kanmiCon .smallShow .turnLeft span{ float:right;}
+.kanmiCon .smallShow .turnLeft:hover{background-position:0 0; padding-left:20px;}
+.kanmiCon .smallShow .turnRight{ background-position:-140px -110px; left:410px;}
+.kanmiCon .smallShow .turnRight span{ float:left;}
+.kanmiCon .smallShow .turnRight:hover{background-position:-20px 0; left:290px; padding-right:20px; }
+.kanmiCon .smallShow .stopL,
+.kanmiCon .smallShow .stopR{filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity: 0.3;opacity: 0.3; z-index:-1; cursor:default; }
+
+.kanmiNullInfo{ height:300px; line-height:300px; margin-bottom:80px; text-align:center; background:url(../images/icon/64frown.gif) 360px center no-repeat;}
+/*.kanmiCon .smallShow .stopL:hover{ width:20px; padding-left:0; overflow:hidden; background-position:0 -110px; }
+.kanmiCon .smallShow .stopL:hover span{ display:none;}
+.kanmiCon .smallShow .stopR:hover{ left:410px; width:20px; padding-right:0; overflow:hidden; background-position:-140px -110px; }
+.kanmiCon .smallShow .stopR:hover span{ display:none;}*/
+.kanmiConLast .smallShow{ height:354px;}
+.kanmiConLast .smallShow .magezineBoxLast a{ background-image:url(../images/imgShadow145b.png);}
+.kanmiConLast .smallShow .magezineBoxLast a span{ padding-top:148px;}
+/*kanmiSlideDoor*/
+.kanmiCon .control{ top:330px; width:272px; left:258px; position:absolute; text-align:center; z-index:1; display:block;}
+.kanmiCon .control a{ width:10px; height:10px; overflow:hidden; margin:5px; display:block; display:inline-block; background:url(../images/iconDot.gif) 0 -20px no-repeat;}
+.kanmiCon .control a.current{ background-position:0 0;}
+.kanmiCon .control a:hover{ background-position:0 -40px;}
+.kanmiConLast .control{ top:334px; }
+/*deskShow*/
+.main .body .deskShow{ overflow:hidden; margin-top:-10px; height:auto;}
+.main .pageKanmi .deskShow{ margin-top:0px;}
+.deskShow .item{ height:185px; background:url(../images/magezineDesk980.gif) 0 145px no-repeat; margin-top:-10px; padding-top:10px; }
+.deskShow .item a{ text-decoration:none; width:110px; height:145px; margin:0 10px; float:left; display:none; padding-right:10px; background:url(../images/imgShadow145a.png) right top no-repeat; position:relative;}
+.deskShow .item a img{ width:110px; height:145px;}
+.deskShow .item a span{ position:absolute; top:0; left:0; width:110px; padding-top:145px; height:20px; line-height:20px; display:block; text-align:center; background:url(../images/mask145.png) 0 0 no-repeat; overflow:hidden;}
+.deskShow .item a.showBar:hover span{ background-position:-110px 0;}
+.deskShow .item a sub.history{ width:16px; height:16px; display:block; background:url(../images/icon/folder_w.gif) center center no-repeat; position:absolute; right:12px; top:1px; z-index:103}
+.deskShow .item a.title{ cursor:default;}
+.deskShow .itemLast{ background-image:none; height:175px;}
+.deskShow .itemLast a{ background-image:url(../images/imgShadow145b.png);}
+.deskShow .itemLast a span{ padding-top:148px;}
+.main .body .deskOther{ margin-top:0;}
+
+/*conTagWall*/
+.pageTagWall{margin-bottom:38px;}
+.pageTagWall .outer .inner{ width:992px; margin-left:-12px;}
+.pageTagWall .col{ width:236px; margin-left:12px; float:left; display:inline;}
+.pageTagWall .inner .item{ width:236px; overflow:hidden; margin-bottom:12px; background:#f5f5f5 url(../images/tagWallItemBg.gif) 0 bottom no-repeat; }
+.pageTagWall .inner .item .img{ margin:12px; padding-top:1px; display:block; text-decoration:none; color:#999; position:relative; min-height:90px; }
+.pageTagWall .inner .item .img div{ padding:0 1px 1px 1px; }
+.pageTagWall .inner .item .img img{ width:210px;}
+.pageTagWall .inner .item .name{ padding:0 12px; height:14px; overflow:hidden; line-height:14px; margin-top:10px; text-decoration:none;}
+.pageTagWall .inner .item .tools{ padding:0 0 0 12px; height:16px; line-height:16px; margin:6px 0; display:block;}
+.pageTagWall .inner .item .tools em{ height:14px; line-height:14px; float:left; padding-left:5px; margin-left:5px; padding-left:16px; background-position:left center; background-repeat:no-repeat;}
+.pageTagWall .inner .item .tools em.icon1{ border:none; margin-left:0; background-image:url(../images/icon/graph.gif);}
+.pageTagWall .inner .item .tools em.icon2{ background-image:url(../images/icon/dig.gif); margin-left:2px;}
+.pageTagWall .inner .item .tools em.icon3{ background-image:url(../images/icon/share.gif); position:relative;}
+/*ckepop*/
+.pageTagWall .inner .item .tools #ckepop{ float:left; position:absolute; left:-10px; top:18px; width:60px; background:#2d2e31; padding:5px; padding-right:0; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+.pageTagWall .inner .item .tools #ckepop *{ float:left;}
+.pageTagWall .inner .item .tools #ckepop sub{ width:6px; height:3px; overflow:hidden; display:block; background:url(../images/iconArrow1.gif) 0 0 no-repeat; position:absolute; top:-3px; left:29px;}
+.pageTagWall .inner .item div.clearFix{ padding:6px 10px; border-top:1px dotted #ccc;}
+.pageTagWall .inner .item div.clearFix img{ width:30px; height:30px; float:left; margin-right:10px;}
+.pageTagWall .inner .item div.clearFix p{ height:30px; line-height:15px; color:#666}
+.pageTagWall .inner .item div.clearFix a{ color:#f60;}
+.pageTagWall .loadMore{ bottom:-2px;}
+#loadingPage{ bottom:40%; }
+
+.fullScreen .pageTagWall .outer .inner{ width:100%; margin-top:-8px; position:relative; }
+.fullScreen .pageTagWall .outer .inner .item{ float:left; margin:0 0 12px 12px; background-color:#f5f5f5; }
+.fullScreen .pageTagWall .outer .inner .item:hover #ckepop{ display:block;}
+.fullScreen .pageTagWall .outer .inner .item:hover{ background-color:#dcdcdc;}
+/*conUserList*/
+.conUserList h2{ padding:6px; background:#F0F0F0;}
+.conUserList h2 img{ width:30px; height:30px; float:left; margin-right:10px;}
+.conUserList h2 strong{ color:#f60; height:15px; line-height:15px; display:block;}
+.conUserList .conBody{ overflow:hidden; background:#F5F5F5; width:224px; padding:6px; overflow:hidden;}
+.conUserList .conBody .inner{ width:234px; height:230px; margin-left:-7px;}
+.conUserList .conBody .inner a{ width:68px; height:68px; margin:0 0 8px 8px; float:left; display:inline-block; }
+.conUserList .conBody .inner img{ width:68px; height:68px;}
+.conUserList .control{ clear:both;}
+.conUserList .control a{ float:left; color:#f60;}
+.conUserList .control a.turn{ float:right; height:16px; width:22px; background-color:#ddd; background-position:center center; background-repeat:no-repeat; display:block; margin-left:5px; border-radius:3px;}
+.conUserList .control a.turn:hover{ background-color:#ccc;}
+.conUserList .control a.left{ background-image:url(../images/icon/arrowL.gif);}
+.conUserList .control a.right{ background-image:url(../images/icon/arrowR.gif);}
+.conUserList .control a.stop{ cursor:default; filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity: 0.3;opacity: 0.3;}
+.conUserList .control a.stop:hover{background-color:#ddd; }
+
+/*conBigMgzShow*/
+.conBigMgzShow{ padding:6px; margin-top:30px; background:#f5f5f5; margin-bottom:0; position:relative; width:472px; }
+.conBigMgzShow h6{ color:#f60; margin-top:5px;}
+.conBigMgzShow p{ line-height:20px; color:#666; margin-top:5px; }
+.conBigMgzShow .info{ padding:5px 0;}
+.conBigMgzShow .info span{ color:#aaa; float:right; line-height:25px;}
+.conBigMgzShow .info .iconDig{ padding:5px 10px 5px 20px; background:url(../images/icon/dig_w.gif) 4px center no-repeat #f60; color:#fff; text-decoration:none; border-radius:5px; display:inline-block; float:left;}
+.conBigMgzShow .info .iconDig strong{ margin-left:5px; font-weight:normal;}
+.conBigMgzShow .info .iconDig:hover{  background-color:#333; background-image:url(../images/icon/dig.gif)}
+.conBigMgzShow .info .iconShare{ padding:5px 5px 5px 20px; background:url(../images/icon/share.gif) 4px center no-repeat; text-decoration:none; border-radius:5px; display:inline-block; float:left;}
+.conBigMgzShow .info .iconShare:hover{ color:#999; cursor:default;}
+.conBigMgzShow .info .iconShare strong{ margin-left:5px; font-weight:normal;}
+.conBigMgzShow .info #ckepop{ padding-top:5px;}
+
+
+
+.conBigMgzShow .btnToggle{ position:absolute; z-index:99; left:5px; top:-30px; width:100px; height:24px; display:block; background:url(../images/btnToggle.gif) 0 0 no-repeat;}
+.bigMgzShow1 .btnToggle{ background-position:0 0;}
+.bigMgzShow2 .btnToggle{ background-position:0 -24px;}
+.conBigMgzShow .toggleSmall{ background-position:0 -24px;}
+.bigMgzShow1 img{ width:472px;}
+.bigMgzShow1 .mask{ cursor:pointer; position:absolute; left:6px; top:6px; background:#000; z-index:2; display:block; filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
+.bigMgzShow1 .showArea{ position:absolute; border:1px dashed #fff; z-index:3; display:block;}
+.bigMgzShow1 .showArea img{ width:auto;}
+.bigMgzShow2 img{ display:none;}
+.bigMgzShow2 .mask{ display:none;}
+.bigMgzShow2 .showArea{ position:inherit; text-align:center; border:none; max-width:472px; overflow:hidden; }
+.bigMgzShow2 .showArea img{ width:auto; max-width:472px; display:inline-block;}
+
+
+/*conTagTime*/
+.conTagTime{ position:relative;}
+.conTagTime .conBody img{ width:80px; float:left; margin-right:10px;}
+.conTagTime .conBody p{ line-height:20px;}
+/*conTagComment*/
+.conTagComment{ padding:0 6px; background:#f5f5f5; position:relative; margin-bottom:35px;}
+.conTagComment .item{ padding:6px 0; border-top:1px dotted #ccc;}
+.conTagComment .item a{ text-decoration:none;}
+.conTagComment .item span{ color:#ccc; float:right; height:12px; line-height:12px;}
+.conTagComment .item .userHead{ width:46px; height:46px; float:left; margin-right:6px; position:relative;}
+.conTagComment .item .userHead img{ width:46px; height:46px; }
+.conTagComment .item .userHead sub{ width:46px; height:46px; display:block; position:absolute; left:0; top:0; background:url(../images/headMask.png) 0 0 no-repeat;}
+.conTagComment .item strong{ height:12px; line-height:12px; margin-bottom:4px; color:#f60;}
+.conTagComment .item p{ padding-left:52px; margin-top:5px; line-height:1.8em; word-wrap:break-word; word-break:break-all;}
+.conTagComment .itemTitle span{ float:none; margin-left:5px; font-weight:normal;}
+.conTagComment .inputArea textarea,
+.conTagComment .inputArea .in,
+.conTagComment .inputArea .code{ border:1px solid #ddd; border-left-color:#999; border-top-color:#999; padding:4px; height:14px; line-height:15px; width:462px; margin-bottom:5px; float:left; }
+.conTagComment .inputArea .in{ width:105px; line-height:14px; margin-right:5px;}
+.conTagComment .inputArea .code{ width:50px;}
+.conTagComment .inputArea a{ vertical-align:middle; line-height:22px;}
+.conTagComment .tCenter{ padding:20px 0;}
+.conTagComment .loadMore{ bottom:-25px;}
+
+
+
+/*pageMgzSection*/
+.conCurrentMgz h2{ text-align:center;}
+.conCurrentMgz .conBody{ padding-left:24px; height:174px; background:url(../images/magezineDesk150Last.gif) 0 123px no-repeat;}
+.conCurrentMgz .conBody a{ width:100px; height:132px; display:block; padding-right:10px; background:url(../images/imgShadow132b.png) right top no-repeat; position:relative;}
+.conCurrentMgz .conBody a span{ position:absolute; left:0; top:0; width:100px; padding-top:132px; height:22px; line-height:22px; display:block; text-align:center; background:url(../images/mask132.png) 0 0 no-repeat; overflow:hidden;}
+.conCurrentMgz .conBody a:hover span{ background-position:-100px 0;}
+/*conHistoryMgz*/
+.conHistoryMgz .conBody{ background:url(../images/magezineDesk300Last.gif) 0 97px no-repeat;}
+.conHistoryMgz .conBody .mgzPic{ height:140px; padding-left:15px; }
+.conHistoryMgz .conBody .mgzPic a{ width:80px; margin-right:5px; height:106px; display:block; padding-right:10px; position:relative; float:left; background:url(../images/imgShadow132b.png) right bottom no-repeat;}
+.conHistoryMgz .conBody .mgzPic a img{ width:80px; height:106px;}
+.conHistoryMgz .conBody .mgzPic a span{ position:absolute; left:0; top:0; width:80px; padding-top:106px; height:22px; line-height:22px; display:block; text-align:center; overflow:hidden; background:url(../images/mask106.png) 0 0 no-repeat;}
+.conHistoryMgz .conBody .mgzPic a:hover span{ background-position:-80px 0;}
+.conHistoryMgz .conBody .mgzText{ padding:0 5px;}
+.conHistoryMgz .conBody .mgzText a{ padding:5px 5px 5px 18px; width:73px; border-bottom:1px dotted #e8e8e8; display:block; float:left; background:url(../images/icon/arrow3_e.gif) 3px center no-repeat;}
+
+/*conPushMgz*/
+.conPushMgz .conBody .mgzPic{ height:150px; padding-left:15px; background:url(../images/magezineDesk300Last.gif) 0 97px no-repeat;}
+.conPushMgz .conBody .mgzPic a{ width:80px; margin-right:5px; height:106px; display:block; padding-right:10px; position:relative; float:left; background:url(../images/imgShadow132b.png) right bottom no-repeat;}
+.conPushMgz .conBody .mgzPic a img{ width:80px; height:106px;}
+.conPushMgz .conBody .mgzPic a span{ position:absolute; left:0; top:0; width:80px; padding-top:106px; height:22px; line-height:22px; display:block; text-align:center; overflow:hidden; background:url(../images/mask106.png) 0 0 no-repeat;}
+.conPushMgz .conBody .mgzPic a:hover span{ background-position:-80px 0;}
+
+/*conLikeMgz*/
+.conLikeMgz .conBody .mgzPic{ height:150px; padding-left:15px; background:url(../images/magezineDesk300Last.gif) 0 97px no-repeat;}
+.conLikeMgz .conBody .mgzPic a{ width:80px; margin-right:5px; height:106px; display:block; padding-right:10px; position:relative; float:left; background:url(../images/imgShadow132b.png) right bottom no-repeat;}
+.conLikeMgz .conBody .mgzPic a img{ width:80px; height:106px;}
+.conLikeMgz .conBody .mgzPic a span{ position:absolute; left:0; top:0; width:80px; padding-top:106px; height:22px; line-height:22px; display:block; text-align:center; overflow:hidden; background:url(../images/mask106.png) 0 0 no-repeat;}
+.conLikeMgz .conBody .mgzPic a:hover span{ background-position:-80px 0;}
+.conDetailMgz{ padding:10px; background:#f9f9f9;}
+
+
+
+
+/*kanmiFolder*/
+.folder{ height:0; background:url(../images/folderBg.gif) 0 0 no-repeat; position:relative; z-index:10; top:-20px; z-index:99; overflow:hidden;}
+.folder h2{ height:13px; line-height:13px; padding-top:10px; padding-left:10px; color:#fff; font-size:13px; text-shadow:1px 1px 2px #333;}
+.folder sub,
+.folder sup{ width:30px; height:178px; display:block; background-image:url(../images/folderMask.png); background-repeat:no-repeat; position:absolute; top:0; left:0;}
+.folder sup{ background-position:-30px 0; left:auto; right:0;}
+.folder .outer{ height:198px; width:980px; padding-top:11px; overflow:hidden;}
+.folder .outer .jspDrag{background:#ddd;}
+.folder .outer .jspDrag:hover,
+.folder .outer .jspDrag:active{background:#f60;}
+.folder .inner{ height:167px; }
+.folder .inner a.showBar{ display:none;}
+.folder .inner a{ text-decoration:none; width:110px; height:145px; margin:0 10px; float:left; padding-right:10px; background:url(../images/folderShadow145.png) right top no-repeat; position:relative;}
+.folder .inner a img{ width:110px; height:145px;}
+.folder .inner a span{ position:absolute; top:0; left:0; width:110px; padding-top:145px; height:20px; line-height:20px; display:block; text-align:center; background:url(../images/mask145.png) 0 0 no-repeat; overflow:hidden;}
+.folder .inner a:hover span{ background-position:-110px 0;}
+.deskShow .inner a span{ position:absolute; color:#fff; top:0; left:0; width:110px; padding-top:145px; height:20px; line-height:20px; display:block; text-align:center; background:url(../images/mask145.png) 0 0 no-repeat; overflow:hidden;}
+.deskShow .item a .arrow{ width:20px; height:10px; background:url(../images/folderArrow.gif) 0 0 no-repeat; position:absolute; bottom:-20px; left:45px; overflow:hidden;}
+/*kanmi1*/
+.pageKanmi .folder{top:-20px;}
+.pageKanmi .folder .inner a span{ color:#fff;}
+.kanmiCon .smallShow .magezineBox a .arrow{ width:20px; height:10px; background:url(../images/folderArrow.gif) 0 -10px no-repeat; position:absolute; bottom:auto; top:-20px; left:45px; overflow:hidden;}
+.kanmiCon .smallShow .magezineBoxLast a .arrow{ top:auto; bottom:-20px; background-position:0 0;}
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+﻿@charset "utf-8";
+@import url("conBigHeaderv6.css");
+
+
+body{padding-top:120px;}
+.body{ zoom:1; margin:0 auto 50px auto; width:928px; background:#f3f3f3; box-shadow:0px 2px 3px rgba(0,0,0,0.1),0px 0px 2px rgba(0,0,0,0.1); position:relative;}
+.conB{ border-top:0;}
+/*-Standard Definitions----------------------------------------*/
+#tagPassword{ margin-bottom:20px;}
+#tagPassword .ctrl{ margin-bottom:10px;}
+#tagPassword .doorList .item{ padding:10px;}
+#tagPassword .doorList fieldset div{ margin-bottom:15px;}
+#tagPassword .doorList fieldset div em.title{ text-align:left; width:94px; padding-left:3px;}
+#tagPassword .doorList .item .tips{ margin-top:50px; color:#333; line-height:1.6em; background:url(../images/icon/comment.gif) 0 2px no-repeat;}
+
+
+
+/*总静态页样式*/
+.pageStatic .conLeft .nav ul li{ line-height:2em; background:url(../images/icon/arrowR.gif) 0 4px no-repeat; font-weight:bold; font-size:16px;}
+.pageStatic .conLeft .nav ul li a{ color:#666}
+.pageStatic .conLeft .nav ul li a:hover,
+.pageStatic .conLeft .nav ul li a.current{ color:#f60}
+.pageStatic .conLeft .nav ul li li{ background:none; padding-left:0; font-weight:normal;}
+.pageStatic .conLeft .nav ul li li a{ color:#999}
+/*contentPage*/
+.pageStatic .conBig h2{ font-size:22px; line-height:2em; height:auto; text-align:left; color:#ddd;}
+.pageStatic .conBig h3{ font-size:16px; line-height:1.5em; margin-top:1em;}
+.pageStatic .conBig .conBody p{ font-size:14px; margin-top:15px; line-height:1.8em;}
+.pageStatic .conBig .conBody strong{ display:block;}
+.pageStatic .conBig .conBody p strong{ color:#f60; font-weight:normal; font-size:16px; margin-top:0; display:inline;}
+.pageStatic .conBig .conBody p span{font-weight:bold;}
+
+
+
+.pagePassword .conLeft{ background:none; border-radius:0;}
+.pagePassword .leftNav{ border-top:1px solid #ccc; margin-bottom:20px;}
+.pagePassword .leftNav a{ height:30px; line-height:30px; text-indent:10px; display:block; background:#f5f5f5; border-bottom:1px solid #ccc;}
+
+
+.pageFriendLink h2{ text-indent:16px;}
+.pageFriendLink hr{ margin:7px 0; height:1px; overflow:hidden; border-top:1px dotted #ccc; background:none;}
+.pageFriendLink .conLeftMiddleRight .conB{ margin-bottom:0; padding-bottom:10px;}
+.pageFriendLink .conLeftMiddleRight ul{ padding-left:15px;}
+.pageFriendLink .conLeftMiddleRight ul li{ float:left; width:120px; height:40px; margin:0 48px 20px 0; border:1px solid #eee; text-align:center; line-height:18px; background:#f9f9f9}
+
+
+
+.page404{ padding-bottom:30px; background:none; box-shadow:none;}
+.page404 .conLeftMiddleRight{ height:250px; padding-top:350px; text-align:center;font-size:26px; color:#ccc; background:url(../images/404.gif) center 25px no-repeat;}
+
+.pageLogin{ padding-bottom:20px;}
+.pageLogin .login{ float:left; width:360px; margin-left:60px; margin-right:60px; padding:20px; background:#f7f7f7; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+.pageLogin .login div em.title{ text-align:left; width:80px;}
+.pageLogin .register{ float:left; width:360px; padding:20px; background:#f7f7f7; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+.pageLogin .register div em.title{ text-align:left; width:60px;}
+.pageLogin .register h2{ color:#f60;}
+.pageLogin fieldset div{ margin-bottom:15px;}
+.pageLogin fieldset h2{ font-size:14px; margin-bottom:20px;}
+
+
+
+
+/*pageNews*/
+.pageNews .conB{ border:none;}
+.pageNews .conBig .conBody p{ font-size:14px; line-height:1.6em; margin-top:0;}
+.pageNews .item{ margin-bottom:20px; padding-top:20px; border-top:1px solid #eee; position:relative;}
+.pageNews .item .type{ float:right; width:70px; margin-top:30px}
+.pageNews .item .type span{ width:64px; height:64px; display:block; text-indent:-9999em; overflow:hidden; background-repeat:no-repeat;}
+.pageNews .item .type span.typeDoc{ background-image:url(../images/icon/64document.gif); background-position:4px -12px; }
+.pageNews .item .type span.typeImage{ background-image:url(../images/icon/64image.gif); background-position:4px -16px;}
+.pageNews .item .type span.typeVideo{ background-image:url(../images/icon/64tv.gif); background-position:4px -12px;}
+.pageNews .item .content{ float:left; width:500px;}
+.pageNews .item .content h2{ font-size:16px; line-height:16px; margin-bottom:10px; color:#f60;}
+.pageNews .item .date{ position:absolute; right:0; top:18px; width:85px; background:url(../images/icon/time.gif) 0 1px no-repeat;}
+.pageNews .item .date span{ margin-left:16px;}
+
+
+/*pageTagList*/
+.pageTagList{ box-shadow:none;  font-size:14px; background:none;}
+.pageTagList .conA .contentLeft{ margin-bottom:10px; border-bottom:1px dotted #ccc; padding-bottom:5px;}
+.pageTagList .conA ul li {display:inline-block;float:left;white-space:nowrap; margin-right:10px;}
+.pageTagList .conA ul li a { padding:5px; display:inline-block;*display:inline;_display:inline-block;}
+.pageTagList .conA ul li a:hover { text-decoration:underline;}
+.pageTagList .contentLeft a{ color:#08c;}
+.pageTagList .conA .contentRight{ width:944px; overflow:hidden;}
+.pageTagList .conA .contentRight .item{ width:210px; overflow:hidden; float:left; height:336px; margin:0 23px 23px 0;}
+.pageTagList .conA .contentRight .item .photo{ width:210px; height:140px; position:relative; overflow:hidden;}
+.pageTagList .conA .contentRight .item .photo img{ position:absolute;}
+.pageTagList .conA .contentRight .item .info{ width:210px; height:196px; overflow:hidden;}
+.pageTagList .conA .contentRight .item strong{ font-size:16px; color:#000; line-height:24px;}
+.pageTagList .conA .contentRight .item p{ color:#999; line-height:24px;}
+.pageTagList .conA .contentRight .item a:hover strong{ color:#08c;}
+.pageTagList .conA .contentRight .item a:hover p{ color:#333;}
+
+/*pageTagDetail*/
+.pageTagDetail{ box-shadow:none; background:none;}
+.pageTagDetail .sideRight .conList a strong{max-width:220px;}
+#conDetailWall .itemFirst{ width:918px; height:210px;}
+#conDetailWall .itemSpace{ height:210px;}
+#conDetailWall .itemFirst .pic{ width:446px; height:210px; float:left; position:relative; overflow:hidden;}
+#conDetailWall .itemFirst .pic img{ position:absolute; vertical-align:text-top;}
+#conDetailWall .itemFirst .content{ width:447px; margin:10px 10px 10px 15px; float:left; height:190px; overflow:hidden;}
+#conDetailWall .itemFirst .content p{ line-height:1.8em; font-size:14px;}
+#conDetailWall .item .info{ padding-top:0;}
+#conDetailWall .item .info h2{ border-top:0;}
+#conDetailWall .item .info h6{ display:none;}
+#conDetailWall .item .info strong{ display:none;}
+
+
+
+
+
+/*footer*/
+.footerBig .inner { width:900px;}
+.footerBig .inner .contactForm { display:none;}
+
+
+
+
+
+
+

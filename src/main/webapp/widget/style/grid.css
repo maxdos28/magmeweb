@@ -1,0 +1,28 @@
+/*10 to 500-----------------------------------------------------------------------------------------------------*/
+.g10{width:10px}		.g110{width:110px}		.g210{width:210px}		.g310{width:310px}		.g410{width:410px}
+.g20{width:20px}		.g120{width:120px}		.g220{width:220px}		.g320{width:320px}		.g420{width:420px}
+.g30{width:30px}		.g130{width:130px}		.g230{width:230px}		.g330{width:330px}		.g430{width:430px}
+.g40{width:40px}		.g140{width:140px}		.g240{width:240px}		.g340{width:340px}		.g440{width:440px}
+.g50{width:50px}		.g150{width:150px}		.g250{width:250px}		.g350{width:350px}		.g450{width:450px}
+.g60{width:60px}		.g160{width:160px}		.g260{width:260px}		.g360{width:360px}		.g460{width:460px}
+.g70{width:70px}		.g170{width:170px}		.g270{width:270px}		.g370{width:370px}		.g470{width:470px}
+.g80{width:80px}		.g180{width:180px}		.g280{width:280px}		.g380{width:380px}		.g480{width:480px}
+.g90{width:90px}		.g190{width:190px}		.g290{width:290px}		.g390{width:390px}		.g490{width:490px}
+.g100{width:100px}		.g200{width:200px}		.g300{width:300px}		.g400{width:400px}		.g500{width:500px}
+/*500 to 1000---------------------------------------------------------------------------------------------------*/
+.g510{width:510px}		.g610{width:610px}		.g710{width:710px}		.g810{width:810px}		.g910{width:910px}		
+.g520{width:520px}		.g620{width:620px}		.g720{width:720px}		.g820{width:820px}		.g920{width:920px}		
+.g530{width:530px}		.g630{width:630px}		.g730{width:730px}		.g830{width:830px}		.g930{width:930px}		
+.g540{width:540px}		.g640{width:640px}		.g740{width:740px}		.g840{width:840px}		.g940{width:940px}		
+.g550{width:550px}		.g650{width:650px}		.g750{width:750px}		.g850{width:850px}		.g950{width:950px}		
+.g560{width:560px}		.g660{width:660px}		.g760{width:760px}		.g860{width:860px}		.g960{width:960px}		
+.g570{width:570px}		.g670{width:670px}		.g770{width:770px}		.g870{width:870px}		.g970{width:970px}		
+.g580{width:580px}		.g680{width:680px}		.g780{width:780px}		.g880{width:880px}		.g980{width:980px}		
+.g590{width:590px}		.g690{width:690px}		.g790{width:790px}		.g890{width:890px}		.g990{width:990px}		
+.g600{width:600px}		.g700{width:700px}		.g800{width:800px}		.g900{width:900px}		.g1000{width:1000px}
+/*margin-----------------------------------------------------------------------------------------------------------*/
+html body .mgb10{ margin-bottom:10px;}
+html body .mgb12{ margin-bottom:12px;}
+html body .mgb20{ margin-bottom:20px;}
+html body .mgt0{ margin-top:0;}
+html body .mgt30{ margin-top:30px;}

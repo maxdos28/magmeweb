@@ -1,0 +1,60 @@
+body{min-width:320px; max-width:480px; padding-top:72px;}
+
+.header{ background:url(../images/bgBody.png) 0 0 repeat-x; background-size:25px 72px; position:fixed; top:0; left:0; width:100%; height:72px;}
+.header .logo{ background:url(../images/logo.png) center center no-repeat; background-size:100px;}
+.header .back{ position:absolute; top:5px; left:8px; width:40px; height:27px; display:block; text-indent:-999em; background:url(../images/btnBack.png) 0 0 no-repeat; background-size:40px; }
+.header .share{ position:absolute; top:5px; left:56px; width:27px; height:27px; display:block; text-indent:-999em; background:url(../images/btnShare.png) 0 0 no-repeat; background-size:27px;}
+.header .viewType{ width:64px; height:27px; position:absolute; right:8px; top:5px;}
+.header .viewType a{ width:64px; height:27px; display:block; float:left; text-indent:-999em; background-image:url(../images/btnViewType.png); background-size:64px 54px; background-repeat:no-repeat;}
+.header .viewType a.list{ background-position:0 0;}
+.header .viewType a.grid{ background-position:0 -27px;}
+.header .viewSize{ width:62px; height:27px; position:absolute; right:8px; top:5px; background:url(../images/btnChangeSize.png) 0 0 no-repeat; background-size: 62px 27px; }
+.header .viewSize a{ width:31px; height:27px; display:block; float:left; text-indent:-999em; }
+
+.home{ display:none;}
+
+.homeGrid{ display:block; margin:0 4px; background-size:312px 156px; background-image:url(../images/phoneBg.png); background-repeat:repeat-y; }
+.horizontal .homeGrid{ background-repeat:repeat; margin:0 6px;}
+.homeGrid .item{ width:140px; height:140px; padding:5px 5px 8px 5px; margin:3px 3px 0 3px; float:left; background-position:0 0; background-repeat:no-repeat; position:relative;}
+.homeGrid .item a{ width:140px; height:140px; display:block; overflow:hidden;}
+.homeGrid .item a .img img{ background:#ddd; border:none; width:140px; height:140px;}
+.homeGrid .item a p{ background:url(../images/alpha60.png) 0 0 repeat; min-height:20px; max-height:60px; line-height:20px; color:#fff; position:absolute; left:5px; bottom:8px; width:134px; display:block; padding-left:6px; overflow:hidden;}
+.homeGrid .item a p strong{ font-weight:normal;}
+.homeGrid .item a p span{ display:none;}
+.homeGrid .size11{ background-image:url(../images/iphoneSize11.gif); background-size:150px 156px;}
+.homeGrid .size12{ background-image:url(../images/iphoneSize12.gif); width:296px; background-size:306px 156px;}
+.homeGrid .size21{ background-image:url(../images/iphoneSize21.gif); height:296px; background-size:150px 312px;}
+.homeGrid .size12 a{ width:296px; height:140px;}
+.homeGrid .size12 a p {width:290px;}
+.homeGrid .size12 a .img img{ width:296px; display:block;}
+.homeGrid .size21 a{ width:140px; height:296px;}
+.homeGrid .size21 a .img img{ height:296px;}
+
+
+.homeList{ display:block; background:none; margin:0;}
+.homeList .item{ height:66px; margin:0; width:100%; float:none; background:url(../images/bgPhoneHomeItem.png) 0 0 repeat-x; background-size:25px 66px;}
+.homeList .item a{ height:50px; padding:9px 30px 9px 9px; margin-right:10px; display:block; float:none; background:url(../images/iconEnter.png) right center no-repeat; background-size:8px 14px;}
+.homeList .item p{ position:static; padding:0; background:none; line-height:15px; height:46px; display:block; overflow:hidden;}
+.homeList .item p strong{ display:block;}
+.homeList .item p span{ color:#999;}
+.homeList .item .img{ width:40px; height:40px; padding:3px; float:left; margin-right:10px; background:url(../images/bgPhoneItem.png) 0 0 no-repeat; background-size:46px 46px;}
+.homeList .item .img span { width:40px; height:40px; display:block; overflow:hidden;}
+.homeList .item .img img{ height:40px; width:40px; display:block; background:#ddd; }
+.homeList .size12 .img img{ width:85px; height:40px; margin-left:-22px;}
+.homeList .size21 .img img{ width:40px; height:85px; margin-top:-22px;}
+
+
+
+
+.read{ position:relative; left:500px;}
+.read .img{ margin:10px; width:120px; height:160px; float:left; position:relative;}
+.read .img span{ width:26px; height:26px; text-align:center; line-height:26px; display:block; color:#fff; font-size:16px; font-weight:bold; position:absolute; left:50%; top:50%; margin-left:-13px; margin-top:-13px; background-color:rgba(0,0,0,0.6); border-radius:5px;}
+.read .img img{ display:block;box-shadow:0 0 5px rgba(0,0,0,0.3); z-index:9;}
+.read .content{ padding:10px; }
+.read .content h1{ font-size:120%; line-height:1.2em; margin-bottom:10px;}
+/*horizontal*/
+
+
+
+
+

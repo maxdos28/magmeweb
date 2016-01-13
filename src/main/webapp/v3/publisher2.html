@@ -1,0 +1,344 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6 ieOld"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ieOld"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ieOld"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<title>(SEO)事件精选&nbsp;[分类名]&nbsp;麦米网Magme&nbsp;-&nbsp;世界新杂志&nbsp;发现新内容</title>
+<meta name="Keywords" content="(SEO)麦米网,Magme,电子杂志,在线杂志,免费电子杂志,电子杂志下载,数码杂志,时尚杂志,汽车杂志,财经杂志">
+<meta name="Description" content="(SEO)麦米网提供数百种最新杂志在线免费阅读，财经，旅游，娱乐，时尚，汽车，体育，数码生活等。在麦米看书，交流，分享，交友，新的阅读生活由此开启">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/useFunction.js"></script>
+<script>
+$(function(){
+	
+	var topSlide = {
+		current : 1,
+		timerid : 1,
+		t : null,
+		init : function(){
+			$("#topSlide>.dot>a").bind("click", topSlide.onclick);
+			topSlide.current = 1;
+			topSlide.timer();
+		},
+		onclick : function (e){
+			if( !$(this).hasClass("current") ) {
+				topSlide.move($(this).index() + 1);
+				topSlide.timerid = $(this).index() + 2;
+				$("#topSlide>.dot>a").removeClass("current");
+				$(this).addClass("current");
+				clearTimeout(topSlide.t);
+				topSlide.t = setTimeout(function(){
+					topSlide.timer();
+				},10000);
+			}
+		},
+		timer : function(){
+			clearTimeout(topSlide.t);
+			topSlide.t = setTimeout(function(){
+				topSlide.timer();
+			},10000);
+			if (topSlide.current == 3){
+				topSlide.timerid = 1;
+			}
+			topSlide.move(topSlide.timerid);
+			$("#topSlide>.dot>a").removeClass("current");
+			$($("#topSlide>.dot>a")[topSlide.timerid - 1]).addClass("current");
+			topSlide.timerid += 1;
+		},
+		move : function(target){
+			if (topSlide.current != target) {
+				switch (topSlide.current) {
+					case 1 :
+						$("#topSlide>.inner>.c1").stop(true,true).animate({left:"-960px"}, 600);
+						$("#topSlide>.inner>.c2").stop(true,true).animate({left:"-960px"}, 600);
+						break;
+					case 2 :
+						if (topSlide.current < target) {
+							$("#topSlide>.inner>.c3").stop(true,true).animate({left:"-960px"}, 600);
+							$("#topSlide>.inner>.c4").stop(true,true).animate({left:"-960px"}, 600);
+							$("#topSlide>.inner>.c5").stop(true,true).animate({left:"-960px"}, 600);
+						}else{
+							$("#topSlide>.inner>.c3").stop(true,true).animate({left:"1200px"}, 600);
+							$("#topSlide>.inner>.c4").stop(true,true).animate({left:"1200px"}, 600);
+							$("#topSlide>.inner>.c5").stop(true,true).animate({left:"1200px"}, 600);
+						}
+						break;
+					case 3 :
+						$("#topSlide>.inner>.c6").stop(true,true).animate({left:"1200px"}, 600);
+						$("#topSlide>.inner>.c7").stop(true,true).animate({left:"1200px"}, 600);
+						$("#topSlide>.inner>.c8").stop(true,true).animate({left:"1200px"}, 600);
+						$("#topSlide>.inner>.c9").stop(true,true).animate({left:"1200px"}, 600);
+						$("#topSlide>.inner>.c10").stop(true,true).animate({left:"1200px"}, 600);
+						break;
+				}
+			}
+			switch (target) {
+				case 1 :
+					if (topSlide.current == 1) {
+						$("#topSlide>.inner>.c1").css({"left":"960px"});
+						$("#topSlide>.inner>.c2").css({"left":"960px"});
+						$("#topSlide>.inner>.c1").stop(true,true).animate({left:"-30px"}, 600);
+						$("#topSlide>.inner>.c2").stop(true,true).delay(160).animate({left:"510px"}, 800);
+					}else{
+						$("#topSlide>.inner>.c1").css({"left":"-960px"});
+						$("#topSlide>.inner>.c2").css({"left":"-960px"});
+						$("#topSlide>.inner>.c1").stop(true,true).animate({left:"-30px"}, 600);
+						$("#topSlide>.inner>.c2").stop(true,true).delay(120).animate({left:"510px"}, 800);
+					}
+					break;
+				case 2 :
+					if (topSlide.current < target) {
+						$("#topSlide>.inner>.c3").css({"left":"1200px"});
+						$("#topSlide>.inner>.c4").css({"left":"1200px"});
+						$("#topSlide>.inner>.c5").css({"left":"1200px"});
+						$("#topSlide>.inner>.c3").stop(true,true).animate({left:"90px"}, 600);
+						$("#topSlide>.inner>.c4").stop(true,true).delay(120).animate({left:"580px"}, 700);
+						$("#topSlide>.inner>.c5").stop(true,true).delay(160).animate({left:"500px"}, 800);
+					}else{
+						$("#topSlide>.inner>.c3").css({"left":"-960px"});
+						$("#topSlide>.inner>.c4").css({"left":"-960px"});
+						$("#topSlide>.inner>.c5").css({"left":"-960px"});
+						$("#topSlide>.inner>.c3").stop(true,true).animate({left:"90px"}, 600);
+						$("#topSlide>.inner>.c4").stop(true,true).delay(120).animate({left:"580px"}, 700);
+						$("#topSlide>.inner>.c5").stop(true,true).delay(160).animate({left:"500px"}, 800);
+					}
+					break;
+				case 3 :
+					$("#topSlide>.inner>.c6").css({"left":"1200px"});
+					$("#topSlide>.inner>.c7").css({"left":"1200px"});
+					$("#topSlide>.inner>.c8").css({"left":"1200px"});
+					$("#topSlide>.inner>.c9").css({"left":"1200px"});
+					$("#topSlide>.inner>.c10").css({"left":"1200px"});
+					$("#topSlide>.inner>.c6").stop(true,true).animate({left:"0"}, 600);
+					$("#topSlide>.inner>.c7").stop(true,true).delay(300).animate({left:"90px"}, 800);
+					$("#topSlide>.inner>.c8").stop(true,true).delay(260).animate({left:"260px"}, 800);
+					$("#topSlide>.inner>.c9").stop(true,true).delay(220).animate({left:"430px"}, 800);
+					$("#topSlide>.inner>.c10").stop(true,true).delay(180).animate({left:"600px"}, 800);
+					break;
+			}
+			topSlide.current = target;
+		}
+	};
+	
+	topSlide.init();
+	
+	
+});
+</script>
+<script src="js/global.js"></script>
+
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+<style>
+body{ padding-top:80px;}
+html{ padding-bottom:50px;}
+.header .inner{ width:980px;}
+.header #loginBar{ right:0;}
+.header #loginBar li a{ font-size:16px; letter-spacing:0.5em;}
+.body{ zoom:1; margin:0 auto; width:960px; background:#fff; box-shadow:0px 1px 3px rgba(0,0,0,0.4); position:relative;}
+.body:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+
+.ie8 .body,.ie7 .body,.ie6 .body { border:1px solid #dedede;}
+
+h2 { font-size:40px; color:#222222; font-weight:normal; line-height:40px; margin-bottom:20px; font-family:\5FAE\8F6F\96C5\9ED1, \9ED1\4F53, Arial, Helvetica, sans-serif;}
+.body p,.body ul,.body li { color:#333333; font-size:16px; line-height:32px;}
+.con { padding:50px 90px; background:url(images/publisher/conBg.gif) 0 0 no-repeat; position:relative;}
+
+.con1 { background:url(images/publisher/conBg1.gif) 0 0 repeat-x; height:480px; padding:0;}
+.con1 .dot { position:absolute; left:50%; bottom:8px; height:20px; width:78px; overflow:hidden; margin-left:-39px; z-index:100;}
+.con1 .dot a { display:block; float:left; width:20px; height:20px; overflow:hidden; background:url(images/publisher/scrollDot.jpg); margin:0 3px; display:block; _display:inline;}
+.con1 .dot a:hover { background:url(images/publisher/scrollDot.jpg) 0 -20px no-repeat;}
+.con1 .dot a.current,
+.con1 .dot a.current:hover { background:url(images/publisher/scrollDot.jpg) 0 -40px no-repeat; cursor:default;}
+
+.con1 .inner { width:960px; height:480px; overflow:hidden; position:relative;}
+.con1 .c1 { top:10px; left:-960px; position:absolute; z-index:2;}
+.con1 .c2 { width:400px; top:80px; left:-960px; position:absolute; z-index:1;}
+.con1 .c2 ul { width:394px; height:56px; overflow:hidden; background:url(images/publisher/con1setp.gif); margin-top:15px;}
+.con1 .c2 ul li { float:left; width:115px; padding-right:3px; text-align:center; font-size:24px; line-height:54px; font-family:\5FAE\8F6F\96C5\9ED1, \9ED1\4F53, Arial, Helvetica, sans-serif; color:#afbac8;}
+.con1 .c2 ul li.s2 { color:#a3b0bf;}
+.con1 .c2 ul li.s3 { padding-left:18px; color:#9ca8b6;}
+.con1 .c3 { width:380px; overflow:hidden; top:80px; left:-960px; position:absolute;}
+.con1 .c4 { top:40px; left:-960px; position:absolute; z-index:2;}
+.con1 .c5 { top:100px; left:-960px; position:absolute; z-index:3;}
+.con1 .c6 { top:40px; left:0; position:absolute; width:960px; left:-960px;}
+.con1 .c6 h2 { text-align:center;}
+.con1 .c6 p { text-align:center;}
+.con1 .c6 p strong { font-size:18px; margin-top:10px; display:block; text-align:center;}
+.con1 .c7 { top:220px; position:absolute; left:-960px;}
+.con1 .c8 { top:220px; position:absolute; left:-960px;}
+.con1 .c9 { top:220px; position:absolute; left:-960px;}
+.con1 .c10 { top:220px; position:absolute; left:-960px;}
+
+.con2 ul li { background:url(images/publisher/uldot.gif) 0 center no-repeat; padding-left:20px;}
+.con2 p { font-size:18px; margin-bottom:8px;}
+
+.con3 { height:280px;}
+.con3 p { width:330px;}
+.con3 img { position:absolute; right:0; top:40px;}
+
+.con4 { height:380px;}
+.con4 h2 { text-align:center;}
+.con4 p { text-align:center;}
+.con4 ul { position:absolute; left:4px; bottom:25px; width:953px;}
+.con4 ul li { float:left; text-align:center; line-height:20px; color:#8495a8; height:230px; overflow:hidden;}
+
+.con5 { height:430px;}
+.con5 .img1 { position:absolute; left:0; top:220px;}
+.con5 .img2 { position:absolute; right:0; top:40px;}
+.con5 .apps { margin:120px 0 0 310px;}
+.con5 .app1 { display:block; width:170px; height:60px; overflow:hidden; background:url(images/publisher/appBtn1.gif); text-indent:-99em; margin-bottom:10px;}
+/*.con5 .app1:hover { background:url(images/publisher/appBtn.gif) 0 -60px no-repeat;}*/
+.con5 .app2 { display:block; width:170px; height:60px; overflow:hidden; background:url(images/publisher/appBtn2.gif); text-indent:-99em; margin-bottom:10px; cursor:default}
+
+.con6 {}
+.con6 ul li { float:left; width:153px; height:56px; overflow:hidden; padding:20px 30px 0 0;}
+
+
+a.footerEnter { background:#f1f4f7 url(images/publisher/enter.gif) 550px 15px no-repeat; display:block; width:960px; text-align:center; height:70px; line-height:70px; font-size:32px; color:#b1bac4; text-shadow:0 2px 1px rgba(255,255,255,0.8); box-shadow:0 1px 3px rgba(0,0,0,0.1) inset; -webkit-transition: background 0.2s ease;}
+a.footerEnter:hover { background:#e7ebef url(images/publisher/enter_hover.gif) 550px 15px no-repeat; color:#949fac; text-shadow:0 2px 1px rgba(255,255,255,0.4);}
+</style>
+</head>
+<body>
+
+<!--header-->
+<div class="header clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="javascript:void(0)">(SEO)麦米 Magme</a></h1>
+            <!--userBar-->
+            <ul class="conUser" id="loginBar" style="display:none;">
+                <li class="reg"><a href="javascript:void(0)">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--body-->
+<div class="body clearFix">
+
+	<div class="con con1" id="topSlide">
+    	<div class="inner">
+        	<div class="c1"><img src="images/publisher/con1img1.png" class="png"/></div>
+            <div class="c2">
+            	<h2 style="font-size:60px; margin-bottom:30px;">麦米网</h2>
+                <p style="font-size:32px; line-height:1.5em;">电子杂志的视觉盛宴，<br>上百家合作刊物，<br>全方位数字管理，<br>与众不同的麦米平台，<br>你不容错过！</p>
+                <ul class="clearFix" style="display:none;">
+                	<li class="s1">注册</li>
+                	<li class="s2">上传</li>
+                	<li class="s3">获取代码</li>
+                </ul>
+            </div>
+            <div class="c3">
+            	<h2>最好的阅读体验</h2>
+                <p style="font-size:24px; line-height:1.7em;">平台自主研发的麦米阅读器，<br>界面简洁流畅，可在网站间平滑迁移， 
+					它不只有阅读，还可以分享、<br>电子商务、在线视频、在线音乐，<br>操作简便，功能强大，<br>你一定会爱上它。</p>
+            </div>
+        	<div class="c4"><img src="images/publisher/con1img3.png" class="png"/></div>
+        	<div class="c5"><img src="images/publisher/con1img2.png" class="png"/></div>
+            <div class="c6">
+            	<h2>数据提供</h2>
+                <p style="font-size:22px;">你想知道杂志的线上活动收效如何吗？你想了解更适合杂志推广的网站吗？<br>
+					麦米平台提供综合数据的集成系统，直接对麦米阅读器所在的网页，<br>进行全面的数据监测，助你纵览全局，运筹帷幄。</p>
+            </div>
+            <div class="c7">
+            	<img src="images/publisher/con1img4p1.png" class="png"/>
+            </div>
+            <div class="c8">
+            	<img src="images/publisher/con1img4p2.png" class="png"/>
+            </div>
+            <div class="c9">
+            	<img src="images/publisher/con1img4p3.png" class="png"/>
+            </div>
+            <div class="c10">
+            	<img src="images/publisher/con1img4p4.png" class="png"/>
+            </div>
+        </div>
+    	<div class="dot clearFix">
+        	<a class="m0 current" href="javascript:void(0)"></a>
+        	<a class="m1" href="javascript:void(0)"></a>
+        	<a class="m2" href="javascript:void(0)"></a>
+        </div>
+    </div>
+
+    <div class="con con3">
+    	<h2>SNS应用开发</h2>
+        <p>我们承诺提供多种渠道的传播工具。你的SNS应用程序，麦米为你度身定制，你的应用杂志将登陆微博、开心、人人、腾讯等平台。SNS蓝海，等你来开辟。</p>
+        <img src="images/publisher/con6img.png" class="png" />
+    </div>
+
+    <div class="con con2">
+    	<h2>这就是我们</h2>
+        <p>你的数字运营伙伴，提供多渠道的展示平台以及数字化管理工具，从期刊的上下架、多媒体互动插入到反馈信息收集，麦米都能帮你轻松搞定。
+我们拥有优质的阅读器，出色的开发团队，新鲜的营销模式，相信麦米，我们可以。
+</p>
+        
+    </div>
+    
+    
+    <div class="con con4">
+    	<h2>互动就是不一样</h2>
+        <p>你可以个性化编辑刊物来吸引读者的兴趣：通过后台在杂志中加入花絮视频、广告歌曲、商品外链，<br>
+			丰富阅读体验，让读者简单享受更多乐趣。</p>
+        <ul class="clearFix">
+        	<li><img src="images/publisher/con4img1.jpg" /><br>杂志内音频播放</li>
+        	<li><img src="images/publisher/con4img2.jpg" /><br>杂志内视频播放</li>
+        	<li><img src="images/publisher/con4img3.jpg" /><br>杂志商品购买</li>
+        </ul>
+    </div>
+    
+    <div class="con con5">
+    	<h2>移动就是王道</h2>
+        <p>iPhone、iPad和安卓，麦米的App将让你的读者可以享受你的刊物，<br>在所有的移动设备上！</p>
+        <div class="apps">
+        	<a class="app1" href="#">点击下载 app store</a>
+        	<a class="app2" href="#">点击下载 android store</a>
+        </div>
+        <img src="images/publisher/con5img.png" class="img1 png" />
+        <img src="images/publisher/con5img2.png" class="img2 png" />
+    </div>
+    
+    <div class="con con6">
+    	<h2>快速传播</h2>
+        <p>麦米网帮你实现快速传播的梦想，让你的刊物可以用最便利的方式传播给你的目标族群，不论他们是在百度、新浪、腾讯、开心、人人等等，麦米网都能将你的刊物曝光在读者面前。</p>
+        <ul class="clearFix">
+            <li><img src="images/publisher/con7img1.png" class="png" /></li>
+            <li><img src="images/publisher/con7img2.png" class="png" /></li>
+            <li><img src="images/publisher/con7img3.png" class="png" /></li>
+            <li><img src="images/publisher/con7img4.png" class="png" /></li>
+            <li><img src="images/publisher/con7img5.png" class="png" /></li>
+            <li><img src="images/publisher/con7img6.png" class="png" /></li>
+        </ul>
+    </div>
+    
+    <a href="http://www.magme.cn" target="_blank" class="footerEnter">进入网站</a>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

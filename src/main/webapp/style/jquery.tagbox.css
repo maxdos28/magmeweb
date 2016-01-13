@@ -1,0 +1,6 @@
+/*jqueryTagBox*/
+.jqueryTagBox .ctrl{ height:30px; padding:0; list-style:none; margin:0; border-bottom:1px solid #E6E6E6; _overflow:hidden; }
+.jqueryTagBox .ctrl div{ float:left; width:90px; height:30px; line-height:30px; margin-right:2px; text-align:center; border-bottom:none; cursor:pointer;}
+.jqueryTagBox .ctrl div.current{ background:url(../images/tabboxTitleBg.gif) 0 0 no-repeat; border-bottom:5px solid #fff; color:#f60;}
+.jqueryTagBox .doorList {overflow:hidden; margin-top:4px; }
+.jqueryTagBox .doorList .item{ display:none; overflow:hidden; }

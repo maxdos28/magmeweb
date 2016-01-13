@@ -1,0 +1,27 @@
+connection.driver_class=com.mysql.jdbc.Driver
+#develop db
+connection.url=jdbc:mysql://192.168.10.168:3306/magmecn?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull
+#online db
+#connection.url=jdbc:mysql://211.152.55.82:3306/magmecn?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull
+connection.username=cnmagme
+connection.password=ab56%Y@uiP
+
+connection.stat.driver_class=com.mysql.jdbc.Driver
+connection.stat.url=jdbc:mysql://192.168.10.83:3306/stat?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull
+connection.stat.username=cnmagme
+connection.stat.password=ab56%Y@uiP
+
+connection.mobileStat.driver_class=com.mysql.jdbc.Driver
+connection.mobileStat.url=jdbc:mysql://192.168.10.83:3306/mobileStat?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull
+connection.mobileStat.username=cnmagme
+connection.mobileStat.password=ab56%Y@uiP
+
+pool.c3p0.acquire_increment=20
+pool.c3p0.max_size=500
+pool.c3p0.min_size=5
+pool.c3p0.checktimeout=0
+pool.c3p0.max_idle_time=25000
+pool.c3p0.idleConnectionTestPeriod=900
+
+memcache.server1=211.152.43.168:12000
+memcache.server2=211.152.43.168:12000

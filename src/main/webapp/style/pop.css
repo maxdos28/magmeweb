@@ -1,0 +1,275 @@
+@charset "utf-8";
+#fancybox-overlay { position:absolute; top:0;	left:0; width:100%; z-index:1100; display: none;}
+#fancybox-wrap { position: absolute; top:0; left:0; z-index:1101; outline:none; display:none;}
+#fancybox-mag { position: absolute; top:0; left:0; z-index:1101; outline:none; display:none;}
+#fancybox-pic { position: absolute; top:0; left:0; z-index:1101; outline:none; display:none;}
+#fancybox-eve { position: absolute; top:0; left:0; z-index:1101; outline:none; display:none;}
+#fancybox-content {width: 0;height: 0;outline: none;position: relative;overflow: hidden;z-index:1102;border: 1px solid #ccc; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; }
+.pop{ display:none; margin:20px auto; padding:10px; border:none; background:url(../images/popBg.png) 0 0 repeat; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; position:relative;}
+.pop a.del{ width:16px; height:16px; margin:7px; display:block; background:url(../images/icon/close_w.gif) center center no-repeat #ccc; position:absolute; right:10px; top:10px; cursor:pointer;z-index: 1103; border-radius:8px; -webkit-border-radius:8px; -moz-border-radius:8px;}
+.pop a.del:hover{background-color:#333;}
+.popContent{ padding:10px; background:#fff; display:none;}
+.popContent h6{ height:22px; line-height:12px; color:#283037}
+.popContent fieldset hr{ margin:10px 0; background-color:transparent; border-bottom:1px dotted #ccc; height:1px; overflow:hidden;}
+.popContent fieldset div{ padding:6px 0;}
+.popContent fieldset div.important{ background-color:#f5f5f5;}
+.popContent fieldset div em.title{ padding-right:5px;}
+.popContent textarea.input{ height:auto;}
+/*popUploadHead*/
+#uploadUserAvatarDialog{ width:300px;}
+#uploadUserAvatarDialog .imgArea { padding:0; width:300px; height:300px; text-align:center; line-height:1.5em; display:table-cell; vertical-align:middle; position: relative; overflow:hidden; background:#f5f5f5;}
+#uploadUserAvatarDialog .imgArea a:active {star:expression(this.onFocus=this.blur());}
+#uploadUserAvatarDialog .imgArea a{ position:inherit !important ; position: absolute; top: 50%; left: 50%;text-decoration:none;}
+#uploadUserAvatarDialog .imgArea a span{ position:inherit !important ;  position: relative; top: -50%; left: -50%;}
+#uploadUserAvatarDialog .imgArea a span img{max-width:300px;max-height:300px;}
+#uploadUserAvatarDialog .tCenter{ position:relative; height:0; line-height:0;}
+#uploadUserAvatarDialog .tCenter a{ margin:0 2px; }
+#uploadUserAvatarDialog .tCenter a.btnOB{ width:100px; overflow:hidden; position:absolute; left:50%; margin-left:-70px; top:-180px;}
+#uploadUserAvatarDialog .tCenter a.btnOB .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:50px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer; }
+#uploadUserAvatarDialog .tCenter a.btnOB span{ width:100px; display:block;}
+#uploadUserAvatarDialog .tCenter a.btnOS{ width:80px; padding:0 8px; text-align:center; overflow:hidden; position:relative; }
+#uploadUserAvatarDialog .tCenter a.btnOS .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:40px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer; }
+#uploadUserAvatarDialog .tCenter a span{ display:block; width:75px; text-align:center;}
+#uploadUserAvatarDialog .tCenter .tipsError{ display:block; margin-top:5px; text-align:center; color:#900; display:none;}
+#uploadUserAvatarDialog .tCenter a.fileEdit{ width:140px; overflow:hidden; position:absolute; left:50%; margin-left:-70px; top:-180px; cursor:pointer; text-align:right;}
+/*uploadPublisherLogoDialog*/
+#uploadPublisherLogoDialog{ width:300px;}
+#uploadPublisherLogoDialog .imgArea { padding:0; width:300px; height:300px; text-align:center; line-height:1.5em; display:table-cell; vertical-align:middle; position: relative; overflow:hidden; background:#f5f5f5;}
+#uploadPublisherLogoDialog .imgArea a:active {star:expression(this.onFocus=this.blur());}
+#uploadPublisherLogoDialog .imgArea a{ position:inherit !important ; position: absolute; top: 50%; left: 50%;text-decoration:none;}
+#uploadPublisherLogoDialog .imgArea a span{ position:inherit !important ;  position: relative; top: -50%; left: -50%;}
+#uploadPublisherLogoDialog .imgArea a span img{max-width:300px;max-height:300px;}
+#uploadPublisherLogoDialog .tCenter{ position:relative; height:0; line-height:0;}
+#uploadPublisherLogoDialog .tCenter a{ margin:0 2px; }
+#uploadPublisherLogoDialog .tCenter a.btnOB{ width:100px; text-align:center; overflow:hidden; position:absolute; left:50%; margin-left:-70px; top:-180px;}
+#uploadPublisherLogoDialog .tCenter a.btnOB .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:50px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer; }
+#uploadPublisherLogoDialog .tCenter a.btnOS{ width:80px; padding:0 8px; text-align:center; overflow:hidden; position:relative; }
+#uploadPublisherLogoDialog .tCenter a.btnOS .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:40px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer; }
+#uploadPublisherLogoDialog .tCenter a span{ display:block; width:75px; text-align:center;}
+#uploadPublisherLogoDialog .tCenter .tipsError{ display:block; margin-top:5px; text-align:center; color:#900; display:none;}
+#uploadPublisherLogoDialog .tCenter a.fileEdit{ width:140px; overflow:hidden; position:absolute; left:50%; margin-left:-70px; top:-180px; cursor:pointer; text-align:right;}
+
+/*editPublicationDialog*/
+#editPublicationDialog{ width: 450px; }
+#editPublicationDialog div.clip em span{ height:15px; width:20px; overflow:hidden; background-image:url(../images/iconMgzClip.gif); background-repeat:no-repeat; float:none; display:inline-block; margin-top:2px;}
+#editPublicationDialog div.clip em.type1,
+#editPublicationDialog div.clip em.type2{ margin-top:3px;}
+#editPublicationDialog div.clip em.type1 span{ background-position:0 0;}
+#editPublicationDialog div.clip em.type2 span{ background-position:0 -15px; }
+
+/*addAdvertiseDialog*/
+#addAdvertiseDialog{ width: 430px; display:none;}
+#addAdvertiseDialog div em.title{ width:90px;}
+#addAdvertiseDialog div textarea{ height:60px;}
+/*createPublicationDialog*/
+#createPublicationDialog{ width:430px;}
+#createPublicationDialog div em.title{ width:50px;}
+#createPublicationDialog div.clip em span{ height:15px; width:20px; overflow:hidden; background-image:url(../images/iconMgzClip.gif); background-repeat:no-repeat; float:none; display:inline-block; margin-top:2px;}
+#createPublicationDialog div.clip em.type1,
+#createPublicationDialog div.clip em.type2{ margin-top:3px;}
+#createPublicationDialog div.clip em.type1 span{ background-position:0 0;}
+#createPublicationDialog div.clip em.type2 span{ background-position:0 -15px; }
+
+/*userInfoDialog*/
+#userInfoDialog{ width:580px;}
+#userInfoDialog div em.title{ width:60px;}
+#userInfoDialog fieldset{ position:relative;}
+#userInfoDialog strong.changePWD{ position:absolute; right:0; top:0;}
+/*editTagDialog*/
+#editTagDialog{ width:430px;}
+#editTagDialog div em.title{ width:45px;}
+#editTagDialog div textarea{ height:65px;}
+#editTagDialog div .btnOS{ float:right; margin-right:18px;}
+/*userInfoDialog2*/
+#userInfoDialog2{ width:250px;}
+#userInfoDialog2 div em.title{ width:40px;}
+/*uploadIssueDialog*/
+#uploadIssueDialog{ width:580px; display:block;}
+#uploadIssueDialog h6{ margin-bottom:30px;}
+#uploadIssueDialog div textarea{ height:65px;}
+#uploadIssueDialog div em.date{ position:relative;}
+#uploadIssueDialog div em.date div{ width:246px; height:auto; border:1px solid #ccc; background:#f9f9f9; padding:3px 8px; position:absolute; right:0; top:25px; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; display:none; }
+#uploadIssueDialog div em.date div a{ width:16px; height:16px; line-height:16px; text-decoration:none; padding:3px 7px; cursor:pointer; text-align:center; WHITE-SPACE:nowrap; display:inline-block; float:left; vertical-align:middle; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; }
+#uploadIssueDialog div em.date div a:hover{ background:#f60; color:#fff;}
+#uploadIssueDialog div em.date div a.text{ width:auto;}
+#uploadIssueDialog .upload{height:30px; line-height:30px; position:absolute; right:10px; top:1px;}
+#uploadIssueDialog .upload strong{ margin-right:5px; float:left;}
+#uploadIssueDialog .upload span{ color:#f60; float:left;}
+#uploadIssueDialog .upload a{ float:left; margin-left:5px; color:#ccc;}
+#uploadIssueDialog .upload a:hover{ color:#f60;}
+#uploadIssueDialog .upload .inner{ width:300px; float:left; margin:14px 5px 0 5px; height:4px; background:#ccc; overflow:hidden;}
+#uploadIssueDialog .upload .inner sub{ height:4px; width:0%; display:block; background:#f60; max-width:300px; }
+#uploadIssueDialog .tips{ position:absolute; right:10px; bottom:10px; color:#f60}
+
+
+/*editIssueDialog*/
+#editIssueDialog{ width:430px;}
+#editIssueDialog div em.title{ width:70px;}
+#editIssueDialog div em textarea{ height:65px;}
+/*editPublisherDialog*/
+#editPublisherDialog{ width:580px;}
+#editPublisherDialog div em.title{ width:80px;}
+/*shareTagDialog*/
+#shareEventDialog{ width:778px;}
+#shareEventDialog h6{ height:16px; line-height:16px; overflow:hidden; background:url(../images/icon/share.gif) left center no-repeat; padding-left:16px; margin-bottom:10px;}
+#shareEventDialog h6 span{ float:left;}
+#shareEventDialog h6 div{ float:left; margin-left:5px;}
+#shareEventDialog .left{ width:374px; float:left;}
+#shareEventDialog .left a.img{ width:374px; height:230px; overflow:hidden; margin-bottom:5px; display:block; text-align:center;}
+#shareEventDialog .left a.img img{ max-width:374px; max-height:230px;}
+#shareEventDialog .left h5{ line-height:20px; margin-bottom:5px;}
+#shareEventDialog .left h6{ background:none; margin-bottom:0; padding-left:0; font-weight:normal; height:auto;}
+#shareEventDialog .left h6 span{ display:block; float:left; height:12px; line-height:12px; padding:0 6px 0 14px; background-repeat:no-repeat; background-position:-2px center; margin-right:6px; overflow:hidden; font-size:11px;}
+#shareEventDialog .left h6 span.fav{ background-image:url(../images/icon/heart.gif); cursor:pointer;}
+#shareEventDialog .left h6 span.fav:hover{ background-image:url(../images/icon/heart_o.gif); color:#f60;}
+#shareEventDialog .left h6 span.top{ background-image:url(../images/icon/graph.gif);}
+#shareEventDialog .left h6 span.chat{ background-image:url(../images/icon/chat.gif);}
+#shareEventDialog .left h6 span.create{ float:right; margin-right:0; padding-right:0;}
+#shareEventDialog .right{ width:374px; margin-left:30px; float:left; position:relative;}
+#shareEventDialog .right .head{ float:left; margin:0 10px 35px 0;}
+#shareEventDialog .right h3{ height:12px; line-height:12px; margin-bottom:10px; overflow:hidden; font-weight:normal; width:236px;}
+#shareEventDialog .right h5{ border-top:1px solid #eee; height:25px; line-height:25px; font-weight:normal; clear:both;}
+#shareEventDialog .right .btn{ padding:3px 10px; display:block; float:left; color:#fff; background:#aaa; margin-right:10px; }
+#shareEventDialog .right .addFriend{ background:#f60; }
+#shareEventDialog .right .message{ background:#aaa;}
+#shareEventDialog .right .addTag{ margin-top:10px;}
+#shareEventDialog .right .addTag .input{ margin-right:10px; width:290px}
+#shareEventDialog .right .listTag{ max-height:137px; _height:137px; overflow:hidden;}
+
+
+#shareMgzDialog{ width:576px;}
+#shareMgzDialog h6{ height:16px; line-height:16px; overflow:hidden; background:url(../images/icon/share.gif) left center no-repeat; padding-left:16px; margin-bottom:10px;}
+#shareMgzDialog h6 span{ float:left;}
+#shareMgzDialog h6 div{ float:left; margin-left:5px;}
+#shareMgzDialog .left{ width:172px; float:left;}
+#shareMgzDialog .left a.img{ width:172px; height:230px; overflow:hidden; margin-bottom:5px; display:block; text-align:center;}
+#shareMgzDialog .left a.img img{ width:172px; height:230px;}
+#shareMgzDialog .left h5{ line-height:20px; height:40px; overflow:hidden; margin-bottom:5px;}
+#shareMgzDialog .left h6{ background:none; margin-bottom:0; padding-left:0; font-weight:normal; height:auto;}
+#shareMgzDialog .left h6 span{ display:block; float:left; height:12px; line-height:12px; padding:0 6px 0 14px; background-repeat:no-repeat; background-position:-2px center; margin-right:6px; overflow:hidden; font-size:11px;}
+#shareMgzDialog .left h6 span.fav{ background-image:url(../images/icon/heart.gif); cursor:pointer;}
+#shareMgzDialog .left h6 span.fav:hover{ background-image:url(../images/icon/heart_o.gif); color:#f60;}
+#shareMgzDialog .left h6 span.fans{ background-image:url(../images/icon/user.gif);}
+#shareMgzDialog .left h6 span.chat{ background-image:url(../images/icon/comment.gif);}
+#shareMgzDialog .left h6 span.mgz{ cursor:pointer; padding:0; font-size:12px;}
+#shareMgzDialog .left h6 span.mgz:hover{ color:#f60}
+#shareMgzDialog .right{ width:374px; margin-left:30px; float:left; position:relative;}
+#shareMgzDialog .right .head{ float:left; margin:0 10px 35px 0;}
+#shareMgzDialog .right h3{ height:12px; line-height:12px; margin-bottom:10px; overflow:hidden; font-weight:normal; width:240px;}
+#shareMgzDialog .right h5{ border-top:1px solid #eee; height:25px; line-height:25px; font-weight:normal; clear:both;}
+#shareMgzDialog .right .btn{ padding:3px 8px; display:block; float:left; color:#fff; background:#aaa; margin:0 10px 10px 0; }
+#shareMgzDialog .right .addTag{ margin-top:10px;}
+#shareMgzDialog .right .addTag .input{ margin-right:10px; width:290px}
+#shareMgzDialog .right .listTag{ max-height:137px; _height:137px; overflow:hidden;}
+#shareMgzDialog .right .sendMsg{ display:none; position:absolute; top:47px; left:70px;}
+#shareMgzDialog .right .sendMsg .input{ width:224px; margin-right:5px;}
+
+
+
+#shareTagDialog{ width:576px;}
+#shareTagDialog h6{ height:16px; line-height:16px; overflow:hidden; background:url(../images/icon/share.gif) left center no-repeat; padding-left:16px; margin-bottom:10px;}
+#shareTagDialog h6 span{ float:left;}
+#shareTagDialog h6 div{ float:left; margin-left:5px;}
+#shareTagDialog .left{ width:172px; float:left;}
+#shareTagDialog .left a.img{ width:172px; height:230px; overflow:hidden; margin-bottom:5px; display:block; text-align:center;}
+#shareTagDialog .left a.img img{ max-height:230px; max-width:172px;}
+#shareTagDialog .left h5{ line-height:20px; height:40px; overflow:hidden; margin-bottom:5px;}
+#shareTagDialog .left h6{ background:none; margin-bottom:0; padding-left:0; font-weight:normal; height:auto;}
+#shareTagDialog .left h6 span{ display:block; float:left; height:12px; line-height:12px; padding:0 6px 0 14px; background-repeat:no-repeat; background-position:-2px center; margin-right:6px; overflow:hidden; font-size:11px;}
+#shareTagDialog .left h6 span.fav{ background-image:url(../images/icon/heart.gif); cursor:pointer;}
+#shareTagDialog .left h6 span.fav:hover{ background-image:url(../images/icon/heart_o.gif); color:#f60;}
+#shareTagDialog .left h6 span.top{ background-image:url(../images/icon/graph.gif);}
+#shareTagDialog .left h6 span.chat{ background-image:url(../images/icon/comment.gif);}
+#shareTagDialog .left h6 span.addFav{ padding:0; cursor:pointer; font-size:12px;}
+#shareTagDialog .left h6 span.addFav:hover{ color:#f60}
+#shareTagDialog .left .input{ height:30px; width:164px; line-height:15px; margin-bottom:10px;}
+#shareTagDialog .right{ width:374px; margin-left:30px; float:left; position:relative;}
+#shareTagDialog .right .head{ float:left; margin:0 10px 35px 0;}
+#shareTagDialog .right h3{ height:12px; line-height:12px; margin-bottom:10px; overflow:hidden; font-weight:normal; width:240px;}
+#shareTagDialog .right h5{ border-top:1px solid #eee; height:25px; line-height:25px; font-weight:normal; clear:both;}
+#shareTagDialog .right .btn{ padding:3px 10px; display:block; float:left; color:#fff; background:#aaa; margin-right:10px; }
+#shareTagDialog .right .addFriend{ background:#f60; }
+#shareTagDialog .right .addTag{ margin-top:10px;}
+#shareTagDialog .right .addTag .input{ margin-right:10px; width:290px}
+#shareTagDialog .right .listTag{ max-height:137px; _height:137px; overflow:hidden;}
+#shareTagDialog .right .sendMsg{ display:none; position:absolute; top:47px; left:70px;}
+#shareTagDialog .right .sendMsg .input{ width:224px; margin-right:5px;}
+
+
+#feedBackDialog{ width:430px;}
+#feedBackDialog p{ margin-bottom:5px;}
+#feedBackDialog fieldset div em.title{ width:60px;}
+#feedBackDialog fieldset div textarea{ height:65px;}
+
+
+#viewAdType{ width:280px;}
+
+
+#viewAdDetail{ width:430px;}
+#viewAdDetail fieldset div textarea{ height:65px;}
+
+
+#postAd{ width:430px;}
+#postAd fieldset div textarea{ height:150px; width:418px;}
+
+
+#addAd{ width:430px;}
+#addAd fieldset div textarea{ height:80px;}
+
+
+
+
+
+
+
+
+
+#popLoginRegister .jqueryTagBox .doorList form{ height:225px;}
+#popLoginRegister .jqueryTagBox .doorList form .select{ height:39px; padding:0 10px;}
+#popLoginRegister .jqueryTagBox .doorList form .select li{ background:#fff; width:24px; height:24px; overflow:hidden; display:block; float:left; padding:5px; margin:5px 5px 0 0; border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0; cursor:pointer;}
+#popLoginRegister .jqueryTagBox .doorList form .select li:hover,
+#popLoginRegister .jqueryTagBox .doorList form .select li.current{ background:#f5f5f5;}
+#popLoginRegister .jqueryTagBox .doorList form .select li a{ width:24px; height:24px; background-position:0 0; background-repeat:no-repeat;}
+#popLoginRegister .jqueryTagBox .doorList form .select li a img{ width:24px; height:24px;}
+#popLoginRegister .jqueryTagBox .doorList form .con{ padding:10px; background:#f5f5f5;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div{ margin-bottom:5px;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div em.title{ width:80px;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div em .input{ width:200px;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div em.tipsError{ height:24px; line-height:24px;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div em.code{ margin:0;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div em.remanber{ padding-top:3px; line-height:20px;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div.last{ margin-bottom:0;}
+
+
+
+#publisherAgreement{ height:475px; margin:5px; width:775px; overflow-y:scroll; display:block;}
+#publisherAgreement h1{ color:#000; font-size:20px; line-height:2em; text-align:center;}
+#publisherAgreement h2{ color:#000; font-size:14px; line-height:2em; margin-top:10px;}
+#publisherAgreement p{ line-height:1.8em; color:#666;}
+
+
+
+/*lightbox*/
+.lightbox{ display:none; width:240px; padding:5px; border:none; background:url(../images/popBg.png) 0 0 repeat; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -o-border-radius:5px; position:relative;}
+.lightbox .popBody:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.lightbox .popBody{ padding:30px 10px 10px 10px; background:#fff; text-align:center; }
+.lightbox .popBody p{ line-height:20px; min-height:40px; color:#666; text-align:center;}
+.lightbox .popClose{ width:16px; height:16px; margin:7px; display:block; background:url(../images/icon/close_w.gif) center center no-repeat #ccc; cursor:pointer; border-radius:8px; -webkit-border-radius:8px; -moz-border-radius:8px; position:absolute; right:5px; top:5px; z-index:1103;}
+.lightbox .popClose:hover{background-color:#333;}
+/*lightboxTips*/
+
+html body .lightboxTips{ width:980px; margin:0 auto; background:none; padding:0; border:none;}
+.lightboxTips .popBody{ background:none; padding:0;}
+.lightboxTips .popBody img{ position:absolute; left:0; top:0; z-index:10000;}
+.lightboxTips .popBody .btnBS{ display:none;}
+.lightboxTips .popClose{ width:160px; height:31px; top:60px; background:url(../images/tips/close.png) 0 0 no-repeat;}
+.lightbox .popClose:hover{ background-color:transparent; filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+
+
+
+
+
+
+
+
+

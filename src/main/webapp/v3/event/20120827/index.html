@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ieOld ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ieOld ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ieOld ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<title>(SEO)杂志精选&nbsp;[分类名]&nbsp;麦米网Magme&nbsp;-&nbsp;世界新杂志&nbsp;发现新内容</title>
+<meta name="Keywords" content="(SEO)麦米网,Magme,电子杂志,在线杂志,免费电子杂志,电子杂志下载,数码杂志,时尚杂志,汽车杂志,财经杂志">
+<meta name="Description" content="(SEO)麦米网提供数百种最新杂志在线免费阅读，财经，旅游，娱乐，时尚，汽车，体育，数码生活等。在麦米看书，交流，分享，交友，新的阅读生活由此开启">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../../style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<script src="../../js/jquery-new.min.js"></script>
+<script src="../../js/jquery.easing.1.3.js"></script>
+<script src="../../js/jquery.inputfocus.js"></script>
+<script src="../../js/scrolltopcontrol.js"></script>
+<script src="../../js/jquery.backgroundPosition.js"></script>
+<script src="../../js/jquery.onImagesLoad.min.js"></script>
+<script>
+$(function(){
+	var $banner = $("#banner");
+	var $item = $banner.find(".item");
+	var $ctrl;
+	var currentId = 0;
+	var targetId = 0;
+	var bannerLock = 0;
+	var bannerEnter = 1;
+	var length = $item.length;
+	var autoPlay = setInterval(fnPlay,6000);
+
+	var showW;
+	var boxW = 960;
+	$(window).bind("resize",fnResize);
+	fnResize();
+
+
+	$item.eq(currentId).fadeIn(500);
+	//set ctrl Item
+	var ctrlHtml = "<div class='ctrl'>";
+	for (var i=0;i<length;i++){ctrlHtml += "<a href='javascript:void(0)'>"+i+"</a>";}
+	ctrlHtml += "</div>";
+	$banner.append(ctrlHtml);
+	$ctrl = $banner.find(".ctrl>a");
+	$ctrl.eq(currentId).addClass("current");
+
+
+	
+	$banner.mouseenter(function(){
+		bannerEnter = 1;
+		clearInterval(autoPlay);
+		autoPlay = setInterval(fnPlay,6000);
+	}).mouseleave(function(){
+		bannerEnter = 0;
+	});
+	
+	
+	
+	$ctrl.live("click",function(){
+		if($(this).index()!=currentId && bannerLock==0){
+			bannerLock=1;
+			targetId = $(this).index();
+			//play
+			fnSwitchBanner(currentId,targetId);
+			clearInterval(autoPlay);
+			if(bannerEnter){autoPlay = setInterval(fnPlay,6000)}
+			setTimeout(function(){
+				currentId = targetId;
+				fnSetCtrl();
+				bannerLock=0;
+			},2500)
+		}
+	});
+	
+	function fnSwitchBanner(currentId,targetId){
+		switch (currentId) {
+			case 0:
+				if(targetId>currentId){I0ML()}else{I0MR()}break;
+			case 1:
+				if(targetId>currentId){I1ML()}else{I1MR()}break;
+			case 2:
+				if(targetId>currentId){I2ML()}else{I2MR()}break;
+		}
+		switch (targetId) {
+			case 0:
+				if(targetId>currentId){I0RM()}else{I0LM()}break;
+			case 1:
+				if(targetId>currentId){I1RM()}else{I1LM()}break;
+			case 2:
+				if(targetId>currentId){I2RM()}else{I2LM()}break;
+		}
+	}
+	
+	function fnPlay(){
+		if(bannerLock==0){
+			bannerLock=1;
+			if(currentId<length-1){
+				targetId+=1
+			}else{
+				targetId=0
+			}
+
+			//play
+			fnSwitchBanner(currentId,targetId);
+			clearInterval(autoPlay);
+			if(bannerEnter){autoPlay = setInterval(fnPlay,6000)}
+			setTimeout(function(){
+				currentId = targetId;
+				fnSetCtrl();
+				bannerLock=0;
+			},2500)
+		
+		}
+	}
+	function fnSetCtrl(){
+		$ctrl.eq(currentId).addClass("current").siblings().removeClass("current");
+	}
+	function fnResize(){
+		showW = $(window).width();
+		if(showW<boxW){showW==boxW}
+	}
+
+	
+
+
+	//item0
+	function I0RM(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(0).show().find("div").css({left:offset});
+		$item.eq(0).find(".a1").delay(200).animate({left:150},2000,"easeInOutQuart");
+		$item.eq(0).find(".a2").delay(300).animate({left:630},2000,"easeInOutQuart");
+		$item.eq(0).find(".a3").delay(400).animate({left:284},2000,"easeInOutQuart");
+	}
+	function I0LM(){
+		var offset = -showW;
+		$item.eq(0).show().find("div").css({left:offset});
+		$item.eq(0).find(".a2").delay(200).animate({left:630},2000,"easeInOutQuart");
+		$item.eq(0).find(".a1").delay(300).animate({left:150},2000,"easeInOutQuart");
+		$item.eq(0).find(".a3").delay(400).animate({left:284},2000,"easeInOutQuart");
+	}
+	function I0MR(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(0).find(".a3").animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(0).find(".a1").delay(200).animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(0).find(".a2").delay(300).animate({left:offset},2000,"easeInOutQuart");
+	}
+	function I0ML(){
+		$item.eq(0).find(".a1").animate({left:-(showW-boxW)/2 - $item.eq(0).find(".a1").width()-100},2000,"easeInOutQuart");
+		$item.eq(0).find(".a3").delay(200).animate({left:-(showW-boxW)/2 - $item.eq(0).find(".a3").width()-100},2000,"easeInOutQuart");
+		$item.eq(0).find(".a2").delay(300).animate({left:-(showW-boxW)/2 - $item.eq(0).find(".a2").width()-100},2000,"easeInOutQuart");
+	}
+	//item1
+	function I1RM(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(1).show().find("div").css({left:offset});
+		$item.eq(1).find(".a2").delay(200).animate({left:130},2000,"easeInOutQuart");
+		$item.eq(1).find(".a1").delay(300).animate({left:450},2000,"easeInOutQuart");
+		$item.eq(1).find(".a3").delay(400).animate({left:574},2000,"easeInOutQuart");
+	}
+	function I1LM(){
+		var offset = -showW;
+		$item.eq(1).show().find("div").css({left:offset});
+		$item.eq(1).find(".a1").delay(200).animate({left:450},2000,"easeInOutQuart");
+		$item.eq(1).find(".a3").delay(300).animate({left:574},2000,"easeInOutQuart");
+		$item.eq(1).find(".a2").delay(400).animate({left:130},2000,"easeInOutQuart");
+	}
+	function I1ML(){
+		$item.eq(1).show();
+		$item.eq(1).find(".a1").animate({left:-(showW-boxW)/2 - $item.eq(1).find(".a1").width()-100},2000,"easeInOutQuart");
+		$item.eq(1).find(".a3").animate({left:-(showW-boxW)/2 - $item.eq(1).find(".a3").width()-100},2000,"easeInOutQuart");
+		$item.eq(1).find(".a2").delay(200).animate({left:-(showW-boxW)/2 - $item.eq(1).find(".a2").width()-100},2000,"easeInOutQuart",function(){$item.eq(1).hide()});
+	}
+	function I1MR(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(1).show();
+		$item.eq(1).find(".a3").animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(1).find(".a1").delay(200).animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(1).find(".a2").delay(300).animate({left:offset},2000,"easeInOutQuart",function(){$item.eq(1).hide()});
+	}
+	//item2
+	function I2RM(){
+		$item.eq(2).show().find("div").css({left:showW+100});
+		$item.eq(2).find(".a1").delay(200).animate({left:90},2000,"easeInOutQuart");
+		$item.eq(2).find(".a3").delay(300).animate({left:250},2000,"easeInOutQuart");
+		$item.eq(2).find(".a2").delay(400).animate({left:550},2000,"easeInOutQuart");
+	}
+	function I2LM(){
+		var offset = -showW;
+		$item.eq(2).show().find("div").css({left:offset});
+		$item.eq(2).find(".a2").delay(200).animate({left:550},2000,"easeInOutQuart");
+		$item.eq(2).find(".a1").delay(300).animate({left:90},2000,"easeInOutQuart");
+		$item.eq(2).find(".a3").delay(300).animate({left:250},2000,"easeInOutQuart");
+	}
+	function I2ML(){
+		$item.eq(2).show();
+		$item.eq(2).find(".a1").animate({left:-(showW-boxW)/2 - $item.eq(2).find(".a1").width()-100},2000,"easeInOutQuart");
+		$item.eq(2).find(".a2").delay(200).animate({left:-(showW-boxW)/2 - $item.eq(2).find(".a2").width()-100},2000,"easeInOutQuart");
+		$item.eq(2).find(".a3").delay(300).animate({left:-(showW-boxW)/2 - $item.eq(2).find(".a3").width()-100},2000,"easeInOutQuart",function(){$item.eq(2).hide()});
+	}
+	function I2MR(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(2).show();
+		$item.eq(2).find(".a2").animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(2).find(".a1").delay(200).animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(2).find(".a3").delay(300).animate({left:offset},2000,"easeInOutQuart",function(){$item.eq(2).hide()});
+	}
+	
+	
+	
+
+});
+</script>
+<!--[if lt IE 7]>
+<script src="../../js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header clearFix" style="position:absolute;">
+	<div class="outer png">
+        <div class="inner png">
+        	<div class="contact"><strong>咨询电话</strong><span>+86 21 53068296</span><span>+86 21 33130256</span></div>
+            <a class="home" href="http://www.magme.cn">麦米网首页</a>
+            <h1 class="logo" id="logo"><a class="png" href="javascript:void(0)" title="(SEO)世界新杂志 发现新内容">麦米网Magme</a></h1>
+        </div>
+    </div>
+
+</div>
+
+<div class="topInfo" id="banner">
+	<div class="item item1">
+    	<div class="a1"><img class="png" src="images/b1_1.png" /></div>
+    	<div class="a2"><img class="png" src="images/b1_2.png" /></div>
+    	<div class="a3"><a class="contact" href="mailto:publish@magme.cn"><img src="images/btnContact.gif" /></a></div>
+    </div>
+	<div class="item item2">
+    	<div class="a1"><img class="png" src="images/b2_1.png" /></div>
+    	<div class="a2"><img class="png" src="images/b2_2.png" /></div>
+    	<div class="a3"><a class="contact" href="mailto:publish@magme.cn"><img src="images/btnContact.gif" /></a></div>
+    </div>
+	<div class="item item3">
+    	<div class="a1"><img class="png" src="images/b3_1.png" /></div>
+    	<div class="a2"><img class="png" src="images/b3_2.png" /></div>
+    	<div class="a3"><a class="contact" href="mailto:publish@magme.cn"><img src="images/btnContact.gif" /></a></div>
+    </div>
+</div>
+
+<!--body-->
+<div class="body clearFix">
+<script>
+$(function(){
+//isIE6
+var isIE6 = $.browser.msie && $.browser.version < 7 && !window.XMLHttpRequest;
+
+
+
+	var $box = $("#box");
+	var $ctrl = $box.find(".ctrl>a").not(".current");
+	var $ctrlCurrent = $box.find(".ctrl>a.current");
+	var $item = $box.find(".content>.item");
+	var currentId = 0;
+	var ctrlH = 49;
+	var boxLock = 0;
+
+
+
+	$item.eq(currentId).show();
+
+	$ctrl.click(function(){
+		if(boxLock==0){
+			boxLock=1;
+			var index = $(this).index();
+			fnSetCtrl(index);
+			fnSetContent(index);
+			setTimeout(function(){boxLock=0},800)
+		}
+	});
+
+
+	function fnSetCtrl(index){
+		$ctrlCurrent.animate({top:index*ctrlH},600,"easeOutQuart");
+		if(isIE6){
+			$ctrlCurrent.find("span").css({backgroundPosition:"-20px "+-index*ctrlH});
+		}else{
+			$ctrlCurrent.find("span").animate({backgroundPosition:"0 "+-index*ctrlH},600,"easeOutQuart");
+		}
+	}
+	function fnSetContent(index){
+		$item.hide().find("div").removeAttr("style").css({opacity:0}).stop(true,false);
+		$item.eq(index).show();
+		
+		if(!isIE6){
+			setTimeout(function(){
+				switch (index) {
+					case 0:
+						$item.eq(index).find(".a4").animate({opacity:1},800);
+						$item.eq(index).find(".a1").delay(500).animate({opacity:1},1800,"easeOutQuart");
+						$item.eq(index).find(".a2").delay(2000).css({opacity:1,height:0}).animate({height:110},500);
+						$item.eq(index).find(".a3").delay(3500).css({left:460}).animate({left:430,opacity:1},1000,"easeOutQuart");
+						break;
+					case 1:
+						var step2Index = 0;
+						$item.eq(index).find(".a5").animate({opacity:1},800);
+						$item.eq(index).find(".a1").css({top:120}).delay(600).animate({opacity:1},1500,function(){
+							fnStep2();
+						});
+						function fnStep2(){
+							$item.eq(index).find(".a1").animate({top:"-=260"},1000,"easeOutQuart");
+							if(step2Index<2){
+								setTimeout(fnStep2,1250);
+							}
+							step2Index++;
+						}
+						break;
+					case 2:
+						var step3Index = 0;
+						$item.eq(index).find(".a3").animate({opacity:1},800);
+						$item.eq(index).find(".a2").delay(400).animate({opacity:1},600);
+						$item.eq(index).find(".a1").delay(1200).animate({opacity:1},1800,"easeOutQuart",function(){
+							fnStep3();
+						});
+						function fnStep3(){
+							$item.eq(index).find(".a2").animate({left:"-=150"},600,"easeOutQuart");
+							if(step3Index<6){
+								setTimeout(fnStep3,1000);
+							}
+							step3Index++;
+						}
+						break;
+					case 3: 
+						$item.eq(index).find(".a1").css({left:230}).animate({opacity:1},1500,"easeOutQuart").animate({left:120},800);
+						$item.eq(index).find("div").slice(1,4).css({left:120,top:110});
+						$item.eq(index).find(".a5").delay(1900).animate({opacity:1},800);
+						$item.eq(index).find(".a2").delay(2500).animate({left:240,top:90,opacity:1},1000);
+						$item.eq(index).find(".a3").delay(2600).animate({left:340,top:75,opacity:1},1000);
+						$item.eq(index).find(".a4").delay(2700).animate({left:430,top:60,opacity:1},1000);
+						break;
+					case 4: 
+						$item.eq(index).find("div").slice(1,7).css({left:800,opacity:1});
+						$item.eq(index).find(".a1").animate({left:540},1200,"easeOutQuart");
+						$item.eq(index).find(".a2").animate({left:440},1400,"easeOutQuart");
+						$item.eq(index).find(".a3").animate({left:340},1600,"easeOutQuart");
+						$item.eq(index).find(".a4").animate({left:240},1800,"easeOutQuart");
+						$item.eq(index).find(".a5").animate({left:140},2000,"easeOutQuart");
+						$item.eq(index).find(".a6").animate({left:40},2200,"easeOutQuart");
+						$item.eq(index).find(".a7").delay(2000).animate({opacity:1},800);
+						break;
+				}
+			},500);
+		}
+	}
+
+
+});
+</script>
+    <div class="box clearFix" id="box">
+    	<div class="ctrl">
+        	<a href="javascript:void(0)">移动推送</a>
+        	<a href="javascript:void(0)">海量杂志</a>
+        	<a href="javascript:void(0)">极速阅读</a>
+            <a href="javascript:void(0)">互动内容</a>
+        	<a href="javascript:void(0)">应用平台</a>
+        	<a class="current png" href="javascript:void(0)"><span>当前</span></a>
+        </div>
+    	<div class="content">
+       	<div class="item item1" style="display:none;">
+            	<div class="a1"><img src="images/box1_1.jpg" /></div>
+            	<div class="a2"><img src="images/box1_2.jpg" /></div>
+            	<div class="a3"><img class="png" src="images/box1_3.png" /></div>
+            	<div class="a4">随时随地，将杂志放到用户手中</div>
+            </div>
+        	<div class="item item2" style="display:none;">
+            	<div class="a1"><img src="images/box2_1.jpg" /></div>
+            	<div class="a5">300余本价值杂志信息免费极速阅读</div>
+            </div>
+        	<div class="item item3" style="display:none;">
+            	<div class="a1"><img class="png" src="images/box3_1.png" /></div>
+            	<div class="a2"><img src="images/box3_2.jpg" /></div>
+            	<div class="a3">打开、下载、阅读，就这么简单</div>
+            </div>
+        	<div class="item item4" style="display:none;">
+            	<div class="a1"><img src="images/box4_1.gif" /></div>
+            	<div class="a2"><img src="images/box4_2.gif" /></div>
+            	<div class="a3"><img src="images/box4_3.gif" /></div>
+            	<div class="a4"><img src="images/box4_4.gif" /></div>
+            	<div class="a5">不一样的互动，让您的内容更加生动丰富</div>
+            </div> 
+        	<div class="item item6" style="display:none;">
+            	<div class="a7">6大应用平台，360，Q+，百度，腾讯，新浪，天涯</div>
+            	<div class="a1"><img src="images/box5_1.png" class="png" /></div>
+            	<div class="a2"><img src="images/box5_2.png" class="png" /></div>
+            	<div class="a3"><img src="images/box5_3.png" class="png" /></div>
+            	<div class="a4"><img src="images/box5_4.png" class="png" /></div>
+            	<div class="a5"><img src="images/box5_5.png" class="png" /></div>
+            	<div class="a6"><img src="images/box5_6.png" class="png" /></div>
+            </div>
+        </div>
+    </div>
+	
+
+
+	<div class="boxB">
+    	<div class="item item1"></div>
+    	<div class="item item2"><a href="http://www.magme.cn">麦米magme，来认识我们吧！</a></div>
+    	<div class="item item3"><a href="http://www.magme.cn/sns/sns-index.action">以内容为核心的社交阅读天地</a></div>
+    	<div class="item item4"><a href="#">全国首家真正解决电子出版问题</a></div>
+    
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="footerBig footerBigWidther">
+    <div class="inner clearFix">
+    
+    	<div class="clearFix">
+    		<!--
+            <a href="#" class="footerBanner">
+            	<div style="width:900px; height:90px; line-height:90px; color:#333; font-size:26px; font-weight:bold; text-align:center;">Banner 900-90</div>
+            </a>-->
+            <div class="quickLink">
+                <h6>快速导航</h6>
+                <ul class="clearFix">
+                	<li><a href="http://www.magme.cn/static_join_us.html" rel="nofollow" >加入我们</a></li>
+                	<li><a href="http://www.magme.cn/static_friendlink.html">友情链接</a></li>
+                	<li><a href="http://www.magme.cn/static_policy.html" rel="nofollow" >法律声明</a></li>
+                	<li><a id="userFeedBack" href="javascript:void(0);" rel="nofollow" >意见反馈</a></li>
+                	<li><a href="http://interactive.magme.cn">广告合作</a></li>
+                	<!--<li><a href="#">麦米应用</a></li>-->
+                </ul>
+            </div>
+            <div class="magmeWeiBo">
+            	<ul class="clearFix">
+                	<li class="sina"><a href="http://e.weibo.com/magme" target="_blank"><span class="png"></span>新浪微博</a></li>
+                	<li class="qq"><a href="http://e.t.qq.com/magme2011" target="_blank"><span class="png"></span>腾讯微博</a></li>
+                	<li class="weixin"><a href="http://e.t.qq.com/magme2011" target="_blank"><span class="png"></span>微信</a></li>
+                </ul>
+            </div>
+			  <div class="contact" style="display:block;">
+                <h6>联系我们</h6>
+                <p>上海：黄浦区延安东路222号外滩中心4502室<br>北京：朝阳区建国门外大街乙12号双子座大厦<br>　　　东塔10层1021室</p>
+            </div>
+        </div>
+        
+        
+        <div class="clear letterIndex">
+            	<dl class="clearFix">
+                	<dt><a href="http://www.magme.cn/baike">麦米专题</a></dt>
+                    <dd><a href="http://www.magme.cn/baike/letter=a">A</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=b">B</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=c">C</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=d">D</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=e">E</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=f">F</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=g">G</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=h">H</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=i">I</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=j">J</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=k">K</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=l">L</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=m">M</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=n">N</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=o">O</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=p">P</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=q">Q</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=r">R</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=s">S</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=t">T</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=u">U</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=v">V</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=w">W</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=x">X</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=y">Y</a></dd>
+                    <dd><a href="http://www.magme.cn/baike/letter=z">Z</a></dd>
+                </dl>
+            </div>
+        <p class="copyright">Copyright © 2005-2013 <strong><span>麦米网电子杂志在线阅读</span> (www.magme.cn)</strong> 沪ICP备10217320号-2 </p>
+        
+    </div>
+</div>
+
+</body>
+</html>

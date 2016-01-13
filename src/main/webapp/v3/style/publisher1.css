@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+
+body{ padding-top:80px;}
+html{ padding-bottom:50px;}
+.header .inner{ width:980px;}
+.header #loginBar{ right:0;}
+.header #loginBar li a{ font-size:16px; letter-spacing:0.5em;}
+.body{ zoom:1; margin:0 auto; width:960px; background:#fff; box-shadow:0px 1px 3px rgba(0,0,0,0.4); position:relative;}
+.body:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+
+.ie8 .body,.ie7 .body,.ie6 .body { border:1px solid #dedede;}
+
+h2 { font-size:40px; color:#222222; font-weight:normal; line-height:40px; margin-bottom:20px; font-family:\5FAE\8F6F\96C5\9ED1, \9ED1\4F53, Arial, Helvetica, sans-serif;}
+.body p,.body ul,.body li { color:#333333; font-size:16px; line-height:32px;}
+.con { padding:50px 90px; background:url(images/publisher/conBg.gif) 0 0 no-repeat; position:relative;}
+
+.con1 { background:url(images/publisher/conBg1.gif) 0 0 repeat-x; height:480px; padding:0;}
+.con1 .dot { position:absolute; left:50%; bottom:8px; height:20px; width:78px; overflow:hidden; margin-left:-39px; z-index:100;}
+.con1 .dot a { display:block; float:left; width:20px; height:20px; overflow:hidden; background:url(images/publisher/scrollDot.jpg); margin:0 3px; display:block; _display:inline;}
+.con1 .dot a:hover { background:url(images/publisher/scrollDot.jpg) 0 -20px no-repeat;}
+.con1 .dot a.current,
+.con1 .dot a.current:hover { background:url(images/publisher/scrollDot.jpg) 0 -40px no-repeat; cursor:default;}
+
+.con1 .inner { width:960px; height:480px; overflow:hidden; position:relative;}
+.con1 .c1 { top:10px; left:-960px; position:absolute; z-index:2;}
+.con1 .c2 { width:400px; top:80px; left:-960px; position:absolute; z-index:1;}
+.con1 .c2 ul { width:394px; height:56px; overflow:hidden; background:url(images/publisher/con1setp.gif); margin-top:15px;}
+.con1 .c2 ul li { float:left; width:115px; padding-right:3px; text-align:center; font-size:24px; line-height:54px; font-family:\5FAE\8F6F\96C5\9ED1, \9ED1\4F53, Arial, Helvetica, sans-serif; color:#afbac8;}
+.con1 .c2 ul li.s2 { color:#a3b0bf;}
+.con1 .c2 ul li.s3 { padding-left:18px; color:#9ca8b6;}
+.con1 .c3 { width:380px; overflow:hidden; top:80px; left:-960px; position:absolute;}
+.con1 .c4 { top:40px; left:-960px; position:absolute; z-index:2;}
+.con1 .c5 { top:100px; left:-960px; position:absolute; z-index:3;}
+.con1 .c6 { top:40px; left:0; position:absolute; width:960px; left:-960px;}
+.con1 .c6 h2 { text-align:center;}
+.con1 .c6 p { text-align:center;}
+.con1 .c6 p strong { font-size:18px; margin-top:10px; display:block; text-align:center;}
+.con1 .c7 { top:220px; position:absolute; left:-960px;}
+.con1 .c8 { top:220px; position:absolute; left:-960px;}
+.con1 .c9 { top:220px; position:absolute; left:-960px;}
+.con1 .c10 { top:220px; position:absolute; left:-960px;}
+
+.con2 ul li { background:url(images/publisher/uldot.gif) 0 center no-repeat; padding-left:20px;}
+.con2 p { font-size:18px; margin-bottom:8px;}
+
+.con3 { height:250px;}
+.con3 p { width:260px;}
+.con3 img { position:absolute; right:0; top:40px;}
+
+.con4 { height:380px;}
+.con4 h2 { text-align:center;}
+.con4 p { text-align:center;}
+.con4 ul { position:absolute; left:4px; bottom:25px; width:953px;}
+.con4 ul li { float:left; text-align:center; line-height:20px; color:#8495a8; height:230px; overflow:hidden;}
+
+.con5 { height:430px;}
+.con5 .img1 { position:absolute; left:0; top:220px;}
+.con5 .img2 { position:absolute; right:0; top:40px;}
+.con5 .apps { margin:120px 0 0 310px;}
+.con5 .app1 { display:block; width:170px; height:60px; overflow:hidden; background:url(images/publisher/appBtn1.gif); text-indent:-99em; margin-bottom:10px;}
+/*.con5 .app1:hover { background:url(images/publisher/appBtn.gif) 0 -60px no-repeat;}*/
+.con5 .app2 { display:block; width:170px; height:60px; overflow:hidden; background:url(images/publisher/appBtn2.gif); text-indent:-99em; margin-bottom:10px; cursor:default}
+
+.con6 {}
+.con6 ul li { float:left; width:153px; height:56px; overflow:hidden; padding:20px 30px 0 0;}
+
+
+a.footerEnter { background:#f1f4f7 url(images/publisher/enter.gif) 550px 15px no-repeat; display:block; width:960px; text-align:center; height:70px; line-height:70px; font-size:32px; color:#b1bac4; text-shadow:0 2px 1px rgba(255,255,255,0.8); box-shadow:0 1px 3px rgba(0,0,0,0.1) inset; -webkit-transition: background 0.2s ease;}
+a.footerEnter:hover { background:#e7ebef url(images/publisher/enter_hover.gif) 550px 15px no-repeat; color:#949fac; text-shadow:0 2px 1px rgba(255,255,255,0.4);}

@@ -1,0 +1,495 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelPublisher.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.onImagesLoad.min.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.scrollphoto.js"></script>
+<script src="js/scrolltopcontrol.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/global.js"></script>
+<script src="js/publisher.js"></script>
+<script>
+$(function(){
+	$.jqueryScrollPhoto("#publisherMgzList",4,188,4,0,600);
+});
+</script>
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="javascript:void(0)">(SEO)麦米 Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li class="home"><a href="index.html">首页</a></li>
+                <li class="magazine"><a href="magazine.html">杂志</a></li>
+                <li class="kanmi"><a href="kanmi.html">看米</a></li>
+                <li class="publisher"><a href="kanmi.html">米商中心</a></li>
+            </ul>
+            <!--userBar-->
+            <ul class="conUser" id="loginBar" style="display:none;">
+                <li class="reg"><a href="javascript:void(0)">注册</a></li>
+                <li class="login"><a href="javascript:void(0)">登录</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="head"><a href="javascript:void(0)"><img id="avatar30" src="images/head30.gif" /></a></li>
+                <li class="name"><strong id="nickName">Lewis</strong></li>
+                <li class="message"><a href="javascript:void(0)" id="newMessageNum" title="5条新消息">消息</a></li>
+                <li class="setup"><a href="snsMyConfig.html" title="设置">设置</a></li>
+                <li class="logout" id="logout"><a href="javascript:void(0)" title="退出">退出</a></li>
+            </ul>
+            <div class="search" id="headerSearch">
+            	<a href="javascript:void(0)">搜索</a>
+            	<div class="box"><input class="in" type="text" /><input class="btn" type="button" value="搜索" /></div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!--body-->
+<div class="body">
+	<!--topBar-->
+	<div class="topBar clearFix">
+        <ul class="subNav">
+            <li class="current"><a href="publisherHome.html">米商空间</a></li>
+            <li><a href="publisherKanmi.html">米商的图片墙</a></li>
+            <li><a href="publisherCenter.html">杂志管理</a></li>
+            <li><a href="publisherAdvertisement.html">广告管理</a></li>
+        </ul>
+    </div>
+	<!--bodyContent-->
+    <div class="conLeft">
+        <!--userInfo-->
+        <div class="userInfo clearFix">
+            <strong class="name">出版商名</strong> <a href="javascript:void(0)" class="img"><img src="images/temp/home11.jpg" /><em>更换头像</em></a>
+            <ul class="atten">
+                <li><a href="javascript:void(0)"><strong>90</strong><span>图片</span></a></li>
+                <li><a href="javascript:void(0)"><strong>108</strong><span>杂志</span></a></li>
+                <li><a href="javascript:void(0)"><strong>5</strong><span>粉丝</span></a></li>
+            </ul>
+            <div class="tool clear">
+                <a class="btn" href="javascript:void(0)">加关注</a>
+                <a class="btn btnSina" href="javascript:void(0)">微博</a>
+            </div>
+            <div class="conB conNavList">
+            	<h2><a class="floatr important" href="javascript:void(0)">全部<span>(99)</span></a>期刊</h2>
+                <div class="conBody">
+                    <a href="javascript:void(0)">某某杂志2011-5</a>
+                    <a href="javascript:void(0)">某某杂志2011-6</a>
+                    <a href="javascript:void(0)">某某杂志2011-7</a>
+                    <a href="javascript:void(0)">某某杂志2011-8</a>
+                    <a href="javascript:void(0)">某某杂志2011-9</a>
+                    <a href="javascript:void(0)">某某杂志2011-10</a>
+                </div>
+            </div>
+            <div class="conB conNavList">
+            	<h2>出版人</h2>
+                <div class="conBody">
+                    <a href="javascript:void(0)">出版人AAA</a>
+                    <a href="javascript:void(0)">出版人BBB</a>
+                    <a href="javascript:void(0)">出版人CCC</a>
+                </div>
+            </div>
+            <div class="conB conNavList">
+            	<h2>刊号</h2>
+                <div class="conBody">
+                    <a href="javascript:void(0)">杂志名(2154451)</a>
+                    <a href="javascript:void(0)">杂志名(2154451)</a>
+                </div>
+            </div>
+        </div>
+        <!--conFriend-->
+        <div class="conB conFriend">
+            <h2>你和他都关注</h2>
+            <div class="conBody">
+                <ul class="clearFix">
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--conFriend-->
+        <div class="conB conFriend">
+            <h2><a class="floatr important" href="javascript:void(0)">全部<span>(99)</span></a>他的粉丝</h2>
+            <div class="conBody">
+                <ul class="clearFix">
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                    <li><a href="javascript:void(0)"><img src="images/head60.gif" title="用户名" /><span>名字</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="conMiddleRight">
+        <div id="publisherEventList" class="conB conPublisherEventList">
+        	<h2><a class="floatr" href="javascript:void(0)">查看大图</a>出版商的全部事件</h2>
+        	<div class="conBody clearFix">
+                <div class="item size21"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home3.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题事件标题事件标题事件标题事件标题事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home1.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                        <h6>出自 [ 杂志名 ]</h6>
+                        <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+                        <div class="tools png"><em class="iconDetail">详细</em><em class="iconHeart favCurrent">99</em><em class="iconShare">分享</em></div>
+                    </div></a>
+                </div>
+                <div class="item size12"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home10.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home2.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size22"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home11.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home4.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home5.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home6.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home7.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home8.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home9.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home12.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home13.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size21"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home14.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home15.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home16.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home17.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home18.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home1.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home2.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size21"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home3.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home4.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home5.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home6.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home7.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home8.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home9.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size12"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home10.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size22"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home11.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home12.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home13.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size21"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home14.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home15.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home16.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home17.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home18.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home1.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home2.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size21"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home3.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home4.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home5.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home6.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home7.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home8.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home9.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size12"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home10.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size22"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home11.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home12.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home13.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size21"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home14.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home15.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home16.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home17.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+                <div class="item size11"><a href="javascript:void(0)">
+                    <img class="photo" src="images/temp/home18.jpg" alt="(SEO)事件标题">
+                    <div class="info png">
+                        <h5>事件标题</h5>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+        <div class="pageLoad"><span>正在加载内容...</span></div>
+    </div>
+</div>
+</body>
+</html>

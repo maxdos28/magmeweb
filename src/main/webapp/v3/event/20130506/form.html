@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ieOld ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ieOld ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ieOld ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>见行见远 报名表</title>
+<link href="../../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../../style/global.css" rel="stylesheet" type="text/css" />
+<link href="../../style/pop.css" rel="stylesheet" type="text/css" />
+<link href="../../style/datepicker.css" rel="stylesheet" type="text/css" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link href="../../style/conBigHeader.css" rel="stylesheet" type="text/css" />
+<script src="../../js/jquery-1.6.2.min.js"></script>
+<script src="../../js/form2object.js"></script>
+<script src="../../js/ajaxfileupload.js"></script>
+<script src="../../js/datepicker.js"></script>
+
+<!--[if lt IE 7]>
+<script src="../../js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+  $("#submit").unbind("click").live("click",function(){
+	  var filename=$("#avatarFile").val();
+	  if(filename &&  filename!=''){
+		  filename=filename.toLowerCase();
+		  var fnamearr=filename.split(".");
+		  if(fnamearr.length!=2){
+			  alert("上传的照片格式不正确，只能支持jpg,png格式");
+			  return;
+		  }else if(fnamearr[1]!='jpg' && fnamearr[1]!='png'){
+			  alert("上传的照片格式不正确，只能支持jpg,png格式");
+			  return;
+		  }
+		  $("#filenameext").val(fnamearr[1]);
+	  }else{
+		  alert("必须上传照片");
+		  return;
+	  }
+	  
+	  if(isNaN($("#age").val())){
+		  alert("年龄必须填写数字");
+		  return ;
+	  }
+	  
+		var postUrl="http://www.magme.cn/event/event-jxjy!addJson.action?random="+Math.random();
+		$.ajaxFileUpload(
+          {
+              url : postUrl,
+              secureuri : false,
+              data : form2object('form'),
+              fileElementId : "avatarFile",
+              content : $("#form"),
+              dataType : "json",
+              async : true,
+              type : 'POST',
+              success : function(rs){
+              	if(!rs) return;
+              	if(rs.code != 200){
+              		alert(rs.message);
+              	}else{
+              		alert("上传信息成功！");               		
+              	}
+              },
+              //服务器响应失败处理函数
+              error : function (data, status, e) {
+              	alert("亲，上传信息失败了！");
+              }
+          }
+      );
+		progressBarShow(uuid);
+		return false;
+	});
+
+  
+
+
+
+</script>
+</head>
+<body>
+<!--header-->
+<div class="header20120905 clearFix">
+	<div class="outer headerTop">
+    	<div class="inner">
+            <div class="logo" id="logo"><a class="png" href="javascript:void(0)" title="世界新杂志 发现新内容">麦米网Magme</a></div>
+            <!--nav-->
+            <ul class="nav">
+                <li class="home"><a href="http://www.magme.cn/">首页</a></li>
+                <li class="magazine"><a href="http://www.magme.cn/publish/magazine.html">杂志</a></li>
+                <li class="m1"><a href="http://www.magme.cn/sns/square.action">M1</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="body clearFix form_body">
+	
+    
+
+
+
+
+<div class="popContent popRegister" style="display:block;">
+    <div class="content jxjy_form">
+        <fieldset>
+            <h4><img src="images/form_head.jpg" style="margin-left:-68px;" /></h4>
+            <h5>全国大学生环球旅行影像秀</h5>
+            <h6>——第一季 · 柬埔寨报名表</h6>
+            <form id="form" action="http://www.magme.cn/event/event-jxjy!addJson.action" method="post">
+            <input type="hidden" id="filenameext" name="filenameext"/>
+            <div>
+               <em class="title"><span>*</span>上传照片</em>
+               <em><input style="margin-left:-3px;"  id="avatarFile" name="avatarFile" type="file" class="clear" /></em>
+            </div>
+            <div>
+                <em class="title"><span>*</span>姓名</em><em><input id="name" name="name" class="input g150" type="text" /></em>
+                <em class="title cus_title"><span>*</span>性别</em>
+                <em class="sex"><label><input type="radio" name="gender" value="1" checked>男</label><label><input type="radio" name="gender" value="2">女</label></em>
+                <em class="title cus_title"><span>*</span>年龄</em><em><input id="age" name="age" class="input g72" type="text" /></em>
+            </div>
+            <div>
+                <em class="title"><span>*</span>出生年月</em><em><input  id="birthdate" name="birthdate" class="input g150" type="text" /></em>
+                <em class="title cus_title"><span>*</span>籍贯</em><em><input  id="birthplace" name="birthplace" class="input g72" type="text" /></em>
+                <em class="title cus_title"><span>*</span>学历</em><em><input  id="education" name="education" class="input g72" type="text" /></em>
+            </div>
+            <div>
+                <em class="title"><span>*</span>专业</em><em><input  id="major" name="major" class="input g50" type="text" /></em>
+                <em class="title cus_title"><span>*</span>所在院校</em><em><input  id="college" name="college" class="input g283" type="text" /></em>
+            </div>
+            <div>
+                <em class="title"><span>*</span>身份证号</em><em><input  id="idno" name="idno" class="input g420" type="text" /></em>
+            </div>
+            <div>
+                <em class="title">护照号</em><em><input  id="passport" name="passport" class="input g420" type="text" /></em>
+            </div>
+            <div>
+                <em class="title"><span>*</span>联系方式</em><em><input  id="contact" name="contact" class="input 150" type="text" /></em>
+            </div>
+            <div><em class="title"><span>*</span>通讯地址</em><em><input  id="address" name="address" class="input g420" type="text" /></em></div>
+
+            <div>
+                <em class="title"><span>*</span>报名角色</em><em><input  id="role" name="role" class="input g420" type="text" /></em>
+            </div>
+            <div>
+            <em class="title"><span>*</span>个人特长爱好</em><em><textarea id="hobbies" name="hobbies" rows="4" class="input g420" type="text"></textarea></em>
+            </div>
+            <div>
+            <em class="title"><span>*</span>参加过的比赛及获得的荣誉</em><em><textarea id="honours" name="honours" rows="4" class="input g420" type="text"></textarea></em>
+            </div>
+            <div>
+            <em class="title"><span>*</span>梦想宣言</em><em><textarea id="declaration" name="declaration" rows="4" class="input g420" type="text"></textarea></em>
+            </div>
+
+            <div>
+                <em class="title other">注：</em>
+                <p>
+                    1、本人自愿报名参加【见行见远】全国大学生环球旅行影像秀选拔大赛。<br />
+                    2、以上资料属实。<br />
+                    3、大赛期间一切活动听从组委会安排，组委会对选手资料享有无偿使用权。<br />
+                    4、如团队报名参赛，请填写三张报名表一同提交即可。
+                </p>
+            </div>
+            <div class="btn_center">
+                <em><a id="submit" href="javascript:void(0)" class="btnBM">确认</a></em>
+            </div>
+            </form>
+            
+        </fieldset>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+
+  $(function(){
+
+
+
+      var myDate = new Date();
+      var month = (myDate.getMonth()+1 < 10) ? ("0"+(myDate.getMonth()+1)) : (myDate.getMonth()+1)
+      var datetime=myDate.getDate()<10?("0"+myDate.getDate()):myDate.getDate();
+      var nowDate= myDate.getFullYear()+"-"+month+"-"+datetime;
+      datePickerFun($("#birthdate"),nowDate);
+      
+        //时间控件
+      //input_datepicker------------------------------------
+      function datePickerFun($dateInput,date){
+        if(!date) date = nowDate;
+        $dateInput.DatePicker({
+          format:'Y-m-d',
+          date: date,
+          current: date,
+          starts: 0,
+          position: 'bottom',
+          onBeforeShow: function(){
+            $dateInput.DatePickerSetDate($dateInput.val()||date, true);
+          },
+          onChange: function(formated, dates){
+            $dateInput.val(formated);
+    //        $dateInput.DatePickerHide();
+          }
+        });
+      }
+  });
+</script>

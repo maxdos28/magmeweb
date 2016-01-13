@@ -1,0 +1,77 @@
+
+/*
+ *  评论模块：
+ *  默认灰色，头像左侧
+ *  CLASS="bl"：为灰色头像左侧，CLASS="br"：为灰色头像右侧，CLASS="gl"：为绿色头像左侧，CLASS="gr"：为绿色头像右侧
+ *
+ */
+
+.conReply div { margin-bottom:10px; zoom:1; position:relative; width:100%; min-height:30px;}
+.conReply div:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+
+.conReply div p { font-weight:normal; margin:0 0 0 40px; border:1px solid #d7d7d7; background:#f7f7f7; display:inline-block; border-radius:3px; font-size:12px; float:left; word-wrap:break-word; word-break:break-all;}
+.conReply div p span { border:1px solid #ffffff; display:block; padding:5px; background:#f7f7f7; border-radius:3px; color:#999; min-width:160px;}
+.conReply div p span del{ width:16px; height:16px; text-indent:-999em; overflow:hidden; float:right; position:relative; top:-5px; right:-5px; background:url(../images/icon/close.gif) 0 0 no-repeat; cursor:pointer;}
+.conReply div p span del:hover{background-image:url(../images/icon/close_b.gif);}
+.conReply div p span strong { display:block; zoom:1; height:18px; line-height:18px; color:#bababa; font-weight:normal;}
+.conReply div p span strong:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.conReply div p span strong a { color:#5e91c1; padding:0 5px 0 0;}
+.conReply div p span strong a:hover { color:#336493;}
+.conReply div .head{ position:absolute; left:0; right:auto; top:0; width:30px; height:30px; display:block; border-radius:3px; overflow:hidden;}
+.conReply div .head img { display:block; width:30px; height:30px; border-radius:3px;}
+.conReply div em{ width:10px; height:6px; overflow:hidden; display:block; position:absolute; left:34px; right:auto; top:0; z-index:1; background:url(../images/icon/m1ReplyArrow.gif) 0 0 no-repeat;}
+
+
+.conReply div.gl p span, .conReply div.gr p span { border:1px solid #f2f8e6; background:#e7f2d1; color:#7c8865;}
+.conReply div.gl p span sup, .conReply div.gr p span sup { color:#a8ba98;}
+.conReply div.gr .head, .conReply div.br .head { right:0; left:auto;}
+
+.conReply div.gl p { border:1px solid #c7dbb5;}
+.conReply div.gl em { background:url(../images/icon/m1ReplyArrow.gif) 0 -10px no-repeat;}
+
+.conReply div.gr p { border:1px solid #c7dbb5; margin:0 40px 0 0; float:right;}
+.conReply div.gr em { left:auto; right:34px; background:url(../images/icon/m1ReplyArrow.gif) -10px -10px no-repeat;}
+
+.conReply div.br p { margin:0 40px 0 0; float:right;}
+.conReply div.br em { left:auto; right:34px; background:url(../images/icon/m1ReplyArrow.gif) -10px 0 no-repeat;}
+
+.conReply div.br p span sup,
+.conReply div.gr p span sup { text-align:right;}
+.conReply div.br p span sup a,
+.conReply div.gr p span sup a { float:right; padding:0 0 0 5px;}
+
+.conReplyBig div { min-height:40px;}
+.conReplyBig div .head,
+.conReplyBig div .head img { width:40px; height:40px;}
+.conReplyBig div p { margin:0 0 0 53px;}
+.conReplyBig div p span { padding:10px;}
+.conReplyBig div em { left:47px;}
+
+.conReplyBig div.gr p,.conReplyBig div.br p { margin:0 53px 0 0;}
+.conReplyBig div.gr em,.conReplyBig div.br em { right:47px;}
+
+
+.ie6 div.conReply div p{ float:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

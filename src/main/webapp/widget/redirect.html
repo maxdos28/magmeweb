@@ -1,0 +1,17 @@
+<script type="text/javascript">
+
+function getUrlValue(name){ 
+	var r = location.search.substr(1).match(new RegExp("(^|&)"+ name +"=([^&]*)(&|$)")); 
+	if (r!=null) return unescape(r[2]); return null;
+}
+
+var xx = getUrlValue('xx');
+
+if(xx&&xx=='rr'){
+	location.href='https://graph.renren.com/oauth/authorize?scope=publish_share send_invitation operate_like&response_type=code&client_id=3a2740e731624f53ae054d914b870fbe&redirect_uri=http://www.magme.cn/widgetPass.html?xx=rr';
+}
+else{
+	location.href='http://www.magme.cn/newTag.html?xx='+xx;
+}
+
+</script>

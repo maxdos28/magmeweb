@@ -1,0 +1,6 @@
+尊敬的 {userName}：<br/>
+	欢迎您注册<a href="http://www.magme.cn/" target="_blank">麦米网</a>，这封邮件是系统自动发送的激活邮件，请点击下面连接激活您的账户：<br/>
+	<a href="http://www.magme.cn/alive/{type}/{accountId}/{sec}" target="_blank">点击此处激活您的帐号</a><br/>
+	我们的成长离不开您的支持！<br/>
+
+麦米网团队

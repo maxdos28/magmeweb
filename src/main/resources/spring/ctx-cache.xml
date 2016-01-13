@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+
+<beans>
+	<bean id="memcachePool" class="com.danga.MemCached.SockIOPool"
+		factory-method="getInstance" init-method="initialize" destroy-method="shutDown">
+		<constructor-arg>
+			<value>neeaMemcachedPool</value>
+		</constructor-arg>
+		<property name="servers">
+			<list>
+				<value>${memcache.server1}</value>
+				<value>${memcache.server2}</value>
+			</list>
+		</property>
+		<property name="initConn">
+			<value>20</value>
+		</property>
+		<property name="minConn">
+			<value>10</value>
+		</property>
+		<property name="maxConn">
+			<value>50</value>
+		</property>
+		<property name="maintSleep">
+			<value>300</value>
+		</property>
+		<property name="nagle">
+			<value>false</value>
+		</property>
+		<property name="socketTO">
+			<value>3000</value>
+		</property>
+	</bean>
+
+	<bean id="memCachedClient"
+		class="com.danga.MemCached.MemCachedClient" depends-on="memcachePool">
+		<property name="compressEnable">
+			<value>true</value>
+		</property>
+		
+		<property name="compressThreshold">
+            <value>4096</value>
+        </property>
+		
+		<constructor-arg>
+			<value>neeaMemcachedPool</value>
+		</constructor-arg>
+	</bean>
+</beans>

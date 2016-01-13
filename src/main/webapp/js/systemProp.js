@@ -1,0 +1,53 @@
+var SystemProp={};
+//是否统计
+SystemProp.isStat=true;
+//新版出版商后台上传图片的地址
+SystemProp.newPublisherServerUrl="http://static.magme.com/newPublisher";
+//网站域名
+SystemProp.domain="http://www.magme.com";
+//加到所有*.action前面
+SystemProp.appServerUrl="http://www.magme.com";
+//加到所有静态资源前面,包括js,style以及静态的图片,但是/js/systemProp.js除外
+SystemProp.staticServerUrl="http://static.magme.com";
+//统计的URL  http://stat.magme.com/onepix.gif
+SystemProp.statServerUrl="";
+//加到用户头像前面
+SystemProp.profileServerUrl="http://static.magme.com/profiles";
+//加到用户上传的临时头像前面
+SystemProp.profileServerUrlTmp="http://static.magme.com/profiles/tmp";
+//暂未用到
+SystemProp.sampleServerUrl="http://static.magme.com/samplefiles";
+//加到标签图片的前面
+SystemProp.tagServerUrl="http://static.magme.com/tags";
+//加到杂志的图片和SWF前面
+SystemProp.magServerUrl="http://static.magme.com/pdfprofile";
+//供Flash调用
+SystemProp.fpageServerUrl="http://static.magme.com/fpage";
+//供首页图片路径调用
+SystemProp.rrAppid="155909";
+//人人APPID
+SystemProp.rrResponseType="code";
+//人人ResponseType
+SystemProp.rrRedirectUri="/third/third-login!renren.action";
+//人人RedirectUri
+SystemProp.kxApiKey="50588781100120b84c040e52dd68f238";
+//开心APPKEY
+SystemProp.kxSecret="7245d2dedbde88326ee7e8af17bf0202";
+//开心SECRET
+SystemProp.kxResponseType="code";
+//开心ResponseType
+SystemProp.kxRedirectUri="/third/third-login!kaixin.action";
+//开心RedirectUri
+SystemProp.sinaAppKey="477313374";
+SystemProp.baiduApiKey="83RSrH72ocIERSxZ2uAA6hGT";
+//kaijiewangluo
+SystemProp.kaiJieAppUrl="http://qn00.cn";
+//新浪pKey
+SystemProp.publishProfileServerUrl="http://static.magme.com/publishprofiles";
+SystemProp.publishProfileServerUrlTmp="http://static.magme.com/publishprofiles/tmp";
+SystemProp.adProfileServerUrl="http://static.magme.com/adprofiles";
+SystemProp.adProfileServerUrlTmp="http://static.magme.com/adprofiles/tmp";
+SystemProp.getUrl=function(param){
+   var url=eval('SystemProp.'+param);
+   return url;
+};

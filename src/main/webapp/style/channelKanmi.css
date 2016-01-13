@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*nav*/
+.header .nav .kanmi a,
+.header .nav .kanmi a:hover{ border-bottom-color:#f60;}
+/*body topBar----------------------------------------------------------------------------------*/
+.body{ padding-bottom:30px;}
+.body .topBar .subNav li a{ margin-right:39px;}
+/*bodyKanmi*/
+.body .bodyKanmi { width:1000px; overflow:hidden;}
+.body .bodyKanmi .inner{ width:1010px; margin-left:-10px; position:relative; padding-bottom:10px;}
+.body .bodyKanmi .desk{ zoom:1; padding-bottom:30px;}
+.body .bodyKanmi .desk:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.body .bodyKanmi .item{ width:182px; height:300px; float:left; display:inline; margin-left:10px; padding:5px; position:relative;}
+.body .bodyKanmi .item .arrow{ width:20px; height:10px; background:url(../images/folderArrow.gif) 0 0 no-repeat; position:absolute; bottom:-10px; left:6px; display:block; z-index:999; overflow:hidden;}
+.body .bodyKanmi .item a.img img{ width:172px; height:230px; display:block; border:5px solid #fff; }
+.body .bodyKanmi .item:hover a.img img,
+.body .bodyKanmi .item.hover a.img img{ border-color:#999; }
+.body .bodyKanmi .item h6{ height:16px; line-height:12px; font-weight:normal; width:100%; overflow:hidden; padding:3px 5px;}
+.body .bodyKanmi .item h6 span{ display:block; float:left;  height:16px; line-height:16px; padding-left:14px; background-repeat:no-repeat; background-position:-2px center; margin-right:6px; overflow:hidden; font-size:11px;}
+.body .bodyKanmi .item h6 span.fav{ background-image:url(../images/icon/heart.gif); cursor:pointer;}
+.body .bodyKanmi .item h6 span.fav:hover,
+.body .bodyContent .item h6 span.favCurrent{ background-image:url(../images/icon/heart_o.gif); color:#f60;}
+.body .bodyKanmi .item h6 span.top{ background-image:url(../images/icon/graph.gif);}
+.body .bodyKanmi .item h6 span.click{ background:url(../images/icon/camera_w_block.gif) 0 0 no-repeat; height:16px; display:inline-block; line-height:16px; padding-left:16px; padding-right:5px; cursor:pointer; margin-right:0; font-size:12px;color:#fff; border-radius:8px;}
+.body .bodyKanmi .item h6 span.click:hover{ background-image:url(../images/icon/camera_o_block.gif);}
+.body .bodyKanmi .item h6 span.history{ float:right; background:none; margin:0; padding:0; font-size:12px; height:12px; line-height:12px; max-width:none; cursor:pointer; color:#f60; display:none;}
+.body .bodyKanmi .item h5{ height:30px; padding:5px; }
+.body .bodyKanmi .item h5 span.head{ width:30px; height:30px; float:left; display:block; margin-right:10px;}
+.body .bodyKanmi .item h5 span.head a{ height:30px; margin:0;}
+.body .bodyKanmi .item h5 span.head img{ width:30px; height:30px;}
+.body .bodyKanmi .item h5 a{ height:12px; line-height:12px; margin-bottom:7px; display:block; overflow:hidden;}
+.body .bodyKanmi .item h5 strong{ height:11px; line-height:11px; font-size:11px; font-weight:normal;}
+.body .bodyKanmi .item h5 em{ position:absolute; right:0; bottom:0; height:12px; line-height:12px; overflow:hidden; cursor:pointer;}
+.body .bodyKanmi .item .tips{ position:absolute; left:10px; bottom:-28px; background:url(../images/kanmiTips.gif) 0 0 no-repeat; width:152px; padding:4px 10px 0 10px; line-height:32px; height:32px; overflow:hidden;}
+.body .bodyKanmi .item .tips del{ position:absolute; right:3px; top:10px; width:8px; height:8px; background:url(../images/kanmiTipsClose.gif) 0 0 no-repeat; display:block; cursor:pointer;}
+.body .bodyKanmi .typeNav{ width:182px; overflow:hidden;}
+.body .bodyKanmi .typeNav .scroll-pane{ width:172px; height:200px; overflow:hidden;}
+.body .bodyKanmi .deskBig .item{ width:384px; height:580px;}
+.body .bodyKanmi .deskBig .item a img{ width:374px; height:510px;}
+.body .bodyKanmi .deskBig .typeNav{ width:182px; height:580px;}
+.body .bodyKanmi .deskBig .typeNav .scroll-pane{ width:172px; height:480px; overflow:hidden; }
+
+/*folder*/
+.folder{ height:0; background:url(../images/folderBg.gif) 0 0 no-repeat; position:relative; top:-20px; z-index:99; overflow:hidden; margin-left:30px; margin-bottom:10px;}
+.folder h2{ height:13px; line-height:13px; padding-top:10px; padding-left:10px; color:#fff; font-size:13px; text-shadow:1px 1px 2px #333;}
+.folder sub,
+.folder sup{ width:30px; height:178px; display:block; background-image:url(../images/folderMask.png); background-repeat:no-repeat; position:absolute; top:0; left:0;}
+.folder sup{ background-position:-30px 0; left:auto; right:0;}
+.folder .outer{ height:187px; width:950px; margin-top:9px; overflow:hidden; padding-left:30px;}
+.folder .outer .jspDrag{background:#fff;}
+.folder .outer .jspTrack{background:#999;}
+.folder .outer .jspDrag:hover,
+.folder .outer .jspDrag:active{background:#f60;}
+.folder .inner{ height:150px; }
+.folder .inner a.showBar{ display:block;}
+.folder .inner a{ text-decoration:none; width:110px; height:147px; padding:0 20px 0 10px; float:left; position:relative; color:#fff;}
+.folder .inner a img{ width:110px; height:145px; display:block;}
+.folder .inner a span{ position:absolute; top:0; left:10px; width:110px; padding-top:147px; height:20px; line-height:20px; display:block; text-align:center; overflow:hidden; }
+.folder .inner a:hover{ color:#f60;}
+
+
+
+
+
+
+
+

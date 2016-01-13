@@ -1,0 +1,41 @@
+﻿@charset "utf-8";
+/*设置导航位置*/
+.header .menu .home a,
+.header .menu .home a:hover{background:#172639; }
+/*顶部工具条去除*/
+body{padding-top:40px; }
+
+
+
+.bodyHome .item{ width:200px; height:200px; padding:10px 10px 15px 10px; margin:8px 8px 3px 8px; float:left; background-position:0 0; background-repeat:no-repeat; position:relative; overflow:hidden;}
+.bodyHome .item img{ width:200px; height:200px; background:#ddd; border:none; display:block;}
+.bodyHome .item .info{ position:relative; left:0; bottom:40px; height:40px; overflow:hidden; color:#fff; background:url(../images/alpha40.png);}
+.bodyHome .item .info h5,
+.bodyHome .item .info h6,
+.bodyHome .item .info p,
+.bodyHome .item .info .tools{ height:20px; line-height:20px; display:block; position:relative;}
+.bodyHome .item .info h5,
+.bodyHome .item .info h6,
+.bodyHome .item .info p{ padding-left:4px; font-weight:normal; overflow:hidden;}
+.bodyHome .item .info h6{ color:#ccc;}
+.bodyHome .item .info p{ color:#fff; height:40px; line-height:19px; display:none;}
+.bodyHome .item .info .tools{ background:url(../images/alpha60.png);}
+.bodyHome .item .info .tools em{ height:20px; display:block; float:left; margin-right:5px; background-position:3px center; background-repeat:no-repeat; color:#777; text-indent:22px; cursor:pointer;}
+.bodyHome .item .info .tools em:hover{ color:#fff;}
+.bodyHome .item .info .tools em.iconHeart{ background-image:url(../images/icon/heart_b.gif);}
+.bodyHome .item .info .tools em.iconHeart:hover,
+.bodyHome .item .info .tools em.favCurrent{ background-image:url(../images/icon/heart_bOn.gif);}
+.bodyHome .item .info .tools em.iconShare{ background-image:url(../images/icon/share_b.gif);}
+.bodyHome .item .info .tools em.iconDetail{ background-image:url(../images/icon/detail_b.gif); float:right;}
+.bodyHome .size11{ background-image:url(../images/size11.gif);}
+.bodyHome .size12{ background-image:url(../images/size12.gif); width:436px;}
+.bodyHome .size21{ background-image:url(../images/size21.gif); height:436px;}
+.bodyHome .size22{ background-image:url(../images/size22.gif); height:436px; width:436px;}
+.bodyHome .size12 img{ width:436px;}
+.bodyHome .size21 img{ height:436px;}
+.bodyHome .size22 span{ width:436px;}
+.bodyHome .size22 img{ width:436px; height:436px;}
+
+
+
+

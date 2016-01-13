@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style/royalslider.css"/>
+<link rel="stylesheet" type="text/css" href="style/rs-default.css"/>
+<link rel="stylesheet" type="text/css" href="style/tpl.css"/>
+<title>短信系统</title>
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.royalslider.min.js"></script>
+<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.js"></script>
+<script src="js/jquery.scrollto.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<style>
+
+</style>
+
+
+<script>
+$(function(){
+
+//设置面面加载后地址栏收起
+window.addEventListener('load', function() {
+setTimeout(scrollTo, 0, 0, 1);
+}, false);
+
+
+
+$('#gallery-1').royalSlider({
+    fullscreen: {
+      enabled: true,
+      nativeFS: true
+    },
+    controlNavigation: 'none',		//thumbnails,bullets,none
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 4,     
+    autoScaleSliderHeight: 3.6,
+	arrowsNav: false,
+    loop: false,
+    imageScaleMode: 'fit',	//fill,fit-if-smaller
+    navigateByClick: true,
+    numImagesToPreload:3,
+	slidesSpacing:20,
+	slidesOrientation:'horizontal',		//vertical,horizontal
+	transitionType:'move',
+	controlsInside:true,
+    arrowsNavAutoHide: true,
+    arrowsNavHideOnTouch: true,
+    keyboardNavEnabled: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
+    globalCaptionInside: false,
+    thumbs: {
+      orientation: 'vertical',			//vertical,horizontal
+      appendSpan: true,
+      firstMargin: true,
+	  fitInViewport: true,
+      paddingBottom: 0
+    }
+});
+
+
+});
+</script>
+  </head>
+  <body>
+    <div class="main tpl3">
+    	<h1 class="header">汤臣别墅</h1>
+        <div class="nav">
+        	<a href="default.html">汤臣别墅</a><a href="demo2.html" class="current">地理位置</a><a href="demo3.html">设计理念</a><a href="demo4.html">建材设备</a><a href="demo5.html">户型图集</a>
+        </div>
+    	<div class="body">
+            <div id="gallery-1" class="royalSlider rsDefault">
+            <a class="rsImg" data-rsw="374" data-rsh="332"  data-rsBigImg="ui/p5.jpg" href="ui/p5.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p1.jpg" /></a>
+            </div>
+
+            
+        	<div class="content">
+                <strong>城市核心，荣耀结晶</strong><br>
+                <p>左拥140公顷高尔夫球场，右抱140公顷世纪公园。<br>
+					座落于上海市中心最大的高尔夫球场 —— 140公顷的湯臣高尔夫球场旁，不出家门，即可坐观滴翠的绿水碧草，已是得天独厚，更为难得的是湯臣15墅近享140公顷世纪公园的浩瀚绿意，生活境界，朗阔从容。<br>
+					城市中心，可以是纵横职场的壮志凌云，也可以是修身养心的逸致闲情。高尔夫球场与事业版圈激情碰撞，生活又是何等的豪情万丈。</p>
+            </div>
+        </div>
+    	<div class="pagedock">
+        	<ul>
+            	<li class="mail"><a href="#"></a></li>
+            	<li class="qq"><a href="#"></a></li>
+            	<li class="phone400"><a href="tel:40000000000"></a></li>
+            	<li class="weibo"><a href="#"></a></li>
+            	<li class="weixin"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>

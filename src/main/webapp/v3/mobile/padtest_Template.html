@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="format-detection" content="telephone=no" />
+<style>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, audio, canvas, details, figcaption,
+figure, footer, header, hgroup, mark, menu, meter, nav,
+output, progress, section, summary, time, video {
+margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+.item{ position:relative; display:block; zoom:1; overflow:hidden;}
+.item>.inner{ margin:20px 20px 0 20px; overflow:hidden; }
+.item>.inner .textMask{ height:60px; background:url(pad/textMask.png) 0 0 repeat-x; position:absolute; left:0;}
+.item>.inner h2{ font-size:22px; max-height:2.8em; overflow:hidden; line-height:1.4em; margin:0 0 10px 0;}
+.item>.inner .con{ font-size:16px; line-height:1.6em; color:#333;}
+.item>.inner .con p{ margin-bottom:0.8em; text-align:justify; text-justify:distribute-all-lines;}
+.item>.inner .img{ display:block; background-repeat:no-repeat; background-size:cover; background-position:center top; overflow:hidden; }
+.item>.inner.title h2{ position:absolute; left:0; bottom:75px; z-index:11; line-height:40px; height:40px; margin:0 20px; padding:0 10px; color:#fff; display:block; overflow:hidden; z-index:1;}
+.item>.inner.title .con{ position:absolute; left:0; bottom:-20px; z-index:10; height:75px; line-height:25px; overflow:hidden; color:#fff; margin:0 20px 20px 20px; padding:40px 10px 0 10px; background:url(pad/titlePng.png) left bottom repeat-x;}
+.item>.inner.title .con p{ margin-right:1px; height:50px; overflow:hidden;}
+</style>
+<script type='text/javascript' src='js/jquery-1.4.2.min.js'></script>
+<script>
+$(function(){
+	$(".item .inner").append("<div class='textMask'></div>");
+	fnWork(300,500);
+	$(window).bind("resize", fnWork(300,500));
+});
+function fnWork(W,H){
+var $id = $(".item");
+var inW = W-40;
+var inH = H-20;
+//重设Title样式
+$id.height(H).width(W);
+$id.find(".textMask").css({width:W,top:inH-40});
+$id.find(".inner").removeClass("title");
+$id.find("h2").css({width:inW});
+$id.find(".img").insertAfter($id.find("h2"));
+//显示区域判断
+if( W*H < 220000){
+	//宽高比例判断
+	if( inW/inH > 1.2 ){
+		$id.find(".img").css({width:inW*0.4,height:inH-65,float:"right",margin:"0 0 15px 15px"});
+	}else if( inW/inH > 0.8 && $id.find(".img").hasClass("size21")){
+		$id.find(".img").css({width:inW*0.5,height:inH*0.9-40,float:"right",margin:"0 0 15px 15px"});
+	}else{
+		$id.find("h2").insertAfter($id.find(".img"));
+		$id.find(".img").css({width:inW*1.0,height:inH*0.4,float:"none",margin:"0 0 15px 0"});
+	}
+}else{
+	if( $id.find(".img").hasClass("size11") ){
+		$id.find(".img").css({width:inW*0.5,height:inW*0.5,float:"right",margin:"0 0 15px 15px"});
+	}else if( $id.find(".img").hasClass("size12") ){
+		$id.find("h2").insertAfter($id.find(".img"));
+		$id.find(".img").css({width:inW*1.0,height:inW*0.6,float:"none",margin:"0 0 15px 0"});
+	}else if( $id.find(".img").hasClass("size21") ){
+		$id.find(".img").css({width:inW*0.5,height:inH*0.8,float:"right",margin:"0 0 15px 15px"});
+	}
+}
+//判断显示为全图模式
+if(W*H > 110000){
+	if( ($id.find(".img").hasClass("size22")) ||
+		(W/H > 1.5 && $id.find(".img").hasClass("size12")) ||
+		(W/H < 0.67 && $id.find(".img").hasClass("size21"))){
+		$id.find(".inner").addClass("title").find(".img").css({width:inW*1.0,height:inH*1.0}).end().find("h2").css({width:inW*1.0-20});
+		$id.find(".textMask").remove();
+	}
+}
+}
+
+</script>
+</head>
+
+<body id="body">
+
+        <div class="item L1">
+        	<div class="inner">
+            	<h2>梦园</h2>
+            	<div class="img size22" style="background-image:url(http://static.magme.cn/fpage/event/20120424/1335254941088.jpg)" /></div>
+            	<div class="con">
+                	<p>偶尔，想象着自己躺在那片花海，沐浴着阳光，聆听着虫鸣鸟叫。忙碌、浮躁、束缚，摧残着人们的心智，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠……</p>
+                </div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

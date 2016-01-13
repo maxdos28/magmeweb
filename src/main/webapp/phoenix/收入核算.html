@@ -1,0 +1,185 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelAdmin.css" rel="stylesheet" type="text/css" />
+<link href="style/jquery.datepicker.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/datepicker.js"></script>
+
+<script type="text/javascript">
+
+  $(function(){
+
+
+
+      var myDate = new Date();
+      var month = (myDate.getMonth()+1 < 10) ? ("0"+(myDate.getMonth()+1)) : (myDate.getMonth()+1)
+      var datetime=myDate.getDate()<10?("0"+myDate.getDate()):myDate.getDate();
+      var nowDate= myDate.getFullYear()+"-"+month+"-"+datetime;
+      datePickerFun1($("#datepicker1"),nowDate);
+      datePickerFun2($("#datepicker2"),nowDate);
+      
+        //时间控件
+      //input_datepicker------------------------------------
+      function datePickerFun1($dateInput,date){
+        if(!date) date = nowDate;
+        $dateInput.DatePicker({
+          format:'Y-m-d',
+          date: date,
+          current: date,
+          starts: 0,
+          position: 'bottom',
+          onBeforeShow: function(){
+            $dateInput.DatePickerSetDate($dateInput.val()||date, true);
+          },
+          onChange: function(formated, dates){
+            $dateInput.val(formated);
+    //        $dateInput.DatePickerHide();
+          }
+        });
+      }
+      function datePickerFun2($dateInput,date){
+        if(!date) date = nowDate;
+        $dateInput.DatePicker({
+          format:'Y-m-d',
+          date: date,
+          current: date,
+          starts: 0,
+          position: 'bottom',
+          onBeforeShow: function(){
+            $dateInput.DatePickerSetDate($dateInput.val()||date, true);
+          },
+          onChange: function(formated, dates){
+            $dateInput.val(formated);
+    //        $dateInput.DatePickerHide();
+          }
+        });
+      }
+  });
+</script>
+
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header headerAdmin clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="后台-首页.html">(SEO)麦米 Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li><a href="启动画面管理.html">启动画面管理</a></li>
+                <li><a href="栏目管理.html">频道管理</a></li>
+                <li><a href="启动APP数.html">数据报表</a></li>
+                <li class="current"><a href="收入核算.html">收入核算</a></li>
+                <li><a href="内部账号.html">内部账号</a></li>
+                <li><a href="后台审批.html">后台审批</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="logout" id="logout"><a href="后台-登录.html" title="退出">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--body-->
+<div class="body">
+    <div class="conLeftMiddleRight">
+        <div class="conTools clearFix tCenter">
+        	<fieldset>
+            	<div>
+                	<em>开始日期</em>
+                	<em><input type="text" class="input g140 datepicker" id="datepicker1" /></em>
+                	<em>结束日期</em>
+                	<em><input type="text" class="input g140 datepicker" id="datepicker2" /></em>
+                	<em><a href="#" class="btnBS">确定</a></em>
+                </div>
+            </fieldset>
+        </div>
+        <div class="conB g470 floatr">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table JQtableBg">
+              <thead>
+                <tr>
+                    <td class="tLeft">Android</td>
+                    <td class="g100">&nbsp;</td>
+                    <td class="g100">&nbsp;</td>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tLeft">杂志</td>
+                        <td>￥999.99元</td>
+                        <td><a href="javascript:void(0)">导出Excel</a></td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+        <div class="conB g470 floatl">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table JQtableBg">
+              <thead>
+                <tr>
+                    <td class="tLeft">IOS</td>
+                    <td class="g100">&nbsp;</td>
+                    <td class="g100">&nbsp;</td>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tLeft">杂志</td>
+                        <td>￥999.99元</td>
+                        <td><a href="javascript:void(0)">导出Excel</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tLeft">会员</td>
+                        <td>￥999.99元</td>
+                        <td><a href="javascript:void(0)">导出Excel</a></td>
+                    </tr>
+                    <tr>
+                        <td class="tLeft"><strong>总计</strong></td>
+                        <td><strong>￥999.99元</strong></td>
+                        <td><a href="javascript:void(0)">导出Excel</a></td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+        <div class="clear"></div>
+        <div class="conB">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table JQtableBg">
+              <thead>
+                <tr>
+                    <td class="tLeft">收入总计</td>
+                    <td class="g100">&nbsp;</td>
+                    <td class="g100">&nbsp;</td>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tLeft">IOS + Android</td>
+                        <td>￥999.99元</td>
+                        <td><a href="javascript:void(0)">导出Excel</a></td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+        <div class="conFooter tRight">
+                
+		</div>
+    </div>
+</div>
+
+</body>
+</html>

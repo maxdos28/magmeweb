@@ -1,0 +1,60 @@
+body{font-size:12px;}
+body *{font-family:Arial, Helvetica, sans-serif;}
+.header .userFeedBack{ background-image:url(../images/btnFeedBackEn.png);}
+.body .bodyContent .typeMgz sub{ background-image:url(../images/corMgzEn.png);}
+.body .bodyContent .typeEve sub{ background-image:url(../images/corEventEn.png);}
+
+
+
+
+
+/*fix footer*/
+.footer .nav{ width:280px;}
+.footer .nav ul{ width:70px;}
+
+
+
+
+/*fix pop*/
+fieldset div em.title {width:100px;}
+#editTagDialog div em.title{ width:65px;}
+#editTagDialog div em .g350{ width:330px;}
+#createPublicationDialog div em.title{ width:70px;}
+#userInfoDialog div em.title{ width:100px;}
+#userInfoDialog div em.g40{ width:60px;}
+#userInfoDialog div em.g90{ width:65px;}
+#userInfoDialog div em.g180{ width:160px;}
+#userInfoDialog div em.titleBirthday{ width:67px;}
+#userInfoDialog div em input.gBirthday{ width:110px;}
+#uploadIssueDialog div em.title{ width:100px;}
+#uploadIssueDialog div em.g100{ width:110px;}
+#uploadIssueDialog div em.g80{ width:95px;}
+#editPublisherDialog div em.title{ width:100px;}
+#editPublisherDialog div em.g200{ width:180px;}
+#editPublisherDialog div em input.g150{ width:154px;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div em.title{ width:110px;}
+#popLoginRegister .jqueryTagBox .doorList form .con fieldset div em .input{ width:150px;}
+#addAdvertiseDialog #startTime .g50{ width:80px;}
+#addAdvertiseDialog #startTime input.g80{ width:75px;}
+#addAdvertiseDialog em .g280{ width:300px;}
+#editIssueDialog em textarea.g280{ width:320px;}
+#shareTagDialog .right .sendMsg .input{ width:220px;}
+#shareMgzDialog .right .sendMsg .input{ width:220px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

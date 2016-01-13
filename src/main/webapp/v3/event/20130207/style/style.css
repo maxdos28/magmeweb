@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+
+.header20120905 .headerNav{ background:url(../images/bg.jpg) center top no-repeat;}
+.header20120905 .headerTop .nav .home a,
+.header20120905 .headerTop .nav .home a:hover{ background-color:#2C0000; }
+
+.header20120905 .headerNav ul.clearFix li a{color:#A27F7D;}
+
+

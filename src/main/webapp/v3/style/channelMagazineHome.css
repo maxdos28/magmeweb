@@ -1,0 +1,82 @@
+﻿@charset "utf-8";
+@import url("conM1.css");
+@import url("conReply.css");
+
+
+body{ padding-top:150px;}
+.header .inner,
+.header .nav .navInner,
+.topTools{ width:1180px;}
+
+
+
+/*layout*/
+.sideLeft{ margin-left:8px; width:670px; float:left; }
+.sideRight{ margin-left:20px; width:238px; float:left; position:relative; display:inline; position:static; right:auto; top:auto;}
+
+
+
+
+.pageMagazineHome .conA h2{ background:none; border:0; text-indent:0; font-size:16px; margin-bottom:6px;}
+.pageMagazineHome .conA{ padding:10px 20px 20px 20px;}
+.pageMagazineHome .conA .conBody{ padding:0;}
+
+
+.pageMagazineHome .conMgzInfo{ padding-top:20px; height:268px; overflow:hidden; background:#FAFAFA;}
+.pageMagazineHome .conMgzInfo .cover{ width:200px; height:268px; float:left; margin-right:20px;}
+.pageMagazineHome .conMgzInfo .cover img{ width:200px; height:268px; display:block;}
+.pageMagazineHome .conMgzInfo .info strong{ font-size:32px; line-height:36px; margin-bottom:20px; height:36px; overflow:hidden; display:block; color:#B4B4B4; font-weight:normal;}
+.pageMagazineHome .conMgzInfo .info p{ height:26px; line-height:26px; color:#000;}
+.pageMagazineHome .conMgzInfo .info p span{ color:#999;}
+.pageMagazineHome .conMgzInfo .info a{ margin-top:18px; letter-spacing:0; text-indent:0;}
+.pageMagazineHome .conMgzInfo .info a span{ display:block; float:left; margin-top:7px; width:24px; height:24px; margin-right:5px; background-repeat:no-repeat; background-position:center center;}
+.pageMagazineHome .conMgzInfo .info a.btnAB{ margin-right:15px;}
+.pageMagazineHome .conMgzInfo .info a.btnAB span{ background-image:url(../images/icon/book24White.png);}
+.pageMagazineHome .conMgzInfo .info a.btnWB span{ background-image:url(../images/icon/mail24Blue.png);}
+.ie6 .pageMagazineHome .conMgzInfo .info a span{ display:none;}
+.ieOld .pageMagazineHome .conMgzInfo{ border-bottom:0;}
+
+.pageMagazineHome .conMgzDescription p{ margin-bottom:1.4em; font-size:14px; line-height:1.6em; text-indent:2em;}
+.pageMagazineHome .conMgzDescription .conMgzBody{ margin-bottom:10px; border-bottom:1px dotted #ccc;}
+
+.pageMagazineHome .conMoreMgz{ overflow:hidden; width:630px;}
+.pageMagazineHome .conMoreMgz h2 a{ font-size:12px; float:right; color:#08c;}
+.pageMagazineHome .conMoreMgz h2 a:hover{ text-decoration:underline;}
+.pageMagazineHome .conMoreMgz .conBody{ width:650px; overflow:hidden;}
+.pageMagazineHome .conMoreMgz .conBody a{ width:150px; height:200px; display:inline-block; float:left; margin-right:10px;}
+.pageMagazineHome .conMoreMgz .conBody a img{ width:150px; height:200px; display:block;}
+
+
+.pageMagazineHome .sendBox { padding:20px; background:#f9f9f9;}
+.pageMagazineHome .sendBox .head { float:left; width:75px; height:75px; border-radius:3px;}
+.pageMagazineHome .sendBox .right { float:left; width:545px; margin-left:10px;}
+.pageMagazineHome .sendBox .right .input { border:1px solid #c7dbb5; background:none; padding:0; height:73px; width:543px; position:relative; border-radius:3px; margin-bottom:10px;}
+.pageMagazineHome .sendBox .right .input textarea { border:1px solid #f2f8e6; background:#e7f2d1; color:#7c8865; padding:5px; width:531px; position:relative; height:61px; border-radius:3px; overflow:auto; font-size:14px;}
+.pageMagazineHome .sendBox .right .input em { width:10px; height:6px; display:block; position:absolute; left:-7px; top:-1px; z-index:1; background:url(../images/icon/m1ReplyArrow.gif) 0 -10px no-repeat;}
+.pageMagazineHome .sendBox .shareWeiBo { float:left; line-height:20px; padding:5px 0 5px 14px; color:#919191; display:block; position:relative;}
+.pageMagazineHome .sendBox .shareWeiBo sup { width:12px; height:12px; overflow:hidden; display:block; background:url(../images/iconCheckbox.gif) 0 0; position:absolute; left:0; top:8px;}
+.pageMagazineHome .sendBox .shareWeiBo:hover { color:#666;}
+.pageMagazineHome .sendBox .shareWeiBo:hover sup { background:url(../images/iconCheckbox.gif) 0 -24px;}
+.pageMagazineHome .sendBox .shareWeiBoChecked sup,
+.pageMagazineHome .sendBox .shareWeiBoChecked:hover sup { background:url(../images/iconCheckbox.gif) 0 -12px;}
+.pageMagazineHome .sendBox .txtNum { float:right; font-weight:normal; color:#b3b3b3; line-height:28px; padding: 0; margin-right:10px;}
+.pageMagazineHome .sendBox .txtNum span { padding:0 5px; font-size:16px; color:#999; font-family:Constantia,Georgia;}
+.pageMagazineHome .sendBox .btnGB { float:right;}
+.ieOld .pageMagazineHome .sendBox{ border-bottom:0;}
+.ieOld .pageMagazineHome .sendBox .right { width:543px;}
+.ieOld .pageMagazineHome .sendBox .right .input { width:541px;}
+.ieOld .sideLeft .sendBox .right .input textarea{ width:529px;}
+.ie6 .pageMagazineHome .sendBox .right .input textarea,
+.ie7 .pageMagazineHome .sendBox .right .input textarea { margin-top:-1px;}
+
+.pageMagazineHome .conReplyBig div p span del{ background-image:url(../images/icon/book16Gray.png);}
+.pageMagazineHome .conReplyBig div p span del:hover{background-image:url(../images/icon/book16Blue.png);}
+.pageMagazineHome .conReplyMore { background:url(../images/icon/m1ReplyMore.gif) center center no-repeat; width:100px; height:30px; display:block; margin:0 auto;}
+.pageMagazineHome .conReplyMore:hover { background:url(../images/icon/m1ReplyMoreHover.gif) center center no-repeat;}
+
+
+
+
+/*footer*/
+.footerBig .inner { width:900px;}
+.footerBig .inner .contactForm { display:none;}

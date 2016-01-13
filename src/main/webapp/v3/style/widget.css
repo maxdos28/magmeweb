@@ -1,0 +1,22 @@
+/* Columns section */
+#content {position: relative;width: 940px;height: inherit;margin: 0 auto;padding: 25px;}
+#columns .column {float: left;width: 33.3%;min-height: 400px;height: auto !important;height: 400px;}
+#columns .widget {margin: 16px 8px 0 8px;}
+#columns .widget .widget-head { color: #000;overflow: hidden;height: 34px;line-height:34px;background:#dfdfdf;}
+#columns .widget .widget-head h2 { text-indent:20px; font-size:110%;}
+*+html #columns .widget .widget-head {top: 3px;}
+#columns .widget .widget-content {background: #fff;overflow: hidden;border: 1px solid #fff;}
+*+html #columns .widget .widget-content {margin: 0;}
+.myfeed li {list-style: none;border-bottom: 1px solid #ebebeb;padding: 10px 20px;}
+
+
+
+
+/* JS-Enabled CSS */
+.widget-head a.collapse  {float: right;display: inline;background: url(../images/widget/collapse.png) no-repeat 0 0;width: 28px;height: 28px;text-indent: -9999em;margin: 5px;outline: none;}
+.collapsed .widget-head a.collapse {background-position: 0 -28px;}
+.collapsed .widget-content {display:none !important;}
+.widget-placeholder { border: 1px dashed #666;}
+#column1 .widget-placeholder { margin: 16px 8px 0 8px; }
+#column2 .widget-placeholder { margin: 16px 8px 0 8px; }
+#column3 .widget-placeholder { margin: 16px 8px 0 8px; }

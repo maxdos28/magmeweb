@@ -1,0 +1,75 @@
+.conMyMessage .topBar,
+.conMyMessageDetail .topBar,
+.conMyMessageWrite .topBar{ margin-top:0; padding-bottom:10px; border:none; border-bottom:1px solid #e0e0e0; }
+.conMyMessage .topBar .floatr { margin-top:5px;}
+.conMyMessage .nullInfo{ background:url(../images/icon/64mail.gif) 200px 70px no-repeat #fff; height:500px; padding-top:0; line-height:200px; text-indent:270px; font-size:26px; color:#ddd; margin-bottom:50px;}
+
+
+.conMyMessage .conBody .msgList .item{ padding:10px; background:#FAFAFA; margin:0; overflow:hidden; position:relative; border-top:1px solid #fff; border-bottom:1px solid #E6E6E6; -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s;}
+.conMyMessage .conBody .msgList .item:hover{ background:#fff;}
+.conMyMessage .conBody .msgList .item:last-of-type{ border-bottom:none;}
+
+.conMyMessage .conBody .msgList .item:hover a.del { display:block;}
+.conMyMessage .conBody .msgList .item input{ position:absolute; left:15px; top:50%; margin-top:-8px; display:none;}
+
+.conMyMessage .conBody .msgList .item a{ display:block; margin:0 30px 0 0; text-decoration:none; color:#999; word-wrap:break-word; word-break:break-all;}
+.conMyMessage .conBody .msgList .item a div{ width:260px; float:left; margin:0; padding:0;}
+.conMyMessage .conBody .msgList .item a div .userHead{ width:46px; height:46px; margin-right:10px; position:relative; display:block; background:#fff; border-radius:3px;}
+.conMyMessage .conBody .msgList .item a div .userHead img{ width:46px; height:46px;}
+.conMyMessage .conBody .msgList .item a div strong{ display:block; height:20px; line-height:20px; width:145px; overflow:hidden; color:#7f8690;}
+.conMyMessage .conBody .msgList .item a div span{ display:block; color:#b6c0ca;}
+
+
+
+
+.conMyMessage .conBody .msgList .item a sup{ width:25px; height:24px; line-height:24px; padding-left:22px; color:#f60; font-size:10px; display:block; position:absolute; left:215px; top:21px; background:url(../images/icon/24mail.gif) -4px center no-repeat;}
+.conMyMessage .conBody .msgList .item a sup.new{ background-image:url(../images/icon/24mail_o.gif);}
+.conMyMessage .conBody .msgList .item a p { color:#666;}
+.conMyMessage .conBody .msgList .item a p em{ padding:0 3px; background:#ff0; color:#333; display:inline;}
+.conMyMessage .conBody .msgList .item a.del{ margin:0; position:absolute; right:10px; top:50%; margin-top:-8px; width:16px; height:16px; background:url(../images/icon/close.gif) center center no-repeat; cursor:pointer; display:none;}
+.conMyMessage .conBody .msgBody{ width:570px; float:left; }
+.conMyMessage .conBody .msgBody .topBar{ height:20px; padding:5px; background:#ddd;}
+.conMyMessage .conBody .msgBody .topBar strong{ font-size:14px; color:#000;}
+.conMyMessage .conBody .msgBody .topBar strong.myName{ float:right;}
+.conMyMessage .conBody .msgBody .topBar strong.firendName{ float:left;}
+.conMyMessage .conBody .msgBody .msgContent{ height:440px; padding:5px; overflow-y:scroll;}
+.conMyMessage .conBody .msgBody .msgContent .item{ padding:8px; margin-bottom:5px; background:#f1f1f1; border:1px solid #ccc;}
+.conMyMessage .conBody .msgBody .msgContent .msgM{ background:#FFD5AA; color:#f60; margin-left:280px;}
+.conMyMessage .conBody .msgBody .msgContent .msgF{ margin-right:280px;}
+
+
+.conMyMessageDetail .back { text-indent:0; letter-spacing:0; background:none; border:none; padding:1px 10px; margin-left:10px; box-shadow:none;}
+.conMyMessageDetail .back:active { box-shadow:none;}
+.conMyMessageDetail .conDetail{ background:#fff; padding:20px;}
+.conMyMessageDetail .conDetail .gl p{ margin-right:53px;}
+.conMyMessageDetail .conDetail .br p{ margin-left:53px;}
+.conMyMessageDetail .reply{ padding:20px 0 0 0; border:none;}
+.conMyMessageDetail .reply textarea.input{ padding:3px 8px; line-height:1.6em; width:610px; height:120px; margin-bottom:10px; display:block;}
+
+
+
+
+
+
+
+
+
+.conMyMessageWrite .wirteMessage { padding-left:0; height:320px; position:relative;}
+.conMyMessageWrite .wirteMessage #sendNames { height:22px; line-height:22px; text-indent:8px; width:660px;}
+.conMyMessageWrite .wirteMessage .reply{ clear:both;}
+.conMyMessageWrite .wirteMessage .reply textarea.input { padding:3px 8px; line-height:1.6em; width:648px; height:180px; margin-bottom:10px; display:block;}
+.conMyMessageWrite .wirteMessage .back { text-indent:0; letter-spacing:0; background:none; border:none; padding:1px 10px; margin-left:10px; box-shadow:none;}
+.conMyMessageWrite .wirteMessage .back:active { box-shadow:none;}
+.conMyMessageWrite .wirteMessage .nameList{ margin:10px 0; float:left;}
+.conMyMessageWrite .wirteMessage .nameList .input{ width:660px; float:left;}
+.conMyMessageWrite .wirteMessage .nameList .chooseFriends{ position:absolute; left:0; top:34px; width:644px; max-height:170px; overflow:hidden; display:none; background:#fff; border:1px solid #ccc; border-top:none; padding:10px;}
+.conMyMessageWrite .wirteMessage .nameList .chooseFriends ul { height:140px; overflow:hidden; overflow-y:auto; width:100%;}
+.conMyMessageWrite .wirteMessage .nameList .chooseFriends ul li{ width:100px; float:left; height:20px; margin:0 10px 8px 0; overflow: hidden;}
+.conMyMessageWrite .wirteMessage .nameList .chooseFriends ul li label{ display:block;}
+.conMyMessageWrite .wirteMessage .nameList .chooseFriends a{ float:right; margin-left:5px; margin-top:8px; display:block; padding:3px 7px; color:#aeaeae;}
+.conMyMessageWrite .wirteMessage .nameList .chooseFriends a:hover { color:#898989;}
+.conMyMessageWrite .wirteMessage .nameList .chooseFriends a.submit{ color:#f60; border:1px solid #cfd8e1; color:#99a4b0; background:#f3f3f3; padding:2px 6px; margin-left:10px;}
+.conMyMessageWrite .wirteMessage .nameList .chooseFriends a.submit:hover { color:#848e9a;}
+.conMyMessageWrite .wirteMessage .nameList .jspTrack{background:#fff;}
+.conMyMessageWrite .wirteMessage .nameList .jspDrag{background:#ccc;}
+

@@ -1,0 +1,1 @@
+${callback?if_exists}("${adId?if_exists}","${hasAd?if_exists}","${adScript?if_exists}","${adHeadId?if_exists}")

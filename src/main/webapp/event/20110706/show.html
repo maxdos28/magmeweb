@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Copyright" content="Copyright &copy; 2010-2011 MagMe Media Ltd." /> 
+<meta name ="keywords" content="麦米，电子杂志，在线杂志，免费电子杂志，电子杂志下载，数码杂志，时尚杂志，汽车杂志，财经杂志">
+<meta name ="description" content="麦米网提供数百种最新杂志在线免费阅读，财经，旅游，娱乐，时尚，汽车，体育，数码生活等。在麦米看书，交流，分享，交友，新的阅读生活由此开启">
+<title>麦米网-极速电子杂志免费在线阅读平台</title> 
+<link href="../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../style/global.css" rel="stylesheet" type="text/css" />
+<link href="../style/pop.css" rel="stylesheet" type="text/css" />
+<link href="20110706/style.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-new.min.js"></script>
+<script src="../js/don't use/systemProp.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/jquery.tagbox.js"></script>
+<script src="lightbox/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="lightbox/css/jquery.lightbox-0.5.css" media="screen" />
+<!-- / fim dos arquivos utilizados pelo jQuery lightBox plugin -->
+
+<!-- Ativando o jQuery lightBox plugin -->
+<script type="text/javascript">
+$(window).ready(function() {
+	$.jquerytagbox("#gallery",0);
+	$('#gallery .item:eq(0) a').lightBox();
+	$('#gallery .item:eq(1) a').lightBox();
+	$('#gallery .item:eq(2) a').lightBox();
+	$('#gallery .item:eq(3) a').lightBox();
+	$('#gallery .item:eq(4) a').lightBox();
+});
+</script>
+<style>
+.body .left .menu{ background-position:0 150px;}
+</style>
+<!--[if lte IE 6]>
+<link href="../style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div class="main">
+<!--header-->
+<div id="header" class="header">
+    <h1 class="logo"><a href="javascript:void(0)">麦米magme</a></h1>
+    <!--nav-->
+    <ul id="menu" class="nav">
+        <li id="homePage"><a href="javascript:void(0)">首页</a></li>
+        <li id="kanmi"><a id="" href="javascript:void(0)">看米</a></li>
+        <li><a href="javascript:void(0)">切米</a></li>
+        <li class="current"><a href="javascript:void(0)">麦米活动</a></li>
+    </ul>
+    <!--search-->
+    <div class="search">
+        <input type="text" class="in" tips="输入您想看的杂志" /><a class="btn"></a>
+    </div>
+    <!--userBar-->
+    <ul id="userBar" class="userBar">
+        <li class="l3"><a id="help" class="help png" href="javascript:void(0)">帮助</a></li>
+		<li class="l2"><a id="login" class="exit png" href="javascript:void(0)">登录</a>
+        	<div class="dropBox">
+                <div class="dropBoxhead png"></div>
+                <fieldset class="png">
+                	<form id="logInForm" action="">
+	                    <div class="input">
+	                    	<em><input class="in" id="userName" name="userName" type="text" tips="用户名/邮箱" /></em>
+	                    	<em class="tipsRight"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" name="password" type="text" tips="密码" />
+	                    		<input class="in hide" id="password" name="password" type="password" tips="密码" />
+	                    	</em>
+	                    	<em class="tipsRight"></em>
+	                    </div>
+	                    <div code="getcode">
+	                    	<em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tips="验证码" /></em>
+	                    	<em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+	                    </div>
+	                    <div>
+	                    	<em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+	                    	<em class="loading"></em>
+                            <em class="remanber"><label><input type="checkbox" />下次自动登录</label></em>
+	                    	<em class="tipsError">请填写相关信息</em>
+	                    </div>
+                        <div class="last">
+                        	<em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+                        	<em><a href="javascript:void(0)">新用户注册</a></em>
+                        </div>
+                    </form>
+                </fieldset>
+                <div class="dropBoxfoot png">
+                	<a href="javascript:void(0)" class="loginqq">腾讯QQ登录</a>
+                </div>
+            </div>
+        </li>
+        <li class="l"><a id="register" class="reg png" href="javascript:void(0)">注册</a>
+        	<div class="dropBox">
+                <div class="dropBoxhead png"></div>
+                <fieldset class="png">
+					<form id="registerForm" action="">
+	                    <div class="input">
+	                    	<em><input class="in" id="userName" name="userName" type="text" tips="用户名" /></em>
+	                    	<em id="checkName" class="tipsRight" style="display:block;"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em><input class="in" id="email" name="email" type="text" tips="邮箱" /></em>
+	                    	<em id="checkEmail" class="tipsRight"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" type="text" tips="密码" />
+	                    		<input class="in" id="password" name="password" style="display:none;" type="password" tips="密码" />
+	                    	</em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" type="text" tips="确认密码"/>
+	                    		<input class="in" id="password2" name="password2" style="display:none;" type="password" tips="确认密码" />
+	                    	</em>
+	                    	<em id="checkPassword" class="tipsRight"></em>
+	                    </div>
+	                    <div code="getcode">
+	                    	<em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tips="验证码" /></em>
+	                    	<em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+	                    </div>
+	                    <div class="last">
+	                    	<em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+	                    	<em class="loading"></em>
+	                    	<em class="tipsError">请填写相关信息</em>
+	                    </div>
+					</form>
+                </fieldset>
+                <div class="dropBoxfoot png">
+                	<a href="javascript:void(0)" class="loginqq">腾讯QQ登录</a>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+<!--body-->
+<div class="body clearFix">
+	<div class="left">
+    	<ul class="menu clearFix">
+        	<li><a href="index.html">活动首页</a></li>
+        	<li><a href="info.html">活动介绍</a></li>
+        	<li><a href="join.html">我要参与</a></li>
+        	<li><a href="questions.html">活动问答</a></li>
+        	<li><a href="photos.html">体验作品</a></li>
+        	<li><a href="show.html">现场照片</a></li>
+        	<li><a href="process.html">招聘现场流程</a></li>
+        	<li><a href="delivery.html" class="important">杂志派送</a></li>
+        </ul>
+        <a class="registerLink">参与即送精美杂志</a>
+    </div>
+	<div class="right">
+    	<div class="con con8 jqueryTagBox clearFix" id="gallery">
+            <div class="ctrl">
+                <div>上海</div>
+                <div>广州</div>
+                <div>南京</div>
+                <div>杭州</div>
+                <div>视频</div>
+            </div>
+            <div class="doorList clearFix">
+                <div class="item itemSubscribe clearFix">
+                    <div class="inner clearFix">        
+                        <div class="box">
+                            <img src="photo/sh/01.jpg" />
+                            <a href="photo/sh/01_1.jpg" title="7月初，上海，麦米网“阅读体验师”招聘，热力展开"></a>
+                            <p>7月初，上海，麦米网“阅读体验师”招聘，热力展开</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/sh/02.jpg" />
+                            <a href="photo/sh/02_2.jpg" title="投递简历者众多，现场气氛热情高涨"></a>
+                            <p>投递简历者众多，现场气氛热情高涨</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/sh/03.jpg" />
+                            <a href="photo/sh/03_3.jpg" title="应聘者认真填写职位申请"></a>
+                            <p>应聘者认真填写职位申请</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/sh/04.jpg" />
+                            <a href="photo/sh/04_4.jpg" title="招聘展位前，人头济济"></a>
+                            <p>招聘展位前，人头济济</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/sh/05.jpg" />
+                            <a href="photo/sh/05_5.jpg" title="年轻职场人闻讯而来，热切咨询"></a>
+                            <p>年轻职场人闻讯而来，热切咨询</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/sh/07.jpg" />
+                            <a href="photo/sh/07_7.jpg" title="公司董总，耐心接受大家的咨询"></a>
+                            <p>公司董总，耐心接受大家的咨询</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/sh/08.jpg" />
+                            <a href="photo/sh/08_8.jpg" title="现场热烈，资料纷发"></a>
+                            <p>现场热烈，资料纷发</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/sh/09.jpg" />
+                            <a href="photo/sh/09_9.jpg" title="职位诱人，问询处应接不暇"></a>
+                            <p>职位诱人，问询处应接不暇</p>
+                        </div>
+        			</div>
+                </div>
+                
+                <div class="item itemSubscribe clearFix">
+                    <div class="inner clearFix">        
+                        <div class="box">
+                            <img src="photo/gd/01.jpg" />
+                            <a href="photo/gd/01_1.jpg" title="7月2日 广州招聘现场，应聘者认真填写应聘信息"></a>
+                            <p>7月2日 广州招聘现场，应聘者认真填写应聘信息</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/gd/02.jpg" />
+                            <a href="photo/gd/02_2.jpg" title="10万元年薪，引得职场新鲜人热切关注"></a>
+                            <p>10万元年薪，引得职场新鲜人热切关注</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/gd/03.jpg" />
+                            <a href="photo/gd/03_3.jpg" title="“阅读体验师”，创意新职位，激发大热情"></a>
+                            <p>“阅读体验师”，创意新职位，激发大热情</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/gd/04.jpg" />
+                            <a href="photo/gd/04_4.jpg" title="现场气氛热烈，简历投递积极踊跃"></a>
+                            <p>现场气氛热烈，简历投递积极踊跃</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/gd/05.jpg" />
+                            <a href="photo/gd/05_5.jpg" title="招聘展位问询处，大家自觉排起长队"></a>
+                            <p>招聘展位问询处，大家自觉排起长队</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/gd/06.jpg" />
+                            <a href="photo/gd/06_6.jpg" title="聆听职位描述，年轻人满脸的好奇"></a>
+                            <p>聆听职位描述，年轻人满脸的好奇</p>
+                        </div>
+        			</div>
+                </div>
+                <div class="item itemSubscribe clearFix">
+                    <div class="inner clearFix">        
+                        <div class="box">
+                            <img src="photo/nj/01.jpg" />
+                            <a href="photo/nj/01_1.jpg" title="7月3日 南京招聘现场，姑娘们兴致浓厚"></a>
+                            <p>7月3日 南京招聘现场，姑娘们兴致浓厚</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/nj/02.jpg" />
+                            <a href="photo/nj/02_2.jpg" title="极具创意的职位，应聘者问得很仔细"></a>
+                            <p>极具创意的职位，应聘者问得很仔细</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/nj/03.jpg" />
+                            <a href="photo/nj/03_3.jpg" title="机不可失，申请表格抓紧填"></a>
+                            <p>机不可失，申请表格抓紧填</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/nj/04.jpg" />
+                            <a href="photo/nj/04_4.jpg" title="我说小伙子，高薪高待遇，你心动了咩？"></a>
+                            <p>我说小伙子，高薪高待遇，你心动了咩？</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/nj/05.jpg" />
+                            <a href="photo/nj/05_5.jpg" title="边填边上网，兄弟你在查神马？"></a>
+                            <p>边填边上网，兄弟你在查神马？</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/nj/06.jpg" />
+                            <a href="photo/nj/06_6.jpg" title="申请表格堆成山，工作人员打包忙"></a>
+                            <p>申请表格堆成山，工作人员打包忙</p>
+                        </div>
+        			</div>
+                </div>
+                <div class="item itemSubscribe clearFix">
+                    <div class="inner clearFix">        
+                        <div class="box">
+                            <img src="photo/hz/01.jpg" />
+                            <a href="photo/hz/01_1.jpg" title="7月9日 杭州大型招聘会，年轻人结伴而来"></a>
+                            <p>7月9日 杭州大型招聘会，年轻人结伴而来</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/hz/02.jpg" />
+                            <a href="photo/hz/02_2.jpg" title="麦米网招贤纳士，笑迎天下有志者"></a>
+                            <p>麦米网招贤纳士，笑迎天下有志者</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/hz/03.jpg" />
+                            <a href="photo/hz/03_3.jpg" title="展位问询处，应聘人群不断涌来，排起长龙"></a>
+                            <p>展位问询处，应聘人群不断涌来，排起长龙</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/hz/04.jpg" />
+                            <a href="photo/hz/04_4.jpg" title="极其诱惑力的工作描述，大家兴趣盎然"></a>
+                            <p>极其诱惑力的工作描述，大家兴趣盎然</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/hz/05.jpg" />
+                            <a href="photo/hz/05_5.jpg" title="你咨询我解答，彼此热情高涨"></a>
+                            <p>你咨询我解答，彼此热情高涨</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/hz/06.jpg" />
+                            <a href="photo/hz/06_6.jpg" title="乘兴，而来满意而归，兄弟，您投了吗？"></a>
+                            <p>乘兴而来满意而归，兄弟，您投了吗？</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/hz/07.jpg" />
+                            <a href="photo/hz/07_7.jpg" title="富有挑战的职位，亦引来姑娘们驻足细询"></a>
+                            <p>富有挑战的职位，亦引来姑娘们驻足细询</p>
+                        </div>
+                        <div class="box">
+                            <img src="photo/hz/09.jpg" />
+                            <a href="photo/hz/09_9.jpg" title="招聘展位前，小伙子们热情始终不减"></a>
+                            <p>招聘展位前，小伙子们热情始终不减</p>
+                        </div>
+        			</div>
+                </div>
+                <div class="item itemSubscribe clearFix" style="padding:10px 0 0 20px;">
+                	
+                    	<embed src="http://www.tudou.com/v/BH968O4Ie9E/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="inner">
+    	<p>Copyright &copy; 2011 麦米版权所有 | 沪ICP备 <a href="http://www.miibeian.gov.cn" target="_blank">10217320</a></p>
+        <div class="nav">
+        	<ul class="m">
+            	<li><a href="javascript:void(0)">公司信息</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">加入我们</a></li>
+                        <li><a href="javascript:void(0)">联系我们</a></li>
+                        <li><a href="javascript:void(0)">活动公告</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m2">
+            	<li><a href="javascript:void(0)">商务合作</a>
+               		<ul>
+                        <li><a href="javascript:void(0)">上传杂志</a></li>
+                        <li><a href="javascript:void(0)">麦米API</a></li>
+                        <li><a href="javascript:void(0)">媒体报道</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m3">
+            	<li><a href="javascript:void(0)">获取更新</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">邮件订阅</a></li>
+                        <li><a href="javascript:void(0)">麦米RSS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m4">
+            	<li><a href="javascript:void(0)">使用麦米</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">网站地图</a></li>
+                        <li><a href="javascript:void(0)">使用帮助</a></li>
+                        <li><a href="javascript:void(0)">我要咨询</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="shareTools">
+        	<a href="javascript:void(0)" class="sinaweibo" title="新浪微博"></a>
+        	<a href="javascript:void(0)" class="qqweibo" title="腾讯微博"></a>
+        	<a href="javascript:void(0)" class="sohuweibo" title="搜狐微博"></a>
+        	<a href="javascript:void(0)" class="neteasyweibo" title="网易微博"></a>
+        	<a href="javascript:void(0)" class="baidu" title="百度"></a>
+        	<a href="javascript:void(0)" class="kaixin" title="开心网"></a>
+        	<a href="javascript:void(0)" class="renren" title="人人网"></a>
+        	<a href="javascript:void(0)" class="douban" title="豆瓣"></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+

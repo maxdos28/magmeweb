@@ -1,0 +1,207 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelAdmin.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.scrollphoto.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<script src="js/admin.js"></script>
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header headerAdmin clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="后台-首页.html">(SEO)麦米 Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li><a href="后台-杂志管理.html">杂志管理</a></li>
+                <li><a href="后台-广告管理.html">广告管理</a></li>
+                <li><a href="后台-嵌入式阅读器.html">嵌入式阅读器</a></li>
+                <li><a href="后台-用户设置.html">用户设置</a></li>
+                <li class="current"><a href="后台-编辑管理-出版商管理.html">编辑管理</a></li>
+                <li><a href="#">数据后台</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="name"><strong id="nickName">Lewis</strong></li>
+                <li class="logout" id="logout"><a href="后台-登录.html" title="退出">退出</a></li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="inner">
+                <li><a href="后台-编辑管理-出版商管理.html">出版商管理</a></li>
+                <li><a href="后台-编辑管理-杂志管理.html">杂志管理</a></li>
+                <li><a href="后台-编辑管理-广告管理.html">广告管理</a></li>
+                <li class="current"><a href="后台-编辑管理-事件管理.html">事件管理</a></li>
+                <li><a href="后台-编辑管理-侧栏广告.html">侧栏管理</a></li>
+                <li><a href="后台-编辑管理-页面管理.html">页面管理</a></li>
+                <li><a href="后台-编辑管理-频道管理.html">频道管理</a></li>
+                <li><a href="后台-编辑管理-专题管理.html">专题管理</a></li>
+                <li><a href="后台-编辑管理-发布审核.html">发布审核</a></li>
+                <li><a href="后台-编辑管理-百科管理.html">百科管理</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<!--body-->
+<div class="body">
+    <div class="conLeftMiddleRight">
+    	<div class="con19 conTools">
+        	<fieldset>
+            	<div>
+                    <em class="floatr"><a class="btnAS" href="#">发布</a></em>
+                    <em class="floatr"><a class="btnSS" href="#">预览</a></em>
+                    <em><a class="btnSS" href="#">添加</a></em>
+                    <em><a class="btnSS" href="#">删除</a></em>
+                    <em><a class="btnSS" href="#">提交</a></em>
+                    <em><a class="btnSS" href="#">生效</a></em>
+                    <em class="g100"><a class="btnSS" href="#">失效</a></em>
+                	<em><input type="file" class="g200" /></em>
+                    <em><a class="btnBS" href="#">上传图片</a></em>
+                </div>
+                <hr />
+            	<div>
+                	<em class="tRight g60">创建日期</em>
+                	<em class="g130"><input type="text" class="input g120" /></em>
+                	<em class="tRight g60">杂志ID</em>
+                	<em><input type="text" class="input g100" /></em>
+                	<em class="tRight g60">标题</em>
+                	<em><input type="text" class="input g70" /></em>
+                	<em class="tRight g70">事件状态</em>
+                	<em class="g80"><select><option>全部</option><option>待发布</option><option>生效</option></select></em>
+                	<em class="tRight g70">适用手机</em>
+                	<em class="g70"><select><option>全部</option></select></em>
+                </div>
+                <hr />
+                <div>
+                	<em class="tRight g60">出版商类型</em>
+                	<em class="g130"><select><option>全部</option></select></em>
+                	<em class="tRight g60">期刊ID</em>
+                	<em><input type="text" class="input g100" /></em>
+                	<em class="tRight g60">描述</em>
+                	<em><input type="text" class="input g70" /></em>
+                	<em class="tRight g70">是否推荐</em>
+                	<em class="g80"><select><option>全部</option></select></em>
+                	<em class="tRight g70">事件类型</em>
+                	<em class="g70"><select><option>全部</option></select></em>
+                    <em><a class="btnBS g70" href="#">查询</a></em>
+                </div>
+            </fieldset>
+        </div>
+        <div class="conB con28">
+        <table class="table JQtableBg" width="100%">
+          <thead>
+            <tr>
+                <td class="g50">事件ID</td>
+                <td class="g60">缩略图</td>
+                <td class="g40">权重</td>
+                <td class="g100">标题</td>
+                <td>描述</td>
+                <td class="g60">状态</td>
+                <td class="g40">推荐</td>
+                <td class="g40">手机</td>
+                <td class="g80">创建时间</td>
+                <td class="g100">标签</td>
+                <td class="g60">详细</td>
+              </tr>
+            </thead>
+              <tbody>
+                <tr>
+                <td>1234</td>
+                <td><img src="images/temp/home9.jpg" /><p><span>1</span>x<span>1</span></p></td>
+                <td>0</td>
+                <td>标题标题标题</td>
+                <td>描述描述描述描述描述描述描述描述描述描述</td>
+                <td>待发布</td>
+                <td>否</td>
+                <td>否</td>
+                <td>2012-12-12</td>
+                <td>美女,美女,美女</td>
+                <td><a class="btn" href="#">编辑</a></td>
+              </tr>
+                <tr>
+                <td>1234</td>
+                <td><img src="images/temp/home9.jpg" /><p><span>1</span>x<span>1</span></p></td>
+                <td>0</td>
+                <td>标题标题标题</td>
+                <td>描述描述描述描述描述描述描述描述描述描述</td>
+                <td>待发布</td>
+                <td>否</td>
+                <td>否</td>
+                <td>2012-12-12</td>
+                <td>美女,美女,美女</td>
+                <td><a class="btn" href="#">编辑</a></td>
+              </tr>
+                <tr>
+                <td>1234</td>
+                <td><img src="images/temp/home9.jpg" /><p><span>1</span>x<span>1</span></p></td>
+                <td>0</td>
+                <td>标题标题标题</td>
+                <td>描述描述描述描述描述描述描述描述描述描述</td>
+                <td>待发布</td>
+                <td>否</td>
+                <td>否</td>
+                <td>2012-12-12</td>
+                <td>美女,美女,美女</td>
+                <td><a class="btn" href="#">编辑</a></td>
+              </tr>
+                <tr>
+                <td>1234</td>
+                <td><img src="images/temp/home9.jpg" /><p><span>1</span>x<span>1</span></p></td>
+                <td>0</td>
+                <td>标题标题标题</td>
+                <td>描述描述描述描述描述描述描述描述描述描述</td>
+                <td>待发布</td>
+                <td>否</td>
+                <td>否</td>
+                <td>2012-12-12</td>
+                <td>美女,美女,美女</td>
+                <td><a class="btn" href="#">编辑</a></td>
+              </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="conFooter">
+            <div class="gotoPage">跳转到<input id="toPageValue" class="input g20" type="text">页  <span><a id="toPageOk" class="btnBS" href="javascript:void(0);">确定</a></span></div>
+            <div class="changePage">
+                <a href="javascript:void(0)">上一页</a>
+                <a href="javascript:void(0)">1</a>
+                <a href="javascript:void(0)">2</a>
+                <a href="javascript:void(0)">3</a>
+                <a href="javascript:void(0)">4</a>
+                <a href="javascript:void(0)" class="current">5</a>
+                <a href="javascript:void(0)">6</a>
+                <a href="javascript:void(0)">7</a>
+                <a href="javascript:void(0)">8</a>
+                <a href="javascript:void(0)">下一页</a>
+            </div>
+		</div>
+    </div>
+
+    
+</div>
+
+
+</body>
+</html>

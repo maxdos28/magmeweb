@@ -1,0 +1,200 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelAdmin.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.scrollphoto.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<script src="js/admin.js"></script>
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header headerAdmin clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="后台-首页.html">(SEO)麦米 Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li><a href="后台-杂志管理.html">杂志管理</a></li>
+                <li><a href="后台-广告管理.html">广告管理</a></li>
+                <li><a href="后台-嵌入式阅读器.html">嵌入式阅读器</a></li>
+                <li><a href="后台-用户设置.html">用户设置</a></li>
+                <li><a href="后台-编辑管理-出版商管理.html">编辑管理</a></li>
+                <li><a href="#">数据后台</a></li>
+                <li class="current"><a href="后台-IOS管理.html">IOS管理</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="name"><strong id="nickName">Lewis</strong></li>
+                <li class="logout" id="logout"><a href="后台-登录.html" title="退出">退出</a></li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="inner">
+                <li><a href="后台-IOS管理.html">IOS管理</a></li>
+                <li class="current"><a href="后台-IOS管理-新建APP.html">新建APP</a></li>
+                <li><a href="后台-IOS管理-发送消息.html">通知管理</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--body-->
+<div class="body">
+    <div class="conLeftMiddleRight">
+        <div class="con36 conTools">
+        	<fieldset>
+            	<div>
+                	<em class="g50">版权信息</em>
+                    <em class="g240"><input type="text" class="input g200" /></em>
+                	<em class="g50">应用名称</em>
+                    <em class="g240"><input type="text" class="input g200" /></em>
+                	<em class="g40">关键字</em>
+                    <em><input type="text" class="input g200" /></em>
+                </div>
+                <hr />
+            	<div>
+                	<em class="g50">一级分类</em>
+                    <em class="g240"><select><option>请选择</option></select></em>
+                	<em class="g50">二级分类</em>
+                    <em><select><option>请选择</option></select></em>
+                </div>
+                <hr />
+            	<div>
+                	<em class="g50">描述</em>
+                    <em><textarea class="input g500"></textarea></em>
+                </div>
+                <hr />
+            	<div>
+                	<em class="g50">所有者</em>
+                    <em class="g80"><label><input type="radio" />magme</label></em>
+                    <em class="g80"><label><input type="radio" />出版商</label></em>
+                </div>
+                <hr />
+				<div class="list selectList">
+                	<div><strong>已选择的杂志社<a class="javascript:vhod(0)">点击选择杂志社</a></strong>
+                    	<p><a class="current">暂无</a></p>
+                    </div>
+                </div>
+				<div class="list">
+                	<div><strong>A</strong>
+                    	<p><a>公司名名名</a><a>公司名</a><a>公司名名</a><a>公司名名名名</a><a>公司名名名名名名名</a><a>公司名名</a><a>公司名名名</a><a>公司名名名</a><a>公司名名名名名名名名名名</a></p>
+                    </div>
+                	<div><strong>B</strong>
+                    	<p><a>公司名名</a><a>公司名名</a><a>公司名名</a><a>公司名名名名</a><a>公司名名</a><a>公司名名名名名名</a><a>公名名名名</a><a>公司名</a><a>公司名名名</a></p>
+                    </div>
+                	<div><strong>C</strong>
+                    	<p><a>公司名名名</a><a>公司名名名名名</a><a>公司名名</a><a>公司名名</a><a>公司名</a><a>公司名名名名</a><a>公司名名</a><a>公司名名名名名名名</a><a>公司名名名名</a></p>
+                    </div>
+                	<div><strong>D</strong>
+                    	<p><a>公司名</a><a>公司名</a><a>公司名</a><a>公司名</a><a>公司名</a><a>公司名</a><a>公司名</a><a>公司名</a><a>公司名</a></p>
+                    </div>
+                	<div><strong>E</strong>
+                    	<p><a>公司名名</a><a>公司名名</a><a>公司名名</a><a>公司名名名名</a><a>公司名名</a><a>公司名名名名名名</a><a>公名名名名</a><a>公司名</a><a>公司名名名</a></p>
+                    </div>
+                	<div><strong>F</strong>
+                    	<p><a>公司名名名</a><a>公司名名名名名</a><a>公司名名</a><a>公司名名</a><a>公司名</a><a>公司名名名名</a><a>公司名名</a><a>公司名名名名名名名</a><a>公司名名名名</a></p>
+                    </div>
+                	<div><strong>G</strong>
+                    	<p><a>公司名名名</a><a>公司名名名名名</a><a>公司名名</a><a>公司名名</a><a>公司名</a><a>公司名名名名</a><a>公司名名</a><a>公司名名名名名名名</a><a>公司名名名名</a></p>
+                    </div>
+                </div>
+                <div class="actionArea tRight">
+                	<a href="javascript:void(0)" class="btnAS">确认</a>
+                </div>
+                <script>
+                	$(function(){
+						//杂志社选择
+						$(".con36 .list:eq(1) div a").click(function(){
+							if($(this).hasClass("current")){
+								$(this).removeClass("current");
+							}else{
+								$(this).addClass("current");
+							}
+							var tempHtml="";
+							$(".con36 .list:eq(1) div a.current").each(function(i){
+								tempHtml=tempHtml+"<a class='selected'>"+$(this).html()+"</a>";
+							});
+							$(".con36 .selectList div p").html(tempHtml);
+							if($(".con36 .selectList div p").html()==""){
+								$(".con36 .selectList div p").html("<a class='current'>暂无</a>");
+							}
+						});
+						$(".con36 .list div strong a").toggle(function(){
+							$(".con36 .list:eq(1)").slideDown(300);
+						},function(){
+							$(".con36 .list:eq(1)").slideUp(300);
+						});
+					});
+                </script>
+            </fieldset>
+        </div>
+        <div class="conB con31">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table JQtableBg">
+              <thead>
+                <tr>
+                    <td class="g50"><label><input type="checkbox" />全选</label></td>
+                    <td class="g300">杂志社名</td>
+                    <td>杂志名</td>
+                    <td class="g100">级别</td>
+                    <td class="g80">状态</td>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label><input type="checkbox" /></label></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox" /></label></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox" /></label></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox" /></label></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="conFooter tCenter">
+            <a href="javascript:void(0)" class="btnBB">加入APP</a>
+            <a href="javascript:void(0)" class="btnSB">取消</a>
+		</div>
+    </div>
+</div>
+
+</body>
+</html>

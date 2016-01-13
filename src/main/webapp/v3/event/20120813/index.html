@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ieOld ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ieOld ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ieOld ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<title>(SEO)杂志精选&nbsp;[分类名]&nbsp;麦米网Magme&nbsp;-&nbsp;世界新杂志&nbsp;发现新内容</title>
+<meta name="Keywords" content="(SEO)麦米网,Magme,电子杂志,在线杂志,免费电子杂志,电子杂志下载,数码杂志,时尚杂志,汽车杂志,财经杂志">
+<meta name="Description" content="(SEO)麦米网提供数百种最新杂志在线免费阅读，财经，旅游，娱乐，时尚，汽车，体育，数码生活等。在麦米看书，交流，分享，交友，新的阅读生活由此开启">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../../style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<script src="../../js/jquery-new.min.js"></script>
+<script src="../../js/jquery.easing.1.3.js"></script>
+<script src="../../js/jquery.inputfocus.js"></script>
+<script src="../../js/scrolltopcontrol.js"></script>
+<script src="../../js/jquery.backgroundPosition.js"></script>
+<script src="../../js/jquery.onImagesLoad.min.js"></script>
+<script>
+$(function(){
+	var $banner = $("#banner");
+	var $item = $banner.find(".item");
+	var $ctrl;
+	var currentId = 0;
+	var targetId = 0;
+	var bannerLock = 0;
+	var bannerEnter = 1;
+	var length = $item.length;
+	var autoPlay = setInterval(fnPlay,6000);
+
+	var showW;
+	var boxW = 960;
+	$(window).bind("resize",fnResize);
+	fnResize();
+
+
+	$item.eq(currentId).fadeIn(500);
+	//set ctrl Item
+	var ctrlHtml = "<div class='ctrl'>";
+	for (var i=0;i<length;i++){ctrlHtml += "<a href='javascript:void(0)'>"+i+"</a>";}
+	ctrlHtml += "</div>";
+	$banner.append(ctrlHtml);
+	$ctrl = $banner.find(".ctrl>a");
+	$ctrl.eq(currentId).addClass("current");
+
+
+	
+	$banner.mouseenter(function(){
+		bannerEnter = 1;
+		clearInterval(autoPlay);
+		autoPlay = setInterval(fnPlay,6000);
+	}).mouseleave(function(){
+		bannerEnter = 0;
+	});
+	
+	
+	
+	$ctrl.live("click",function(){
+		if($(this).index()!=currentId && bannerLock==0){
+			bannerLock=1;
+			targetId = $(this).index();
+			//play
+			fnSwitchBanner(currentId,targetId);
+			clearInterval(autoPlay);
+			if(bannerEnter){autoPlay = setInterval(fnPlay,6000)}
+			setTimeout(function(){
+				currentId = targetId;
+				fnSetCtrl();
+				bannerLock=0;
+			},2500)
+		}
+	});
+	
+	function fnSwitchBanner(currentId,targetId){
+		switch (currentId) {
+			case 0:
+				if(targetId>currentId){I0ML()}else{I0MR()}break;
+			case 1:
+				if(targetId>currentId){I1ML()}else{I1MR()}break;
+			case 2:
+				if(targetId>currentId){I2ML()}else{I2MR()}break;
+		}
+		switch (targetId) {
+			case 0:
+				if(targetId>currentId){I0RM()}else{I0LM()}break;
+			case 1:
+				if(targetId>currentId){I1RM()}else{I1LM()}break;
+			case 2:
+				if(targetId>currentId){I2RM()}else{I2LM()}break;
+		}
+	}
+	
+	function fnPlay(){
+		if(bannerLock==0){
+			bannerLock=1;
+			if(currentId<length-1){
+				targetId+=1
+			}else{
+				targetId=0
+			}
+
+			//play
+			fnSwitchBanner(currentId,targetId);
+			clearInterval(autoPlay);
+			if(bannerEnter){autoPlay = setInterval(fnPlay,6000)}
+			setTimeout(function(){
+				currentId = targetId;
+				fnSetCtrl();
+				bannerLock=0;
+			},2500)
+		
+		}
+	}
+	function fnSetCtrl(){
+		$ctrl.eq(currentId).addClass("current").siblings().removeClass("current");
+	}
+	function fnResize(){
+		showW = $(window).width();
+		if(showW<boxW){showW==boxW}
+	}
+
+	
+
+
+	//item0
+	function I0RM(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(0).show().find("div").css({left:offset});
+		$item.eq(0).find(".a1").delay(200).animate({left:-30},2000,"easeInOutQuart");
+		$item.eq(0).find(".a2").delay(300).animate({left:-80},2000,"easeInOutQuart");
+		$item.eq(0).find(".a3").delay(400).animate({left:490},2000,"easeInOutQuart");
+		$item.eq(0).find(".a4").delay(400).animate({left:660},2000,"easeInOutQuart");
+	}
+	function I0LM(){
+		var offset = -showW;
+		$item.eq(0).show().find("div").css({left:offset});
+		$item.eq(0).find(".a1").delay(200).animate({left:-30},2000,"easeInOutQuart");
+		$item.eq(0).find(".a2").delay(300).animate({left:-80},2000,"easeInOutQuart");
+		$item.eq(0).find(".a3").delay(400).animate({left:490},2000,"easeInOutQuart");
+		$item.eq(0).find(".a4").delay(400).animate({left:660},2000,"easeInOutQuart");
+	}
+	function I0MR(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(0).find(".a3").animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(0).find(".a4").animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(0).find(".a1").delay(200).animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(0).find(".a2").delay(300).animate({left:offset},2000,"easeInOutQuart");
+	}
+	function I0ML(){
+		$item.eq(0).find(".a2").animate({left:-(showW-boxW)/2 - $item.eq(0).find(".a2").width()},2000,"easeInOutQuart");
+		$item.eq(0).find(".a1").delay(200).animate({left:-(showW-boxW)/2 - $item.eq(0).find(".a1").width()-100},2000,"easeInOutQuart");
+		$item.eq(0).find(".a3").delay(300).animate({left:-(showW-boxW)/2 - $item.eq(0).find(".a3").width()-100},2000,"easeInOutQuart");
+		$item.eq(0).find(".a4").delay(300).animate({left:-(showW-boxW)/2 - $item.eq(0).find(".a4").width()-100},2000,"easeInOutQuart",function(){$item.eq(0).hide()});
+	}
+	//item1
+	function I1RM(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(1).show().find("div").css({left:offset});
+		$item.eq(1).find(".a1").delay(200).animate({left:10},2000,"easeInOutQuart");
+		$item.eq(1).find(".a2").delay(300).animate({left:470},2000,"easeInOutQuart");
+		$item.eq(1).find(".a3").delay(300).animate({left:150},2000,"easeInOutQuart");
+	}
+	function I1LM(){
+		var offset = -showW;
+		$item.eq(1).show().find("div").css({left:offset});
+		$item.eq(1).find(".a1").delay(200).animate({left:10},2000,"easeInOutQuart");
+		$item.eq(1).find(".a2").delay(300).animate({left:470},2000,"easeInOutQuart");
+		$item.eq(1).find(".a3").delay(200).animate({left:150},2000,"easeInOutQuart");
+	}
+	function I1ML(){
+		$item.eq(1).show();
+		$item.eq(1).find(".a1").animate({left:-(showW-boxW)/2 - $item.eq(1).find(".a1").width()-100},2000,"easeInOutQuart");
+		$item.eq(1).find(".a3").animate({left:-(showW-boxW)/2 - $item.eq(1).find(".a3").width()-100},2000,"easeInOutQuart");
+		$item.eq(1).find(".a2").delay(200).animate({left:-(showW-boxW)/2 - $item.eq(1).find(".a2").width()-100},2000,"easeInOutQuart",function(){$item.eq(1).hide()});
+	}
+	function I1MR(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(1).show();
+		$item.eq(1).find(".a2").animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(1).find(".a1").delay(200).animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(1).find(".a3").delay(200).animate({left:offset},2000,"easeInOutQuart",function(){$item.eq(1).hide()});
+	}
+	//item2
+	function I2RM(){
+		$item.eq(2).show().find("div").css({left:showW+100});
+		$item.eq(2).find(".a1").delay(200).animate({left:500},2000,"easeInOutQuart");
+		$item.eq(2).find(".a2").delay(300).animate({left:40},2000,"easeInOutQuart");
+		$item.eq(2).find(".a3").delay(300).animate({left:180},2000,"easeInOutQuart");
+	}
+	function I2LM(){
+		var offset = -showW;
+		$item.eq(2).show().find("div").css({left:offset});
+		$item.eq(2).find(".a1").delay(200).animate({left:500},2000,"easeInOutQuart");
+		$item.eq(2).find(".a2").delay(300).animate({left:40},2000,"easeInOutQuart");
+		$item.eq(2).find(".a3").delay(300).animate({left:180},2000,"easeInOutQuart");
+	}
+	function I2ML(){
+		$item.eq(2).show();
+		$item.eq(2).find(".a3").animate({left:-(showW-boxW)/2 - $item.eq(2).find(".a3").width()-100},2000,"easeInOutQuart");
+		$item.eq(2).find(".a2").animate({left:-(showW-boxW)/2 - $item.eq(2).find(".a2").width()-100},2000,"easeInOutQuart");
+		$item.eq(2).find(".a1").delay(200).animate({left:-(showW-boxW)/2 - $item.eq(2).find(".a1").width()-100},2000,"easeInOutQuart",function(){$item.eq(2).hide()});
+	}
+	function I2MR(){
+		var offset = boxW+(showW-boxW)/2+100;
+		$item.eq(2).show();
+		$item.eq(2).find(".a1").animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(2).find(".a3").delay(200).animate({left:offset},2000,"easeInOutQuart");
+		$item.eq(2).find(".a2").delay(200).animate({left:offset},2000,"easeInOutQuart",function(){$item.eq(2).hide()});
+	}
+	
+	
+	
+
+});
+</script>
+<!--[if lt IE 7]>
+<script src="../../js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header clearFix">
+	<div class="outer png">
+        <div class="inner png">
+        	<div class="contact"><strong>咨询电话</strong><span>+86 21 53068296</span><span>+86 21 33130256</span></div>
+            <h1 class="logo" id="logo"><a class="png" href="javascript:void(0)" title="(SEO)世界新杂志 发现新内容">麦米网Magme</a></h1>
+        </div>
+    </div>
+
+</div>
+
+<div class="topInfo" id="banner">
+	<div class="item item1">
+    	<div class="a1"><img class="png" src="images/b1_iPad.png" /></div>
+    	<div class="a2"><img class="png" src="images/b1_iPhone.png" /></div>
+    	<div class="a3"><a href="https://itunes.apple.com/cn/app/fa-xing-zhuan-jia/id554655706?l=en&mt=8" target="_blank"><img class="png" src="images/b1_text_2.png" /></a></div>
+    	<div class="a4"><a class="contact" href="mailto:publish@magme.cn"><img src="images/btnContact.gif" /></a></div>
+    </div>
+	<div class="item item2">
+    	<div class="a1"><img class="png" src="images/b2_text.png" /></div>
+    	<div class="a2"><img class="png" src="images/b2_img.png" /></div>
+    	<div class="a3"><a class="contact" href="mailto:publish@magme.cn"><img src="images/btnContact.gif" /></a></div>
+    </div>
+	<div class="item item3">
+    	<div class="a1"><img class="png" src="images/b3_img.png" /></div>
+    	<div class="a2"><img class="png" src="images/b3_text.png" /></div>
+    	<div class="a3"><a class="contact" href="mailto:publish@magme.cn"><img src="images/btnContact.gif" /></a></div>
+    </div>
+</div>
+
+<!--body-->
+<div class="body clearFix">
+<script>
+$(function(){
+//isIE6
+var isIE6 = $.browser.msie && $.browser.version < 7 && !window.XMLHttpRequest;
+
+
+
+	var $box = $("#box");
+	var $ctrl = $box.find(".ctrl>a").not(".current");
+	var $ctrlCurrent = $box.find(".ctrl>a.current");
+	var $item = $box.find(".content>.item");
+	var currentId = 0;
+	var ctrlH = 49;
+	var boxLock = 0;
+
+
+
+	$item.eq(currentId).show();
+
+	$ctrl.click(function(){
+		if(boxLock==0){
+			boxLock=1;
+			var index = $(this).index();
+			fnSetCtrl(index);
+			fnSetContent(index);
+			setTimeout(function(){boxLock=0},800)
+		}
+	});
+
+
+	function fnSetCtrl(index){
+		$ctrlCurrent.animate({top:index*ctrlH},600,"easeOutQuart");
+		if(isIE6){
+			$ctrlCurrent.find("span").css({backgroundPosition:"-20px "+-index*ctrlH});
+		}else{
+			$ctrlCurrent.find("span").animate({backgroundPosition:"0 "+-index*ctrlH},600,"easeOutQuart");
+		}
+	}
+	function fnSetContent(index){
+		$item.hide().find("div").removeAttr("style").css({opacity:0}).stop(true,false);
+		$item.eq(index).show();
+		
+		if(!isIE6){
+			setTimeout(function(){
+				switch (index) {
+					case 0:
+						$item.eq(index).find(".a1").animate({opacity:1},300);
+						$item.eq(index).find(".a2").css({top:0,opacity:0}).delay(500).animate({top:80,opacity:1},500);
+						$item.eq(index).find("div").slice(2,7).css({left:340,top:85});
+						$item.eq(index).find(".a3").delay(1500).animate({left:140,top:200,opacity:1},600,"easeOutBack");
+						$item.eq(index).find(".a4").delay(1550).animate({left:240,top:200,opacity:1},600,"easeOutBack");
+						$item.eq(index).find(".a5").delay(1600).animate({left:340,top:200,opacity:1},600,"easeOutBack");
+						$item.eq(index).find(".a6").delay(1650).animate({left:440,top:200,opacity:1},600,"easeOutBack");
+						$item.eq(index).find(".a7").delay(1700).animate({left:540,top:200,opacity:1},600,"easeOutBack");
+						$item.eq(index).find(".a8").delay(3000).animate({opacity:1},800);
+						break;
+					case 1:
+						$item.eq(index).find(".a1").animate({opacity:1},2000,"easeOutQuart");
+						$item.eq(index).find("div").slice(1,6).css({top:20});
+						$item.eq(index).find(".a2").delay(1000).animate({top:80,opacity:1},800,"easeOutQuart");
+						$item.eq(index).find(".a3").delay(1000).animate({top:130,opacity:1},900,"easeOutQuart");
+						$item.eq(index).find(".a4").delay(1000).animate({top:180,opacity:1},1000,"easeOutQuart");
+						$item.eq(index).find(".a5").delay(1000).animate({top:230,opacity:1},1100,"easeOutQuart");
+						$item.eq(index).find(".a6").delay(1000).animate({top:280,opacity:1},1200,"easeOutQuart");
+						$item.eq(index).find(".a7").delay(2000).animate({opacity:1},800);
+						break;
+					case 2:
+						$item.eq(index).find("div").slice(0,3).css({left:-300,opacity:1});
+						$item.eq(index).find(".a1").css({left:-300,opacity:1}).animate({left:25},1200,"easeOutQuart");
+						$item.eq(index).find(".a2").animate({left:256},1400,"easeOutQuart");
+						$item.eq(index).find(".a3").animate({left:486},1600,"easeOutQuart");
+						$item.eq(index).find(".a4").delay(1000).animate({opacity:1},800);
+						break;
+					//case 3: 
+//						$item.eq(index).find(".a1").css({left:230}).animate({opacity:1},1500,"easeOutQuart").animate({left:120},800);
+//						$item.eq(index).find("div").slice(1,4).css({left:120,top:110});
+//						$item.eq(index).find(".a5").delay(1900).animate({opacity:1},800);
+//						$item.eq(index).find(".a2").delay(2500).animate({left:240,top:90,opacity:1},1000);
+//						$item.eq(index).find(".a3").delay(2600).animate({left:340,top:75,opacity:1},1000);
+//						$item.eq(index).find(".a4").delay(2700).animate({left:430,top:60,opacity:1},1000);
+//						break;
+					case 3: 
+						$item.eq(index).find(".a1").animate({opacity:1},1500);
+						$item.eq(index).find(".a2").css({left:410,top:110,opacity:1}).delay(1000).animate({left:410,top:140},1500,"easeOutQuart");
+						$item.eq(index).find(".a2 img").css({width:0,height:0}).delay(1000).animate({width:177,height:148},1500,"easeOutQuart");
+						$item.eq(index).find(".a3").css({left:240,top:190,opacity:1}).delay(2000).animate({left:210,top:270},1500,"easeOutQuart");
+						$item.eq(index).find(".a3 img").css({width:0,height:0}).delay(2000).animate({width:232,height:42},1500,"easeOutQuart");
+						$item.eq(index).find(".a4").delay(3000).animate({opacity:1},800);
+						break;
+					case 4: 
+						$item.eq(index).find("div").slice(1,7).css({left:800,opacity:1});
+						$item.eq(index).find(".a1").animate({left:540},1200,"easeOutQuart");
+						$item.eq(index).find(".a2").animate({left:440},1400,"easeOutQuart");
+						$item.eq(index).find(".a3").animate({left:340},1600,"easeOutQuart");
+						$item.eq(index).find(".a4").animate({left:240},1800,"easeOutQuart");
+						$item.eq(index).find(".a5").animate({left:140},2000,"easeOutQuart");
+						$item.eq(index).find(".a6").animate({left:40},2200,"easeOutQuart");
+						$item.eq(index).find(".a7").delay(2000).animate({opacity:1},800);
+						break;
+				}
+			},500);
+		}
+	}
+
+
+});
+</script>
+    <div class="box clearFix" id="box">
+    	<div class="ctrl">
+        	<a href="javascript:void(0)">出版管理</a>
+        	<a href="javascript:void(0)">ios客户端</a>
+        	<a href="javascript:void(0)">数据报表</a>
+			<!--<a href="javascript:void(0)">互动内容</a>-->
+            <a href="javascript:void(0)">多媒体展示</a>
+        	<a href="javascript:void(0)">应用平台</a>
+        	<a class="current png" href="javascript:void(0)"><span>当前</span></a>
+        </div>
+    	<div class="content">
+       	<div class="item item1" style="display:none;">
+            	<div class="a1"><img src="images/box1_1.jpg" /></div>
+            	<div class="a2"><img src="images/box1_2.jpg" /></div>
+            	<div class="a3"><img src="images/box1_3.jpg" /></div>
+            	<div class="a4"><img src="images/box1_7.jpg" /></div>
+            	<div class="a5"><img src="images/box1_5.jpg" /></div>
+            	<div class="a6"><img src="images/box1_6.jpg" /></div>
+            	<div class="a7"><img src="images/box1_4.jpg" /></div>
+            	<div class="a8">一个档案，更新所有渠道；一个后台，掌握所有表现</div>
+            </div>
+        	<div class="item item2" style="display:none;">
+            	<div class="a1"><img src="images/box2_1.gif" /></div>
+            	<div class="a2"><img src="images/box2_2.gif" /></div>
+            	<div class="a3"><img src="images/box2_3.gif" /></div>
+            	<div class="a4"><img src="images/box2_4.gif" /></div>
+            	<div class="a5"><img src="images/box2_5.gif" /></div>
+            	<div class="a6"><img src="images/box2_6.gif" /></div>
+            	<div class="a7">您的期刊将拥有1500万iPhone用户，和600万iPad用户</div>
+            </div>
+        	<div class="item item3" style="display:none;">
+            	<div class="a1"><img src="images/box3_1.jpg" /></div>
+            	<div class="a2"><img src="images/box3_2.jpg" /></div>
+            	<div class="a3"><img src="images/box3_3.jpg" /></div>
+            	<div class="a4">多种报表，提供给您准确的数据</div>
+            </div>
+        	<!--<div class="item item4" style="display:none;">
+            	<div class="a1"><img src="images/box4_1.gif" /></div>
+            	<div class="a2"><img src="images/box4_2.gif" /></div>
+            	<div class="a3"><img src="images/box4_3.gif" /></div>
+            	<div class="a4"><img src="images/box4_4.gif" /></div>
+            	<div class="a5">不一样的互动，让您的内容更加生动丰富</div>
+            </div>--> 
+       	<div class="item item5" style="display:none;">
+            	<div class="a1"><img src="images/box5_1.jpg" /></div>
+            	<div class="a2"><img src="images/box5_2.jpg" /></div>
+            	<div class="a3"><img src="images/box5_3.gif" /></div>
+            	<div class="a4">视频，音乐，难不倒你</div>
+            </div>
+        	<div class="item item6" style="display:none;">
+            	<div class="a7">6大应用平台，360，Q+，百度，腾讯，新浪，天涯</div>
+            	<div class="a1"><img src="images/box6_1.png" class="png" /></div>
+            	<div class="a2"><img src="images/box6_2.png" class="png" /></div>
+            	<div class="a3"><img src="images/box6_3.png" class="png" /></div>
+            	<div class="a4"><img src="images/box6_4.png" class="png" /></div>
+            	<div class="a5"><img src="images/box6_5.png" class="png" /></div>
+            	<div class="a6"><img src="images/box6_6.png" class="png" /></div>
+            </div>
+        </div>
+    </div>
+	
+
+
+	<div class="boxB">
+    	<div class="item item1"></div>
+    	<div class="item item2"><a href="http://www.magme.cn">麦米magme，来认识我们吧！</a></div>
+    	<div class="item item3"><a href="http://www.magme.cn/sns/sns-index.action">以内容为核心的社交阅读天地</a></div>
+    	<div class="item item4"><a href="#">全国首家真正解决电子出版问题</a></div>
+    
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="footerBig ">
+    <div class="inner clearFix">
+    
+    	<div class="left clearFix">
+            <div class="quickLink">
+                <h6>快速导航</h6>
+                <ul class="clearFix">
+                	<li><a href="http://www.magme.cn/static_join_us.html">加入我们</a></li>
+                	<li><a href="http://www.magme.cn/static_friendlink.html">友情链接</a></li>
+                	<li><a href="http://www.magme.cn/static_policy.html">法律声明</a></li>
+                </ul>
+
+            </div>
+            <div class="magmeWeiBo">
+            	<h6>微博关注</h6>
+                <ul class="clearFix">
+                	<li><a target="_blank" href="http://www.weibo.com/u/2173428060"><img src="http://www.magme.cn/images/icon/weibo/logo_magme.jpg" />官方微博</a></li>
+                	<li><a target="_blank" href="http://www.weibo.com/u/2236334264"><img src="http://www.magme.cn/images/icon/weibo/logo_automobile.jpg" />汽车频道</a></li>
+                	<li><a target="_blank" href="http://www.weibo.com/u/2236447763"><img src="http://www.magme.cn/images/icon/weibo/logo_entertainment.jpg" />娱乐频道</a></li>
+                	<li><a target="_blank" href="http://www.weibo.com/u/2236683793"><img src="http://www.magme.cn/images/icon/weibo/logo_fashion.jpg" />时尚频道</a></li>
+                	<li><a target="_blank" href="http://www.weibo.com/u/2237267865"><img src="http://www.magme.cn/images/icon/weibo/logo_finance.jpg" />财经频道</a></li>
+                	<li><a target="_blank" href="http://www.weibo.com/u/2237226891"><img src="http://www.magme.cn/images/icon/weibo/logo_technology.jpg" />科技频道</a></li>
+                	<li><a target="_blank" href="http://www.weibo.com/u/2236538607"><img src="http://www.magme.cn/images/icon/weibo/logo_travel.jpg" />旅游频道</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p class="copyright">Copyright © 2005-2012 <strong><span>麦米网</span> (www.magme.com)</strong> 沪ICP证：沪B2-20120009 </p>
+        
+    </div>
+</div>
+</body>
+</html>

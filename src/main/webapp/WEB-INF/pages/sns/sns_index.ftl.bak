@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6 ieOld"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ieOld"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ieOld"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<title>图片精选&nbsp;[分类名]&nbsp;麦米网Magme&nbsp;-&nbsp;世界新杂志&nbsp;发现新内容</title>
+<meta name="Keywords" content="麦米网,Magme,电子杂志,在线杂志,免费电子杂志,电子杂志下载,数码杂志,时尚杂志,汽车杂志,财经杂志">
+<meta name="Description" content="麦米网提供数百种最新杂志在线免费阅读，财经，旅游，娱乐，时尚，汽车，体育，数码生活等。在麦米看书，交流，分享，交友，新的阅读生活由此开启">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="${systemProp.staticServerUrl}/v3/style/reset.css" rel="stylesheet" type="text/css" />
+<link href="${systemProp.staticServerUrl}/v3/style/global.css" rel="stylesheet" type="text/css" />
+<link href="${systemProp.staticServerUrl}/v3/style/pop.css" rel="stylesheet" type="text/css" />
+<link href="${systemProp.staticServerUrl}/v3/style/channelM1.css" rel="stylesheet" type="text/css" />
+<link href="${systemProp.staticServerUrl}/v3/style/conCoverImg.css" rel="stylesheet" type="text/css" />
+<style type="text/css" rel="stylesheet">
+	.favCurrent, .favCurrent:hover {background-image: url("../images/icon/heart24Red.png");}
+	.reg {display:none;}
+	.login {display:none;}
+</style>
+<script src="${systemProp.staticServerUrl}/js/systemProp.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery-1.6.2.min.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.masonry.min.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.easing.1.3.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.scrollto.min.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.mousewheel.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.onImagesLoad.min.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.inputfocus.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/scrolltopcontrol.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.tagbox.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.coverImg.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.floatDiv.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.m1_1.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/sns/sns_index.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/sns/sns_scroll.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.sampleFancyBox.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/jquery.lightbox.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/shareToInternet.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/useFunction.js"></script>
+<script src="${systemProp.staticServerUrl}/v3/js/global.js"></script>
+
+
+<script>
+$(function(){
+	$.magmeShow(".sideLeft .theme");
+	$(".sideLeft .theme .content .photo a img").coverImg();
+	$.floatDiv("#rightInner",100);
+});
+
+
+</script>
+<!--[if lt IE 7]>
+<script src="${systemProp.staticServerUrl}/v3/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<#import "../components/header.ftl" as header>
+<@header.main searchType="User"/>
+
+<!--body-->
+<div class="body pageM1 noBg clearFix">
+<input id="pageTimeLock" name="pageTimeLock" type="hidden" value="${pageTimeLock!}" />
+	<div class="sideLeft" id="Dashboard">
+		<!--theme start-->
+        <#list creativeList as c>
+        	<div class="theme">
+	        	<div class="userHead">
+	            	<a class="head" u='${c.userId}' href="${systemProp.appServerUrl}/sns/user-index.action?u=${c.userId}"><img src="${systemProp.profileServerUrl}<#if c.avatar?? && c.avatar!="" >${avatarResize(c.avatar,'60')}</#if>" onerror="this.src='${systemProp.staticServerUrl}/images/head60.gif'"/>
+	            	<#if c.ism?? && c.ism=='M'>
+	            		<em class="png m" title="麦米认证编辑">M</em>
+	            	</#if>
+	            	</a>
+	            </div>
+	            <div class="content clearFix">
+	            	<h2 class='til' url='${systemProp.appServerUrl}/sns/user-index.action?u=${c.userId}&c=${c.id!}' >${c.title!}</h2>
+	            	<#if c.magazineName?? && c.magazineName!="">
+	            		<h3>出自&nbsp;<a class="publisher" target="_blank" text=${c.magazineName!} href="${c.magazineUrl!}">[&nbsp;${c.magazineName!}&nbsp;]</a></h3>
+	            	</#if>
+	                <span class="date">${c.updateTime?string("yyyy-MM-dd")}</span>
+	                <#if c.tags?? && c.tags.size()&gt;0>
+	                <div class="tagList">
+	                	<#list c.tags as tag>
+	                    	<a href="javascript:void(0)">${tag}</a>
+	                    </#list>
+	                </div>
+	                </#if>
+		        	<#if c.cType==2>
+		        		<#if c.creativeEx?? && c.creativeEx.size()&gt;0>
+				        	<div class="photo pn<#if c.showType==0 >1<#else>${c.showType}</#if>">
+				        		<#list c.creativeEx as ex>
+		                    		<a <#if ex_index&gt;9>style="display:none;"</#if> pic='${ex.imgPath}' w='${ex.w!}' h='${ex.h!}'  text='${ex.content!}' class="a${ex_index+1}" href="javascript:void(0)">
+		                    			<img width='${creativeResize("w",ex.w,ex.h,500)}' height='${creativeResize("h",ex.w,ex.h,500)}' src="${avatarResize(ex.imgPath,'500')}"  />
+		                    			<div style="display:none;">${ex.content!}</div>
+		                    		</a>
+		                    	</#list>
+							</div>
+						</#if>
+		        	<#elseif c.cType==3>
+			        	<#if c.creativeEx?? && c.creativeEx.size()&gt;0>
+			        		<div class="audio">
+		        				<#list c.creativeEx as ex>
+		    						<div class="photo"><div class="mask png"></div><a href="javascript:void(0)"><img src='${ex.imgPath}' /></a></div>
+		    						${ex.path}
+		        				</#list>
+			                </div>
+		                </#if>
+		        	<#elseif c.cType==4>
+		        		<#if c.creativeEx?? && c.creativeEx.size()&gt;0>
+			        		<div class="video">
+			        			<#list c.creativeEx as ex>
+		    						<a pic='${ex.imgPath}' text='${ex.content}' path='${ex.path}' href="javascript:void(0)"><img src="${ex.imgPath}" /></a>
+		        				</#list>
+			               	 	
+			                </div>
+		                 </#if>
+		        	<#elseif c.cType==5>
+		        		<#if c.creativeEx?? && c.creativeEx.size()&gt;0>
+				        	<div class="photo album">
+				        		<#list c.creativeEx as ex>
+				        			<#if ex.conType==3>
+				        				<a text='${ex.content!}' pic='${ex.imgPath}' path='${ex.path}' class="<#if ex_index==1>start</#if> audio <#if ex_index==0>cover</#if>"><img src="${ex.imgPath}" /></a>
+				        			<#elseif ex.conType==4>
+				        				<a text='${ex.content!}' pic='${ex.imgPath}' path='${ex.path}' class="<#if ex_index==1>start</#if> video <#if ex_index==0>cover</#if>"><img src="${ex.imgPath}"  /></a>
+				        			<#else>
+				        				<a text='${ex.content!}' w='${ex.w!}' h='${ex.h!}' pic='${ex.imgPath}' class="<#if ex_index==1>start</#if> pic <#if ex_index==0>cover</#if>">
+				        					<img width='${creativeResize("w",ex.w,ex.h,500)}' height='${creativeResize("h",ex.w,ex.h,500)}'  src="${avatarResize(ex.imgPath,'500')}" />
+				        				</a>
+				        			</#if>
+				        		</#list>
+		                	</div>
+	                	 </#if>
+		        	</#if>
+		        	<#if c.content?? && c.content!="">
+			        	<div class="text">
+			                <p>${c.content!}</p>
+		            	</div>
+		            </#if>
+		            
+		        	<div class="userList">
+		        		<#list c.creativeUser as u>
+		                    <a href="${systemProp.appServerUrl}/sns/user-index.action?u=${u.userId}" u='' title="${u.nickname!}">
+		                    <img src="${systemProp.profileServerUrl}<#if u.avatar?? && u.avatar!="" >${avatarResize(u.avatar,'60')}</#if>" onerror="this.src='${systemProp.staticServerUrl}/images/head60.gif'" />
+		                    </a>
+		                    <#if !u_has_next >
+		                    <span>${u.num}个参与人</span>
+		                    </#if>
+	                    </#list>
+	                </div>
+	                <div cre="${c.id}" class="tools">
+	                    <a class="iconMoreInfoBig iconMore" title="评论" href="javascript:void(0)">评论</a>
+	                    <a class="iconShareBig" title="分享" href="javascript:void(0)">转发</a>
+	                    <a class="<#if c.isEnjoy?? && (c.isEnjoy>0)>favCurrent<#else>iconHeartBig</#if>" title="收藏" href="javascript:void(0)">喜欢</a>
+	                </div>
+	            </div>
+	        </div>
+        </#list>
+       <!--theme end-->         
+    </div>
+    
+	<div class="sideRight">
+		<div id="rightInner" style="width:238px;">
+            <div class="con conRegister">
+                <a id='snsbtnWB' href="${systemProp.appServerUrl}/sns/m1-register-and-login.action" class="btnWB">登录</a>
+                <a id='snsbtnGB' href="${systemProp.appServerUrl}/sns/m1-register-and-login.action#register" class="btnGB">注册</a>
+            </div>
+    
+            <div id="r_u_list" class="con conUser">
+                <#list publicAuthor as author>
+            	<a class="author_list <#if author_index==4>last</#if>" href="javascript:void(0);" <#if author_index&gt;4>style='display:none;'</#if> >
+	                <img url='${systemProp.appServerUrl}/sns/user-index.action?u=${author.userId}' src="${systemProp.profileServerUrl}<#if author.avatar?? && author.avatar!="" >${avatarResize(author.avatar,'60')}</#if>" onerror="this.src='${systemProp.staticServerUrl}/images/head60.gif'" />
+	                <strong>${author.nickname!}</strong>
+	                <p><span>${author.num!}</span>作品</p>
+	                <em nick='${author.nickname!}' u='${author.userId}' class='atten'>加关注</em>
+	            </a>
+            </#list>
+                <a href="javascript:void(0)" class="more">换一批&nbsp;作者</a>
+            </div>
+            <div id="cre_list" class="con conList">
+               <#list publicCreative as pcrv>
+		            <a class="pcrv_list <#if pcrv_index==4>last</#if>"  href="${systemProp.appServerUrl}/sns/user-index.action?u=${pcrv.userId}&c=${pcrv.cid}" <#if pcrv_index&gt;4>style='display:none;'</#if>>
+		                <strong>${pcrv.title!}</strong>
+		                <span>(${pcrv.num!})</span>
+		            </a>
+	            </#list>
+                <a href="javascript:void(0)" class="more">换一批&nbsp;话题</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="loading" class="pageLoad"><span>正在加载内容...</span></div>
+
+<div id="userNewMsg" class="popContent hide">
+	<fieldset>
+    	<h6>发送私信给<span id='sns_mes_userName' name="userName"></span></h6>
+        <div>
+            <em><textarea id="msgContent" class="input g420"></textarea></em>
+        </div>
+        <div class="floatr">
+            <em><a id="send" userId="" href="javascript:void(0)" class="btnBB" >发送</a></em>
+            <em><a id="closePop" href="javascript:void(0)" class="btnWB">取消</a></em>
+        </div>
+    </fieldset>
+</div>
+<#import "../components/footer.ftl" as footer>
+<@footer.main class="footerMini footerStatic" />
+</body>
+</html>

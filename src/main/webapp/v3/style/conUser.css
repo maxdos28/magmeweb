@@ -1,0 +1,43 @@
+
+.bodyUser .item { float:left; width:200px; height:60px; padding:10px; margin:8px; background:#fff; border-radius:5px; box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.bodyUser .item .userHead{ position:relative; float:left; margin-right:8px;}
+.bodyUser .item .userHead a.head { width:50px; height:50px; overflow:hidden; display:block; _display:inline; border-radius:3px;}
+.bodyUser .item .userHead a.head img { display:block; width:50px; height:50px;}
+.bodyUser .item strong { color:#7f8690; font-size:14px; line-height:16px; max-height:32px; width:130px; display:block;  overflow:hidden; word-wrap:break-word; word-break:break-all;}
+.bodyUser .item p { color:#cbd2d9; height:18px; line-height:18px; overflow:hidden;}
+.bodyUser .item p span { padding-right:4px;}
+.bodyUser .item .del{ color:#ccc; display:none;}
+.bodyUser .item:hover .del{ display:block;}
+html.ie6 .bodyUser .item .del{ display:block;}
+.ie6 .bodyUser .item,
+.ie7 .bodyUser .item { width:350px; margin:8px 30px 8px 8px;}
+
+
+
+
+.userHead .tool { position:absolute; left:44px; top:0; z-index:1; padding-left:20px; display:none; background:url(../images/icon/arrowBig20120615.gif) 10px 20px no-repeat;}
+.userHead .tool .outer { width:280px; background:url(../images/icon/36loading.gif) center center no-repeat #222; cursor:default; min-height:80px; _height:80px;}
+.userHead .tool .inner { padding:10px; background:#222;}
+.userHead .tool .inner .img{ width:50px; height:50px; display:block; float:left; margin:0 10px 10px 0;}
+.userHead .tool .inner .name{ height:20px; line-height:14px; color:#fff; display:block;}
+.userHead .tool .inner .name span{ color:#555; margin-left:5px; font-weight:normal;}
+.userHead .tool .inner .company{ color:#999; height:24px; line-height:14px;}
+.userHead .tool .inner .company span{ color:#555; margin-left:5px;}
+.userHead .tool .inner .count{ clear:both; padding-bottom:5px; border-bottom:1px solid #111;}
+.userHead .tool .inner .count p{ display:inline; margin-right:20px; color:#999;}
+.userHead .tool .inner .count p span,
+.userHead .tool .inner .count p a{ color:#fff;}
+.userHead .tool .inner .count p a:hover{ text-decoration:underline;}
+.userHead .tool .inner .info{ padding-top:5px; border-top:1px solid #333; color:#999;}
+.userHead .tool .ft{ border-top:1px solid #000; height:26px; width:280px;}
+.userHead .tool .ft a { display:block; float:left; height:26px; line-height:26px; overflow:hidden; text-align:center; width:140px; color:#e5e5e5; background-color:#000; background-repeat:no-repeat; background-position:34px center;}
+.userHead .tool .ft a:hover { color:#fff; background-color:#181818;}
+.userHead .tool .ft a.atten{ background-image:url(../images/icon/add_w.gif);}
+.userHead .tool .ft a.cancel{ background-image:url(../images/icon/subtract_w.gif); background-position:28px center;}
+.userHead .tool .ft a.message{ background-image:url(../images/icon/mail_w.gif);}
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+﻿/*global*/
+html.ieOld .body .con{ border:1px solid #e5e5e5;}
+html.ie6 .pageStatic,
+html.ie7 .pageStatic,
+html.ie8 .pageStatic{ border:1px solid #eee; border-bottom-color:#ddd;}
+html.ie6 body fieldset div em select { margin-left:2px;}
+html.ie6 .body .sideLeft{ display:inline;}
+/*popWindow*/
+html.ie6 body .lightboxTips .popClose{ background-image:url(../images/tips/close.gif);}
+html.ie6 body .popContent fieldset hr{ margin:3px 0;}
+html.ie6 .pop,
+html.ie7 .pop,
+html.ie8 .pop,
+html.ie6 .lightbox,
+html.ie7 .lightbox,
+html.ie8 .lightbox{ border-bottom:1px solid #999; border-right:1px solid #999;}
+/*popSinaWeibo*/
+html.ie6 #sinaWeibo .link a { display:inline; margin:0 0 10px 10px;}
+/*header footer*/
+html.ie6 .header #userBar .name a{display:inline;}
+html.ie6 .header20120905 #userBar .name a{display:inline;}
+html.ie6 .iphoneapp{ position:absolute; top:300px;}
+html.ie6 .feedbackBtn{ position:absolute; top:300px;}
+html.ie6 .addWeibo{ position:absolute; top:300px;}
+html.ie6 .footer{ position:relative;}
+/*sns*/
+html.ie7 .body .userInfo .atten{ margin-bottom:0;}
+html.ie6 .conMyMessage .conBody .msgList .item a.del { display:block;}
+html.ie6 .bodyUser .itemUser{ overflow:hidden;}
+/*kanmi*/
+html.ie6 .tagList ul li.add,
+html.ie7 .tagList ul li.add,
+html.ie8 .tagList ul li.add{ padding-left:2px;}
+.tagList ul li.add{ padding-left:xx;[color:padding-left:xx;]*padding-left:xx;_padding-left:xx;}
+/*20120405topic*/
+.ie6 .pageTopic .typeImage .item,
+.ie7 .pageTopic .typeImage .item{ width:670px; overflow:hidden;}
+.ie6 .pageTopic .typeImage .team .productList .inner .item a p{ background:#fff; color:#333;}
+.ieOld .pageTopic .typeImage .item .ctrl a{ background-image:url(../images/iconDot20120405.gif); background-repeat:no-repeat; background-position:0 -20px; background-color:transparent;}
+.ieOld .pageTopic .typeImage .item .ctrl a:hover{ background-color:transparent;}
+.ieOld .pageTopic .typeImage .item .ctrl a.current{ background-position:0 0; background-color:transparent;}
+.ieOld .pageTopic .sideLeft{ margin-left:7px; width:672px;}
+.ieOld .pageTopic .sideLeft .conTypeText,
+.ieOld .pageTopic .sideLeft .conTypeImage{ border:1px solid #e5e5e5;}
+.ieOld .pageTopic .sideRight{ margin-left:18px; width:240px;}
+.ieOld .pageTopic .sideRight .con{ border:1px solid #e5e5e5;}
+.ie6 .typeImage .team .ctrl a.left{ background-position:left -47px;}
+.ie6 .typeImage .team .ctrl a.right{ background-position:right -47px;}
+
+/*20120405m1*/
+.ieOld .pageM1 .sideLeftMiddleRight { border:1px solid #e5e5e5;}
+.ieOld .pageM1 .sideLeftMiddle{ border:1px solid #e5e5e5; }
+.ieOld .pageM1 .sideLeft{ margin-left:7px; width:672px;}
+.ieOld .pageM1 .sideRight{ margin-left:18px; width:240px;}
+.ieOld .pageM1 .sideLeft .topBar .inner,
+.ieOld .pageM1 .sideLeft .invitationCode,
+.ieOld .pageM1 .sideLeft .theme .calendar,
+.ieOld .pageM1 .sideLeft .theme .content,
+.ieOld .pageM1 .sideLeft .theme .moreInfo,
+.ieOld .pageM1 .sideLeft .m1Authorize{ border:1px solid #e5e5e5;}
+.ieOld .pageM1 .sideLeft .theme .moreInfo .close{ bottom:1px;}
+.ieOld .pageM1 .sideLeft .theme .moreInfo .topArrow{ background-position:0 -20px;}
+.ie6 .pageM1 .sideLeft .theme .moreInfo .topArrow { background:none;}
+.ieOld .pageM1 .sideLeft .theme .calendar{ border-bottom:2px solid #ddd;}
+.ie6 .pageM1 .sideLeft .theme .worksCover{ left:0;}
+.ie6 .pageM1 .sideLeft .theme .moreInfo .sameTag{ padding-right:5px;}
+.ie6 .pageM1 .sideLeft .theme .moreInfo .sameMagazine{ padding-right:5px; width:233px;}
+.ie6 .pageM1 .sideLeft .theme .moreInfo .sameLike{ padding-right:5px;}
+.ie6 .pageM1 .sideLeft .theme .moreInfo .comment .reply .input,
+.ie7 .pageM1 .sideLeft .theme .moreInfo .comment .reply .input{ width:418px;}
+.ie6 .pageM1 .sideLeft .theme .content .photo{ width:510px;}
+.ie6 .pageM1 .sideLeft .theme .content .audio .photo{ width:180px; margin-right:0; }
+
+

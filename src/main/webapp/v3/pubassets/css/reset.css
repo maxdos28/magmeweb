@@ -1,0 +1,135 @@
+@charset "utf-8";
+@import url("fonts.css");
+@import url("slideDoor.css");
+@import url("textColumn.css");
+@import url("innerScroll.css");
+@import url("slideBanner.css");
+@import url("mCustomScrollbar.min.css");
+
+
+/*zIndex划分
+内容0-999
+广告1000-9999
+显示切换,遮罩10000,按钮10001，内容10002
+*/
+
+
+/*-Standard Definitions----------------------------------------*/
+*{ font-family:\4E3D\9ED1,\82F9\679C\4E3D\4E2D\9ED1,\5FAE\8F6F\96C5\9ED1;}
+*{ -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none; word-wrap:break-word; word-break:break-all;}
+html,body{-webkit-text-size-adjust:none; width:100%; height:100%; overflow:hidden; font-size:16px;background-color: #fff !important;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,textarea,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{
+margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-family:inherit; font-size:100%; text-align:left; vertical-align: baseline; font-family:\5FAE\8F6F\96C5\9ED1, \5B8B\4F53, Verdana, Arial, Helvetica, sans-serif;}
+table{border-spacing:0;}
+table {border-collapse:;[color:;border-collapse:collapse;]border-collapse:collapse;}
+fieldset,img{border:0; display:block;}
+legend{ display:none;}
+label {cursor:pointer}
+textarea {overflow:auto; resize:none; overflow-y:scroll;}
+address,caption,cite,code,dfn,em,th,var{font-weight:normal;font-style:normal}
+strong, b{ font-weight: bold; }
+ol,ul,li{list-style:none;}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal; font-size:100%;}
+p{ line-height:1.5em;}
+q:before,q:after,blockquote:before,blockquote:after {content: "";}
+blockquote{color:#666;font-style:italic;}
+abbr,acronym{border:0}
+hr {margin: 0;padding: 0;border: 0;color: #CDCDCD;background-color: #CDCDCD;height: 1px}
+sup,sub{line-height:0}
+abbr,acronym{border-bottom:1px dotted #666}
+pre{white-space:pre; text-align:inherit;}
+embed{ display:block;}
+a{ text-decoration:none;}
+input[type=text], input[type=textarea], input[type=password], select{ outline:none;}
+.boxsizing{ box-sizing:border-box;-moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+.coverImg{ background-size:cover !important; background-repeat:no-repeat  !important;background-origin:border-box !important;}
+.containImg{ background-size:contain !important; background-position:center center  !important; background-repeat:no-repeat  !important;background-origin:border-box !important;}
+
+/*站长统计代码隐藏*/
+a[title="站长统计"]{display: none;}
+
+/*解决首图超过一屏高后出现黑底*/
+body.phone{padding-top: 1px;}
+
+/*手机版本图片间距*/
+body.phone div[id^="layoutDiv"]:last-child{padding-bottom: 10px;}
+body.phone div[id^="layoutDiv"]:first-child div[id$="textblock"]:first-child{margin-top: 10px;}
+body.phone div[id$="textblock"]{word-wrap:break-word;}
+
+/*手机版本文字内部样式重设*/
+body.phone div[id$="textblock"]>span{color: #000!important;}
+
+/*图片裁切*/
+.picBottom{background-position:center bottom !important;}
+.picTop{background-position:center top !important;}
+.picRight{background-position:right center !important;}
+.picLeft{background-position:left center !important;}
+.picCenter{background-position:center center !important;}
+
+
+
+/*旧版图片加载loading*/
+.loadImage{background-image:url(../imgs/icon/Recovered_Gif_339.gif) !important;background-size:50px 50px !important;background-position:center center !important;background-repeat: no-repeat !important; background-color: #eee;}
+/*新版图片加载loading*/
+.loading{ width:35px; height:35px; display:block; position:absolute; left:50%; top:50%; margin-left:-17px; margin-top:-17px; background-image:url(../imgs/icon/loading.png); background-size:35px 35px; background-repeat:no-repeat;-webkit-animation:cssloading 1s linear infinite;animation:cssloading 1s linear infinite;}
+@-webkit-keyframes cssloading{
+     0.00% { -webkit-transform:rotate(0deg)}
+     8.30% { -webkit-transform:rotate(0deg)}
+     8.31% { -webkit-transform:rotate(30deg)}
+    16.60% { -webkit-transform:rotate(30deg)}
+    16.61% { -webkit-transform:rotate(60deg)}
+    24.90% { -webkit-transform:rotate(60deg)}
+    24.91% { -webkit-transform:rotate(90deg)}
+    33.30% { -webkit-transform:rotate(90deg)}
+    33.31% { -webkit-transform:rotate(120deg)}
+    41.60% { -webkit-transform:rotate(120deg)}
+    41.61% { -webkit-transform:rotate(150deg)}
+    49.80% { -webkit-transform:rotate(150deg)}
+    49.81% { -webkit-transform:rotate(180deg)}
+    58.20% { -webkit-transform:rotate(180deg)}
+    58.21% { -webkit-transform:rotate(210deg)}
+    66.50% { -webkit-transform:rotate(210deg)}
+    66.51% { -webkit-transform:rotate(240deg)}
+    74.80% { -webkit-transform:rotate(240deg)}
+    74.81% { -webkit-transform:rotate(270deg)}
+    83.10% { -webkit-transform:rotate(270deg)}
+    83.11% { -webkit-transform:rotate(300deg)}
+    91.50% { -webkit-transform:rotate(300deg)}
+    91.51% { -webkit-transform:rotate(330deg)}
+   100.00% { -webkit-transform:rotate(330deg)}
+}
+@keyframes cssloading{
+     0.00% { transform:rotate(0deg)}
+     8.30% { transform:rotate(0deg)}
+     8.31% { transform:rotate(30deg)}
+    16.60% { transform:rotate(30deg)}
+    16.61% { transform:rotate(60deg)}
+    24.90% { transform:rotate(60deg)}
+    24.91% { transform:rotate(90deg)}
+    33.30% { transform:rotate(90deg)}	
+    33.31% { transform:rotate(120deg)}
+    41.60% { transform:rotate(120deg)}
+    41.61% { transform:rotate(150deg)}
+    49.80% { transform:rotate(150deg)}
+    49.81% { transform:rotate(180deg)}
+    58.20% { transform:rotate(180deg)}
+    58.21% { transform:rotate(210deg)}
+    66.50% { transform:rotate(210deg)}
+    66.51% { transform:rotate(240deg)}
+    74.80% { transform:rotate(240deg)}
+    74.81% { transform:rotate(270deg)}
+    83.10% { transform:rotate(270deg)}
+    83.11% { transform:rotate(300deg)}
+    91.50% { transform:rotate(300deg)}
+    91.51% { transform:rotate(330deg)}
+   100.00% { transform:rotate(330deg)}
+}
+
+
+/*广告zIndex从1000开始*/
+.attrAD{position:absolute; z-index:1000 !important;overflow:visible !important;}
+
+
+
+

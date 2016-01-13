@@ -1,0 +1,21 @@
+﻿@charset "utf-8";
+
+/*图片广告*/
+.conAd{ zoom:1; background:#fff; margin-bottom:20px; overflow:hidden;}
+.conAd:after {content:"\0020";display:block;height:0;clear:both; visibility:hidden;}
+.conAd-1180-90{ margin:16px auto 8px auto; width:1180px; height:90px; background:#eee; display:none;}
+.conAd-400{ height:400px; }
+.conAd-140{ height:140px; }
+.conAd-280{ height:280px; }
+
+
+
+
+/*杂志*/
+.conMagezine{ height:255px; padding-top:15px; background:url(../images/bgWoodGlass.jpg) 0 0 no-repeat; position:relative;}
+.conMagezine .book{ width:162px; height:206px; padding:2px 0 0 2px; margin:0 auto; display:block; background:url(../images/bookShadow.png) 0 0 no-repeat;}
+.conMagezine a{ width:162px; height:206px; padding:2px 0 0 2px; margin:0 auto; display:block; background:url(../images/bookShadow.png) 0 0 no-repeat;}
+.conMagezine a img{ width:150px; height:200px; display:block;}
+.conMagezine a:hover img{filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.conMagezine strong{ position:absolute; display:block; top:242px; width:238px; left:0; text-align:center; color:#9A8C7A; text-shadow:1px 1px 1px rgba(255,255,255,0.5)}
+

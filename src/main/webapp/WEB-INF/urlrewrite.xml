@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<urlrewrite>
+    <rule>
+        <from>^/js/systemProp\.(\d+\.)?js(.*)$</from>
+        <to>/system-prop.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/(\?.*)?$</from>
+        <to>/index.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/index\.htm(.*)$</from>
+        <to>/index.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/home/(\d+).html(.*)$</from>
+        <to>/index.action?sortId=$1</to>
+    </rule>
+    
+    <rule>
+        <from>^/home/(\d+)/(\d+).html(.*)$</from>
+        <to>/index.action?sortId=$1&amp;secondSortId=$2</to>
+    </rule>
+    
+    <rule>
+        <from>^/home/tag/(\d+).html(.*)$</from>
+        <to>/index.action?tagId=$1</to>
+    </rule>
+    
+    <rule>
+        <from>^/mobile/index.html(.*)$</from>
+        <to>/mobile/mobile-index.action</to>
+    </rule>
+    <rule>
+        <from>^/mobile/read.html(.*)$</from>
+        <to>/mobile/mobile-read.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/kanmi\.html(.*)$</from>
+        <to>/publish/kanmi.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/yacht\.html(.*)$</from>
+        <to>/activity/yacht.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/publish/magazine\.html(.*)$</from>
+        <to>/publish/magazine.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/publish/magazine!magazineAjax\.html(.*)$</from>
+        <to>/publish/magazine!magazineAjax.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/tagWall\.html(.*)$</from>
+        <to>/user-tag!tagWall.action</to>
+    </rule> 
+    
+    <rule>
+        <from>^/tagShow\.html(.*)$</from>
+        <to>/user-tag!show.action</to>
+    </rule> 
+    
+    <rule>
+        <from>^/event\.html(.*)$</from>
+        <to>/event!index.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/static_(friendlink|about_us|bulletin|join_us|policy|ad)\.htm(.*)$</from>
+        <to>/static_$1.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/widget/newTag\.htm(.*)$</from>
+        <to>/widget/widget!newTag.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/widget/hotTag\.htm(.*)$</from>
+        <to>/widget/widget!hotTag.action</to>
+    </rule>
+
+    <rule>
+        <from>^/widget/showTag\.htm(.*)$</from>
+        <to>/widget/widget!showTag.action</to>
+    </rule>
+
+    <rule>
+        <from>^/widget/magzine\.htm(.*)$</from>
+        <to>/widget/widget!magzine.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/widget/?(\?xx=.*)?$</from>
+        <to>/widget/widget!magzine.action</to>
+    </rule>
+
+    <rule>
+        <from>^/user-image/(.+)\.html(.*)$</from>
+        <to>/user-image!$1.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/user-image-master/(.+)\.html(.*)$</from>
+        <to>/user-image-master!$1.action</to>
+    </rule>    
+
+    <rule>
+        <from>^/user-event/(.+)\.html(.*)$</from>
+        <to>/user-event!$1.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/feed-back!edit\.html(.*)$</from>
+        <to>/feed-back!editAjax.action</to>
+    </rule>
+    
+    <rule>
+        <from>^/channel/(\d+).html(.*)$</from>
+        <to>/channel!index.action?sortId=$1</to>
+    </rule>
+    
+    <rule>
+        <from>^/new-publisher.action$</from>
+        <to>/new-publisher/channel!to.action</to>
+    </rule>  
+    
+    <rule>
+        <from>^/third/rss.xml$</from>
+        <to>/third/rss-for114.action</to>
+    </rule>      
+    <rule>
+        <from>^/third/rssforkindle.xml\?source=kindle$</from>
+        <to>/third/rss-for-kindle.action</to>
+    </rule>      
+    
+    <rule>
+        <from>^/baike/?(.*)$</from>
+        <to>/page/d/page-d.action?$1</to>
+    </rule> 
+    <rule>
+        <from>^/detail(\d+)/?$</from>
+        <to>/index.action</to>
+    </rule> 
+    <!-- 
+    <rule>
+        <from>^/sns/c(\d+)/?$</from>
+        <to>/sns/user-index.action?c=$1</to>
+    </rule>  
+    -->
+    <rule>
+        <from>^/sns/c(\d+)/(\d+)/?$</from>
+        <to>/sns/sns-detail.action?creativeId=$1&amp;articleId=$2</to>
+    </rule> 
+    
+    <rule>
+        <from>^/sns/c(\d+)/?$</from>
+        <to>/sns/sns-detail.action?creativeId=$1</to>
+    </rule> 
+      
+    <rule>
+        <from>^/sns/u(\d+)/?$</from>
+        <to>/sns/article!mindex.action?userId=$1</to>
+    </rule>
+    
+    <!--
+    <rule>
+        <from>^/sns/u(\d+)/?$</from>
+        <to>/sns/user-index.action?u=$1</to>
+    </rule>  -->
+    <rule>
+        <from>^/alive/(\d+)/(\d+)/(\w+)$</from>
+        <to>/new-publisher/account-alive.action?type=$1&amp;accountId=$2&amp;sec=$3</to>
+    </rule> 
+    <!-- ME广告统计 -->
+    <rule>
+        <from>^/sendmuid/?(.*)$</from>
+        <to>/me/magic-editor-stat!genericMuid.action</to>
+    </rule>
+    <rule>
+        <from>^/getmead/?(.*)$</from>
+        <to>/me/magic-editor-stat!getAdList.action</to>
+    </rule>
+</urlrewrite>

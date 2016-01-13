@@ -1,0 +1,11 @@
+label.error { 
+	color: red;
+	display: block;
+	padding-top: 2px;
+	padding-left: 18px;
+}
+   
+input.error {
+	/*background: url(../../images/invalid_line.gif) repeat-x left bottom;*/
+	border: 1px red dashed;
+}

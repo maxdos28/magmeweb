@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>第三方连接回调页面。。。</title>
+
+<script>
+	function getUrlValue(name){
+		var r = location.search.substr(1).match(new RegExp("(^|&)"+ name +"=([^&]*)(&|$)")); 
+		if (r!=null) return unescape(r[2]); return null;
+	}
+	
+	function fn2(){
+		var jc = getUrlValue("jc");
+		if(!jc){
+			var flag=getUrlValue("flag");
+			if( !flag ){
+				flag = 'false';	
+			}
+			if(window.opener && !window.opener.closed){
+				window.opener.thirdBack(flag);
+				var thisURL = window.opener.document.URL; 
+				if(thisURL.indexOf('mag-read.action')>=0){
+					window.opener.closeReaderLoginPop();
+				}
+			}
+			window.close();
+		} else {
+			var b_close = getUrlValue("b_close");
+			if(b_close == '1'){
+				alert('');
+				window.close();
+			} else if(b_close == '2'){
+				alert('验证未通过');
+				window.close();
+			}
+		}
+	}
+</script>
+</head>
+<body onload="fn2();">
+
+</html>

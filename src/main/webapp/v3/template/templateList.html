@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="../js/jquery-1.6.2.min.js"></script>
+<script src="js/tpl.js"></script>
+</head>
+<script>
+$(function(){
+	
+	//fnShowTplList("2","c","1");
+	fnShowAllTpl();
+	
+	$("#tplList a").live("click",function(){
+		$(this).addClass("current").parent().siblings().find("a").removeClass("current");
+	});
+	
+	
+	
+})
+</script>
+<link rel="stylesheet" type="text/css" href="../style/reset.css" />
+<style>
+body{ padding:15px; background:#fff;}
+ul{ clear:both; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #ccc;}
+ul li.title{ float:none; height:30px; width:auto; font-weight:bold; line-height:30px; clear:both;}
+ul li.title a{ width:auto; height:30px;}
+ul li{ width:166px; height:126px; float:left; margin:10px;}
+ul li a{ background:#ddd; width:160px; height:120px; display:block; padding:3px; cursor:pointer;}
+ul li a:hover,
+ul li a.current{ background:#08c;}
+
+/*clearFix clear*/
+.clearFix:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.clearFix {zoom:1;} 
+.clear{clear:both;}
+
+</style>
+<body>
+
+
+<div id="tplList">
+
+
+</div>
+
+
+</body>
+</html>

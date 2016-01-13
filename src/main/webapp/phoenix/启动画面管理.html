@@ -1,0 +1,151 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelAdmin.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/useFunction.js"></script>
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header headerAdmin clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="后台-首页.html">(SEO)麦米 Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li class="current"><a href="启动画面管理.html">启动画面管理</a></li>
+                <li><a href="栏目管理.html">频道管理</a></li>
+                <li><a href="启动APP数.html">数据报表</a></li>
+                <li><a href="收入核算.html">收入核算</a></li>
+                <li><a href="内部账号.html">内部账号</a></li>
+                <li><a href="后台审批.html">后台审批</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="logout" id="logout"><a href="后台-登录.html" title="退出">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--body-->
+<div class="body">
+    <div class="conLeftMiddleRight">
+        <div class="conTools clearFix">
+            <fieldset>
+                <div>
+            		<em>封面图</em>
+            		<em><input type="file" class="inputFile g300" /></em>
+            		<em class="g80 tRight">URL</em>
+            		<em><input type="text" class="input g300" /></em>
+                	<em><a class="btnBS" href="javascript:void(0)">添加</a></em>
+                </div>
+            </fieldset>
+        </div>
+		<script>
+        	$(function(){
+				$(".con01 li.item a").click(function(){
+					if($(this).hasClass("moveL")){
+						$(this).parent(".item").insertBefore($(this).parent().prev());
+					}else if($(this).hasClass("moveR")){
+						$(this).parent(".item").insertAfter($(this).parent().next());
+					}
+				});
+			});
+        </script>
+        <div class="conB con01">
+            <h2>封面列表</h2>
+            <ul class="clearFix">
+                <li class="item showBar">
+                    <img src="images/temp/mz9.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz8.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz7.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz6.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz5.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz9.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz9.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz9.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz9.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+                <li class="item showBar">
+                    <img src="images/temp/mz9.jpg" />
+                    <div class="border"></div>
+                    <a class="del" href="#">下架</a>
+                    <a class="moveL" href="javascript:void(0)">前移</a>
+                    <a class="moveR" href="javascript:void(0)">后移</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="conFooter">
+		</div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿@charset "utf-8";
+@import url("channelHeaderv7.css");
+@import url("conAdv7.css");
+
+/*当前导航高亮*/
+.header20150126 .headerTop .newnav li.home a{ color:#fff;}
+
+
+/*右边栏位置*/
+.bodyHome{ width:944px; padding-right:263px; position:relative;}
+.sideRight{ position:absolute; top:13px; right:13px; width:238px;margin-left: 0;}
+.ieOld .sideRight{ width:240px; right:12px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*homeItem*/
+.bodyHome .item{ width:210px; margin:12px; float:left; display:inline; background:#fff; border:1px solid #e5e5e5; position:relative;}
+.ieOld .bodyHome .item .info{ padding:9px;}
+.ie6 .bodyHome .item{ overflow-y:visible; overflow-x:hidden;}
+
+.bodyHome .item .photo{ width:210px; max-height:420px; background:#f1f1f1; display:block;position: relative;z-index: 1;overflow: hidden;}
+.bodyHome .item .photo img{ border:none; width:210px; height:210px; display:block; transition: all 0.6s ease-out;-moz-transition: all 0.6s ease-out;-webkit-transition: all 0.6s ease-out;-o-transition: all 0.6s ease-out;}
+.bodyHome .item a:hover .photo img{transform: scale(1.05);-moz-transform: scale(1.05);-webkit-transform: scale(1.05);-o-transform: scale(1.05);}
+.bodyHome .item .info{ padding:0 10px 10px 10px; position:relative;z-index: 2;}
+.bodyHome .item .info .user{ position:relative; left:-5px; margin-top:-12px; margin-bottom:6px; width:185px; height:40px; padding:8px; display:block; background:url(../images/m1UserBorder.png) 0 0 no-repeat;}
+.ie6 .bodyHome .item .info .user{ background-image:url(../images/m1UserBorder.gif); left:-5px;}
+.ieOld .bodyHome .item .info .user{margin-top:-22px;}
+.bodyHome .item .info .user img{ width:40px; height:40px; display:block; float:left; margin-right:15px;}
+.bodyHome .item .info .user strong{ font-size:12px; height:20px; line-height:20px; margin-top:15px; width:120px; display:block; overflow:hidden; color:#000; font-weight:normal; float:left;}
+.bodyHome .item .info .class{ position:relative; margin-top:-10px; margin-bottom:10px; left:-10px; width:210px; overflow:hidden;}
+.bodyHome .item .info .class strong{ font-size:12px; height:20px; line-height:18px; display:block; float:left; margin-left:10px; color:#fff; font-weight:normal; padding:0 6px; border:1px solid rgba(255,255,255,0.4); background:#4DB7E2;}
+.ieOld .bodyHome .item .info .class{ margin-top:-20px; }
+.ie6 .bodyHome .item .info .class{ margin-top:-18px; left:-20px;}
+.bodyHome .item .info p{ line-height:1.8em; color:#666; overflow:hidden;}
+.bodyHome .item h2{ font-size:18px; line-height:30px; color:#000; display:inline; margin-top:10px; word-wrap:break-word; word-break:break-all;}
+.bodyHome .item .tools{ position:absolute; left:0; bottom:0; height:24px; padding:7px; width:196px;z-index: 4}
+.bodyHome .item .tools em{ height:24px; line-height:24px; width:24px; text-indent:-99em; display:none; float:right; margin-left:5px; background-position:center center; background-repeat:no-repeat; cursor:pointer;}
+.bodyHome .item .tools em:hover{ color:#fff;}
+.bodyHome .item .tools em.iconHeart{ background-image:url(../images/icon/heart24Gray.png);display: none!important;}
+.bodyHome .item .tools em.iconHeart:hover{ background-image:url(../images/icon/heart24Blue.png);}
+.bodyHome .item .tools em.favCurrent,
+.bodyHome .item .tools em.favCurrent:hover{ background-image:url(../images/icon/heart24Red.png); display:inline-block;}
+.bodyHome .item .tools em.iconShare{ background-image:url(../images/icon/share24Gray.png);}
+.bodyHome .item .tools em.iconShare div{right:56px; top:4px;}
+.bodyHome .item .tools em.iconShare:hover{ background-image:url(../images/icon/share24Blue.png);}
+.bodyHome .item .tools em.iconDetail{ background-image:url(../images/icon/more24Gray.png); }
+.bodyHome .item .tools em.iconDetail:hover{ background-image:url(../images/icon/more24Blue.png);}
+.bodyHome .item:hover{ border-color:#5BAFD3;}
+.bodyHome .item:hover .tools{ border-top:1px solid #ddd; background:#f9f9f9;}
+.bodyHome .item:hover .tools em{ display:inline-block;}
+.ieOld .bodyHome .item:hover .tools{ border-top:1px solid #ddd;}
+.ie6 .bodyHome .item .toolsOn{ border-top:1px solid #ddd; background:#f9f9f9;}
+.ie6 .bodyHome .item .toolsOn em{ display:inline-block;}
+.ie6 .bodyHome .item .tools em.iconShare div{right:22px; top:-2px;}
+.bodyHome .itemFirst{ width:446px; height:320px; background:#fff; border:1px solid #e5e5e5; z-index:1; position:absolute; left:12px; top:12px; overflow:hidden;}
+.bodyHome .itemSpace{ width:210px; height:320px; box-shadow:none; background:none; padding:0;}
+.bodyHome .itemSpace:hover{ background:none; box-shadow:none;}
+
+
+
+
+
+
+
+
+
+/* 设备判断 */
+.padStyle .conAd-1180-90{ width:748px; height:57px; margin:10px auto;}
+.padStyle .conAd-1180-90 iframe{ -webkit-transform:scale(0.635); width:1180px; height:90px; -webkit-transform-origin:left top;}
+.padStyle .bodyHome{ width:760px; margin:0 auto; padding-right:0px; overflow:hidden;}
+.padStyle .bodyHome .item{ width:180px; margin:4px; float:left; display:inline; background:#fff; border:1px solid #e5e5e5; position:relative;}
+.padStyle .bodyHome .item:hover{ border-color:inherit;}
+.padStyle .bodyHome .item:active{ border-color:#4DB7E2;}
+.padStyle .bodyHome .item a:hover .photo img{transform:none !important;-moz-transform:none !important;-webkit-transform:none !important;-o-transform:none !important;}
+.padStyle .bodyHome .itemFirst{ background:#fff; -webkit-transform:scale(0.827); -webkit-transform-origin:left top; border:1px solid #e5e5e5; z-index:1; position:absolute; left:5px; top:4px; overflow:hidden;}
+.padStyle .bodyHome .itemSpace{ width:180px; height:264px;}
+.padStyle .bodyHome .item .photo{ width:180px; max-height:300px; }
+.padStyle .bodyHome .item .photo img{ width:180px; height:180px; transition:none !important; -webkit-transition:none !important; transform:none !important;-webkit-transform:none !important;}
+.padStyle .bodyHome .item .tools{ display:none;}
+.padStyle .bodyHome .item h2{ font-size:16px; line-height:1.5em;}
+.padStyle .sideRight{ display:none;}
+
+
+.phoneStyle .bodyHome{ width:320px; box-sizing:border-box; margin:0 auto; padding:5px 5px 0 5px; overflow:hidden;}
+.phoneStyle .bodyHome .item{ width:145px; box-sizing:border-box; margin:5px; border-width:0.5px;}
+.phoneStyle .bodyHome .item:hover{ border-color:inherit;}
+.phoneStyle .bodyHome .item:active{ border-color:#4DB7E2;}
+.phoneStyle .bodyHome .item a:hover .photo img{transform:none !important;-moz-transform:none !important;-webkit-transform:none !important;-o-transform:none !important;}
+.phoneStyle .bodyHome .item a .photo img{transform:none !important;-moz-transform:none !important;-webkit-transform:none !important;-o-transform:none !important;}
+.phoneStyle .bodyHome .itemSpace{ height:215px;}
+.phoneStyle .bodyHome .itemFirst{ -webkit-transform:scale(0.67); -webkit-transform-origin:left top; border-width:0.5px; z-index:1; position:absolute; left:10px; top:10px; overflow:hidden;}
+.phoneStyle .bodyHome .item .photo{ width:144px; position:relative;}
+.phoneStyle .bodyHome .item .photo img{ width:144px; height:144px; transition:none !important; -webkit-transition:none !important; transform:none !important;-webkit-transform:none !important;}
+.phoneStyle .bodyHome .item .info{ padding:0 8px 8px 8px; }
+.phoneStyle .bodyHome .item .info .class{ margin-top:-7px; margin-bottom:5px; left:-5px; width:145px;}
+.phoneStyle .bodyHome .item .info .class strong{ font-size:8px; height:14px; line-height:14px; padding:0 4px; margin-left:5px; border-width:0.5px;}
+.phoneStyle .bodyHome .item h2{ font-size:16px; line-height:1.5em;}
+.phoneStyle .bodyHome .item p{ font-size:12px; line-height:1.5em; white-space:pre-wrap; overflow: hidden; max-height:7.5em; text-overflow: ellipsis; -webkit-text-overflow: ellipsis; display:none;}
+.phoneStyle .bodyHome .item .tools{ display:none;}
+.phoneStyle .sideRight{ display:none;}
+.phoneStyle .footer20150126{ display:none;}
+@media screen and (min-device-width: 321px) and (max-device-width: 375px){
+.phoneStyle .bodyHome{ width:375px; padding-left:6px;}
+.phoneStyle .bodyHome .item{ width:172px;}
+.phoneStyle .bodyHome .itemSpace{ height:254px;}
+.phoneStyle .bodyHome .itemFirst{ -webkit-transform:scale(0.792); -webkit-transform-origin:left top; left:11px;}
+.phoneStyle .bodyHome .item .photo{ width:171px;}
+.phoneStyle .bodyHome .item .photo img{ width:171px; height:171px;}
+}
+
+
+
+
+
+
+
+
+
+
+

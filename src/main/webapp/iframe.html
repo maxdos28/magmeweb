@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6 ieOld"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ieOld"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ieOld"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>iframe</title>
+</head>
+<body>
+<script type="text/javascript">
+window.onload = function(){
+	var _Width = window.location.href.split('=')[1]
+	var cur = window.parent.document.location.href.match(/\/\d+\/[a-z]+\.html/i).join().split('/')[1]
+	parent.parent.me.setreaderWidth(cur,_Width);
+};
+</script>
+</body>
+</html>
+
+

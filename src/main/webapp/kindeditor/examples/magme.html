@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>KindEditor</title>
+		<script charset="utf-8" src="../kindeditor.js"></script>
+		<script>
+			KE.show({
+				id : 'content2',
+				resizeMode : 1,
+				allowPreviewEmoticons : false,
+				allowUpload : false,
+				items : [
+				'bold', 'italic', 'underline', '|', 'insertorderedlist', 'insertunorderedlist' ,'|' ,'source','fullscreen']
+			});
+		</script>
+        <style>
+		.ke-toolbar-outer{ background:url(../skins/magme/toolsBg.gif) 0 0 repeat-x;}
+        .ke-icon{ width:26px; height:26px; border-color:transparent;}
+        .ke-icon:hover{border-color:#aaa; background-color:#ddd;}
+		.ke-icon-selected,
+		.ke-icon-selected:hover{ background:#ccc}
+        .ke-icon .ke-common-icon{ width:26px; height:26px; background-image:url(../skins/magme/magme.gif); background-repeat:no-repeat;}
+		.ke-icon .ke-icon-bold{ background-position:0 0;}
+		.ke-icon .ke-icon-italic{ background-position:-26px 0;}
+		.ke-icon .ke-icon-underline{ background-position:-52px 0;}
+		.ke-icon .ke-icon-insertorderedlist{ background-position:-78px 0;}
+		.ke-icon .ke-icon-insertunorderedlist{ background-position:-104px 0;}
+		.ke-icon .ke-icon-source{ background-position:-130px 0;}
+		.ke-icon .ke-icon-fullscreen{ background-position:-156px 0;}
+        </style>
+	</head>
+	<body>
+		<h3>简单模式</h3>
+		<textarea id="content2" name="content" style="width:700px;height:200px;visibility:hidden;"></textarea>
+	</body>
+</html>

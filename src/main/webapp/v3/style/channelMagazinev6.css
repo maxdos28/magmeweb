@@ -1,0 +1,105 @@
+﻿@charset "utf-8";
+
+body{ padding-top:140px;background:#f1f1f1;}
+.header .inner,
+.header .nav .navInner,
+.topTools,
+.bodyMagazine{ width:1210px;}
+
+.header20120905 .newnavL .magazine a,
+.header20120905 .newnavL .magazine a:hover{ color:#fff;}
+.header20120905 .inner{ width:1180px;}
+
+.footerBig .inner{width: 900px;}
+.footerBig .inner .contactForm{display: none;}
+
+
+
+.bodyMagazine .item { width:200px; height:310px; overflow:hidden; background:#fff; border:1px solid #e5e5e5; float:left; display:inline; margin:12px; padding:8px;}
+.bodyMagazine .item .photo { display:block; width:200px; height:292px; position:relative;}
+.bodyMagazine .item .photo img { width:200px; height:268px; background:#f1f1f1; display:block;}
+.bodyMagazine .item .photo h5{ font-weight:normal; font-size:12px; height:14px; line-height:14px; margin-top:6px; overflow:hidden; color:#98a1ab;}
+.bodyMagazine .item .photo h5 span { color:#cbd2d9; padding-left:6px;}
+.bodyMagazine .item .photo .album{ position:absolute; right:-9px; top:-9px; width:60px; height:60px; display:block; background:url(../images/corner.png) 0 0 no-repeat; display:none;}
+.bodyMagazine .item .photo:hover h5 { color:#7f8690;}
+.bodyMagazine .item .photo:hover h5 span { color:#98a1ab;}
+.bodyMagazine .item:hover .photo .album{ display:block;}
+.bodyMagazine .item .tools { height:20px; position:relative;}
+.bodyMagazine .item .tools em { height:20px; line-height:20px; display:block; cursor:pointer; color:#cbd2d9;}
+.bodyMagazine .item .tools em:hover { color:#98a1ab;}
+.bodyMagazine .item .tools em.iconHeart { float:left; text-indent:-999em; width:20px; background-image:url(../images/icon/heart16Gray.gif); background-position: 3px 50%; background-repeat:no-repeat;}
+.bodyMagazine .item .tools em.iconHeart:hover{background-image:url(../images/icon/heart16Blue.gif);}
+.bodyMagazine .item .tools em.favCurrent,
+.bodyMagazine .item .tools em.favCurrent:hover{ background-image:url(../images/icon/heart16Red.gif);}
+.bodyMagazine .item .tools em.iconPublisher { float:right; text-indent:22px; background-position: 3px 50%; background-repeat:no-repeat; font-size:12px;}
+.bodyMagazine .item .tools em.iconPublisher a{ color:#ccc;}
+.bodyMagazine .item .tools em.iconPublisher a:hover{ color:#666;}
+.bodyMagazine .item .tools em.iconPublisher a strong{ font-weight:normal;}
+
+
+
+/* 设备判断 */
+.padMagazineStyle{min-width:100%;}
+.padMagazineStyle .header20120905 .headerTop{overflow: hidden;padding-bottom: 0;}
+.padMagazineStyle .header20120905 .headerTop .conUser{right: 270px;}
+.padMagazineStyle .header20120905 .headerTop .search{width: 250px;right: 2px;}
+.padMagazineStyle .header20120905 .headerNav .logo{margin-left: 18px;} 
+.padMagazineStyle .header20120905 .headerNav ul.clearFix li a{width: 95px;}
+.padMagazineStyle .header20120905 .headerNav ul.clearFix li a.hot{width: 130px;}
+.padMagazineStyle .header20120905 .headerCategory{}
+.padMagazineStyle .header20120905 .outer .inner{width: 100%;}
+.padMagazineStyle .header20120905 .headerCategory .inner ul.title{position: static;margin:0;width: 100px;float:left;}
+.padMagazineStyle .header20120905 .headerCategory .inner ul li,.padMagazineStyle .header20120905 .headerCategory .inner ul li a{width: 58px;}
+.padMagazineStyle .header20120905 .headerCategory .inner ul li em{right: 0;}
+.padMagazineStyle .header20120905 .headerNav .subNav{width: auto;}
+.padMagazineStyle .header20120905 .headerNav ul.magazineCategory li ul{width: 300px;}
+.padMagazineStyle .header20120905 .headerNav ul.clearFix li.current ul li{margin-right: 8px;}
+
+.padMagazineStyle .footerBig{overflow: hidden;}
+.padMagazineStyle .footerBig .inner .contact{width: 250px;padding: 0 20px;}
+.padMagazineStyle .footerBig .inner .quickLink{width: 160px;}
+.padMagazineStyle .footerBig .inner .quickLink ul{width: 160px;}
+.padMagazineStyle .footerBig .inner .quickLink ul li{width: 80px;}
+.padMagazineStyle .footerBig .inner .contactForm{padding-left: 30px;}
+.padMagazineStyle .footerBig .inner .contactForm .sendBox{width: 200px;}
+.padMagazineStyle .footerBig .copyright{overflow: hidden;width: 84%;text-align: center;}
+.padMagazineStyle .footerBig .icon{margin-left: -90px;}
+
+.padMagazineStyle .bodyMagazine{width: auto;margin-left: 2px;}
+.padMagazineStyle .bodyMagazine .item{margin-left: 14px;}
+
+
+
+
+.phoneMagazineStyle{min-width: 320px;padding-top: 70px;}
+.phoneMagazineStyle .header20120905 .headerTop{display: none;}
+.phoneMagazineStyle .header20120905 .headerNav{top:0;}
+.phoneMagazineStyle .header20120905 .headerNav .logo,
+.phoneMagazineStyle .header20120905 .outer .inner{width: 100%;}
+.phoneMagazineStyle .header20120905 .headerNav .logo a{margin: 0 auto;}
+.phoneMagazineStyle .header20120905 .headerNav .subNav{display: none;}
+.phoneMagazineStyle #logo{float: none;margin-right: 0;}
+
+/*.phoneMagazineStyle .footerBig {display: none;}*/
+
+.phoneMagazineStyle .headerCategory{display: none;}
+.phoneMagazineStyle .headerBanner{display: none;}
+.phoneMagazineStyle .headerBanner img{width: 100%;}
+.phoneMagazineStyle .bodyMagazine{width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; box-sizing:border-box;padding: 0 15px;}
+.phoneMagazineStyle .bodyMagazine .item{-moz-box-sizing:border-box;-webkit-box-sizing:border-box; box-sizing:border-box;display: block;float: none;background-image: none; background:#fff; box-shadow:0 0 5px rgba(0,0,0,0.2); padding-right: 10px;margin-left: 0;margin-bottom: 10px;margin-top: 10px;height: auto;}
+.phoneMagazineStyle .bodyMagazine .item .photo img,.phoneMagazineStyle .bodyMagazine .item .photo{width: 100%;height: auto;}
+
+
+.phoneMagazineStyle .bodyMagazine .item:hover{ box-shadow:0 0 5px rgba(0,0,0,0.4);}
+.phoneMagazineStyle .footerBig .letterIndex{display: none;}
+.phoneMagazineStyle .footerBig .footerLink{display: none;}
+.phoneMagazineStyle .footerBig .quickLink{display: none;}
+.phoneMagazineStyle .footerBig .contact{display: none;}
+.phoneMagazineStyle .footerBig .contactForm{display: none;}
+.phoneMagazineStyle .footerBig .magmeWeiBo{padding: 0;margin: 0 auto;float: none;background-image:none;width: 230px;}
+.phoneMagazineStyle .footerBig .inner{width: 100%;}
+.phoneMagazineStyle .footerBig .icon{display: none;}
+
+.phoneMagazineStyle.screenPhoneVertical .bodyMagazine .item{width: 100%;}
+.phoneMagazineStyle.screenPhoneHorizontal .bodyMagazine .item{width: 49%;float: left;}
+.phoneMagazineStyle.screenPhoneHorizontal .bodyMagazine .item:nth-child(2n){float: right;}

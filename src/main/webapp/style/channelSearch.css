@@ -1,0 +1,31 @@
+@charset "utf-8";
+@import url("channelKanmi.css");
+@import url("channelQiemi.css");
+
+
+
+.header .nav .kanmi a,
+.header .nav .qiemi a{ border-bottom-color:#282F37;}
+.header .nav .kanmi a:hover,
+.header .nav .qiemi a:hover{ border-bottom-color:#63717C;}
+
+
+.body .body1000 .bodyKanmi h2{ border-top:3px solid #eee; height:32px; line-height:32px; font-size:14px; margin-left:20px; width:980px;}
+.body .body1000 .bodyKanmi .inner{ padding-bottom:0;}
+.body .body1000 .bodyKanmi .scroll-pane{ width:172px; height:280px;}
+.body .body1000 .bodyQiemi .scroll-pane{ width:172px; height:305px;}
+
+
+.body .body1000 .bodyUser .inner{ width:1030px; margin-left:-10px; padding-bottom:20px;}
+.body .body1000 .bodyUser .item{ width:172px; padding:10px; height:60px; margin:0 0 10px 10px; float:left;}
+.body .body1000 .bodyUser .item:hover{ background:#f9f9f9;}
+.body .body1000 .bodyUser .item .img{ width:60px; height:60px; float:left; margin:0 10px 0 0;}
+.body .body1000 .bodyUser .item strong{ margin-bottom:5px; display:block;}
+.body .body1000 .bodyUser .item p{ line-height:1.8em;}
+
+
+
+.nullInfo .info{ text-align:center; min-height:400px; _height:400px; line-height:400px; background:url(../images/icon/64frown.gif) 370px center no-repeat;}
+
+
+

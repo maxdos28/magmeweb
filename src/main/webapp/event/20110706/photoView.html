@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../style/global.css" rel="stylesheet" type="text/css" />
+<link href="../style/pop.css" rel="stylesheet" type="text/css" />
+<link href="20110706/style.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-new.min.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/jquery.inputfocus.js"></script>
+<script src="20110706/function.js"></script>
+<style>
+.body .left .menu{ background-position:0 150px;}
+</style>
+<!--[if lte IE 6]>
+<link href="../style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div class="main">
+<!--header-->
+<div id="header" class="header">
+    <h1 class="logo"><a href="javascript:void(0)">麦米magme</a></h1>
+    <!--nav-->
+    <ul id="menu" class="nav">
+        <li id="homePage"><a href="javascript:void(0)">首页</a></li>
+        <li id="kanmi"><a id="" href="javascript:void(0)">看米</a></li>
+        <li><a href="javascript:void(0)">切米</a></li>
+        <li class="current"><a href="javascript:void(0)">麦米事件</a></li>
+    </ul>
+    <!--search-->
+    <div class="search">
+        <input type="text" class="in" tips="输入您想看的杂志" /><a class="btn"></a>
+    </div>
+    <!--userBar-->
+    <ul id="userBar" class="userBar">
+        <li class="l3"><a id="help" class="help png" href="javascript:void(0)">帮助</a></li>
+       <li class="l2"><a id="login" class="exit png" href="javascript:void(0)">登录</a>
+        	<div class="dropBox">
+                <div class="dropBoxhead png"></div>
+                <fieldset class="png">
+                	<form id="logInForm" action="">
+	                    <div class="input">
+	                    	<em><input class="in" id="userName" name="userName" type="text" tips="用户名/邮箱" /></em>
+	                    	<em class="tipsRight"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" name="password" type="text" tips="密码" />
+	                    		<input class="in hide" id="password" name="password" type="password" tips="密码" />
+	                    	</em>
+	                    	<em class="tipsRight"></em>
+	                    </div>
+	                    <div code="getcode">
+	                    	<em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tips="验证码" /></em>
+	                    	<em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="../images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+	                    </div>
+	                    <div>
+	                    	<em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+	                    	<em class="loading"></em>
+                            <em class="remanber"><label><input type="checkbox" />下次自动登录</label></em>
+	                    	<em class="tipsError">请填写相关信息</em>
+	                    </div>
+                        <div class="last">
+                        	<em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+                        	<em><a href="javascript:void(0)">新用户注册</a></em>
+                        </div>
+                    </form>
+                </fieldset>
+                <div class="dropBoxfoot png">
+                	<a href="javascript:void(0)" class="loginqq">腾讯QQ登录</a>
+                </div>
+            </div>
+        </li>
+        <li class="l1"><a id="register" class="reg png" href="javascript:void(0)">注册</a>
+        	<div class="dropBox">
+                <div class="dropBoxhead png"></div>
+                <fieldset class="png">
+					<form id="registerForm" action="">
+	                    <div class="input">
+	                    	<em><input class="in" id="userName" name="userName" type="text" tips="用户名" /></em>
+	                    	<em id="checkName" class="tipsRight" style="display:block;"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em><input class="in" id="email" name="email" type="text" tips="邮箱" /></em>
+	                    	<em id="checkEmail" class="tipsRight"></em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" type="text" tips="密码" />
+	                    		<input class="in" id="password" name="password" style="display:none;" type="password" tips="密码" />
+	                    	</em>
+	                    </div>
+	                    <div class="input">
+	                    	<em>
+	                    		<input class="in" type="text" tips="确认密码"/>
+	                    		<input class="in" id="password2" name="password2" style="display:none;" type="password" tips="确认密码" />
+	                    	</em>
+	                    	<em id="checkPassword" class="tipsRight"></em>
+	                    </div>
+	                    <div code="getcode">
+	                    	<em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tips="验证码" /></em>
+	                    	<em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="../images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+	                    </div>
+	                    <div class="last">
+	                    	<em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+	                    	<em class="loading"></em>
+	                    	<em class="tipsError">请填写相关信息</em>
+	                    </div>
+					</form>
+                </fieldset>
+                <div class="dropBoxfoot png">
+                	<a href="javascript:void(0)" class="loginqq">腾讯QQ登录</a>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+<!--body-->
+<div class="body clearFix">
+	<div class="left">
+    	<ul class="menu clearFix">
+        	<li><a href="index.html">活动首页</a></li>
+        	<li><a href="info.html">活动介绍</a></li>
+        	<li><a href="join.html">我要参与</a></li>
+        	<li><a href="questions.html">活动问答</a></li>
+        	<li><a href="photos.html">体验作品</a></li>
+        	<li><a href="show.html">现场照片</a></li>
+        	<li><a href="process.html">招聘现场流程</a></li>
+        	<li><a href="delivery.html" class="important">杂志派送</a></li>
+        </ul>
+        <a class="registerLink">参与即送精美杂志</a>
+    	<ol class="top10">
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        	<li><a href="javascript:void(0)">用户名</a></li>
+        </ol>
+    </div>
+	
+    
+    
+    <div class="side490" id="personOpus">
+    	<div class="conC conReportDetail">
+        	<h2><span>2011-5-23</span>标题标题<em>点击展开</em></h2>
+            <div class="content">
+                <a class="iconDig" href="javascript:void(0)">投票<strong>88</strong></a>
+                <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                <p><img src="../images/tempMagezineBig4.jpg" width="478" /></p>
+                <a class="iconDig floatr" href="javascript:void(0)">投票<strong>88</strong></a>
+                <div class="comment">
+                    <div class="item itemTitle" name="#comment">
+                        <strong>评论<span>(20)</span></strong>
+                    </div>
+                    <div class="item inputArea clearFix">
+                        <textarea tips="还没有评论，赶快抢沙发！"></textarea>
+                        <div class="clearFix hide">
+                            <input type="text" class="in" tips="用户名" />
+                            <input type="text" class="in" name="password" tips="密码" />
+                            <input type="password" name="password" class="in g100 hide" tips="密码" />
+                            <input type="text" class="in code" tips="验证码" />
+                            <a href="javascript:void(0)" class="floatl"><img src="../images/code.gif" class="floatl" />&nbsp;&nbsp;看不清，换一个</a>
+                        </div>
+                        <a href="javascript:void(0)" class="btnBS floatr" >评论</a>
+                        <a href="javascript:void(0)" class="important floatl hide" >新用户注册</a>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<div class="conC conReportDetail">
+        	<h2><span>2011-5-23</span>标题标题<em>点击展开</em></h2>
+            <div class="content">
+                <a class="iconDig" href="javascript:void(0)">投票<strong>88</strong></a>
+                <p>内容内容内容内容内容容内容内内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内内容内容内容内容内容内容内容内容内容</p>
+                <a class="iconDig floatr" href="javascript:void(0)">投票<strong>88</strong></a>
+                <div class="comment">
+                    <div class="item itemTitle" name="#comment">
+                        <strong>评论<span>(20)</span></strong>
+                    </div>
+                    <div class="item inputArea clearFix">
+                        <textarea tips="还没有评论，赶快抢沙发！"></textarea>
+                        <div class="clearFix hide">
+                            <input type="text" class="in" tips="用户名" />
+                            <input type="text" class="in" name="password" tips="密码" />
+                            <input type="password" name="password" class="in g100 hide" tips="密码" />
+                            <input type="text" class="in code" tips="验证码" />
+                            <a href="javascript:void(0)" class="floatl"><img src="../images/code.gif" class="floatl" />&nbsp;&nbsp;看不清，换一个</a>
+                        </div>
+                        <a href="javascript:void(0)" class="btnBS floatr" >评论</a>
+                        <a href="javascript:void(0)" class="important floatl hide" >新用户注册</a>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<div class="conC conReportDetail">
+        	<h2><span>2011-5-23</span>标题标题<em>点击展开</em></h2>
+            <div class="content">
+                <a class="iconDig" href="javascript:void(0)">投票<strong>88</strong></a>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <a class="iconDig floatr" href="javascript:void(0)">投票<strong>88</strong></a>
+                <div class="comment">
+                    <div class="item itemTitle" name="#comment">
+                        <strong>评论<span>(20)</span></strong>
+                    </div>
+                    <div class="item inputArea clearFix">
+                        <textarea tips="还没有评论，赶快抢沙发！"></textarea>
+                        <div class="clearFix hide">
+                            <input type="text" class="in" tips="用户名" />
+                            <input type="text" class="in" name="password" tips="密码" />
+                            <input type="password" name="password" class="in g100 hide" tips="密码" />
+                            <input type="text" class="in code" tips="验证码" />
+                            <a href="javascript:void(0)" class="floatl"><img src="../images/code.gif" class="floatl" />&nbsp;&nbsp;看不清，换一个</a>
+                        </div>
+                        <a href="javascript:void(0)" class="btnBS floatr" >评论</a>
+                        <a href="javascript:void(0)" class="important floatl hide" >新用户注册</a>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                    <div class="item clearFix">
+                        <a href="javascript:void(0)">
+                        <span>2小时前</span>
+                        <div class="userHead"><img src="../images/head46.gif" title="width:50px;" /><sub></sub></div>
+                        <strong>名字</strong>
+                        </a>
+                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>    
+    
+
+
+
+    <div class="side300">
+    	<a class="btnBack" href="photos.html">返回体验作品</a>
+    	<!--conUserInfo-->
+        <div class="conB conUserInfo">
+        	<h2>麦米哥</h2>
+        	<div class="conBody">
+            	<div class="userHead">
+                	<a href="javascript:void(0)"><img src="../images/head150.gif" title="用户名" /></a>
+                </div>
+                <div class="userInfo">
+                	<p class="iconSex"><strong>性别：</strong>男</p>
+                	<p class="iconBirthday"><strong>生日：</strong>1900-10-10</p>
+                	<p class="iconCity"><strong>来自：</strong>上海</p>
+                	<p class="iconLevel"><strong>等级：</strong>钻石至尊</p>
+                	<p class="iconDoc"><strong>报告：</strong><a href="javascript:void(0)" class="important" title="点击查看作品">99</a></p>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+    
+</div>
+
+
+
+
+
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="inner">
+    	<p>Copyright &copy; 2011 麦米版权所有 | 沪ICP备 <a href="http://www.miibeian.gov.cn" target="_blank">10217320</a></p>
+        <div class="nav">
+        	<ul class="m1">
+            	<li><a href="javascript:void(0)">公司信息</a>
+                	<ul>
+                        <li><a href="static_join_us.html">关于我们</a></li>
+                        <li><a href="static_about_us.html">加入我们</a></li>
+                        <li><a href="static_bulletin.html">麦米号外</a></li>
+                        <li><a href="static_policy.html">法律声明</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m2">
+            	<li><a href="javascript:void(0)">商务合作</a>
+               		<ul>
+                        <li><a href="javascript:void(0)">上传杂志</a></li>
+                        <li><a href="javascript:void(0)">合作媒体</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m3">
+            	<li><a href="javascript:void(0)">获取更新</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">邮件订阅</a></li>
+                        <li><a href="javascript:void(0)">麦米RSS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m4">
+            	<li><a href="javascript:void(0)">帮助中心</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">意见反馈</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="shareTools">
+        	<a href="javascript:void(0)" class="sinaweibo" title="新浪微博"></a>
+        	<a href="javascript:void(0)" class="qqweibo" title="腾讯微博"></a>
+        	<a href="javascript:void(0)" class="sohuweibo" title="搜狐微博"></a>
+        	<a href="javascript:void(0)" class="neteasyweibo" title="网易微博"></a>
+        	<a href="javascript:void(0)" class="baidu" title="百度"></a>
+        	<a href="javascript:void(0)" class="kaixin" title="开心网"></a>
+        	<a href="javascript:void(0)" class="renren" title="人人网"></a>
+        	<a href="javascript:void(0)" class="douban" title="豆瓣"></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+

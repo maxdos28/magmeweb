@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<config>
+		<data>
+			<tagServerUrl>http://192.168.1.43/user-tag!addTagJson2.action?issueId=610&pageNo=10&title=aaa&x=0&y=0&width=0&height=0&description=aaa</tagServerUrl>
+		</data> 
+	</config>
+</root>

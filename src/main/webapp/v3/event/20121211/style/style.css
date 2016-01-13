@@ -1,0 +1,10 @@
+html body{ background:url(../images/img1.jpg) 0 60px repeat-x #DEE46A; padding-top:60px;}
+
+.body{ width:980px;}
+.body .con1{ max-width:1350px; min-width:980px; margin-left:-160px;}
+
+.body img{ display:block;}
+
+/*footer*/
+.footerBig .inner { width:900px;}
+.footerBig .inner .contact { display:none;}

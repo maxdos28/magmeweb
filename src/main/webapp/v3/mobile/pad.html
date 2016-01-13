@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="mobileimages/iconApp.png" />
+<link rel="stylesheet" type="text/css" href="style/html5Reset.css"/>		
+<link rel="stylesheet" type="text/css" href="style/global.css"/>
+<link rel="stylesheet" type="text/css" href="style/pad.css"/>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script>
+$(function(){
+	$('.body').masonry({itemSelector: '.item'});
+});
+</script>
+<title>Magme Mobile</title>
+</head>
+
+<body class="pad" id="body">
+<div class="header" id="header">
+	<a class="logo" href="pad.html">Magme</a>
+	<div class="nav" href="javascript:void(0)">
+    	<ul class="clearFix">
+        	<li class="l1"><a class="current" href="javascript:void(0)"><span>汽车旅游</span></a></li>
+        	<li class="l2"><a href="javascript:void(0)"><span>商业财经</span></a></li>
+        	<li class="l3"><a href="javascript:void(0)"><span>时尚娱乐</span></a></li>
+        	<li class="l4"><a href="javascript:void(0)"><span>人文情感</span></a></li>
+        	<li class="l5"><a href="javascript:void(0)"><span>数码科技</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="body clearFix">
+	<div class="item size11"><a href="padRead.html"><img src=""><span>text text texttext text texttext text texttext text texttext text texttext text texttext text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size12"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size21"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size12"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size21"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size12"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size21"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size12"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+	<div class="item size11"><a href="javascript:void(0)"><img src=""><span>text text text</span></a></div>
+</div>
+<div class="pageLoad"><span>正在加载内容...</span></div>
+
+
+
+
+<!--<div class="pop" id="fancybox-wrap" style="width:400px;">
+    <a class="del" title="关闭"></a>
+    <div id="fancybox-content" style="height:200px;">
+        <div id="popLogin" class="popContent">
+	    	<div class="jqueryTagBox" id="popLoginTab">
+	    		<h2>用户登入</h2>
+                <form id="popLoginForm" action="" onsubmit="return false;" method="post">
+                    <div class="con">
+                        <fieldset class="new">
+                            <div>
+                                <em class="title" >用户名/邮箱</em>
+                                <em><input class="input" name="userName" type="text" /></em>
+                            </div>
+                            <div>
+                                <em class="title" >密码</em>
+                                <em><input class="input" name="password" type="password" /></em>
+                            </div>
+                            <div>
+                                <em class="title"></em>
+                                <em class="m0"><a class="btnBB" name="signIn" href="#" >登录</a></em>
+                                <em><a id="popNewUserReg" class="btnWB" href="javascript:void(0)">注册</a></em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+                        
+        	</div>
+    	</div>
+    </div>
+</div>
+
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:400px;">
+    <a class="del" title="关闭"></a>
+    <div id="fancybox-content" style="height:260px;">
+        <div id="popRegister" class="popContent">
+	    	<div class="jqueryTagBox" id="popRegisterTab">
+				<h2>注册新用户</h2>
+			    <form id="popRegisterForm" action="" onsubmit="return false;" method="post">
+			        <div class="con">
+			            <fieldset class="new">
+			                <div>
+			                    <em class="title" >用户名</em>
+			                    <em><input class="input" name="userName" type="text" /></em>
+			                </div>
+			                <div>
+			                    <em class="title" >邮箱</em>
+			                    <em><input class="input" name="email" type="text" /></em>
+			                </div>
+			                <div>
+			                    <em class="title" >密码</em>
+			                    <em><input class="input" name="password" type="password" /></em>
+			                </div>
+			                <div>
+			                    <em class="title" >确认密码</em>
+			                    <em><input class="input" name="password" type="password" /></em>
+			                    <em class="tipsRight"></em>
+			                </div>
+			                <div>
+			                    <em class="title" ></em>
+			                    <em class="m0"><a class="btnBB" name="subimt" href="#" >注册</a></em>
+			                </div>
+			            </fieldset>
+			        </div>
+			     </form> 
+
+        	</div>
+    	</div>
+    </div>
+</div>-->
+
+
+
+
+
+
+</body>
+</html>

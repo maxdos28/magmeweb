@@ -1,0 +1,319 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelAdmin.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.scrollphoto.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<script src="js/admin.js"></script>
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header headerAdmin clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="后台-首页.html">(SEO)麦米 Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li><a href="后台-杂志管理.html">杂志管理</a></li>
+                <li><a href="后台-广告管理.html">广告管理</a></li>
+                <li><a href="后台-嵌入式阅读器.html">嵌入式阅读器</a></li>
+                <li class="current"><a href="后台-用户设置.html">用户设置</a></li>
+                <li><a href="后台-编辑管理-出版商管理.html">编辑管理</a></li>
+                <li><a href="#">数据后台</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="name"><strong id="nickName">Lewis</strong></li>
+                <li class="logout" id="logout"><a href="后台-登录.html" title="退出">退出</a></li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="inner">
+                <li><a href="后台-用户设置.html">账户信息设置</a></li>
+                <li class="current"><a href="后台-杂志设置.html">杂志信息设置</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<!--body-->
+<div class="body">
+    <div class="conLeftMiddleRight">
+        <div class="conB con11">
+        	<div class="head">
+            	<img src="images/head150.gif" />
+            	<a class="btnWS" href="#"><span>修改头像</span><input type="file" class="inputFile" /></a>
+            </div>
+            <div class="info">
+            	<fieldset>
+                	<div class="top">
+                    	<em class="floatr"><a class="btnBB" href="#">杂志定位</a></em>
+                    	<em><select><option>选择杂志</option></select></em>
+                    </div>
+                    <hr />
+                    <h6>基本信息（必填）</h6>
+                	<div class="clear floatl g300">
+                    	<em class="title">杂志名称</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl">
+                    	<em class="title">英文名称</em>
+                    	<em><input type="text" class="input g170" /></em>
+                        <em class="tips">英文名称将用于二级域名，填写拼音也可</em>
+                    </div>
+                	<div class="clear ">
+                    	<em class="title">杂志描述</em>
+                   	  <em><textarea rows="4" class="input g470" type="text"></textarea></em>
+                    </div>
+                	<div class="clear ">
+                    	<em class="title">杂志社地址</em>
+                    	<em><input type="text" class="input g470" /></em>
+                    </div>
+                    <script>
+                    	$(function(){
+							jQuery.fn.isChildAndSelfOf = function(b){return (this.closest(b).length > 0)};
+							$("#category .g470").focus(function(){
+								$("#category .selectBox").stop(true,true).fadeIn(200);
+							});
+							$(document).click(function(event){
+								if(!$(event.target).isChildAndSelfOf ("#category")){
+									$("#category .selectBox").fadeOut(200);
+								}
+							});
+						
+							$("input[name='test']").change(function(e){
+								if($("input[name='test']:checked").length > 3){
+									$(this).removeAttr("checked");
+									alert("不能在选择了已经选了3个了!");
+								}
+								chooseAllSorts();
+							});
+							
+							function chooseAllSorts(){
+								var value = "",
+									text = "";
+								$("input[name='test']:checked").each(function(){
+									value += "," + $(this).val();
+									text += "," + $(this).parent().text();
+								});
+								value = value.slice(1);
+								text = text.slice(1);
+								
+								$("#showSorts").val(text);
+								$("#submitSorts").val(value);
+							}
+						})
+                    </script>
+                	<div class="clear " id="category">
+                    	<em class="title">杂志类目</em>
+                    	<em><input type="text" class="input g470" id="showSorts"/><input type="text" id="submitSorts" name="sorts" style="display:none;"></em>
+                        <em class="tips">最多可选三项</em>
+                        <div class="selectBox hide">
+                        	<label><input type="checkbox" name="test" value="1">分类名1</label>
+                        	<label><input type="checkbox" name="test" value="2">分类名2</label>
+                        	<label><input type="checkbox" name="test" value="3">分类名3</label>
+                        	<label><input type="checkbox" name="test" value="4">分类名4</label>
+                        	<label><input type="checkbox" name="test" value="5">分类名5</label>
+                        	<label><input type="checkbox" name="test" value="6">分类名6</label>
+                        	<label><input type="checkbox" name="test" value="7">分类名7</label>
+                        	<label><input type="checkbox" name="test" value="8">分类名8</label>
+                        	<label><input type="checkbox" name="test" value="9">分类名9</label>
+                        	<label><input type="checkbox" name="test" value="10">分类名10</label>
+                        	<label><input type="checkbox" name="test" value="11">分类名11</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        	<label><input type="checkbox">分类名</label>
+                        </div>
+                    </div>
+                	<div class="clear clip">
+                    	<em class="title">杂志排列</em>
+                    	<em class="type1"><label><input type="radio">单页<span></span></label></em>
+                    	<em class="type2"><label><input type="radio">跨页<span></span></label></em>
+                        <em class="tips">直接影响杂志上传后的处理方式，请正确选择</em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">杂志刊号</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl">
+                    	<em class="title">出版人</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">新浪微博账号</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl">
+                    	<em class="title">新浪微博效验码</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+					<hr class="clear" />
+                    <h6>职位信息（选填）</h6>
+                	<div class="clear floatl g300">
+                    	<em class="title">社长</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">总编</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">主编</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">副主编</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">执行主编</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">首席顾问</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">运营总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">编辑部主任</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">编辑总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">创意总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">设计总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">摄影总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">发行总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">策划总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">媒介总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">广告总监</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">文字编辑</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">专题编辑</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">英文网站</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">网站编辑</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">流程编辑</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">记者</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">美术设计</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">美术编辑</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">摄影记者</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">发行主管</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">广告主管</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">媒介经理</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="clear floatl g300">
+                    	<em class="title">媒介执行</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                	<div class="floatl g300">
+                    	<em class="title">排版校队</em>
+                    	<em><input type="text" class="input g170" /></em>
+                    </div>
+                    <hr class="clear" />
+                	<div class="action">
+                    	<em><a href="#" class="btnBB">保存</a></em>
+                    	<em><a href="#" class="btnWB">新建</a></em>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

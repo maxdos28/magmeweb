@@ -1,0 +1,3 @@
+	尊敬的麦米网客户${userName}您好，您在麦米网后台为${issueName}期刊添加的ID为${advertiseId}，名称为${advertiseTitle}的广告已经通过审核并于<br/>
+正式上线，您可以至${domain}找到相关期刊来浏览广告效果，真诚希望与您再次合作，谢谢<br/>
+																 麦米网客户服务部

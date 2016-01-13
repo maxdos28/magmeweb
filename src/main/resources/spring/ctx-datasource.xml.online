@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<beans default-autowire="byName" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/data/mongo 
+	http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+  default-lazy-init="true">
+
+	<bean id="magmecnDatasource" class="org.springframework.jndi.JndiObjectFactoryBean">
+                <property name="jndiName" value="java:comp/env/jdbc/magmecn"/>
+    </bean>
+    
+    <bean id="magmecnDatasourceStat" class="org.springframework.jndi.JndiObjectFactoryBean">
+                <property name="jndiName" value="java:comp/env/jdbc/stat"/>
+    </bean>
+    <bean id="magmecnDatasourceMobileStat" class="org.springframework.jndi.JndiObjectFactoryBean">
+                <property name="jndiName" value="java:comp/env/jdbc/mobileStat"/>
+    </bean>
+    	
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ibatis/sql-map-config.xml</value>
+        </property>
+        <property name="dataSource">
+            <ref bean="magmecnDatasource" />
+        </property>        
+    </bean>
+    
+	<bean id="sqlMapClientStat" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ibatis/sql-map-config.xml</value>
+        </property>
+        <property name="dataSource">
+            <ref bean="magmecnDatasourceStat" />
+        </property>        
+    </bean>    
+	<bean id="sqlMapClientMobileStat" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ibatis/sql-map-config.xml</value>
+        </property>
+        <property name="dataSource">
+            <ref bean="magmecnDatasourceMobileStat" />
+        </property>        
+    </bean> 
+    
+    <bean id="sqlMapClientTemplate" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+        <property name="sqlMapClient">
+            <ref bean="sqlMapClient" />
+        </property>
+    </bean>
+        
+    <bean id="sqlMapClientTemplateStat" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+        <property name="sqlMapClient">
+            <ref bean="sqlMapClientStat" />
+        </property>
+    </bean>
+    <bean id="sqlMapClientTemplateMobileStat" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+        <property name="sqlMapClient">
+            <ref bean="sqlMapClientMobileStat" />
+        </property>
+    </bean>
+    
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource">
+            <ref local="magmecnDatasource"/>
+        </property>
+    </bean>
+
+	<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+         <property name="transactionManager" ref="transactionManager" />
+         <property name="transactionAttributes">
+              <props>
+                   <prop key="*">PROPAGATION_REQUIRED</prop>
+                   <prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="load*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="query*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="search*">PROPAGATION_REQUIRED,readOnly</prop>
+              </props>
+         </property>
+     </bean>
+
+     <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+         <property name="beanNames">
+              <list>
+                   <value>*Service</value>
+              </list>
+         </property>
+         <property name="interceptorNames">
+              <list>
+                   <value>transactionInterceptor</value>
+              </list>
+         </property>
+     </bean>
+</beans>

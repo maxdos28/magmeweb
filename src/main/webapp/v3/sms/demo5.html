@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style/royalslider.css"/>
+<link rel="stylesheet" type="text/css" href="style/rs-default.css"/>
+<link rel="stylesheet" type="text/css" href="style/tpl.css"/>
+<title>短信系统</title>
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.royalslider.min.js"></script>
+<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.js"></script>
+<script src="js/jquery.scrollto.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script>
+$(function(){
+
+//设置面面加载后地址栏收起
+window.addEventListener('load', function() {
+setTimeout(scrollTo, 0, 0, 1);
+}, false);
+
+
+$('.royalSlider').royalSlider({
+    controlNavigation: 'bullets',		//thumbnails,bullets,none
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 4,     
+    autoScaleSliderHeight: 3.2,
+	arrowsNav: false,
+    loop: false,
+    imageScaleMode: 'fit',	//fill,fit-if-smaller
+    navigateByClick: true,
+    numImagesToPreload:3,
+	slidesSpacing:20,
+	slidesOrientation:'horizontal',		//vertical,horizontal
+	transitionType:'move',
+	controlsInside:true,
+    arrowsNavAutoHide: true,
+    arrowsNavHideOnTouch: true,
+    keyboardNavEnabled: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
+    globalCaptionInside: false,
+    thumbs: {
+      orientation: 'horizontal',			//vertical,horizontal
+      appendSpan: true,
+      firstMargin: true,
+	  fitInViewport: true,
+      paddingBottom: 0
+    }
+});
+
+
+});
+</script>
+<style>
+.rsDefault .rsThumbs{ padding-bottom:5px;}
+</style>
+  </head>
+  <body>
+    <div class="main tpl3">
+    	<h1 class="header">汤臣别墅</h1>
+        <div class="nav">
+        	<a href="default.html">汤臣别墅</a><a href="demo2.html">地理位置</a><a href="demo3.html">设计理念</a><a href="demo4.html">建材设备</a><a href="demo5.html" class="current">户型图集</a>
+        </div>
+    	<div class="body">
+            
+        	<div class="content">
+                <strong>独栋别墅A型</strong><br>
+            </div>
+            <div id="gallery-1" class="royalSlider rsDefault">
+            <a class="rsImg" data-rsw="1024" data-rsh="683"  data-rsBigImg="ui/p51.jpg" href="ui/p51.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p51.jpg" /></a>
+            <a class="rsImg" data-rsw="548" data-rsh="701"  data-rsBigImg="ui/p1.gif" href="ui/p1.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p1.gif" /></a>
+            <a class="rsImg" data-rsw="548" data-rsh="677"  data-rsBigImg="ui/p2.gif" href="ui/p2.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p2.gif" /></a>
+            <a class="rsImg" data-rsw="650" data-rsh="646"  data-rsBigImg="ui/p3.gif" href="ui/p3.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p3.gif" /></a>
+            </div>
+
+
+
+        	<div class="content">
+                <strong>独栋别墅B型</strong><br>
+            </div>
+            <div id="gallery-1" class="royalSlider rsDefault">
+            <a class="rsImg" data-rsw="1024" data-rsh="693"  data-rsBigImg="ui/p52.jpg" href="ui/p52.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p52.jpg" /></a>
+            <a class="rsImg" data-rsw="548" data-rsh="701"  data-rsBigImg="ui/p1.gif" href="ui/p1.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p1.gif" /></a>
+            <a class="rsImg" data-rsw="548" data-rsh="677"  data-rsBigImg="ui/p2.gif" href="ui/p2.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p2.gif" /></a>
+            <a class="rsImg" data-rsw="650" data-rsh="646"  data-rsBigImg="ui/p3.gif" href="ui/p3.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p3.gif" /></a>
+            </div>
+            
+            
+        	<div class="content">
+                <strong>独栋别墅C型</strong><br>
+            </div>
+            <div id="gallery-1" class="royalSlider rsDefault">
+            <a class="rsImg" data-rsw="1024" data-rsh="683"  data-rsBigImg="ui/p53.jpg" href="ui/p53.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p53.jpg" /></a>
+            <a class="rsImg" data-rsw="548" data-rsh="701"  data-rsBigImg="ui/p1.gif" href="ui/p1.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p1.gif" /></a>
+            <a class="rsImg" data-rsw="548" data-rsh="677"  data-rsBigImg="ui/p2.gif" href="ui/p2.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p2.gif" /></a>
+            <a class="rsImg" data-rsw="650" data-rsh="646"  data-rsBigImg="ui/p3.gif" href="ui/p3.gif">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p3.gif" /></a>
+            </div>
+        </div>
+    	<div class="pagedock">
+        	<ul>
+            	<li class="mail"><a href="#"></a></li>
+            	<li class="qq"><a href="#"></a></li>
+            	<li class="phone400"><a href="tel:40000000000"></a></li>
+            	<li class="weibo"><a href="#"></a></li>
+            	<li class="weixin"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>

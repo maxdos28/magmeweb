@@ -1,0 +1,141 @@
+domain=http://www.magme.cn
+app.server.url=
+
+friend.link.server.url=http://static.magme.com/image/link
+friend.link.local.url=/mnt/static/image/link
+
+ad.profile.server.url=http://static.magme.com/adprofiles
+ad.profile.server.url.tmp=http://static.magme.com/adprofiles/tmp
+ad.profile.local.url=/mnt/static/adprofiles
+ad.profile.local.url.tmp=/mnt/static/adprofiles/tmp
+pageCacheTimeout=1800
+
+#develop setting
+staticLocalUrl=d:/mnt/static
+mag.local.url=/mnt/static/pdfprofile
+mag.local.url.tmp=/mnt/static/pdfprofile/tmp
+mag.local.url.pdf=/usr/local/magmecn/static/printhidepdf
+mag.local.url.noprintpdf=/usr/local/magmecn/static/pdf
+mag.local.url.ad=/mnt/static/ad
+mag.job.pwd=jAw483Yp
+mag.job.user=root
+mag.job.ip=192.168.1.100
+sample.local.url=\\\\192.168.1.100\\static\\samplefiles
+sample.local.url.tmp=\\\\192.168.1.100\\static\\samplefiles\\tmp
+profile.local.url=\\\\192.168.1.100\\static\\profiles
+profile.local.url.tmp=\\\\192.168.1.100\\static\\profiles\\tmp
+publish.profile.local.url=E:\\work\\ee\\trunk\\magmecn_web\\src\\main\\webapp\\publishprofiles\\
+publish.profile.local.url.tmp=E:\\work\\ee\\trunk\\magmecn_web\\src\\main\\webapp\\publishprofiles\\tmp\\
+tag.local.url=\\\\192.168.1.100\\static\\tags
+
+index.publication.local.url=D:\\static\\index\\publication
+index.comment.local.url=D:\\static\\index\\comment
+index.user.local.url=D:\\static\\index\\user
+index.publisher.local.url=D:\\static\\index\\publisher
+index.issue.local.url=D:\\static\\index\\issue
+index.userimage.local.url=D:\\static\\index\\userimage
+index.creative.local.url=D:\\static\\index\\creative
+index.sns.lucene.path.local.url=D:\\static\\index\\sns
+index.fpage.event.lucene.path.local.url=D:\\static\\index\\fpageevent
+index.phoenixarticle.local.url=D:\\static\\index\\phoenixarticle
+
+ios.push.path.local.url=/usr/local/magmecn/static/push
+
+event.local.url=\\\\192.168.1.100\\static\\event
+image.local.url=\\\\192.168.1.100\\static\\images
+fpage.local.url=\\\\192.168.1.100\\static\\fpage
+creative.img.url=E:\\work\\ee\\magmecn_web\\src\\main\\webapp\\snsimg
+
+file.filter.path=\\\\192.168.1.100\\static\\filter\\illegalkeyword.txt
+
+
+newPublisherLocalUrl=/mnt/static/newPublisher
+newPublisherServerUrl=http://static.magme.com/newPublisher
+
+activityAlbumLocalUrl=/usr/local/magmecn/static/activityalbum
+activityAlbumServerUrl=http://static.magme.com/activityalbum
+
+pageDLocalUrl=/usr/local/magmecn/static/paged
+pageDServerUrl=http://static.magme.com/paged
+
+static.server.url=http://static.magme.com
+mag.server.url=http://static.magme.com/pdfprofile
+sample.server.url=http://static.magme.com/samplefiles
+profile.server.url=http://static.magme.com/profiles
+profile.server.url.tmp=http://static.magme.com/profiles/tmp
+publish.profile.server.url=http://static.magme.com/publishprofiles
+publish.profile.server.url.tmp=http://static.magme.com/publishprofiles/tmp
+tag.server.url=http://static.magme.com/tags
+event.server.url=http://static.magme.com/event
+fpage.server.url=http://static.magme.com/fpage
+creative.img.server.url=http://static.magme.com/snsimg
+ad.server.url=http://static.magme.com/ad
+
+stat.server.url = http://stat.magme.cn/onepix.gif
+##swfCmd=/usr/local/bin/pdf2swf -p pages pdfFile -o destionations -f -T 9
+swfCmd=E:/SWFTools/pdf2swf.exe -p pages pdfFile -o destionations -f -T 9
+reDealJpgSwfCmd=/usr/local/magme_mars/src/swfMakeup.sh inputFile issueId missPage totalPage reDealType
+swfCmdErrAppend=-s poly2bitmap
+
+flvTransferCmd=ffmpeg -i inputFile -y -s 600*400  -ar 11050 -r 8 -qscale 6  outputFile
+jpgTranferCmd=ffmpeg -i inputFile -y -f image2 -ss 5  -vframes 1 outputFile
+videoTransferToMp4=ffmpeg -i inputFile -r 24.00 -b 500.00k -qscale 1 -ar 22050 -ab 64.00k -ac 2 -vol 256 -y outputFile
+swfReTransferCmd=swfCmd -p pageNo -G -S -s languagedir=swflanguagedir inputFile -o outputFile -T 9
+xpdflanguagedir=/usr/local/xpdf-3.02pl6-linux/xpdf-chinese-simplified
+mag.local.url.tmpswf=/mnt/static/tmpswf
+
+##pdfToJpg=/usr/local/bin/convert pdfFile -resize wxh -quality 90 -colorspace rgb -monitor destionations
+##pdfToJpg=C:/ImageMagick-6.6.6-Q16/convert pdfFile -resize wxh -quality 90 -colorspace rgb -monitor destionations
+pdfToJpg=gswin32c -dPDFFitPage -dUseCropBox -o outputFile -sDEVICE\=jpeg -gwxh -dTextAlphaBits\=4 -dGraphicsAlphaBits\=4 -dFirstPage\=F -dLastPage\=L inputFile   
+
+##pdfNormal=/usr/local/bin/gswin32c -dPDFFitPage -sPAPERSIZE=a4 -o outputFile -sDEVICE=pdfwrite inputFile
+pdfNormal=gswin32c -dPDFFitPage -sPAPERSIZE=a4 -o outputFile -sDEVICE=pdfwrite inputFile
+##pdfChop=/usr/local/bin/gs  -o outputFile -sDEVICE=pdfwrite -gwxh -dFirstPage=F -dLastPage=L -c "<</PageOffset [w h]>> setpagedevice" -f inputFile
+pdfChop=gswin32c  -o outputFile -dUseCropBox -sDEVICE\=pdfwrite -gwxh -dFirstPage\=F -dLastPage\=L -c "<</PageOffset [w h]>> setpagedevice" -f inputFile  
+##pdfMerge=/usr/local/bin/gs -dNOPAUSE -sDEVICE=pdfwrite -o MergedFile -dBATCH pdfFiles
+pdfMerge=gswin32c -dNOPAUSE -sDEVICE=pdfwrite -o mergedFile -dBATCH pdfFiles
+
+mail.host=mail.magme.cn
+mail.smtp.auth=true
+mail.username.reader=magmesp@magme.cn
+mail.password.reader=123
+mail.username.publisher=service@magme.cn
+mail.password.publisher=123
+
+mail.from.publisher=service@magme.cn
+mail.subject=welcome to magme
+
+mail.from.reader=magmesp@magme.cn
+mail.from.name.reader=magme
+mail.from.name.publisher=magme
+mail.to=wanxi27@gmail.com
+
+issueWidth=184
+backIssueWidth=64
+
+issueWidth1=100
+issueHeight1=132
+
+issueWidth2=110
+issueHeight2=145
+
+issueWidth3=248
+issueHeight3=330
+
+familyNameCar=??
+familyNameFasion=??
+familyNameBeauty=??
+
+
+isStat=true
+
+interactive.local.url=\\\\192.168.1.100\\static\\interactive
+interactive.server.url=http://static.magme.com/interactive
+systemVersion=
+siteMapPath=E:\\work\\sitemap\\sitemap\\
+apple.receipt.url=https://sandbox.itunes.apple.com/verifyReceipt
+apple.receipt.sandbox_url=https://sandbox.itunes.apple.com/verifyReceipt
+#kaijiewangluo
+kaiJieAppUrl=http://qn00.cn
+#phoenix file path
+phoenix.file.path=I:/tmpdir/

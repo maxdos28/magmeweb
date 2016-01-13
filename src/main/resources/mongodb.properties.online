@@ -1,0 +1,15 @@
+mongo.connections-per-host=8
+mongo.threads-allowed-to-block-for-connection-multiplier=4
+mongo.connect-timeout=2000
+mongo.max-wait-time=2000
+mongo.socket-timeout=2000
+mongo.write-number=1
+mongo.write-timeout=0
+mongo.write-fsync=true
+mongo.host=192.168.10.167
+mongo.port=27017
+
+mongo.replical-host=192.168.10.83
+mongo.replical-port=27017
+mongo.username=magmecn
+mongo.password=magmecn1qa

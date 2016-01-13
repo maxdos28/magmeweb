@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="../../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../../style/global.css" rel="stylesheet" type="text/css" />
+<script src="../../js/jquery-new.min.js"></script>
+<script src="../../js/useFunction.js"></script>
+<script src="../../js/jquery.lightbox.js"></script>
+<script src="../../js/jquery.inputfocus.js"></script>
+<script src="../../js/global.js"></script>
+<style>
+.userList li{ width:192px; height:30px; line-height:30px; margin-bottom:10px; float:left;}
+</style>
+
+<!--[if lte IE 6]>
+<link href="../../style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="../../js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="inner">
+        <!--logo-->
+        <h1 class="logo" id="logo"><a href="javascript:void(0)">麦米-Magme</a></h1>
+        <!--nav-->
+        <ul class="nav" id="menu">
+            <li class="home"><a href="index.html">首页</a></li>
+            <li class="kanmi"><a href="kanmi.html">杂志</a></li>
+            <li class="qiemi"><a href="qiemi.html">发现</a></li>
+            <li class="sns"><a href="sns.html">米客中心</a></li>
+            <li class="publisher"><a href="publisherHome.html">米商中心</a></li>
+        </ul>
+        <!--userBar-->
+        <ul class="userBar" id="userBar">
+            <li class="reg"><a class="sub" href="javascript:void(0)" id="registerBtn">注册</a>
+            	<form id="registerForm" action="" onsubmit="return false;" method="post">
+	                <div class="box">
+	                	<sub></sub>
+	                	<div class="con">
+	                        <fieldset class="png">
+	                            <div class="input">
+	                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名" /></em>
+	                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+	                            </div>
+	                            <div class="input">
+	                                <em><input class="in" id="email" name="email" type="text" tipsSpan="邮箱" /></em>
+	                                <em id="checkEmail" class="tipsWrong" style="display:block;"></em>
+	                            </div>
+	                            <div class="input">
+	                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+	                            </div>
+	                            <div class="input">
+	                            	<em><input class="in" id="password" name="password" type="password" tipsSpan="确认密码" /></em>
+	                                <em id="checkPassword" class="tipsRight"></em>
+	                            </div>
+	                            <!--<div code="getcode">
+	                                <em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tipsSpan="验证码" /></em>
+	                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+	                            </div>-->
+	                            <div class="last">
+	                                <em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+	                                <em class="loading"></em>
+	                                <em class="tipsError">请填写相关信息</em>
+	                            </div>
+	                        </fieldset>
+	                    </div>
+	                </div>
+	             </form>           
+	        </li>
+            <li class="login"><a class="sub" href="javascript:void(0)" id="loginBtn">登录</a>
+            	<form id="logInForm" action="" onsubmit="return false;" method="post">
+	            	<div class="box">
+	                	<sub></sub>
+	                	<ul class="select">
+	                    	<li class="current"><a href="javascript:void(0)"><img src="../../images/icon/sns32/32-magme.gif" /></a></li>
+	                    	<li><a href="javascript:void(0)" name="login_qq"><img src="../../images/icon/sns32/32-qq.gif" /></a></li>
+	                    	<li><a href="javascript:void(0)" name="login_renren"><img src="../../images/icon/sns32/32-renren.gif" /></a></li>
+	                    	<li><a href="javascript:void(0)" name="login_weibo"><img src="../../images/icon/sns32/32-weibo.gif" /></a></li>
+	                    	<li><a href="javascript:void(0)" name="login_baidu"><img src="../../images/icon/sns32/32-baidu.gif" /></a></li>
+	                    	<li><a href="javascript:void(0)" name="login_kqixin"><img src="../../images/icon/sns32/32-kaixin001.gif" /></a></li>
+	                    </ul>
+	                	<div class="con">
+	                        <fieldset class="png">
+	                            <div class="input">
+	                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名/邮箱" /></em>
+	                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+	                            </div>
+	                            <div class="input">
+	                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+	                                <em class="tipsWrong" style="display:block;"></em>
+	                            </div>
+	                            <!--<div code="getcode">
+	                                <em class="m0"><input code="getcode" class="input g60" name="authcode" type="text" tipsSpan="验证码" /></em>
+	                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+	                            </div>-->
+	                            <div>
+	                                <em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+	                                <em class="loading"></em>
+	                                <em class="remanber"><label><input id="remember_login" type="checkbox" checked/>下次自动登录</label></em>
+	                                <em class="tipsError">请填写相关信息</em>
+	                            </div>
+	                            <div class="last">
+	                                <em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+	                                <em><a id="newUserReg"href="javascript:void(0)">新用户注册</a></em>
+	                            </div>
+	                        </fieldset>
+	                    </div>
+	                </div>
+            	</form>
+            </li>
+        </ul>
+        <!--loginBar-->
+        <ul class="loginBar" id="loginBar" style="display:none;">
+        	<li><a href="javascript:void(0)"><img id="avatar30" src="images/head30.gif" /></a></li>
+        	<li class="user"><strong id="nickName">Lewis</strong><a href="javascript:void(0)" id="newMessageNum"><sub></sub><em>(5)</em></a></li>
+        	<li class="logout" id="logout"><a href="javascript:void(0)">退出</a></li>
+        	<li class="setup"><a href="snsMyConfig.html">设置</a></li>
+        </ul>
+    </div>
+</div>
+<!--body-->
+<div class="body">
+	<div class="body980" style="margin-top:20px; border-top:3px solid #eee; padding-top:10px;">
+    
+    <div style="height:500px; background:#f5f5f5; font-size:70px; line-height:500px; text-align:center; color:#ccc; margin-bottom:30px;">
+    	开始游戏
+    </div>
+    
+    <div>
+        <h3 style="font-size:16px; margin:0 0 10px 0; border-top:3px solid #eee; padding-top:10px;">连连看日排行榜</h3>
+        <table class="table" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr>
+                <td width="100">名次</td>
+                <td width="200">用户ID</td>
+                <td>成绩</td>
+              </tr>
+            </thead> 
+            <tbody>
+             <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+</table>
+
+        
+        
+    </div>
+    <div style="margin-top:30px; margin-bottom:20px;">
+        <h3 style="font-size:16px; margin:0 0 10px 0; border-top:3px solid #eee; padding-top:10px;">上周连连看获奖名单</h3>
+        <ul class="userList clearFix">
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        	<li>用户ID</li>
+        </ul>
+    </div>
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

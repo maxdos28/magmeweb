@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="mobileimages/iconApp.png" />
+<link rel="stylesheet" type="text/css" href="style/html5Reset.css"/>		
+<style>
+body{ overflow:hidden; padding:20px;}
+body>div.h{ width:728px; height:858px; overflow:hidden; position:relative; background-color:#ccc;}
+body>div.w{ width:984px; height:602px; overflow:hidden; position:relative; background-color:#ccc;}
+body>p.footer{ background:#f5f5f5; height:40px; position:absolute; left:0; bottom:0; color:#999; text-align:center; line-height:40px; font-family:Arial, Helvetica, sans-serif;}
+
+.item{ position:absolute; background:#fff; overflow:hidden;}
+.item>.inner{ margin:20px 20px 0 20px; overflow:hidden;}
+.item>.inner .textMask{ height:40px; background:url(pad/textMask.png) 0 0 repeat-x; position:absolute; left:0; bottom:0; width:100%;}
+.item>.inner h2{ font-size:22px; max-height:2.8em; overflow:hidden; line-height:1.4em; margin:0 0 10px 0;}
+.item>.inner .con{ font-size:16px; line-height:1.6em; color:#333;}
+.item>.inner .con p{ margin-bottom:0.8em; text-align:justify; text-justify:distribute-all-lines;}
+.item>.inner .img{ display:block; background-repeat:no-repeat; background-size:cover; background-position:center top; overflow:hidden; }
+.item>.inner .fl{ float:left; margin:0 15px 15px 0;}
+.item>.inner .fr{ float:right; margin:0 0 15px 15px;}	
+.item>.inner .fn{ float:none; margin:0 0 15px 0;}
+.item>.inner.title h2{ position:absolute; left:0; bottom:75px; line-height:40px; height:40px; margin:0 20px; padding:0 10px; color:#fff; display:block; overflow:hidden; z-index:1;}
+.item>.inner.title .con{ position:absolute; left:0; bottom:-20px; height:75px; line-height:25px; overflow:hidden; color:#fff; margin:0 20px 20px 20px; padding:40px 10px 0 10px; background:url(pad/titlePng.png) left bottom repeat-x;}
+.item>.inner.title .con p{ margin-right:1px; height:50px; overflow:hidden;}
+
+
+.typeA .L4,
+.typeA .L5,
+.typeC .L5,
+.typeD .L5,
+.typeE .L5,
+.typeG .L5,
+.typeH .L5,
+.typeK .L5,
+.typeM .L5,
+.typeT .L5,
+.typeU .L4,
+.typeU .L5,
+.typeV .L4,
+.typeV .L5,
+.typeW .L5{ display:none;}
+
+
+
+.typeA.w .L1{ width:587px; height:602px; left:0; top:0;}			.typeA.w .L1 .inner{ height:582px;}
+.typeA.w .L2{ width:396px; height:241px; left:588px; top:0;}		.typeA.w .L2 .inner{ height:222px;}
+.typeA.w .L3{ width:396px; height:360px; left:588px; top:242px;}	.typeA.w .L3 .inner{ height:340px;}
+.typeA.h .L1{ width:728px; height:514px; left:0; top:0;}			.typeA.h .L1 .inner{ height:494px;}
+.typeA.h .L2{ width:292px; height:344px; left:436px; top:515px;}	.typeA.h .L2 .inner{ height:324px;}
+.typeA.h .L3{ width:435px; height:344px; left:0; top:515px;}		.typeA.h .L3 .inner{ height:324px;}
+
+
+
+.typeB.w .L1{ width:327px; height:300px; left:0; top:0;}			.typeB.w .L1 .inner{ height:281px;}
+.typeB.w .L2{ width:327px; height:300px; left:328px; top:0;}		.typeB.w .L2 .inner{ height:281px;}
+.typeB.w .L3{ width:328px; height:300px; left:656px; top:0;}		.typeB.w .L3 .inner{ height:281px;}
+.typeB.w .L4{ width:491px; height:301px; left:0; top:301px;}		.typeB.w .L4 .inner{ height:281px;}
+.typeB.w .L5{ width:492px; height:301px; left:492px; top:301px;}	.typeB.w .L5 .inner{ height:281px;}
+.typeB.h .L1{ width:364px; height:285px; left:364px; top:0;}		.typeB.h .L1 .inner{ height:265px;}
+.typeB.h .L2{ width:364px; height:285px; left:364px; top:286px;}	.typeB.h .L2 .inner{ height:265px;}
+.typeB.h .L3{ width:364px; height:286px; left:364px; top:572px;}	.typeB.h .L3 .inner{ height:265px;}
+.typeB.h .L4{ width:363px; height:428px; left:0; top:0;}			.typeB.h .L4 .inner{ height:408px;}
+.typeB.h .L5{ width:363px; height:429px; left:0; top:429px;}		.typeB.h .L5 .inner{ height:409px;}
+
+
+
+.typeC.w .L1{ width:587px; height:602px; left:0; top:0;}			.typeC.w .L1 .inner{ height:582px;}
+.typeC.w .L2{ width:396px; height:200px; left:588px; top:0;}		.typeC.w .L2 .inner{ height:181px;}
+.typeC.w .L3{ width:396px; height:200px; left:588px; top:201px;}	.typeC.w .L3 .inner{ height:181px;}
+.typeC.w .L4{ width:396px; height:201px; left:588px; top:402px;}	.typeC.w .L4 .inner{ height:181px;}
+.typeC.h .L1{ width:728px; height:513px; left:0; top:0;}			.typeC.h .L1 .inner{ height:493px;}
+.typeC.h .L2{ width:243px; height:344px; left:486px; top:514px;}	.typeC.h .L2 .inner{ height:324px;}
+.typeC.h .L3{ width:242px; height:344px; left:243px; top:514px;}	.typeC.h .L3 .inner{ height:324px;}
+.typeC.h .L4{ width:242px; height:344px; left:0; top:514px;}		.typeC.h .L4 .inner{ height:324px;}
+
+
+
+.typeD.w .L1{ width:395px; height:602px; left:0; top:0;}			.typeD.w .L1 .inner{ height:582px;}
+.typeD.w .L2{ width:588px; height:300px; left:396px; top:0;}		.typeD.w .L2 .inner{ height:280px;}
+.typeD.w .L3{ width:293px; height:301px; left:396px; top:301px;}	.typeD.w .L3 .inner{ height:281px;}
+.typeD.w .L4{ width:294px; height:301px; left:690px; top:301px;}	.typeD.w .L4 .inner{ height:281px;}
+.typeD.h .L1{ width:728px; height:343px; left:0; top:0;}			.typeD.h .L1 .inner{ height:323px;}
+.typeD.h .L2{ width:364px; height:514px; left:364px; top:344px;}	.typeD.h .L2 .inner{ height:494px;}
+.typeD.h .L3{ width:363px; height:256px; left:0; top:344px;}		.typeD.h .L3 .inner{ height:236px;}
+.typeD.h .L4{ width:363px; height:257px; left:0; top:601px;}		.typeD.h .L4 .inner{ height:237px;}
+
+
+
+.typeE.w .L1{ width:491px; height:359px; left:0; top:0;}			.typeE.w .L1 .inner{ height:339px;}
+.typeE.w .L2{ width:492px; height:241px; left:492px; top:0;}		.typeE.w .L2 .inner{ height:221px;}
+.typeE.w .L3{ width:491px; height:242px; left:0; top:360px;}		.typeE.w .L3 .inner{ height:222px;}
+.typeE.w .L4{ width:492px; height:360px; left:492px; top:242px;}	.typeE.w .L4 .inner{ height:340px;}
+.typeE.h .L1{ width:436px; height:428px; left:292px; top:0;}		.typeE.h .L1 .inner{ height:408px;}
+.typeE.h .L2{ width:292px; height:429px; left:436px; top:429px;}	.typeE.h .L2 .inner{ height:409px;}
+.typeE.h .L3{ width:291px; height:428px; left:0; top:0;}			.typeE.h .L3 .inner{ height:408px;}
+.typeE.h .L4{ width:435px; height:429px; left:0; top:429px;}		.typeE.h .L4 .inner{ height:409px;}
+
+
+
+
+.typeF.w .L1{ width:491px; height:359px; left:0; top:0;}			.typeF.w .L1 .inner{ height:339px;}
+.typeF.w .L2{ width:491px; height:242px; left:0; top:360px;}		.typeF.w .L2 .inner{ height:222px;}
+.typeF.w .L3{ width:492px; height:200px; left:492px; top:0;}		.typeF.w .L3 .inner{ height:180px;}
+.typeF.w .L4{ width:492px; height:200px; left:492px; top:201px;}	.typeF.w .L4 .inner{ height:180px;}
+.typeF.w .L5{ width:492px; height:201px; left:492px; top:402px;}	.typeF.w .L5 .inner{ height:181px;}
+.typeF.h .L1{ width:436px; height:428px; left:292px; top:0;}		.typeF.h .L1 .inner{ height:408px;}
+.typeF.h .L2{ width:291px; height:428px; left:0; top:0;}			.typeF.h .L2 .inner{ height:409px;}
+.typeF.h .L3{ width:243px; height:429px; left:486px; top:429px;}	.typeF.h .L3 .inner{ height:409px;}
+.typeF.h .L4{ width:242px; height:429px; left:243px; top:429px;}	.typeF.h .L4 .inner{ height:409px;}
+.typeF.h .L5{ width:242px; height:429px; left:0; top:429px;}		.typeF.h .L5 .inner{ height:409px;}
+
+
+
+
+.typeG.w .L1{ width:395px; height:241px; left:0; top:0;}			.typeG.w .L1 .inner{ height:221px;}
+.typeG.w .L2{ width:588px; height:241px; left:396px; top:0;}		.typeG.w .L2 .inner{ height:221px;}
+.typeG.w .L3{ width:395px; height:360px; left:0; top:242px;}		.typeG.w .L3 .inner{ height:340px;}
+.typeG.w .L4{ width:588px; height:360px; left:396px; top:242px;}	.typeG.w .L4 .inner{ height:340px;}
+.typeG.h .L1{ width:292px; height:343px; left:436px; top:0;}		.typeG.h .L1 .inner{ height:323px;}
+.typeG.h .L2{ width:292px; height:514px; left:436px; top:344px;}	.typeG.h .L2 .inner{ height:494px;}
+.typeG.h .L3{ width:435px; height:343px; left:0; top:0;}			.typeG.h .L3 .inner{ height:323px;}
+.typeG.h .L4{ width:435px; height:514px; left:0; top:344px;}		.typeG.h .L4 .inner{ height:494px;}
+
+
+
+
+.typeH.w .L1{ width:491px; height:300px; left:0; top:0;}			.typeH.w .L1 .inner{ height:280px;}
+.typeH.w .L2{ width:492px; height:300px; left:492px; top:0;}		.typeH.w .L2 .inner{ height:280px;}
+.typeH.w .L3{ width:491px; height:301px; left:0; top:301px;}		.typeH.w .L3 .inner{ height:281px;}
+.typeH.w .L4{ width:492px; height:301px; left:492px; top:301px;}	.typeH.w .L4 .inner{ height:281px;}
+.typeH.h .L1{ width:364px; height:428px; left:364px; top:0;}		.typeH.h .L1 .inner{ height:408px;}
+.typeH.h .L2{ width:364px; height:429px; left:364px; top:429px;}	.typeH.h .L2 .inner{ height:409px;}
+.typeH.h .L3{ width:363px; height:428px; left:0; top:0;}			.typeH.h .L3 .inner{ height:408px;}
+.typeH.h .L4{ width:363px; height:429px; left:0; top:429px;}		.typeH.h .L4 .inner{ height:409px;}
+
+
+
+
+.typeI.w .L1{ width:587px; height:241px; left:0; top:0;}			.typeI.w .L1 .inner{ height:221px;}
+.typeI.w .L2{ width:396px; height:241px; left:588px; top:0;}		.typeI.w .L2 .inner{ height:221px;}
+.typeI.w .L3{ width:293px; height:360px; left:0; top:242px;}		.typeI.w .L3 .inner{ height:340px;}
+.typeI.w .L4{ width:293px; height:360px; left:294px; top:242px;}	.typeI.w .L4 .inner{ height:340px;}
+.typeI.w .L5{ width:396px; height:360px; left:588px; top:242px;}	.typeI.w .L5 .inner{ height:340px;}
+.typeI.h .L1{ width:294px; height:513px; left:434px; top:0;}		.typeI.h .L1 .inner{ height:493px;}
+.typeI.h .L2{ width:294px; height:344px; left:434px; top:514px;}	.typeI.h .L2 .inner{ height:324px;}
+.typeI.h .L3{ width:433px; height:256px; left:0; top:0;}			.typeI.h .L3 .inner{ height:236px;}
+.typeI.h .L4{ width:433px; height:256px; left:0; top:257px;}		.typeI.h .L4 .inner{ height:236px;}
+.typeI.h .L5{ width:433px; height:344px; left:0; top:514px;}		.typeI.h .L5 .inner{ height:324px;}
+
+
+
+
+.typeJ.w .L1{ width:491px; height:241px; left:0; top:0;}			.typeJ.w .L1 .inner{ height:221px;}
+.typeJ.w .L2{ width:491px; height:360px; left:0; top:242px;}		.typeJ.w .L2 .inner{ height:340px;}
+.typeJ.w .L3{ width:245px; height:401px; left:492px; top:0;}		.typeJ.w .L3 .inner{ height:381px;}
+.typeJ.w .L4{ width:246px; height:401px; left:738px; top:0;}		.typeJ.w .L4 .inner{ height:381px;}
+.typeJ.w .L5{ width:492px; height:201px; left:492px; top:402px;}	.typeJ.w .L5 .inner{ height:181px;}
+.typeJ.h .L1{ width:292px; height:428px; left:436px; top:0;}		.typeJ.h .L1 .inner{ height:408px;}
+.typeJ.h .L2{ width:435px; height:428px; left:0; top:0;}			.typeJ.h .L2 .inner{ height:408px;}
+.typeJ.h .L3{ width:486px; height:214px; left:243px; top:429px;}	.typeJ.h .L3 .inner{ height:194px;}
+.typeJ.h .L4{ width:486px; height:214px; left:243px; top:644px;}	.typeJ.h .L4 .inner{ height:194px;}
+.typeJ.h .L5{ width:242px; height:429px; left:0; top:429px;}		.typeJ.h .L5 .inner{ height:409px;}
+
+
+
+
+.typeK.w .L1{ width:587px; height:300px; left:0; top:0;}			.typeK.w .L1 .inner{ height:280px;}
+.typeK.w .L2{ width:396px; height:300px; left:588px; top:0;}		.typeK.w .L2 .inner{ height:280px;}
+.typeK.w .L3{ width:395px; height:301px; left:0; top:301px;}		.typeK.w .L3 .inner{ height:281px;}
+.typeK.w .L4{ width:588px; height:301px; left:396px; top:301px;}	.typeK.w .L4 .inner{ height:281px;}
+.typeK.h .L1{ width:364px; height:513px; left:364px; top:0;}		.typeK.h .L1 .inner{ height:494px;}
+.typeK.h .L2{ width:364px; height:344px; left:364px; top:514px;}	.typeK.h .L2 .inner{ height:324px;}
+.typeK.h .L3{ width:363px; height:343px; left:0; top:0;}			.typeK.h .L3 .inner{ height:323px;}
+.typeK.h .L4{ width:363px; height:514px; left:0; top:344px;}		.typeK.h .L4 .inner{ height:494px;}
+
+
+
+
+.typeL.w .L1{ width:491px; height:300px; left:0; top:0;}			.typeL.w .L1 .inner{ height:280px;}
+.typeL.w .L2{ width:492px; height:300px; left:492px; top:0;}		.typeL.w .L2 .inner{ height:280px;}
+.typeL.w .L3{ width:327px; height:301px; left:0; top:301px;}		.typeL.w .L3 .inner{ height:281px;}
+.typeL.w .L4{ width:327px; height:301px; left:328px; top:301px;}	.typeL.w .L4 .inner{ height:281px;}
+.typeL.w .L5{ width:328px; height:301px; left:656px; top:301px;}	.typeL.w .L5 .inner{ height:281px;}
+.typeL.h .L1{ width:364px; height:428px; left:364px; top:0;}		.typeL.h .L1 .inner{ height:408px;}
+.typeL.h .L2{ width:364px; height:429px; left:364px; top:429px;}	.typeL.h .L2 .inner{ height:409px;}
+.typeL.h .L3{ width:363px; height:285px; left:0; top:0;}			.typeL.h .L3 .inner{ height:265px;}
+.typeL.h .L4{ width:363px; height:285px; left:0; top:286px;}		.typeL.h .L4 .inner{ height:265px;}
+.typeL.h .L5{ width:363px; height:286px; left:0; top:572px;}		.typeL.h .L5 .inner{ height:266px;}
+
+
+
+
+.typeM.w .L1{ width:491px; height:241px; left:0; top:0;}			.typeM.w .L1 .inner{ height:221px;}
+.typeM.w .L2{ width:492px; height:241px; left:492px; top:0;}		.typeM.w .L2 .inner{ height:221px;}
+.typeM.w .L3{ width:395px; height:360px; left:0; top:242px;}		.typeM.w .L3 .inner{ height:340px;}
+.typeM.w .L4{ width:588px; height:360px; left:396px; top:242px;}	.typeM.w .L4 .inner{ height:340px;}
+.typeM.h .L1{ width:292px; height:428px; left:436px; top:0;}		.typeM.h .L1 .inner{ height:408px;}
+.typeM.h .L2{ width:292px; height:429px; left:436px; top:429px;}	.typeM.h .L2 .inner{ height:409px;}
+.typeM.h .L3{ width:435px; height:343px; left:0; top:0;}			.typeM.h .L3 .inner{ height:323px;}
+.typeM.h .L4{ width:435px; height:514px; left:0; top:344px;}		.typeM.h .L4 .inner{ height:494px;}
+
+
+
+
+.typeN.w .L1{ width:491px; height:241px; left:0; top:0;}			.typeN.w .L1 .inner{ height:221px;}
+.typeN.w .L2{ width:492px; height:241px; left:492px; top:0;}		.typeN.w .L2 .inner{ height:221px;}
+.typeN.w .L3{ width:327px; height:360px; left:0; top:242px;}		.typeN.w .L3 .inner{ height:340px;}
+.typeN.w .L4{ width:327px; height:360px; left:328px; top:242px;}	.typeN.w .L4 .inner{ height:340px;}
+.typeN.w .L5{ width:328px; height:360px; left:656px; top:242px;}	.typeN.w .L5 .inner{ height:340px;}
+.typeN.h .L1{ width:292px; height:428px; left:436px; top:0;}		.typeN.h .L1 .inner{ height:408px;}
+.typeN.h .L2{ width:292px; height:429px; left:436px; top:429px;}	.typeN.h .L2 .inner{ height:409px;}
+.typeN.h .L3{ width:435px; height:285px; left:0; top:0;}			.typeN.h .L3 .inner{ height:265px;}
+.typeN.h .L4{ width:435px; height:285px; left:0; top:286px;}		.typeN.h .L4 .inner{ height:265px;}
+.typeN.h .L5{ width:435px; height:286px; left:0; top:572px;}		.typeN.h .L5 .inner{ height:266px;}
+
+
+
+
+.typeO.w .L1{ width:327px; height:359px; left:0; top:0;}			.typeO.w .L1 .inner{ height:339px;}
+.typeO.w .L2{ width:327px; height:359px; left:328px; top:0;}		.typeO.w .L2 .inner{ height:339px;}
+.typeO.w .L3{ width:328px; height:359px; left:656px; top:0;}		.typeO.w .L3 .inner{ height:339px;}
+.typeO.w .L4{ width:491px; height:242px; left:0; top:360px;}		.typeO.w .L4 .inner{ height:222px;}
+.typeO.w .L5{ width:492px; height:242px; left:492px; top:360px;}	.typeO.w .L5 .inner{ height:222px;}
+.typeO.h .L1{ width:436px; height:285px; left:292px; top:0;}		.typeO.h .L1 .inner{ height:265px;}
+.typeO.h .L2{ width:436px; height:285px; left:292px; top:286px;}	.typeO.h .L2 .inner{ height:265px;}
+.typeO.h .L3{ width:436px; height:286px; left:292px; top:572px;}	.typeO.h .L3 .inner{ height:265px;}
+.typeO.h .L4{ width:291px; height:428px; left:0; top:0;}			.typeO.h .L4 .inner{ height:408px;}
+.typeO.h .L5{ width:291px; height:429px; left:0; top:429px;}		.typeO.h .L5 .inner{ height:409px;}
+
+
+
+
+.typeP.w .L1{ width:293px; height:300px; left:0; top:0;}			.typeP.w .L1 .inner{ height:280px;}
+.typeP.w .L2{ width:293px; height:300px; left:294px; top:0;}		.typeP.w .L2 .inner{ height:280px;}
+.typeP.w .L3{ width:396px; height:300px; left:588px; top:0;}		.typeP.w .L3 .inner{ height:280px;}
+.typeP.w .L4{ width:587px; height:301px; left:0; top:301px;}		.typeP.w .L4 .inner{ height:281px;}
+.typeP.w .L5{ width:396px; height:301px; left:588px; top:301px;}	.typeP.w .L5 .inner{ height:281px;}
+.typeP.h .L1{ width:364px; height:256px; left:364px; top:0;}		.typeP.h .L1 .inner{ height:236px;}
+.typeP.h .L2{ width:364px; height:256px; left:364px; top:257px;}	.typeP.h .L2 .inner{ height:236px;}
+.typeP.h .L3{ width:364px; height:344px; left:364px; top:514px;}	.typeP.h .L3 .inner{ height:324px;}
+.typeP.h .L4{ width:363px; height:513px; left:0; top:0;}			.typeP.h .L4 .inner{ height:493px;}
+.typeP.h .L5{ width:363px; height:344px; left:0; top:514px;}		.typeP.h .L5 .inner{ height:324px;}
+
+
+
+.typeQ.w .L1{ width:491px; height:241px; left:0; top:0;}			.typeQ.w .L1 .inner{ height:221px;}
+.typeQ.w .L2{ width:492px; height:241px; left:492px; top:0;}		.typeQ.w .L2 .inner{ height:221px;}
+.typeQ.w .L3{ width:491px; height:360px; left:0; top:242px;}		.typeQ.w .L3 .inner{ height:340px;}
+.typeQ.w .L4{ width:492px; height:179px; left:492px; top:242px;}	.typeQ.w .L4 .inner{ height:159px;}
+.typeQ.w .L5{ width:492px; height:180px; left:492px; top:422px;}	.typeQ.w .L5 .inner{ height:160px;}
+.typeQ.h .L1{ width:292px; height:428px; left:436px; top:0;}		.typeQ.h .L1 .inner{ height:408px;}
+.typeQ.h .L2{ width:292px; height:429px; left:436px; top:429px;}	.typeQ.h .L2 .inner{ height:409px;}
+.typeQ.h .L3{ width:435px; height:428px; left:0; top:0;}			.typeQ.h .L3 .inner{ height:408px;}
+.typeQ.h .L4{ width:217px; height:429px; left:218px; top:429px;}	.typeQ.h .L4 .inner{ height:409px;}
+.typeQ.h .L5{ width:217px; height:429px; left:0; top:429px;}		.typeQ.h .L5 .inner{ height:409px;}
+
+
+
+.typeR.w .L1{ width:491px; height:359px; left:0; top:0;}			.typeR.w .L1 .inner{ height:359px;}
+.typeR.w .L2{ width:492px; height:179px; left:492px; top:0;}		.typeR.w .L2 .inner{ height:159px;}
+.typeR.w .L3{ width:492px; height:179px; left:492px; top:180px;}	.typeR.w .L3 .inner{ height:159px;}
+.typeR.w .L4{ width:491px; height:242px; left:0; top:360px;}		.typeR.w .L4 .inner{ height:222px;}
+.typeR.w .L5{ width:492px; height:242px; left:492px; top:360px;}	.typeR.w .L5 .inner{ height:222px;}
+.typeR.h .L1{ width:436px; height:428px; left:292px; top:0;}		.typeR.h .L1 .inner{ height:408px;}
+.typeR.h .L2{ width:218px; height:429px; left:510px; top:429px;}	.typeR.h .L2 .inner{ height:409px;}
+.typeR.h .L3{ width:217px; height:429px; left:292px; top:429px;}	.typeR.h .L3 .inner{ height:409px;}
+.typeR.h .L4{ width:291px; height:428px; left:0; top:0;}			.typeR.h .L4 .inner{ height:408px;}
+.typeR.h .L5{ width:291px; height:429px; left:0; top:429px;}		.typeR.h .L5 .inner{ height:409px;}
+
+
+
+.typeS.w .L1{ width:395px; height:359px; left:0; top:0;}			.typeS.w .L1 .inner{ height:339px;}
+.typeS.w .L2{ width:293px; height:359px; left:396px; top:0;}		.typeS.w .L2 .inner{ height:339px;}
+.typeS.w .L3{ width:294px; height:359px; left:690px; top:0;}		.typeS.w .L3 .inner{ height:339px;}
+.typeS.w .L4{ width:395px; height:242px; left:0; top:360px;}		.typeS.w .L4 .inner{ height:222px;}
+.typeS.w .L5{ width:588px; height:242px; left:396px; top:360px;}	.typeS.w .L5 .inner{ height:222px;}
+.typeS.h .L1{ width:436px; height:343px; left:292px; top:0;}		.typeS.h .L1 .inner{ height:323px;}
+.typeS.h .L2{ width:436px; height:293px; left:292px; top:344px;}	.typeS.h .L2 .inner{ height:273px;}
+.typeS.h .L3{ width:436px; height:294px; left:292px; top:638px;}	.typeS.h .L3 .inner{ height:274px;}
+.typeS.h .L4{ width:291px; height:343px; left:0; top:0;}			.typeS.h .L4 .inner{ height:323px;}
+.typeS.h .L5{ width:291px; height:588px; left:0; top:344px;}		.typeS.h .L5 .inner{ height:568px;}
+
+
+
+
+.typeT.w .L1{ width:587px; height:359px; left:0; top:0;}			.typeT.w .L1 .inner{ height:339px;}
+.typeT.w .L2{ width:396px; height:359px; left:588px; top:0;}		.typeT.w .L2 .inner{ height:339px;}
+.typeT.w .L3{ width:395px; height:242px; left:0; top:360px;}		.typeT.w .L3 .inner{ height:222px;}
+.typeT.w .L4{ width:588px; height:242px; left:396px; top:360px;}	.typeT.w .L4 .inner{ height:222px;}
+.typeT.h .L1{ width:436px; height:513px; left:292px; top:0;}		.typeT.h .L1 .inner{ height:493px;}
+.typeT.h .L2{ width:436px; height:344px; left:292px; top:514px;}	.typeT.h .L2 .inner{ height:324px;}
+.typeT.h .L3{ width:291px; height:428px; left:0; top:0;}			.typeT.h .L3 .inner{ height:408px;}
+.typeT.h .L4{ width:291px; height:429px; left:0; top:429px;}		.typeT.h .L4 .inner{ height:409px;}
+
+
+
+
+.typeU.w .L1{ width:587px; height:602px; left:0; top:0;}			.typeU.w .L1 .inner{ height:582px;}
+.typeU.w .L2{ width:396px; height:359px; left:588px; top:0;}		.typeU.w .L2 .inner{ height:339px;}
+.typeU.w .L3{ width:396px; height:242px; left:588px; top:360px;}	.typeU.w .L3 .inner{ height:222px;}
+.typeU.h .L1{ width:728px; height:514px; left:0; top:0;}			.typeU.h .L1 .inner{ height:494px;}
+.typeU.h .L2{ width:436px; height:344px; left:292px; top:515px;}	.typeU.h .L2 .inner{ height:324px;}
+.typeU.h .L3{ width:291px; height:344px; left:0; top:515px;}		.typeU.h .L3 .inner{ height:324px;}
+
+
+
+.typeV.w .L1{ width:587px; height:241px; left:0; top:0;}			.typeV.w .L1 .inner{ height:221px;}
+.typeV.w .L2{ width:587px; height:360px; left:0; top:242px;}		.typeV.w .L2 .inner{ height:340px;}
+.typeV.w .L3{ width:396px; height:602px; left:588px; top:0;}		.typeV.w .L3 .inner{ height:582px;}
+.typeV.h .L1{ width:292px; height:513px; left:436px; top:0;}		.typeV.h .L1 .inner{ height:493px;}
+.typeV.h .L2{ width:435px; height:513px; left:0; top:0;}			.typeV.h .L2 .inner{ height:493px;}
+.typeV.h .L3{ width:728px; height:344px; left:0; top:514px;}		.typeV.h .L3 .inner{ height:324px;}
+
+
+
+
+.typeW.w .L1{ width:395px; height:359px; left:0; top:0;}			.typeW.w .L1 .inner{ height:339px;}
+.typeW.w .L2{ width:395px; height:242px; left:0; top:360px;}		.typeW.w .L2 .inner{ height:222px;}
+.typeW.w .L3{ width:588px; height:241px; left:396px; top:0;}		.typeW.w .L3 .inner{ height:221px;}
+.typeW.w .L4{ width:588px; height:360px; left:396px; top:242px;}	.typeW.w .L4 .inner{ height:340px;}
+.typeW.h .L1{ width:436px; height:343px; left:292px; top:0;}		.typeW.h .L1 .inner{ height:323px;}
+.typeW.h .L2{ width:291px; height:343px; left:0; top:0;}			.typeW.h .L2 .inner{ height:323px;}
+.typeW.h .L3{ width:292px; height:514px; left:436px; top:344px;}	.typeW.h .L3 .inner{ height:494px;}
+.typeW.h .L4{ width:435px; height:514px; left:0; top:344px;}		.typeW.h .L4 .inner{ height:494px;}
+
+
+
+
+.typeX.w .L1{ width:395px; height:602px; left:0; top:0;}			.typeX.w .L1 .inner{ height:582px;}
+.typeX.w .L2{ width:293px; height:300px; left:396px; top:0;}		.typeX.w .L2 .inner{ height:280px;}
+.typeX.w .L3{ width:293px; height:301px; left:396px; top:301px;}	.typeX.w .L3 .inner{ height:281px;}
+.typeX.w .L4{ width:294px; height:300px; left:690px; top:0;}		.typeX.w .L4 .inner{ height:280px;}
+.typeX.w .L5{ width:294px; height:301px; left:690px; top:301px;}	.typeX.w .L5 .inner{ height:281px;}
+.typeX.h .L1{ width:728px; height:343px; left:0; top:0;}			.typeX.h .L1 .inner{ height:323px;}
+.typeX.h .L2{ width:364px; height:256px; left:364px; top:344px;}	.typeX.h .L2 .inner{ height:236px;}
+.typeX.h .L3{ width:363px; height:256px; left:0; top:344px;}		.typeX.h .L3 .inner{ height:236px;}
+.typeX.h .L4{ width:364px; height:257px; left:364px; top:601px;}	.typeX.h .L4 .inner{ height:237px;}
+.typeX.h .L5{ width:363px; height:257px; left:0; top:601px;}		.typeX.h .L5 .inner{ height:237px;}
+
+
+
+
+</style>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script>
+;(function($){
+jQuery.autoLayout = function(id) {
+	
+var $item = $(id);
+var winHeight = $(window).height();
+var winWidth = $(window).width();
+$(window).bind("resize", fnResize);
+//添加文字遮罩
+$item.each(function(){
+	$(this).find(".inner").append("<div class='textMask'></div>");
+});
+//处理排版
+fnResize();
+//设置旋转后背景和左右填充
+function fnResize(){
+	winWidth = $(window).width();
+	if(winWidth>768){
+		$("body>div").removeClass("h").addClass("w");
+		$("body>p.footer").css({width:1024});
+	}else{
+		$("body>div").removeClass("w").addClass("h");
+		$("body>p.footer").css({width:768});
+	}
+	fnSetImg();
+}
+
+
+
+
+
+function fnSetImg(){
+	$item.each(function(){
+		var W = $(this).width();
+		var H = $(this).height();
+		var inW = $(this).find(".inner").innerWidth();
+		var inH = $(this).find(".inner").innerHeight();
+		//重设Title样式
+		$(this).find(".inner").removeClass("title");
+		$(this).find("h2").css({width:inW*1.0});
+		$(this).find(".img").insertAfter($(this).find("h2"));
+		//显示区域判断
+		if( W*H < 220000){
+			//宽高比例判断
+			if( inW/inH > 1.2 ){
+				$(this).find(".img").css({width:inW*0.4,height:inH-65,float:"right",margin:"0 0 15px 15px"});
+			}else if( inW/inH > 0.8 && $(this).find(".img").hasClass("size21")){
+				$(this).find(".img").css({width:inW*0.5,height:inH*0.9-40,float:"right",margin:"0 0 15px 15px"});
+			}else{
+				$(this).find("h2").insertAfter($(this).find(".img"));
+				$(this).find(".img").css({width:inW*1.0,height:inH*0.4,float:"none",margin:"0 0 15px 0"});
+			}
+		}else{
+			if( $(this).find(".img").hasClass("size11") ){
+				$(this).find(".img").css({width:inW*0.5,height:inW*0.5,float:"right",margin:"0 0 15px 15px"});
+			}else if( $(this).find(".img").hasClass("size12") ){
+				$(this).find("h2").insertAfter($(this).find(".img"));
+				$(this).find(".img").css({width:inW*1.0,height:inW*0.6,float:"none",margin:"0 0 15px 0"});
+			}else if( $(this).find(".img").hasClass("size21") ){
+				$(this).find(".img").css({width:inW*0.5,height:inH*0.8,float:"right",margin:"0 0 15px 15px"});
+			}
+		}
+		//判断显示为全图模式
+		if(W*H > 110000){
+			if( ($(this).find(".img").hasClass("size22")) ||
+				(W/H > 1.5 && $(this).find(".img").hasClass("size12")) ||
+				(W/H < 0.67 && $(this).find(".img").hasClass("size21"))){
+				$(this).find(".inner").addClass("title").find(".img").css({width:inW*1.0,height:inH*1.0}).end().find("h2").css({width:inW*1.0-20});
+				$(this).find(".textMask").remove();
+			}
+		}
+    });
+}
+
+
+
+}})(jQuery);
+
+$(function(){
+	$.autoLayout(".item");
+})
+
+</script>
+</head>
+
+<body id="body">
+	<div class="typeB">
+        <div class="item L1">
+        	<div class="inner">
+            	<h2>梦园</h2>
+            	<div class="img size22" style="background-image:url(http://static.magme.cn/fpage/event/20120424/1335254941088.jpg)" /></div>
+            	<div class="con">
+                	<p>偶尔，想象着自己躺在那片花海，沐浴着阳光，聆听着虫鸣鸟叫。忙碌、浮躁、束缚，摧残着人们的心智，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠偶尔，想象着自己躺在那片花海，沐浴着阳光，聆听着虫鸣鸟叫。忙碌、浮躁、束缚，摧残着人们的心智，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人变冷漠，也让人变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠偶尔，想象着自己躺在那片花海，沐浴着阳光，聆听着虫鸣鸟叫。忙碌、浮躁、束缚，摧残着人们的心智，也让人慢慢变冷漠，着人们的心智，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠偶尔，想象着自己躺在那片花海，沐浴着阳光，聆听着虫鸣鸟叫。忙碌、浮躁、束缚，摧残着人们的心智，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠……</p>
+                </div>
+            </div>
+        </div>
+        <div class="item L2">
+        	<div class="inner">
+            	<h2>都市潮流“潜伏者”</h2>
+            	<div class="img size11" style="background-image:url(http://static.magme.cn/fpage/event/20120425/1335339586950.jpg)" /></div>
+            	<div class="con">
+                	<p>历经“布局、起势、突破、跨越”四个阶段，迈入成立五周年的长安马自达“内外格局”已悄然升级。迈入成立五周年的长安马自达“内外格局”已悄然升级。迈入成立五周年的长安马自达“内外格局”已悄然升级。</p>
+                </div>
+            </div>
+        </div>
+        <div class="item L3">
+        	<div class="inner">
+            	<h2>省一万元去非洲</h2>
+            	<div class="img size12" style="background-image:url(http://static.magme.cn/fpage/event/20120425/1335336207184.jpg)" /></div>
+            	<div class="con">
+                	<p>全球航空联盟天合联盟推出非洲套票，根据旅程提供最高相当于普通机票75%的折扣，这样你的非洲之行可以省下一大笔钱了。75%的折扣，这样你的非洲之行可以省下一大笔钱了。</p>
+                </div>
+            </div>
+        </div>
+        <div class="item L4">
+        	<div class="inner">
+            	<h2>色彩游戏</h2>
+            	<div class="img size21" style="background-image:url(http://static.magme.cn/fpage/event/20120423/1335171371400.jpg)" /></div>
+            	<div class="con">
+                	<p>绚烂的季节，激发出更多的色彩创意，各种白色花卉与彩色玻璃瓶的组合，既衬托出白的纯洁，也映射着彩的多姿瓶的组合，既衬托出白的纯洁，也映射着彩的多姿。</p>
+                </div>
+            </div>
+        </div>
+        <div class="item L5">
+        	<div class="inner">
+            	<h2>佛罗伦萨（Florence)</h2>
+            	<div class="img size11" style="background-image:url(http://static.magme.cn/fpage/event/20120424/1335255988879.jpg)" /></div>
+            	<div class="con">
+                	<p>被译作“冷翡翠”，意大利语中意为“鲜花之城”。是极为著名的世界艺术之都，欧洲文化中心，欧洲文艺复兴运动的发源地，歌剧的诞生洲文化中心，欧洲文艺复兴运动的发源地，歌剧的诞生地……</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="footer">
+    	footer
+    </p>
+</body>
+</html>

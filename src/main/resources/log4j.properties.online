@@ -1,0 +1,33 @@
+### direct log messages to stdout ###
+#log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+#log4j.appender.stdout.Target=System.out
+#log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+#log4j.appender.stdout.layout.ConversionPattern=[magmecn-web]%d{yyyy-MM-dd HH:mm:ss} %5p %c{1}:%L - %m%n
+
+### direct messages to file hibernate.log ###
+log4j.appender.fileout=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.fileout.File=${catalina.base}/logs/magme.log
+log4j.appender.fileout.DatePattern='_'yyyyMMdd
+log4j.appender.fileout.MaxFileSize=10000KB
+log4j.appender.fileout.layout=org.apache.log4j.PatternLayout
+log4j.appender.fileout.layout.ConversionPattern=[magmecn-web]%d{yyyy-MM-dd HH:mm:ss} %5p %c{1}:%L - %m%n
+
+### set log levels - for more verbose logging change 'info' to 'info' ###
+log4j.rootLogger=INFO, fileout
+
+### add more info levels here ###
+log4j.logger.org.springframework=WARN
+
+log4j.logger.com.ibatis=info
+log4j.logger.com.ibatis.common.jdbc.SimpleDataSource=info
+log4j.logger.com.ibatis.common.jdbc.ScriptRunner=info
+log4j.logger.com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate=info
+log4j.logger.java.sql.Connection=info
+log4j.logger.java.sql.Statement=info
+log4j.logger.java.sql.PreparedStatement=info
+log4j.logger.java.sql.ResultSet=info
+
+log4j.logger.com.opensymphony.xwork2=ERROR
+log4j.logger.cn.magme.=info
+
+log4j.logger.com.danga=WARN

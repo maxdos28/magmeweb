@@ -1,0 +1,1 @@
+function fnGoto(e){if(isweb)parent.me.readerJump(e);else if("undefined"!=typeof androidObj)e--,androidObj.changePositionTo(e);else{if(0==e)return;window.open("iosGoto:"+(e-1))}}

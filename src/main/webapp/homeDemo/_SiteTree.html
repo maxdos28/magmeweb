@@ -1,0 +1,98 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><link href="Resources/axurerpprototype.css" type="text/css" rel="stylesheet"></HEAD>
+<BODY>
+<A href=# onclick='parent.CloseSitemap()' style='font-size:8pt'>Close Frames</A><br><br>
+
+<SCRIPT LANGUAGE="JavaScript">
+image1 = new Image();
+image1.src = 'Resources/plus.gif';
+
+function CloseSitemap()
+{
+	parent.URL = parent.mainFrame.URL
+}
+
+function ToggleDiv(node, id)
+{
+	sibling = document.getElementById(id);
+	if (sibling.style.display == 'none')
+	{
+		if (node.childNodes.length > 0)
+		{
+			if (node.childNodes[0].tagName == "IMG")
+			{
+				node.childNodes[0].src = "Resources/minus.gif";
+			}
+		}
+
+		sibling.style.display = '';
+	}
+	else
+	{
+		if (node.childNodes.length > 0)
+		{
+			if (node.childNodes[0].tagName == "IMG")
+			{
+				node.childNodes[0].src = "Resources/plus.gif";
+			}
+		}
+		sibling.style.display = 'none';
+	}
+}
+
+var currentPage = null;
+
+function highlight(id)
+{
+	if (currentPage != null)
+	{
+		currentPage.style.backgroundColor = '#EEEEFF';
+		currentPage.style.paddingLeft = '0px';
+		currentPage.style.paddingRight = '0px';
+		currentPage.style.border = '0px solid #666666';
+	}
+	
+	currentPage = document.getElementById(id);
+    if (currentPage) {
+	    currentPage.style.backgroundColor = '#DDDDDD';
+	    currentPage.style.paddingLeft = '3px';
+	    currentPage.style.paddingRight = '3px';
+	    currentPage.style.border = '1px solid #666666';
+    }
+}
+
+</SCRIPT>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD nowrap><IMG SRC="Resources/transparent.gif" WIDTH=17px HEIGHT=9px><A onclick="parent.mainFrame.location='home1.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p5e2a7d5cf15149a2a47d180ba1aaf86c">home1</SPAN></A><DIV id="td5e2a7d5cf15149a2a47d180ba1aaf86c">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD nowrap><IMG SRC="Resources/transparent.gif" WIDTH=17px HEIGHT=9px><A onclick="parent.mainFrame.location='home2.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="pd20d610c40a74f5ebf67d57ee7284600">home2</SPAN></A><DIV id="tdd20d610c40a74f5ebf67d57ee7284600">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD nowrap><IMG SRC="Resources/transparent.gif" WIDTH=17px HEIGHT=9px><A onclick="parent.mainFrame.location='home3.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p6bcbf37f62e84e63bda851b94adcff7d">home3</SPAN></A><DIV id="td6bcbf37f62e84e63bda851b94adcff7d">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD nowrap><IMG SRC="Resources/transparent.gif" WIDTH=17px HEIGHT=9px><A onclick="parent.mainFrame.location='home4.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="p3d7fb28905a945a588bd1c5a36049555">home4</SPAN></A><DIV id="td3d7fb28905a945a588bd1c5a36049555">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE>
+<TABLE BORDER="0" cellspacing="0" cellpadding="0">
+	<TR>
+		<TD nowrap><IMG SRC="Resources/transparent.gif" WIDTH=17px HEIGHT=9px><A onclick="parent.mainFrame.location='home5.html'"><IMG class="plusminus" SRC="Resources/page.gif" border=0><SPAN id="pd523ef97c2bc48bc8dd0ed56067f6b19">home5</SPAN></A><DIV id="tdd523ef97c2bc48bc8dd0ed56067f6b19">
+			</DIV>
+		</TD>
+	</TR>
+</TABLE></BODY></HTML>

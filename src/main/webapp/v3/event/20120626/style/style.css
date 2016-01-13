@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.header .inner,
+.header .nav .navInner,
+.topTools{ width:1180px;}
+.topTools .tab { margin-left:8px;}
+.bodyMagazine{ width:944px; padding-right:260px; position:relative;}
+.sideRight{ position:absolute; top:13px; right:8px; width:238px;}
+.ieOld .sideRight{ width:240px; right:6px;}
+
+
+
+/*注册样式*/
+#popRegister .popRight p,
+#popRegister .popRight .select,
+#popLogin .popRight,
+#popLogin .popRight .select{ display:none;}
+
+
+.header .outer{ background-image:url(../images/bgBody20120703.png);}
+.header .logo{ width:410px; height:50px; margin-top:4px; float:left; margin-right:40px; text-indent:-999em;}
+.header .logo a{ height:50px; display:block; background:url(../images/logo.jpg) 0 0 no-repeat; float:left;}
+.header .logo a:active{ background-position:1px -49px;}
+.header .logo a.ny{ background-position:0 0; width:80px; }
+.header .logo a.magme{ background-position:-80px 0; width:100px;}
+.header .logo a.ny:hover{ background-position:0 -50px;}
+.header .logo a.magme:hover{ background-position:-80px -50px;}
+.header .outer .search a{ background-color:#361B2B;}
+.header .outer .search a:hover,
+.header .outer .search a.current { background-color:#402033;}
+.header #userBar .name strong{ color:#fff;}
+
+
+.topBanner {top:59px;}
+
+
+
+.bodyMagazine .item { width:200px; height:310px; overflow:hidden; background:url(../../../images/bgMagazine20120502.gif) 0 0 no-repeat; float:left; display:block; margin:8px 0 8px 8px; padding:10px 18px 6px 10px; position:relative;}
+.bodyMagazine .item .photo { display:block; width:200px; height:292px; position:relative;}
+.bodyMagazine .item .photo img { width:200px; height:268px; background:#f1f1f1; display:block;}
+.bodyMagazine .item .photo h5{ font-weight:normal; height:34px; font-size:14px; line-height:17px; margin-top:6px; overflow:hidden; color:#98a1ab;}
+.bodyMagazine .item .photo h5 span { display:block; color:#cbd2d9; padding-left:6px; font-size:11px;}
+.bodyMagazine .item .photo .album{ position:absolute; right:-9px; top:-9px; width:60px; height:60px; display:block; background:url(../../../images/corner.png) 0 0 no-repeat; display:none;}
+.bodyMagazine .item .photo:hover h5 { color:#7f8690;}
+.bodyMagazine .item .photo:hover h5 span { color:#98a1ab;}
+.bodyMagazine .item:hover .photo .album{ display:block;}
+.bodyMagazine .item .tools { height:24px; padding:7px; width:202px; position:absolute; left:2px; bottom:2px;}
+.bodyMagazine .item .tools em { height:24px; width:24px; display:none; float:right; margin-left:5px; background-position:0 center; background-repeat:no-repeat; cursor:pointer;}
+.bodyMagazine .item .tools em:hover{ color:#fff;}
+.bodyMagazine .item .tools em.iconShare{ background-image:url(../../../images/icon/share24Gray.png);}
+.bodyMagazine .item .tools em.iconShare:hover{ background-image:url(../../../images/icon/share24Blue.png);}
+.bodyMagazine .item .tools em.iconShare div{right:56px; top:4px; }
+.bodyMagazine .item .tools em.iconEmail{ background-image:url(../../../images/icon/mail24Gray.png); }
+.bodyMagazine .item .tools em.iconEmail:hover{ background-image:url(../../../images/icon/mail24Blue.png);}
+.bodyMagazine .item:hover .tools{ background:#f9f9f9; border-top:1px solid #ddd;}
+.bodyMagazine .item:hover .tools em{ display:inline-block;}
+.ie6 .bodyMagazine .item .toolsOn{ background:#f9f9f9; border-top:1px solid #ddd;}
+.ie6 .bodyMagazine .item .toolsOn em{ display:inline-block;}
+.ie6 .bodyMagazine .item .tools em.iconShare div{ right:20px; top:-3px; }
+
+
+/*神奇的代码，你看不懂是正常的*/
+.ie6 .bodyMagazine,
+.ie7 .bodyMagazine{ padding-left:236px; padding-right:24px;}
+.ie6 .bodyMagazine .item,
+.ie7 .bodyMagazine .item { margin-right:236px; margin-left:-228px; display:inline; }
+
+
+
+
+
+
+
+
+

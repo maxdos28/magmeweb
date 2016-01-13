@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>米商中心</title>
+</head>
+<body>
+      <!--topBar-->
+      <@pubCategory.main/>
+      <!--magezineBox-->
+      <@issueItem.main/>
+</body>
+</html>

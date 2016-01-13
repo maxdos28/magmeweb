@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style/royalslider.css"/>
+<link rel="stylesheet" type="text/css" href="style/rs-default.css"/>
+<link rel="stylesheet" type="text/css" href="style/tpl.css"/>
+<title>短信系统</title>
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.royalslider.min.js"></script>
+<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.js"></script>
+<script src="js/jquery.scrollto.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script>
+$(function(){
+
+//设置面面加载后地址栏收起
+window.addEventListener('load', function() {
+setTimeout(scrollTo, 0, 0, 1);
+}, false);
+
+
+
+$('.royalSlider').royalSlider({
+    fullscreen: {
+      enabled: true,
+      nativeFS: true
+    },
+    controlNavigation: 'none',		//thumbnails,bullets,none
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 4,     
+    autoScaleSliderHeight: 2.0,
+	arrowsNav: false,
+    loop: false,
+    imageScaleMode: 'fit',	//fill,fit-if-smaller
+    navigateByClick: true,
+    numImagesToPreload:3,
+	slidesSpacing:20,
+	slidesOrientation:'horizontal',		//vertical,horizontal
+	transitionType:'move',
+	controlsInside:true,
+    arrowsNavAutoHide: true,
+    arrowsNavHideOnTouch: true,
+    keyboardNavEnabled: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
+    globalCaptionInside: false,
+    thumbs: {
+      orientation: 'vertical',			//vertical,horizontal
+      appendSpan: true,
+      firstMargin: true,
+	  fitInViewport: true,
+      paddingBottom: 0
+    }
+});
+
+
+});
+</script>
+  </head>
+  <body>
+    <div class="main tpl3">
+    	<h1 class="header">汤臣别墅</h1>
+        <div class="nav">
+        	<a href="default.html">汤臣别墅</a><a href="demo2.html">地理位置</a><a href="demo3.html">设计理念</a><a href="demo4.html" class="current">建材设备</a><a href="demo5.html">户型图集</a>
+        </div>
+    	<div class="body">
+            
+        	<div class="content">
+                <strong>诚恳物业，细致到生活细处</strong><br>
+               
+                    <div id="gallery-1" class="royalSlider rsDefault" style="float:right; margin:8px 0 0 15px; width:180px;">
+                    <a class="rsImg" data-rsw="289" data-rsh="141"  data-rsBigImg="ui/p10.jpg" href="ui/p10.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p10.jpg" /></a>
+                    </div>
+
+
+                 <p>服务是对人生品味的映照，物业是对生活品质的完善。不需要繁复，不允许堆砌，适度的满足感才是检验其优劣的重要标准。湯臣湖庭花园以国际领先的服务理念，深入生活细处考量您的生活所需，专心构筑细致物业服务体系。体贴的问候，亲切的笑容，诚恳的态度，化作细腻的温馨迎候在您的身畔。 </p>
+            </div>
+            <br>
+
+            <div id="gallery-2" class="royalSlider rsDefault">
+            <a class="rsImg" data-rsw="289" data-rsh="141"  data-rsBigImg="ui/p8.jpg" href="ui/p8.jpg">Vincent van Gogh - Still Life: Vase with Twelve Sunflowers<img width="50" height="50" class="rsTmb" src="ui/p8.jpg" /></a>
+            </div>
+            
+        	<div class="content">
+            	<strong>建材设备说明</strong>
+                <p>建筑结构：本别墅采用钢筋混凝土框架结构，砼砖填充墙，具抗压、防风、耐震、防火、保温等特征，均符合上海市的建筑结构设计规范要求。 
+屋顶：屋面采用防水层及保温层并铺设水泥瓦。 
+外墙：外墙粉刷并附保温层，干挂石材，下沉庭院局部面贴玻化砖。 
+内墙：室内分隔墙均用240或120厚加气砼砌块成品砂浆粉刷。</p>
+            </div>
+            
+            
+            
+        </div>
+    	<div class="pagedock">
+        	<ul>
+            	<li class="mail"><a href="#"></a></li>
+            	<li class="qq"><a href="#"></a></li>
+            	<li class="phone400"><a href="tel:40000000000"></a></li>
+            	<li class="weibo"><a href="#"></a></li>
+            	<li class="weixin"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>

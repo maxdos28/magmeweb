@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelHome.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.onImagesLoad.min.js"></script>
+<script src="js/home.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/jquery.lightbox.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/global.js"></script>
+<!--styleswitcher & home1,2,3,4,5.css为静态页测试用-->
+<!-- <script src="js/styleswitcher.js"></script> -->
+<link title="style/channelHome1" href="style/channelHome1.css" type="text/css" rel="stylesheet">
+<!-- <link title="style/channelHome2" disabled href="style/channelHome2.css" type="text/css" rel="alternate stylesheet"> -->
+<!-- <link title="style/channelHome3" disabled href="style/channelHome3.css" type="text/css" rel="alternate stylesheet"> -->
+<!-- <link title="style/channelHome4" disabled href="style/channelHome4.css" type="text/css" rel="alternate stylesheet"> -->
+<!-- <link title="style/channelHome5" disabled href="style/channelHome5.css" type="text/css" rel="alternate stylesheet"> -->
+
+<!--[if lte IE 6]>
+<link href="style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="inner">
+        <!--logo-->
+        <h1 class="logo" id="logo"><a href="javascript:void(0)">麦米-Magme</a></h1>
+        <!--nav-->
+        <ul class="nav" id="menu">
+            <li class="home"><a href="index.html">首页</a></li>
+            <li class="kanmi"><a href="kanmi.html">杂志</a></li>
+            <li class="qiemi"><a href="qiemi.html">发现</a></li>
+            <li class="sns"><a href="sns.html">米客中心</a></li>
+            <li class="publisher"><a href="publisherHome.html">米商中心</a></li>
+        </ul>
+        <!--userBar-->
+        <ul class="userBar" id="userBar" style="display:block;">
+            <li class="reg"><a class="sub" href="javascript:void(0)" id="registerBtn">注册</a>
+            	<form id="registerForm" action="" onsubmit="return false;" method="post">
+	                <div class="box">
+	                	<sub></sub>
+	                	<div class="con">
+	                        <fieldset class="png">
+	                            <div class="input">
+	                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名" /></em>
+	                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+	                            </div>
+	                            <div class="input">
+	                                <em><input class="in" id="email" name="email" type="text" tipsSpan="邮箱" /></em>
+	                                <em id="checkEmail" class="tipsWrong" style="display:block;"></em>
+	                            </div>
+	                            <div class="input password">
+	                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+	                            </div>
+	                            <div class="input repassword">
+	                            	<em><input class="in" id="password" name="password" type="password" tipsSpan="确认密码" /></em>
+	                                <em id="checkPassword" class="tipsRight"></em>
+	                            </div>
+	                            <!--<div code="getcode">
+	                                <em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tipsSpan="验证码" /></em>
+	                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+	                            </div>-->
+	                            <div class="last">
+	                                <em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+	                                <em class="loading"></em>
+	                                <em class="tipsError">请填写相关信息</em>
+	                            </div>
+	                        </fieldset>
+	                    </div>
+	                </div>
+	             </form>           
+	        </li>
+            <li class="login"><a class="sub" href="javascript:void(0)" id="loginBtn">登录</a>
+            	<form id="logInForm" action="" onsubmit="return false;" method="post">
+	            	<div class="box">
+	                	<sub></sub>
+	                	<div class="con">
+	                        <fieldset class="png">
+	                            <div class="input">
+	                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名/邮箱" /></em>
+	                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+	                            </div>
+	                            <div class="input">
+	                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+	                                <em class="tipsWrong" style="display:block;"></em>
+	                            </div>
+	                            <!--<div code="getcode">
+	                                <em class="m0"><input code="getcode" class="input g60" name="authcode" type="text" tipsSpan="验证码" /></em>
+	                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+	                            </div>-->
+	                            <div>
+	                                <em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+	                                <em class="loading"></em>
+	                                <em class="remanber"><label><input id="remember_login" type="checkbox" checked/>下次自动登录</label></em>
+	                                <em class="tipsError">请填写相关信息</em>
+	                            </div>
+	                            <div class="last">
+	                                <em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+	                                <em><a id="newUserReg"href="javascript:void(0)">新用户注册</a></em>
+	                            </div>
+	                        </fieldset>
+	                    </div>
+	                </div>
+            	</form>
+            </li>
+            <li class="other"><a class="sub" href="javascript:void(0)" id="registerBtn">合作登录</a>
+            	<form id="otherForm" action="" onsubmit="return false;" method="post">
+	                <div class="box">
+	                	<sub></sub>
+	                	<div class="con">
+                        	<strong>使用合作网站账号登录麦米</strong>
+	                        <ul class="select">
+                                <li><a href="javascript:void(0)"><img src="images/icon/sns32/32-weibo.gif" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qq.gif" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="images/icon/sns32/32-renren.gif" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="images/icon/sns32/32-163weibo.gif" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="images/icon/sns32/32-douban.gif" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="images/icon/sns32/32-sohuweibo.gif" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="images/icon/sns32/32-baidu.gif" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qqweibo.gif" /></a></li>
+                            </ul>
+	                    </div>
+	                </div>
+	             </form>           
+	        </li>
+        </ul>
+        <!--loginBar-->
+        <ul class="loginBar" id="loginBar" style="display:none;">
+        	<li class="head"><a href="javascript:void(0)"><img id="avatar30" src="images/head30.gif" /></a></li>
+        	<li class="user"><strong id="nickName">Lewis</strong><a href="javascript:void(0)" id="newMessageNum"><sub></sub><em>(5)</em></a></li>
+        	<li class="logout" id="logout"><a href="javascript:void(0)">退出</a></li>
+        	<li class="setup"><a href="snsMyConfig.html">设置</a></li>
+        </ul>
+    </div>
+    <!--leftNav-->
+    <div class="leftNav">
+        <a class="feedback png" href="javascript:void(0)">意见反馈</a>
+        <a class="weibo png" href="javascript:void(0)">微博关注</a>
+        <a class="company png" href="javascript:void(0)">公司信息</a>
+        <a class="link png" href="javascript:void(0)">友情链接</a>
+    </div>
+    <a class="helpTips png" href="javascript:void(0)">帮助提示</a>
+</div>
+<!--body-->
+<div class="body">
+	<div class="body980">
+    <!--游戏banner-->
+    <div class="slideBanner">
+    	<div class="inner"></div>
+    	<a class="actionBtn" href="javascript:void(0)">开始游戏吧！</a>
+        <a class="close" href="javascript:void(0)">赢取iPhone 4S大奖</a>
+        <script>
+        $(function(){
+			//广告banner用
+			$(".slideBanner").hover(function(){
+				$(this).not(":animated").animate({height:300},700).find(".close").fadeOut(350);
+				$(this).find(".inner:not(:animated)").animate({marginTop:0},700);
+			},function(){
+				$(this).stop().animate({height:25},350).find(".close").fadeIn(350);
+				$(this).find(".inner").stop().animate({marginTop:-275},350);
+			});
+		})	
+        </script>
+    </div>
+	<!--topBar-->
+	<div class="topBar clearFix">
+        <ul class="subNav">
+            <li class="current"><a onclick="setActiveStyleSheet('style/channelHome1'); return false;" href="javascript:void(0)">随机分类</a></li>
+            <li><a onclick="setActiveStyleSheet('style/channelHome2'); return false;" href="javascript:void(0)">族群分类</a></li>
+            <li><a onclick="setActiveStyleSheet('style/channelHome3'); return false;" href="javascript:void(0)">族群分类</a></li>
+            <li><a onclick="setActiveStyleSheet('style/channelHome4'); return false;" href="javascript:void(0)">族群分类</a></li>
+            <li><a onclick="setActiveStyleSheet('style/channelHome5'); return false;" href="javascript:void(0)">族群分类</a></li>
+            <li></li>
+        </ul>
+        <script>
+        $(function(){
+			//临时测试用
+			$(".body980 .topBar .subNav li").click(function(){
+				$(this).addClass("current").siblings().removeClass("current");
+			});
+		})
+        </script>
+    	<div class="search">
+        	<input type="text" tips="输入您想看的杂志" class="text" /><input type="submit" class="btn" value="" />
+        </div>
+    </div>
+	<!--bodyContent-->
+	<div class="bodyContent">
+        <div class="item typeVip num0" id="homeVip">
+        	<h6>切米达人榜</h6>
+            <div class="headList">
+            	<ul>
+                	<li><img src="images/head60.gif" /></li>
+                	<li><img src="images/head60.gif" /></li>
+                	<li><img src="images/head60.gif" /></li>
+                	<li><img src="images/head60.gif" /></li>
+                	<li><img src="images/head60.gif" /></li>
+                </ul>
+            	<span class="arrow"></span>
+            </div>
+            <div class="userTag">
+            	<table>
+                	<tr>
+                    	<td>
+                        	<div class="inner">
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/pdfprofile/366/172_1694.jpg" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/H0/1321516015237.jpg" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/event/1321516720877.jpg" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/H0/1321516339109.jpg" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/H0/1321516513544.jpg" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/H0/1321516611337.jpg" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/event/1321516835720.jpg" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/event/1321348157595.jpg" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/H0/1321349631416.jpg" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="http://static.magme.cn/fpage/H0/1321349543077.jpg" height="160" /></a>
+                            </div>
+                        	<a href="javascript:void(0)" class="name">name111</a>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td>
+                        	<div class="inner">
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                            </div>
+                        	<a href="javascript:void(0)" class="name">name222</a>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td>
+                        	<div class="inner">
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                            </div>
+                        	<a href="javascript:void(0)" class="name">name333</a>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td>
+                        	<div class="inner">
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                            </div>
+                        	<a href="javascript:void(0)" class="name">name444</a>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td>
+                        	<div class="inner">
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" width="160" /></a>
+                                <a href="javascript:void(0)"><img src="" height="160" /></a>
+                            </div>
+                        	<a href="javascript:void(0)" class="name">name555</a>
+                        </td>
+                    </tr>
+                </table>
+          </div>
+          	<div class="loading"></div>
+            <sub class="png"></sub>
+            <sup class="png"></sup>
+        </div>
+		<!--<div class="item typeMgz num1"><a href="javascript:void(0)"><img src="images/temp/tempHome1.jpg" /></a><h6><span class="fav favCurrent">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>-->
+		<div class="item typeTag num2"><a href="javascript:void(0)"><img src="images/temp/tempHome2.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub><em class="png"><span></span>9999</em></div>
+		<div class="item typeEve num3"><a href="javascript:void(0)"><img src="images/temp/tempHome3.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeEve num4"><a href="javascript:void(0)"><img src="images/temp/tempHome4.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeMgz num5"><a href="javascript:void(0)"><img src="images/temp/temphome5.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeTag num6"><a href="javascript:void(0)"><img src="images/temp/temphome11.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub><em class="png"><span></span>9999</em></div>
+		<div class="item typeMgz num7"><a href="javascript:void(0)"><img src="images/temp/temphome6.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeEve num8"><a href="javascript:void(0)"><img src="images/temp/temphome13.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeTag num9"><a href="javascript:void(0)"><img src="images/temp/temphome8.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub><em class="png"><span></span>9999</em></div>
+		<div class="item typeTag num10"><a href="javascript:void(0)"><img src="images/temp/temphome16.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub><em class="png"><span></span>9999</em></div>
+		<div class="item typeEve num11"><a href="javascript:void(0)"><img src="images/temp/temphome14.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeMgz num12"><a href="javascript:void(0)"><img src="images/temp/temphome9.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeTag num13"><a href="javascript:void(0)"><img src="images/temp/temphome7.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub><em class="png"><span></span>9999</em></div>
+		<div class="item typeMgz num14"><a href="javascript:void(0)"><img src="images/temp/temphome10.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeTag num15"><a href="javascript:void(0)"><img src="images/temp/temphome12.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub><em class="png"><span></span>9999</em></div>
+		<div class="item typeTag num16"><a href="javascript:void(0)"><img src="images/temp/temphome2.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub><em class="png"><span></span>9999</em></div>
+		<div class="item typeEve num17"><a href="javascript:void(0)"><img src="images/temp/temphome3.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeEve num18"><a href="javascript:void(0)"><img src="images/temp/temphome4.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeMgz num19"><a href="javascript:void(0)"><img src="images/temp/temphome15.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub></div>
+		<div class="item typeTag num20"><a href="javascript:void(0)"><img src="images/temp/temphome1.jpg" /></a><h6><span class="fav">99</span><span class="top">99</span><span class="click">工具</span></h6><sub class="png"></sub><em class="png"><span></span>9999</em></div>
+    </div>
+	<!--topMagezine-->
+    <div class="topMagezine clearFix">
+    	<h6>热门杂志排行</h6>
+        <ol class="top10">
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        	<li><a href="javascript:void(0)">杂志名</a></li>
+        </ol>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<!--footer-->
+<div class="footer">
+	<div class="inner">
+    	<p>Copyright &copy; 2011 麦米版权所有 | 沪ICP备 <a href="http://www.miibeian.gov.cn" target="_blank">10217320</a></p>
+        <div class="nav">
+        	<ul class="m1">
+            	<li><a href="javascript:void(0)">公司信息</a>
+                	<ul>
+                        <li><a href="static_join_us.html">关于我们</a></li>
+                        <li><a href="static_about_us.html">加入我们</a></li>
+                        <li><a href="static_bulletin.html">麦米号外</a></li>
+                        <li><a href="static_policy.html">法律声明</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m2">
+            	<li><a href="javascript:void(0)">商务合作</a>
+               		<ul>
+                        <li><a href="javascript:void(0)">上传杂志</a></li>
+                        <li><a href="javascript:void(0)">合作媒体</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m3">
+            	<li><a href="javascript:void(0)">获取更新</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">邮件订阅</a></li>
+                        <li><a href="javascript:void(0)">麦米RSS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="shareTools">
+            <a href="javascript:void(0)" class="title"></a>
+            <a href="javascript:void(0)"><img src="images/icon/sns32png/32-weibo.png" /></a>
+            <a href="javascript:void(0)"><img src="images/icon/sns32png/32-qqweibo.png" /></a>
+            <a href="javascript:void(0)"><img src="images/icon/sns32png/32-renren.png" /></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

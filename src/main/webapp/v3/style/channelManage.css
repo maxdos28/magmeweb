@@ -1,0 +1,91 @@
+@charset "utf-8";
+@import url("conMessage.css");
+body{padding-top:90px; }
+.body{ zoom:1; margin:0 auto 50px auto; width:928px; background:#f3f3f3; box-shadow:0px 2px 3px rgba(0,0,0,0.1); position:relative;}
+.body:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+
+
+
+
+
+
+
+.conMiddleRight .conTopTools { margin-bottom:20px; background:#f5f5f5; padding:8px 5px;}
+.conMiddleRight .conTopTools fieldset div em.title{ width:auto;}
+.conMiddleRight .conTopTools fieldset hr{ margin:10px 0; background:#fff;}
+
+
+.conPubTopbar .search{ float:right; height:20px; overflow:hidden; margin-top:8px;}
+.conPubTopbar .search .text{ height:16px; line-height:14px; width:150px; text-indent:3px; border:1px solid #EBEBEB; border-right:none; float:left;}
+.conPubTopbar .search .btn{ width:20px; height:20px; background:url(../images/topbarSearch.gif) 0 0 no-repeat; border:none; cursor:pointer; float:left;}
+
+#publisherBar li.reg .box sub{ right:49px;}
+#publisherBar li.login .box sub{ right:3px;}
+#publisherBar li .box .con{ height:auto;}
+
+
+.conPubTopbar h2 a{ float:right; margin-left:20px;}
+.conPubTopbar .conBody .outer{ width:718px; height:100px; overflow:hidden; margin:0 10px; float:left; position:relative;}
+.conPubTopbar .conBody .inner{ width:9999px; float:left; }
+.conPubTopbar .conBody .item{ width:152px; height:90px; padding:5px 10px; overflow:hidden; margin-right:10px; background:#f1f1f1; float:left; display:inline; position:relative; }
+.conPubTopbar .conBody .current a{ color:#fff; display:block;}
+.conPubTopbar .conBody .btnLR{ height:100px; width:20px; display:inline-block; float:left; background-image:url(../images/btnHoverBig.png); background-repeat:no-repeat;}
+.conPubTopbar .conBody .turnLeft{ background-position:0 -110px; }
+.conPubTopbar .conBody .turnRight{ background-position:-140px -110px;}
+.conPubTopbar .conBody .turnLeft:hover{ background-position:0 0;}
+.conPubTopbar .conBody .turnRight:hover{ background-position:-140px 0;}
+.conPubTopbar .conBody a.stopL,
+.conPubTopbar .conBody a.stopR{ filter:alpha(opacity=20);-moz-opacity:0.2;-khtml-opacity: 0.2;opacity: 0.2;}
+.conPubTopbar .conBody a.stopL:hover{background-position:0 -110px; }
+.conPubTopbar .conBody a.stopR:hover{background-position:-140px -110px; }
+.conPubTopbar .conBody .current{ background:#f60; color:#fff;}
+
+
+
+.conManageMgzList .table tbody .t2{ text-align:left;}
+.conManageMgzData .table tbody .t1{ text-align:left;}
+.conManageAdPosition .table tbody .t1{ text-align:left;}
+.conManageAdCreate .conB h2 a{ position:relative; top:5px;}
+.conManageAdCreate .conTopTools fieldset div em.title{ width:62px;}
+.conManageAdCreate .conTopTools fieldset div.floatl{ margin-right:10px;}
+.conManageAdCreate .table tbody .t6{ text-align:left;}
+.conManageAdMyAd .table tbody .t2{ text-align:left;}
+.conManageAdMyMgzAd .table tbody .t2{ text-align:left;}
+.conManageAdMagmeAd .table tbody .t2,
+.conManageAdMagmeAd .table tbody .t10{ text-align:left;}
+.conManageAdSideAd .table tbody .t2{ text-align:left;}
+.conManageAdSideAd .conB h2 a{ font-weight:normal; margin-top:5px;}
+.conManageAdPositionDetail .table tbody .t3,
+.conManageAdPositionDetail .table tbody .t4,
+.conManageAdPositionDetail .table tbody .t5{ text-align:left;}
+.conManageAdPositionDetail .table tbody .t3 .input,
+.conManageAdPositionDetail .table tbody .t4 .input,
+.conManageAdPositionDetail .table tbody .t5 .input{ height:14px; line-height:14px; background:#FFC; position:relative; margin:-3px 0; font-size:12px;}
+.conManageAdPositionDetail .table tbody .t3 .input{ width:84px;}
+.conManageAdPositionDetail .table tbody .t4 .input{ width:84px;}
+.conManageAdPositionDetail .table tbody .t5 .input{ width:173px;}
+
+.conManageHome .conManageServices{ width:172px; float:right; background:#fff;}
+.conManageServices{ margin-bottom:30px;}
+.conManageServices .left{ width:778px; height:250px; float:left; margin-right:30px;}
+.conManageServices .right{ width:150px; height:188px; padding:60px 10px 0 10px; float:left; border:1px solid #eee; background:url(../images/managePic2.jpg) center 5px no-repeat; }
+.conManageServices .right p{font-size:20px; font-weight:bold; line-height:30px; color:#283037;}
+.conManageServices .right span{ color:#f60; font-size:20px; font-weight:normal;}
+.conManageServices .right .btnBB{ width:108px; margin-top:20px; font-weight:normal;}
+.conManageServicesTab .ctrl div{ width:79px;}
+.conManageServicesTab .ctrl div.current{background-image:url(../images/tabboxTitleBg79.gif);}
+
+.conUploadStatus .conBody strong{ display:block; margin-bottom:5px; color:#333;}
+.conUploadStatus .conBody .table td{ text-align:left;}
+.conUploadStatus .conBody .table td.important{ color:#f60;}
+.conUploadStatus .conBody .table td a{ color:#f60; text-decoration:underline; padding:0 3px; height:18px; line-height:18px; float:left; display:block; font-size:10px;}
+.conUploadStatus .conBody .table td span.floatl{ width:30px; height:18px; line-height:18px; display:block;}
+
+.conManageMgzInput .left{ width:374px; float:left; margin-right:30px; overflow:hidden;}
+.conManageMgzInput .left img{ width:374px; }
+.conManageMgzInput .right{ width:374px; float:left; height:300px;}
+.conManageMgzInput .right textarea.input{ width:368px; height:300px; margin-bottom:10px;}
+.conManageMgzInput .right .changePage{ border-top:1px dotted #ccc; margin-top:10px; padding-top:10px; text-align:left;}
+.conManageMgzInput .right .changePage a{ width:20px; text-align:center; margin-bottom:3px;}
+
+

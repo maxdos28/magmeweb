@@ -1,0 +1,180 @@
+﻿
+@charset "utf-8";
+@import url("conM1.css");
+@import url("conNavColor.css");
+
+/*设置导航位置*/
+body{ padding-top:100px;background: #f1f1f1;}
+.header20120905 .newnavL .home a,
+.header20120905 .newnavL .home a:hover{ color:#fff;}
+.header20120905 .inner{ width:1180px;}
+.bodyHome{ width:944px; padding-right:263px; position:relative;}
+.sideRight{ position:absolute; top:13px; right:13px; width:238px;margin-left: 0;}
+.ieOld .sideRight{ width:240px; right:12px;}
+
+
+
+
+
+
+
+
+/*homeItem*/
+.bodyHome .item{ width:210px; margin:12px; float:left; display:inline; background:#fff; border:1px solid #e5e5e5; position:relative;}
+.ieOld .bodyHome .item .info{ padding:9px;}
+.ie6 .bodyHome .item{ overflow-y:visible; overflow-x:hidden;}
+
+.bodyHome .item .photo{ width:210px; max-height:420px; background:#f1f1f1; display:block;position: relative;z-index: 1;overflow: hidden;}
+.bodyHome .item .photo img{ border:none; width:210px; display:block; transition: all 0.6s ease-out;-moz-transition: all 0.6s ease-out;-webkit-transition: all 0.6s ease-out;-o-transition: all 0.6s ease-out;}
+.bodyHome .item a:hover .photo img{transform: scale(1.1);-moz-transform: scale(1.1);-webkit-transform: scale(1.1);-o-transform: scale(1.1);}
+.bodyHome .item .info{ padding:0 10px 10px 10px; position:relative;z-index: 2;}
+.bodyHome .item .info .user{ position:relative; left:-5px; margin-top:-12px; margin-bottom:6px; width:185px; height:40px; padding:8px; display:block; background:url(../images/m1UserBorder.png) 0 0 no-repeat;}
+.ie6 .bodyHome .item .info .user{ background-image:url(../images/m1UserBorder.gif); left:-5px;}
+.ieOld .bodyHome .item .info .user{margin-top:-22px;}
+.bodyHome .item .info .user img{ width:40px; height:40px; display:block; float:left; margin-right:15px;}
+.bodyHome .item .info .user strong{ font-size:12px; height:20px; line-height:20px; margin-top:15px; width:120px; display:block; overflow:hidden; color:#000; font-weight:normal; float:left;}
+.bodyHome .item .info .class{ position:relative; margin-top:-10px; margin-bottom:10px; left:-10px; width:210px; overflow:hidden;}
+.bodyHome .item .info .class strong{ font-size:12px; line-height:20px; display:block; float:left; margin-left:10px; color:#fff; font-weight:normal; padding:0 6px; border:1px solid rgba(255,255,255,0.4);background:#4DB7E2; }
+.ieOld .bodyHome .item .info .class{ margin-top:-20px; }
+.ie6 .bodyHome .item .info .class{ margin-top:-18px; left:-20px;}
+.bodyHome .item .info p{ line-height:1.8em; color:#666; overflow:hidden;}
+.bodyHome .item h2{ font-size:18px; line-height:30px; color:#000; display:inline; margin-top:10px; word-wrap:break-word; word-break:break-all;}
+.bodyHome .item .tools{ position:absolute; left:0; bottom:0; height:24px; padding:7px; width:196px;z-index: 4}
+.bodyHome .item .tools em{ height:24px; line-height:24px; width:24px; text-indent:-99em; display:none; float:right; margin-left:5px; background-position:center center; background-repeat:no-repeat; cursor:pointer;}
+.bodyHome .item .tools em:hover{ color:#fff;}
+.bodyHome .item .tools em.iconHeart{ background-image:url(../images/icon/heart24Gray.png);display: none!important;}
+.bodyHome .item .tools em.iconHeart:hover{ background-image:url(../images/icon/heart24Blue.png);}
+.bodyHome .item .tools em.favCurrent,
+.bodyHome .item .tools em.favCurrent:hover{ background-image:url(../images/icon/heart24Red.png); display:inline-block;}
+.bodyHome .item .tools em.iconShare{ background-image:url(../images/icon/share24Gray.png);}
+.bodyHome .item .tools em.iconShare div{right:56px; top:4px;}
+.bodyHome .item .tools em.iconShare:hover{ background-image:url(../images/icon/share24Blue.png);}
+.bodyHome .item .tools em.iconDetail{ background-image:url(../images/icon/more24Gray.png); }
+.bodyHome .item .tools em.iconDetail:hover{ background-image:url(../images/icon/more24Blue.png);}
+.bodyHome .item:hover{ border-color:#5BAFD3;}
+.bodyHome .item:hover .tools{ border-top:1px solid #ddd; background:#f9f9f9;}
+.bodyHome .item:hover .tools em{ display:inline-block;}
+.ieOld .bodyHome .item:hover .tools{ border-top:1px solid #ddd;}
+.ie6 .bodyHome .item .toolsOn{ border-top:1px solid #ddd; background:#f9f9f9;}
+.ie6 .bodyHome .item .toolsOn em{ display:inline-block;}
+.ie6 .bodyHome .item .tools em.iconShare div{right:22px; top:-2px;}
+.bodyHome .itemFirst{ width:446px; height:320px; background:#fff; border:1px solid #e5e5e5; z-index:1; position:absolute; left:12px; top:12px; overflow:hidden;}
+.bodyHome .itemSpace{ width:210px; height:320px; box-shadow:none; background:none; padding:0;}
+.bodyHome .itemSpace:hover{ background:none; box-shadow:none;}
+
+
+
+.topTag{ width:1198px; margin-bottom:5px; padding-top:10px;}
+.topTag ul{ padding-left:25px;}
+.topTag ul li{ float:left;}
+.topTag ul li a{ color:#A7AEB4; padding:4px 10px; display:inline-block;}
+.topTag ul li a:hover{ color:#7A868F;}
+.topTag ul li a.current{ color:#223547;}
+.topTag ul li.title a{ color:#A42323; cursor:default;}
+
+
+
+
+
+
+
+/* 设备判断 */
+.padHomeStyle{min-width:100%;}
+.padHomeStyle .header20120905 .headerTop{overflow: hidden;padding-bottom: 0;}
+.padHomeStyle .header20120905 .headerTop .conUser{right: 460px;}
+.padHomeStyle .header20120905 .headerTop .search{right: 200px;width: 250px;}
+.padHomeStyle .header20120905 .headerNav .logo{margin-left: 18px;} 
+.padHomeStyle .header20120905 .headerNav ul.clearFix li a{width: 95px;}
+.padHomeStyle .header20120905 .headerNav ul.clearFix li a.hot{width: 130px;}
+.padHomeStyle .footerBig{overflow: hidden;}
+.padHomeStyle .footerBig .inner .contact{width: 250px;padding: 0 20px;}
+.padHomeStyle .footerBig .inner .quickLink{width: 160px;}
+.padHomeStyle .footerBig .inner .quickLink ul{width: 160px;}
+.padHomeStyle .footerBig .inner .quickLink ul li{width: 80px;}
+.padHomeStyle .footerBig .inner .contactForm{padding-left: 30px;}
+.padHomeStyle .footerBig .inner .contactForm .sendBox{width: 200px;}
+.padHomeStyle .footerBig .copyright{overflow: hidden;width: 84%;text-align: center;}
+.padHomeStyle .footerBig .icon{margin-left: -90px;}
+.padHomeStyle .bodyHome{margin-left:5px;width: auto;}
+.padHomeStyle .sideRight{overflow: hidden;right: 18px;}
+
+
+
+
+
+
+.phoneHomeStyle{min-width: 320px;padding-top: 70px;}
+.phoneHomeStyle .header20120905 .headerTop{display: none;}
+.phoneHomeStyle .header20120905 .headerNav{top:0;}
+.phoneHomeStyle .header20120905 .headerNav .logo,
+.phoneHomeStyle .header20120905 .outer .inner{width: 100%;}
+.phoneHomeStyle .header20120905 .headerNav .logo a{margin: 0 auto;}
+.phoneHomeStyle .header20120905 .headerNav .subNav{display: none;}
+.phoneHomeStyle #logo{float: none;margin-right: 0;}
+.phoneHomeStyle .headerBanner{display: none;}
+.phoneHomeStyle .headerBanner img{width: 100%;}
+.phoneHomeStyle .footerBig .letterIndex{display: none;}
+.phoneHomeStyle .footerBig .footerLink{display: none;}
+.phoneHomeStyle .footerBig .quickLink{display: none;}
+.phoneHomeStyle .footerBig .contact{display: none;}
+.phoneHomeStyle .footerBig .contactForm{display: none;}
+.phoneHomeStyle .footerBig .magmeWeiBo{padding: 0;margin: 0 auto;float: none;background-image:none;width: 230px;}
+.phoneHomeStyle .footerBig .inner{width: 100%;}
+.phoneHomeStyle .footerBig .icon{display: none;}
+.phoneHomeStyle .sideRight{display: none;}
+.phoneHomeStyle .bodyHome{padding-right: 0;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; box-sizing:border-box;padding: 0 15px;}
+.phoneHomeStyle .bodyHome .itemFirst{position:relative !important;left:auto !important; top:auto !important;margin:20px auto; }
+.phoneHomeStyle .bodyHome .itemFirst img{width: 100%;height: auto;}
+.phoneHomeStyle .bodyHome .item{-moz-box-sizing:border-box;-webkit-box-sizing:border-box; box-sizing:border-box;}
+.phoneHomeStyle .bodyHome .item .photo{width: 100%;max-height:auto;}
+.phoneHomeStyle .bodyHome .item .photo img{width: 100%;height: auto !important;}
+.phoneHomeStyle .bodyHome .item .tools{width: 100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; box-sizing:border-box;height: 38px;}
+
+.phoneHomeStyle .bodyHome .conTopic h2{ background:#C0C8CF; height:26px; line-height:24px; color:#fff; text-indent:10px; border-top:2px solid #B3BBC4; margin-bottom:1px;display: block;}
+.phoneHomeStyle .conTopic a{ display:block; margin-bottom:1px; overflow:hidden;}
+.phoneHomeStyle .conTopic a img{ width:100%;height: auto; display:block;}
+
+.phoneHomeStyle .conMagezine .book{ width:162px; height:206px; padding:2px 0 0 2px; margin:0 auto; display:block; background:url(../images/bookShadow.png) 0 0 no-repeat;}
+.phoneHomeStyle .conMagezine a{ width:162px; height:206px; padding:2px 0 0 2px; margin:0 auto; display:block; background:url(../images/bookShadow.png) 0 0 no-repeat;}
+.phoneHomeStyle .conMagezine a img{ width:150px; height:200px; display:block;}
+.phoneHomeStyle .conMagezine a:hover img{filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.phoneHomeStyle .conMagezine strong{ position:absolute; display:block; top:242px; width:238px; left:0; text-align:center; color:#9A8C7A; text-shadow:1px 1px 1px rgba(255,255,255,0.5)}
+
+.phoneHomeStyle .conTopic{ margin-bottom:0; background-color:transparent; margin-bottom:19px;}
+.phoneHomeStyle .bodyHome .conVideoAd img{width: 100%;height: auto;}
+.phoneHomeStyle .bodyHome .conAd img{width: 100%;height: auto;}
+
+.phoneHomeStyle .conList{ overflow:hidden; width:238px;}
+.phoneHomeStyle .conList a{ height:24px; line-height:24px; padding:5px 10px; display:block; overflow:hidden; background:#FAFAFA; border-top:1px solid #fff; border-bottom:1px solid #E6E6E6; -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s;  position:relative;}
+.phoneHomeStyle .conList a h3,
+.phoneHomeStyle .conList a strong{ color:#444; display:block; float:left; width:220px; overflow:hidden; height:24px; -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s;}
+.phoneHomeStyle .conList a span{ height:16px; width:16px; text-align:center; line-height:16px; margin:4px 5px 0 0; display:block; float:left; background:#ccc; color:#fff; font-size:10px; font-weight:normal; border-radius:2px;}
+.phoneHomeStyle .conList a span.a1{ background:#046;}
+.phoneHomeStyle .conList a span.a2{ background:#07a;}
+.phoneHomeStyle .conList a span.a3{ background:#08c;}
+.phoneHomeStyle .conList a.last{ box-shadow:0 1px 3px rgba(0,0,0,0.25); border-bottom:none;}
+.phoneHomeStyle .conList a:hover{ background:#fff;}
+.phoneHomeStyle .conList a:hover strong{ color:#222;}
+.phoneHomeStyle .conList a.more{ background:#F3F3F3; color:#666; border:none; height:28px; line-height:28px; text-align:center; position:static;}
+.phoneHomeStyle .conList a.more:hover{ background:#e5e5e5;}
+.phoneHomeStyle .conList a.title p{ display:inline-block; padding:0 5px; margin-left:5px; float:left; height:20px; line-height:20px; font-weight:normal; color:#fff; text-indent:0; border-radius:2px; position:relative; top:4px;}
+.phoneHomeStyle .bodyHome .conMagezine{ height:270px; padding-top:15px; background:url(../images/bgWoodGlass.jpg) 0 0 no-repeat; position:relative;width: auto;margin-left:auto;margin-right: auto;}
+
+
+.phoneHomeStyle.screenPhoneVertical .bodyHome .itemSpace{display: none !important;}
+.phoneHomeStyle.screenPhoneVertical .bodyHome .itemFirst{height: auto;width: 100%;}
+.phoneHomeStyle.screenPhoneVertical .bodyHome{height: auto !important;padding-left: 15px;padding-right: 15px;}
+.phoneHomeStyle.screenPhoneVertical .bodyHome .item{width: 100%;left:auto !important; top:auto !important;display: block;float: none;position:relative !important;margin:20px 0;}
+.phoneHomeStyle.screenPhoneVertical .conMagezine{margin: 20px auto;}
+.phoneHomeStyle.screenPhoneVertical .bodyHome .conAd{width: 100%;height: auto;}
+.phoneHomeStyle.screenPhoneVertical .bodyHome .conVideoAd{width: 100%;height: auto;}
+.phoneHomeStyle.screenPhoneVertical .bodyHome .conMagezine{width: 238px;margin-left:auto;margin-right: auto;}
+
+
+
+
+.phoneHomeStyle.screenPhoneHorizontal{overflow: hidden;}
+.phoneHomeStyle.screenPhoneHorizontal .bodyHome .itemFirst{margin-left:4%;margin-right:4%;height: 320px;width:92%;}
+.phoneHomeStyle.screenPhoneHorizontal .bodyHome{padding-left: 0;padding-right: 0;}
+.phoneHomeStyle.screenPhoneHorizontal .bodyHome .item{width:42%; margin:0 19px 19px 19px;}
+.phoneHomeStyle.screenPhoneHorizontal .bodyHome .conMagezine{width: 238px;}

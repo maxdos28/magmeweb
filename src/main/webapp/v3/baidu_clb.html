@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body style="margin:0">
+<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
+<script type="text/javascript">
+(function() {
+	//根据首页分类id选择对应的key值
+	baidu_sort0="0";//首页
+	baidu_sort263="1";//最新上架
+	baidu_sort264="2";//欲望清单
+	baidu_sort262="3";//时尚
+	baidu_sort295="4";//美妆
+	baidu_sort240="5";//鲜肉
+	baidu_sort42="6";//生活
+	baidu_sort294="7";//促销
+	/******暂时不用********/
+	//baidu_sort245="7";//绿植格子间
+	//baidu_sort4="8";//此间推荐
+	//baidu_sort249="9";//麦米GO
+	/******************/
+	baidu_sortnv0="nv0";
+	//首页
+	baidu_ad_sort00="1043302";//置顶封面
+	baidu_ad_sort01="966401";//--封面
+	baidu_ad_sort02="966415";//右侧焦点广告
+	//其它广告
+	baidu_ad_sort03="966434";
+	baidu_ad_sort04="966441";
+	baidu_ad_sort05="966436";
+	baidu_ad_sort06="966438";
+	baidu_ad_sort07="966439";
+	baidu_ad_sort08="966440";
+	baidu_ad_sort09="966443";
+	baidu_ad_sort010="966444";
+	//最新上架
+	baidu_ad_sort11="966401";//--封面
+	baidu_ad_sort12="966415";//右侧焦点广告
+	//欲望清单
+	baidu_ad_sort21="966405";//--封面
+	baidu_ad_sort22="966416";//右侧焦点广告
+	//时尚
+	baidu_ad_sort31="966408";//--封面
+	baidu_ad_sort32="966420";//右侧焦点广告
+	//美妆
+	baidu_ad_sort41="1043462";//--封面
+	baidu_ad_sort42="1043465";//右侧焦点广告
+	//鲜肉
+	baidu_ad_sort51="966406";//--封面
+	baidu_ad_sort52="966418";//右侧焦点广告
+	//生活
+	baidu_ad_sort61="966407";//--封面
+	baidu_ad_sort62="966419";//右侧焦点广告
+	//促销
+	baidu_ad_sort71="966413";//--封面
+	baidu_ad_sort72="966425";//右侧焦点广告
+	
+	//此间推荐
+	baidu_ad_sort81="966412";//--封面
+	baidu_ad_sort82="966424";//右侧焦点广告
+
+	//麦米GO
+	baidu_ad_sort91="966413";//--封面
+	baidu_ad_sort92="966425";//右侧焦点广告
+	
+	baidu_ad_sortnv01="418663";//置顶广告
+	baidu_ad_sortnv02="418664";//右侧广告
+	
+	var hash = window.location.hash;
+	hash = hash.replace("#","");
+	hash=hash.split("_");
+	var sort_type= eval("baidu_sort"+hash[0]);
+	var baidu_value = eval("baidu_ad_sort"+sort_type+hash[1]);
+	
+    BAIDU_CLB_fillSlot(baidu_value);
+})();
+</script>
+</body>
+</html>

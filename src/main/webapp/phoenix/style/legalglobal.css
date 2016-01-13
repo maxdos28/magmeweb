@@ -1,0 +1,44 @@
+{-webkit-border-radius:0 0 0 0;-moz-border-radius:0 0 0 0; border-radius:0 0 0 0;}
+
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {-webkit-text-size-adjust:none;}
+body{font-size:16px;margin:0;width:100%; max-width:1024px; min-width:320px; margin:0 auto; color:#444; background:#fff;}
+
+/*clearFix clear*/
+.clearFix:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.clearFix {zoom:1;} 
+.clear{clear:both;}
+/*float*/
+.hide		{display:none;}
+.floatr		{float:right;}
+.floatl		{float:left;}
+.floatrImg	{float:right;clear:right;margin:0 0 10px 10px;}
+.floatlImg	{float:left;clear:left;margin:0 10px 10px 0;}
+
+/*link*/
+a				{text-decoration:none;cursor:pointer; }
+a:link 		{color:#333;} 
+a:visited		{color:#333;}
+a:active		{color:#ff5400;}
+a:hover		{color:#ff5400;}
+a.linkRed{ color:#ff4500;}
+
+
+/*text-align*/
+.tCenter	{ text-align:center;}
+.tLeft		{ text-align:left;}
+.tRight		{ text-align:right;}
+
+
+
+h1{ font-size:24px; text-align:center; line-height:2em;}
+strong{ line-height:2.4em; font-size:18px;}
+li,p{ line-height:1.8em;}
+
+
+.body{ padding:15px; position:relative;}
+.iphonePic img{ display:block; width:290px; margin:10px auto;}
+.iphonePic span{ display:block; text-align:center; font-weight:bold;}
+.ipadPic img{ display:block; width:500px; margin:10px auto;}
+.ipadPic span{ display:block; text-align:center; font-weight:bold;}
+
+a.back{ position:absolute; left:15px; top:15px; color:#08c;}

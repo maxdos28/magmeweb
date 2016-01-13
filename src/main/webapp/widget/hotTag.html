@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="../style/global.css" rel="stylesheet" type="text/css" />
+<link href="../style/kanmi.css" rel="stylesheet" type="text/css" />
+<link href="style/base.css" rel="stylesheet" type="text/css" />
+<link href="style/renren.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-new.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/jquery.color.js"></script>
+<script src="../js/jquery.inputfocus.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/jquery.masonry.min.js"></script>
+<script>
+$(function(){
+	$('#hotTag').masonry({itemSelector: '.item'});
+})
+</script>
+<!--[if lte IE 6]>
+<link href="style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="main">
+<!--header-->
+<div class="header">
+    <h1 class="logo"><a href="http://www.magme.cn" target="_parent">麦米magme</a></h1>
+    <!--nav-->
+    <ul id="menu" class="nav">
+        <li><a href="newTag.html">最新标签</a></li>
+        <li class="current"><a id="" href="hotTag.html">最热标签</a></li>
+        <li><a id="" href="magzine.html">杂志阅读</a></li>
+    </ul>
+    <a class="btnOS floatr">邀请</a>
+    <a class="btnOS floatr btnlike">喜欢</a>
+</div>
+<!--body-->
+<div class="body pageWidget clearFix">
+    <!--conTagWall-->
+	<div class="outer">
+    <!--topBar-->
+    <div class="kanmiTopBar hotTagBar">
+        <div class="conCategoryV2" id="conCategory">
+            <a href="javascript:void(0)" class="btn" id="btn">切米分类<span></span></a>
+            <div class="conBody clearFix">
+            	<div class="item clearFix">
+                    <h3><a href="javascript:void(0)">汽车</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)" class="orderT">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item item2 clearFix">
+                    <h3><a href="javascript:void(0)">旅游</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)" class="orderB">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item clearFix">
+                    <h3><a href="javascript:void(0)">商业</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item item2 clearFix">
+                    <h3><a href="javascript:void(0)">财经</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item clearFix">
+                    <h3><a href="javascript:void(0)">时尚</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item item2 clearFix">
+                    <h3><a href="javascript:void(0)">娱乐</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item clearFix">
+                    <h3><a href="javascript:void(0)">家居</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item item2 clearFix">
+                    <h3><a href="javascript:void(0)">生活</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item itemLast clearFix">
+                    <h3><a href="javascript:void(0)">科技数码</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="item item2 itemLast clearFix">
+                    <h3><a href="javascript:void(0)">人文情感</a></h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="javascript:void(0)">时间</a></li>
+                            <li><a href="javascript:void(0)">点击</a></li>
+                            <li><a href="javascript:void(0)">推荐</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="conFooter"></div>
+        </div>
+        <div class="categoryList">
+        	<a href="javascript:void(0)" class="home">排序：</a>
+        	<a href="javascript:void(0)" class="orderT">时间</a>
+        	<a href="javascript:void(0)" class="orderB">点击</a>
+        	<a href="javascript:void(0)">推荐</a>
+        </div>
+    </div>
+
+    	<div class="inner hotTag clearFix" id="hotTag" style="visibility:visible;">
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpgg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名杂志名杂志名杂志名杂志名杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题标题标题标题标题标题标题标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                       <div class="img"> <img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig3.jpg" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig1.jpg" height="200" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="showBar" href="tagShow.html">
+                        <div class="img"><img src="../images/tempMagezineBig2.jpg" height="400" /></div>
+                        <span>标题标题标题</span>
+                        </a>
+                    <div class="clearFix">
+                        <img src="../images/head30.gif" />
+                        <p><a href="javascript:void(0)">用户名</a>创建此标签，源于<a href="javascript:void(0)">杂志名</a></p>
+                    </div>
+                </div>
+                
+    	</div>
+        <div class="loadMore">点击显示更多内容...</div>
+    </div>
+</div>
+        
+</div>
+</body>
+</html>

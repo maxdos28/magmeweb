@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelPublisher.css" rel="stylesheet" type="text/css" />
+<script src="js/SystemProp.js"></script>
+<script src="js/jquery-new.min.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script>
+$(function(){
+	$.jquerytagbox("#publisherLogin",0);
+});
+</script>
+<style>
+body{ margin:100px auto 0 auto; background:#fff;}
+</style>
+<body>
+
+
+<div class="jqueryTagBox" id="publisherLogin">
+    <div class="ctrl">
+        <div>登录</div>
+        <div>出版商注册</div>
+        <div>广告商注册</div>
+    </div>
+    <div class="doorList">
+        <div class="item">
+            <fieldset class="formPublisherLogin">
+                <div>
+                    <em class="title">用户名/邮箱：</em>
+                    <em><input type="text" class="input g250" /></em>
+                </div>
+                <div>
+                    <em class="title">密码：</em>
+                    <em><input type="password" class="input g250" /></em>
+                </div>
+                <div>
+                    <em class="title">身份：</em>
+                    <em><label><input type="radio" />xxxxxx</label></em>
+                    <em><label><input type="radio" />xxxxxx</label></em>
+                    <em><label><input type="radio" />xxxxxx</label></em>
+                </div>
+                <div>
+                    <em class="title">验证码：</em>
+                    <em><input type="text" class="input g50" /></em>
+                    <em class="code"><a href="javascript:void(0)"><img src="images/code.gif" />&nbsp;看不清？换一个</a></em>
+                </div>
+                <div>
+                    <em class="title">&nbsp;</em>
+                    <em><a href="#" class="btnBS" >登录</a></em>
+                    <em class="loading"></em>
+                </div>
+            </fieldset>
+        </div>
+        <div class="item">
+            <fieldset class="formPublisherRegister">
+                <div>
+                    <em class="title">用户名：</em>
+                    <em><input id="userName" type="text" class="input g200" /></em>
+                    <em id="checkName" class="tipsRight"></em>
+                </div>
+                <div>
+                    <em class="title">杂志社名称：</em>
+                    <em><input id="publishName" type="text" class="input g200" /></em>
+                    <em id="checkPublishName" class="tipsRight"></em>
+                </div>
+                <div>
+                    <em class="title">邮箱：</em>
+                    <em><input id="email" type="text" class="input g200" /></em>
+                    <em id="checkEmail" class="tipsRight"></em>
+                </div>
+                 <div>
+                    <em class="title">联系人：</em>
+                    <em><input id="contact1" type="contact1" class="input g200" /></em>
+                </div>
+                <div>
+                    <em class="title">联系电话：</em>
+                    <em><input id="contactPhone1" type="contactPhone1" class="input g200" /></em>
+                </div>
+                <div>
+                    <em class="title">密码：</em>
+                    <em><input id="passwordRe" type="password" class="input g200" /></em>
+                </div>
+                <div>
+                    <em class="title">确认密码：</em>
+                    <em><input id="password2" type="password" class="input g200" /></em>
+                </div>
+                 <div>
+                    <em class="title">验证码：</em>
+                    <em><input id="publisherauthcode" type="text" class="input g60" /></em>
+                    <em class="code"><img code="getCode" class="code" style="background:#ccc;" src="/images/code.gif" /><a name="getPublisherAuthcode" href="javascript:void(0)">看不清？换一个</a></em>
+                </div>
+                <div>
+                    <em class="title"></em>
+                    <em><label><input type="checkbox" /><span>我已阅读并接受</span><a class="important" onclick="window.open('publisherAgreement.html','','width=800,height=500')">《居冠软件用户协议》</a></label></em>
+                    <em></em>
+                </div>
+                <div>
+                    <em class="title">&nbsp;</em>
+                    <em><a id="publishReg2222Submit" href="#" class="btnOS" >注册</a></em>
+                    <em class="loading"></em>
+                    <em class="tipsError">请填写相关信息</em>
+                </div>
+                <div class="tips">
+                </div>	
+       </fieldset>
+
+        </div>
+        <div class="item">
+            <fieldset class="formAdRegister">
+                <div>
+                    <em class="title">邮箱：</em>
+                    <em><input type="text" class="input g220" /></em>
+                </div>
+                <div>
+                    <em class="title">设置密码：</em>
+                    <em><input type="password" class="input g220" /></em>
+                </div>
+                <div>
+                    <em class="title">重复密码：</em>
+                    <em><input type="password" class="input g220" /></em>
+                </div>
+                <div>
+                    <em class="title">杂志社或公司名称：</em>
+                    <em><input type="text" class="input g220" /></em>
+                </div>
+                <hr /><br />
+                <div>
+                    <em class="title">电子邮件：</em>
+                    <em><input type="text" class="input g220" /></em>
+                </div>
+                <div>
+                    <em class="title">联系电话：</em>
+                    <em><input type="text" class="input g80" /></em>
+                    <em><input type="text" class="input g130" /></em>
+                </div>
+                <div>
+                    <em class="title">常用联系方式：</em>
+                    <em><select class="g80"><option>请选择</option></select></em>
+                    <em><input type="text" class="input g140" /></em>
+                </div>
+                <div>
+                    <em class="title">通信地址：</em>
+                    <em><input type="text" class="input g220" /></em>
+                </div>
+                <hr /><br />
+                <div>
+                    <em class="title">网站地址：</em>
+                    <em><input type="text" class="input g220" value="http://" /></em>
+                </div>
+                <div>
+                    <em class="title">传真号码：</em>
+                    <em><input type="text" class="input g80" /></em>
+                    <em><input type="text" class="input g130" /></em>
+                </div>
+                <div>
+                    <em class="title"></em>
+                    <em><label><input type="checkbox" /><span>我已阅读并接受</span><a class="important" onclick="window.open('publisherAgreement.html','','width=800,height=500')">《居冠软件用户协议》</a></label></em>
+                    <em></em>
+                </div>
+                <div>
+                    <em class="title">&nbsp;</em>
+                    <em><a href="#" class="btnOS" >注册</a></em>
+                    <em class="loading"></em>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

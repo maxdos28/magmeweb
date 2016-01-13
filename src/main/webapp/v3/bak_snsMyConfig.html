@@ -1,0 +1,190 @@
+﻿<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelSns.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.onImagesLoad.min.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/scrolltopcontrol.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/global.js"></script>
+<script>
+$(function(){
+});
+</script>
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="javascript:void(0)">(SEO)麦米 Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li class="home"><a href="index.html">首页</a></li>
+                <li class="magazine"><a href="magazine.html">杂志</a></li>
+                <li class="kanmi"><a href="kanmi.html">看米</a></li>
+            </ul>
+            <!--userBar-->
+            <ul class="conUser" id="loginBar" style="display:none;">
+                <li class="reg"><a href="javascript:void(0)">注册</a></li>
+                <li class="login"><a href="javascript:void(0)">登录</a></li>
+            </ul>
+            <!--loginBar-->
+            <ul class="conUser" id="userBar" style="display:block;">
+                <li class="head"><a href="javascript:void(0)"><img id="avatar30" src="images/head30.gif" /></a></li>
+                <li class="name"><strong id="nickName">Lewis</strong></li>
+                <li class="message"><a href="javascript:void(0)" id="newMessageNum" title="5条新消息">消息</a></li>
+                <li class="setup"><a href="snsMyConfig.html" title="设置">设置</a></li>
+                <li class="logout" id="logout"><a href="javascript:void(0)" title="退出">退出</a></li>
+            </ul>
+            <div class="search" id="headerSearch">
+            	<a href="javascript:void(0)">搜索</a>
+            	<div class="box"><input class="in" type="text" /><input class="btn" type="button" value="搜索" /></div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!--body-->
+<div class="body">
+  <div class="conLeft">
+    <div class="userInfo clearFix"> <strong class="name">赵志达</strong> <a href="javascript:void(0)" class="img"><img src="images/temp/home11.jpg" /><em>更换头像</em></a>
+      <ul class="atten">
+        <li><a href="snsKanmi.html"><strong>90</strong><span>图片</span></a></li>
+        <li><a href="snsMagazine.html"><strong>108</strong><span>杂志</span></a></li>
+        <li><a href="snsFriend.html"><strong>5</strong><span>好友</span></a></li>
+      </ul>
+    </div>
+    <div class="tool clear">
+		<a href="snsKanmi.html">创建的图片</a>
+		<a href="snsKanmi.html">我的关注</a>
+		<a href="snsMessage.html">我的消息</a>
+		<a href="snsMyTag.html">我的标签</a>
+		<a class="current" href="snsMyConfig.html">账户设置</a>
+	</div>
+  </div>
+  <div class="conMiddleRight">
+        <!--conMyTag-->
+        <div class="conMyConfig">
+        	<h2>账户设置</h2>
+            <fieldset class="new">
+                <form id="editForm" method="post" action="" onsubmit="return false;">
+                <div class="important">
+                    <em class="title">原密码</em>
+                    <em><input id="oldPassword" name="oldPassword" class="input g180 inputError" type="password"></em>
+                    <em class="tips">不需要修改密码，请留空</em>
+                </div>
+                <div class="important">
+                    <em class="title">新密码</em>
+                    <em class="g250"><input id="password" name="password" class="input g180" type="password"></em>
+                    <em class="title">确认密码</em>
+                    <em><input id="password2" name="password2" class="input g180" type="password"></em>
+                </div>
+                <hr />
+                <div>
+                    <em class="title">用户名</em>
+                    <em class="g250"><input id="userName" name="userName" value="test" class="input g180" type="text" disabled=""></em>
+                    <em class="title">昵称</em>
+                    <em><input id="nickName" name="nickName" value="tell" class="input g180" type="text"></em>
+                </div>
+                <div>
+                    <em class="title">邮箱</em>
+                    <em class="g250"><input id="email" name="email" value="test123@126.com" class="input g180" type="text"></em>
+                    <em class="title">联系电话</em>
+                    <em><input id="phone" name="phone" value="138796465498" class="input g180" type="text"></em>
+                </div>
+                <div>
+                    <em class="title">性别</em>
+                    <em class="g40"><label><input type="radio" name="gender" value="1" checked="true">男</label></em>
+                    <em class="g40"><label><input type="radio" name="gender" value="2">女</label></em>
+                    <em class="g160"><label><input type="radio" name="gender" value="0">保密</label></em>
+                    <em class="title">生日</em>
+                    <em><input id="birthdate" name="birthdate" value="" class="input g180" type="text"></em>
+                    <em>(1985-01-11)</em>
+                </div>
+                <hr />
+                <div>
+                    <em class="title">职业</em>
+                    <em class="g250"><input id="occupation" name="occupation" value="学生" class="input g180" type="text"></em>
+                    <em class="title">教育水平</em>
+                    <em><select id="education" name="education" class="g70 inputError inputFile" >
+                        <option>博士</option>
+                        <option>研究生</option>
+                        <option>本科</option>
+                        <option>专科</option>
+                        <option>高中</option>
+                    </select></em>
+                </div>
+                <div>
+                    <em class="title">星座</em>
+                    <em class="g250"><select id="astro" name="astro" class="g90" >
+                        <option selected="selected">自动选择</option>
+                        <option>水瓶座</option>
+                        <option>双鱼座</option>
+                        <option>白羊座</option>
+                        <option>金牛座</option>
+                        <option>双子座</option>
+                        <option>巨蟹座</option>
+                        <option>狮子座</option>
+                        <option>处女座</option>
+                        <option>天枰座</option>
+                        <option>天蝎座</option>
+                        <option>射手座</option>
+                        <option>摩羯座</option>
+                    </select>
+                    </em>
+                    <em class="title">血型</em>
+                    <em><input id="bloodType" name="bloodType" value="" class="input g60" type="text"></em>
+                </div>
+                <div>
+                    <em class="title">爱好</em>
+                    <em><input id="hobbies" name="hobbies" rows="4" class="input g520" value="12321" type="text"></em>
+                </div>
+                <hr />
+                <div>
+                    <em class="title">省份</em>
+                    <em><select id="province" name="province" >
+                        <option selected="selected">请选择</option>
+                    </select>
+                    </em>
+                    <em class="title auto">城市</em>
+                    <em><select id="city" name="city" >
+                        <option selected="selected">请选择</option>
+                    </select></em>
+                </div>
+                <div>
+                    <em class="title">地址</em>
+                    <em><input id="address" name="address" value="上海" class="input g520" type="text"></em>
+                </div>
+                <div>
+                    <em class="title"></em>
+                    <em><a id="submit" href="#" class="btnBB">保存</a></em>
+                </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

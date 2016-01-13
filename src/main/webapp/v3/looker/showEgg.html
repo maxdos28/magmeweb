@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>彩蛋收集</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="../pubassets/js/jquery-1.7.2.min.js"></script>
+<style type="text/css">
+/*HTML5 CSS Reset*/
+
+html,body,div,ul,li,img,span,p
+{margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-family:inherit; font-size:100%; text-align:left; vertical-align: baseline; background:transparent;}
+ul {list-style:disc;}
+
+html{background: #EFEFF4;overflow-x:hidden;-webkit-overflow-scrolling:touch;  }
+body *{font-size:14px;font-family: arial;}
+li,ul{list-style: none;}
+* { -webkit-user-select: none;}
+* { -webkit-text-size-adjust: none;}
+* { -webkit-touch-callout: none;}
+
+.appBody{width: 100%;padding-top: 0px;}
+
+.appItem_gray{min-height: 42px;padding-bottom:1px;background: #EFEFF4;position: relative;overflow: hidden;}
+.eggs_list{padding-top: 15px;}
+.eggs_list li{float: left;overflow: hidden;margin-left: 6%;margin-bottom: 20px;}
+.eggs_list li img{width: 56px;}
+</style>
+<script>
+var eggs = null;
+function displayEgg(egg){
+	var _ui = $("#eggs_list");
+	if($.isArray(egg)){
+		if(egg.length == 0){
+			var _li ="<li><p>您还没有收集到彩蛋。阅读可以收集哦！</p></li>";
+			_ui.append(_li);
+		}else{
+			//纪录当前显示过的数据 如果有数据并且是数组 则合并再去重
+			var eggVal = egg;
+			if(eggs != null && $.isArray(eggs)){
+				$.each(eggs,function(index,val){
+					var inArray = $.inArray(val,eggVal);
+					if(inArray != -1){
+						eggVal[inArray] = null;
+					}
+				});
+			}
+			
+			$.each(eggVal,function(index,val){
+				if(val != null){
+					var _li ="<li><img src='"+val+"'/></li>";
+					_ui.append(_li);	
+				}
+			});
+		}
+		eggs = egg;		//纪录当前彩蛋
+	}else{
+		var _li ="<li><p>加载彩蛋失败！</p></li>";
+		_ui.append(_li);
+	}
+}
+//displayEgg(['imgs/egg/egg1.png','imgs/egg/egg2.png','imgs/egg/egg3.png','imgs/egg/egg4.png','imgs/egg/egg5.png','imgs/egg/egg6.png','imgs/egg/egg11.png','imgs/egg/egg12.png','imgs/egg/egg13.png','imgs/egg/egg14.png']);
+//displayEgg(['imgs/egg/egg1.png','imgs/egg/egg2.png','imgs/egg/egg3.png','imgs/egg/egg4.png','imgs/egg/egg5.png','imgs/egg/egg6.png','imgs/egg/egg7.png','imgs/egg/egg8.png','imgs/egg/egg9.png','imgs/egg/egg10.png']);
+
+</script>
+</head>
+<body>
+<div class="appBody">
+	<div class="appItemBox_noBorder">
+	   	<div class="appItem_gray">
+	    	<ul id='eggs_list' class="eggs_list">
+	    	</ul>
+	    </div>
+	</div>    
+</div>
+</body>
+</html>

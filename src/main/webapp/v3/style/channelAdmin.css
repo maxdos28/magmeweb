@@ -1,0 +1,360 @@
+@charset "utf-8";
+@import url("jquery.colorpicker.css");
+@import url("pop.css");
+html{ height:100%;}
+body{ height:100%; background:#eee; padding-top:0; min-width:800px; min-height:600px;}
+
+
+
+
+/*link*/
+a			{text-decoration:none;cursor:pointer; font-family:\5FAE\8F6F\96C5\9ED1, Arial, Helvetica, sans-serif; }
+a:link 		{color:#08c;} 
+a:visited	{color:#08c;}
+a:active	{color:#333;star:expression(this.onFocus=this.blur());}
+a:hover		{color:#333;}
+
+
+
+
+.body{ zoom:1; margin:0 auto 20px auto; width:980px; background:#fff; box-shadow:4px 4px 1px rgba(0,0,0,0.05); border:1px solid #bbb; position:relative;}
+.body:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.bodyHome{ background:none; box-shadow:none;}
+
+.conB{border-top:0; margin:15px 0 0 0;}
+.conB h2{ font-weight:bold; color:#000;}
+
+em.icon16question{ width:16px; height:16px; display:inline-block; margin-left:4px; cursor:pointer; background:url(../images/icon/bgWhite16.gif) 0 -64px no-repeat;}
+em.icon16question:hover{ background-position:0 -80px;}
+
+
+/*table*/
+.table td a.btn{ background:#DCDFE7; color:#8C96B0; padding:2px 5px; font-size:11px; border-radius:3px; margin:2px 5px; display:inline-block;}
+.table td a.del{ background:#EBD8D8; color:#C58B8B; padding:2px 5px; font-size:11px; border-radius:3px; margin:2px 5px; display:inline-block;}
+.table td a.btn:hover{ background:#08c; color:#fff;}
+.table td a.del:hover{ background:#900; color:#fff;}
+.table thead tr td{ padding:0 5px; height:30px; line-height:30px;}
+.table thead td em{ width:16px; height:16px; display:inline-block; position:relative; top:3px; margin-left:4px; cursor:pointer; background-repeat:no-repeat; background-image:url(../images/icon/bgWhite16.gif);}
+.table thead td em.icon16question{ background-position:0 -64px; float:right; top:7px;}
+.table thead td em.icon16question:hover{ background-position:0 -80px;}
+.table thead td em.icon16ascending{ background-position:0 0;}
+.table thead td em.icon16ascending:hover,
+.table thead td em.icon16ascendingSelect{ background-position:0 -16px;}
+.table thead td em.icon16descending{ background-position:0 -32px;}
+.table thead td em.icon16descending:hover,
+.table thead td em.icon16descendingSelect{ background-position:0 -48px;}
+.ie7 .table thead td em{ top:0px;}
+.ie7 .table thead td em.icon16question{ margin-top:5px;}
+.ie6 .table thead td em.icon16question{ top:2px;}
+
+
+
+/*header*/
+.header{ position:static; margin-bottom:20px; height:auto; left:auto; top:auto;}
+html.ie6 body .header{ position:static; }
+.header .outer{ background:url(../images/admin/bgBody20120816.png) 0 0 repeat-x; position:static; height:auto;}
+.header .inner{ width:990px; height:66px; background:none;}
+.header .inner .logo{ width:210px; height:58px; float:left; margin-right:10px; text-indent:-999em;}
+.header .inner .logo a{ width:210px; height:58px; display:block; background:url(../images/admin/logo.png) 0 center no-repeat;}
+.header .inner .logo a:hover{ background-position:0 center;}
+.header .menu{ margin-top:3px;}
+.header .menu li a{ height:55px; line-height:55px; padding:0 15px; font-size:14px; letter-spacing:0}
+.header .menu li a:hover{ background:#1E2631;}
+.header .menu li.current a,
+.header .menu li.current a:hover{background:#09111C;}
+.header .conUser{ right:0;}
+.header .conUser li a{ height:55px; line-height:55px;}
+.header #userBar .name{ padding-right:0;}
+.header #userBar .name strong{ color:#ccc; line-height:55px; font-size:12px; font-weight:normal; padding-right:0; }
+.header #userBar .logout a { background-image:url(../images/admin/iconLogout.gif); font-size:11px;}
+.header .subNav{ position:relative; top:-8px; height:42px; padding-bottom:6px; line-height:42px; background:url(../images/admin/subNavBg.png) 0 0 repeat-x;}
+.header .subNav .inner{ width:980px; height:42px; text-align:center;}
+.header .subNav .inner li{ display:inline-block; margin:0 12px; position:relative;}
+.header .subNav .inner li a{ height:40px; line-height:40px; padding:0; display:inline-block; color:#aaa; text-shadow:1px 1px 1px rgba(0,0,0,0.3);}
+.header .subNav .inner li a:hover{ color:#ddd;}
+.header .subNav .inner li.current a,
+.header .subNav .inner li.current a:hover{ color:#fff;}
+.header .subNav .inner li ul{ position:absolute; left:-12px; top:39px; width:150px; margin:0; padding:0; background:#434850; color:#fff; display:none;}
+.header .subNav .inner li ul li{ width:150px; margin:0; }
+.header .subNav .inner li ul li a{ text-indent:13px; display:block;}
+.header .subNav .inner li.current ul li a{ color:#aaa;}
+.header .subNav .inner li.current ul li a:hover{ color:#ddd; background:#272D39;}
+
+
+
+.conTools{background:url(../images/admin/adminToolsBg.gif) 0 0 repeat-x #D7DCDF; border-bottom:1px solid #8F9BA1; padding:15px 8px; color:#454B52; position:relative; left:-15px; top:0; width:964px;}
+.conTools h2{ margin-bottom:5px; font-size:14px; color:#000; }
+.conTools fieldset hr{border-color:#fff;}
+.conFooter{ background:#EDEFF1; width:950px; padding:15px; margin:15px 0 -15px -15px; border-top:1px solid #BEC5C9;}
+.ie6 .conFooter,
+.ie7 .conFooter{ margin-bottom:0;}
+
+.bodyDataPage{ zoom:1; margin:0 auto 50px auto; width:980px; background:#EAECEE; position:relative;}
+.conLeft { width:160px; padding:0; color:#454B52;}
+.conLeft h2 img{ width:180px; display:block; margin-bottom:1px;}
+.conLeft .leftNav { padding:0; margin-left:0;}
+.conLeft .leftNav li{ background:url(../images/admin/leftNavBg.gif) 0 0 repeat-x;}
+.conLeft .leftNav li a{ display:block; text-indent:20px; height:30px; line-height:30px; font-size:12px; color:#bbb; }
+.conLeft .leftNav li a.title{ background:url(../images/admin/iconArrow2_e.gif) 1px 7px no-repeat; border-bottom:1px solid #292F37; }
+.conLeft .leftNav li.current a.title{ background:url(../images/admin/iconArrow2_s.gif) 1px 7px no-repeat; color:#fff;}
+.conLeft .leftNav li.current a.title:hover{ color:#fff;}
+.conLeft .leftNav li ul a{ color:#979CA1;}
+.conLeft .leftNav ul{ display:none; border-bottom:1px solid #575F67;}
+.conLeft .leftNav li ul li{ background:#fff; }
+.conLeft .leftNav li.current ul li a:hover,
+.conLeft .leftNav li.current ul li.current a{ background:#EAECEE; color:#6B717A;}
+
+
+
+.conMiddleRight{ width:789px; min-height:600px; padding-top:0;}
+.conLeftMiddleRight{ padding-top:0;}
+.ie6 .conLeftMiddleRight,
+.ie7 .conLeftMiddleRight{ padding-bottom:0; width:950px; overflow:hidden;}
+
+
+
+
+/*bookBar set*/
+.bookBar{ overflow:hidden; display:none; position:absolute; z-index:102; left:0; color:#fff; background:url(../images/alpha70.png) 0 0 repeat;}
+.bookBar p{ height:18px; margin:0; padding:0; }
+.bookBar p em:hover{ color:#999;}
+
+
+/*slideDown set*/
+.slideDown{ position:absolute; z-index:102; color:#fff; }
+.slideDown span{ padding:2px 5px; display:inline-block; background:#333; border-radius:4px; display:none;}
+.slideDown p{ width:100px; margin:0; padding:0; display:none; position:absolute;}
+.slideDown p em:hover{ color:#999;}
+
+
+/*changePage*/
+.changePage{ text-align:right; padding:5px 0;}
+.changePage a{ display:inline-block; margin:0 2px; height:20px; padding:0 6px; line-height:20px; background:#345; color:#fff; font-size:12px; font-family:\5FAE\8F6F\96C5\9ED1;text-decoration:none; border-radius:5px;}
+.changePage a:hover{ background:#08c;}
+.changePage a:link,
+.changePage a:visited{ color:#fff;}
+.changePage a.current,
+.changePage a.current:hover{ background:#08c;}
+.gotoPage{ float:right; margin-left:10px; padding:5px 0;}
+.gotoPage input.input{ height:12px; line-height:12px; margin:0 2px; font-size:10px; text-align:center;}
+.gotoPage a.btnBS{ padding:0 10px;}
+
+
+
+
+
+/*login*/
+.pageAdminLogin{ background:url(../images/admin/loginBg.jpg) center center no-repeat #10151C;}
+.pageAdminLogin .copyright{ font-size:11px; text-align:center; width:100%; position:absolute; bottom:0px; color:#4E5561; text-shadow:0 1px 1px rgba(0,0,0,0.3)}
+.conLogin{ width:420px; position:absolute; z-index:1; left:50%; top:50%; margin-left:-210px; height:300px; margin-top:-120px; background:#e5e5e5; border:2px solid #fff; box-shadow:0 0 200px rgba(0,0,0,0.3);}
+.conLogin .logo{ width:204px; height:45px; position:absolute; left:50%; margin-left:-80px; top:-70px; text-indent:-999em; overflow:hidden;}
+.conLogin .logo a{ width:204px; height:45px; background:url(../images/admin/logo.png) 0 0 no-repeat; display:block;}
+.conLogin fieldset div{ margin:8px 0;}
+.conLogin fieldset h6{ font-size:18px; line-height:60px; text-align:center; font-weight:normal; color:#2B313F;}
+.conLogin fieldset div input.g250{ height:32px; line-height:32px; text-indent:10px; background:#4E596B; border:1px solid #000; border-radius:5px; box-shadow:0 0 15px rgba(0,0,0,0.3) inset; margin:4px 0;}
+.conLogin fieldset div.action{ margin:20px; border-top:1px dotted #4E596B; padding-top:20px;}
+.conLogin fieldset div.action em{ margin:0 9px;}
+.conReg{ width:420px; position:absolute; z-index:1; left:50%; top:50%; margin-left:-210px; height:500px; margin-top:-220px; background:#e5e5e5; border:2px solid #fff; box-shadow:0 0 200px rgba(0,0,0,0.3); display:none;}
+.conReg .logo{ width:204px; height:45px; position:absolute; left:50%; margin-left:-80px; top:50%; margin-top:-320px; text-indent:-999em; overflow:hidden;}
+.conReg .logo a{ width:204px; height:45px; background:url(../images/admin/logo.png) 0 0 no-repeat; display:block;}
+.conReg fieldset div{ margin:8px 0; }
+.conReg fieldset h6{ font-size:18px; line-height:60px; text-align:center; font-weight:normal; color:#2B313F;}
+.conReg fieldset div input.g250{ height:32px; line-height:32px; text-indent:10px; background:#4E596B; border:1px solid #000; border-radius:5px; box-shadow:0 0 15px rgba(0,0,0,0.3) inset; margin:4px 0;}
+.conReg fieldset div.action{ margin:20px; border-top:1px dotted #4E596B; padding-top:20px;}
+.conReg fieldset div.action em{ margin:0 9px;}
+
+
+
+
+
+.con01 .conReader{ clear:both; background:url(../images/bgReader.gif) right bottom repeat; height:600px; margin-bottom:10px; position:relative; color:#fff;}
+.con01 h2 em{ margin-top:6px; display:block; float:right; height:14px; line-height:14px; cursor:pointer; background-repeat:no-repeat;}
+.con01 h2 em.iconEmbed{ width:20px; background-position:right 2px;}
+.con01 h2 em.iconEmbed:hover{ background-image:url(../images/icon/embedOn.gif);}
+.con02{ width:950px; position:relative; overflow:hidden; border:0;}
+.con02 .turnLeft,
+.con02 .turnRight{ position:absolute; top:9px; width:30px; height:16px; display:block; overflow:hidden; background:url(../images/btn30-16.gif) 0 0 no-repeat;}
+.con02 .turnLeft { left:70px;}
+.con02 .turnRight{ left:110px; background-position:0 -16px;}
+.con02 .disable{filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity: 0.3;opacity: 0.3; cursor:default;}
+.con02 ul{ height:260px; }
+.con02 ul li { width:182px; overflow:hidden; float:left; display:inline; margin-right:10px; position:relative;}
+.con02 ul li a img{ width:182px; height:243px; display:block;}
+.con02 ul li a span{ height:20px; line-height:20px; display:block; text-align:center; overflow:hidden;}
+.con03 { position:relative; overflow:hidden; width:950px;}
+.con03 ul li{ width:182px; height:266px; margin-right:10px; float:left; display:inline; position:relative; cursor:pointer; }
+.con03 ul li .border{ width:172px; height:233px; border:5px solid #333; position:absolute; left:0; top:0; display:none;}
+.con03 ul li img{ width:182px; height:243px; filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;}
+.con03 ul li strong{ color:#999; overflow:hidden; height:18px; line-height:18px; display:block; font-weight:normal; text-align:center;}
+.con03 ul li:hover img{filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+.con03 ul li .slideDown{ bottom:3px; right:0; }
+.con03 ul li .slideDown span{ border-radius:0 0 4px 4px;}
+.con03 ul li .slideDown p{ width:90px; right:0; bottom:20px; background:#111;}
+.con03 ul li .slideDown p em{ display:block; text-align:center; height:20px; line-height:20px; border-bottom:1px solid #000; border-top:1px solid #222; letter-spacing:3px;}
+.con03 .turnLeft,
+.con03 .turnRight{ position:absolute; top:9px; width:30px; height:16px; display:block; overflow:hidden; background:url(../images/btn30-16.gif) 0 0 no-repeat;}
+.con03 .turnLeft { left:70px;}
+.con03 .turnRight{ left:110px; background-position:0 -16px;}
+.con03 .disable{filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity: 0.3;opacity: 0.3; cursor:default;}
+.con03 .current img{opacity:1;}
+.con03 .current strong{ color:#000; font-weight:bold; text-align:left;}
+.con03 .current .border{ display:block;}
+.con03 .current .slideDown span{ display:block;}
+.con04 .table td.t1{ text-align:left;}
+.con05 { width:950px; position:relative; overflow:hidden;}
+.con05 .conTools{ color:#454B52; line-height:22px; padding-bottom:2px;}
+.con05 .conTools em{ font-size:12px; color:#454B52;}
+.con05 h2 div{ float:right; margin-left:20px;}
+.con05 h2 div *{ margin-left:5px; float:left;}
+.con05 ul li{ width:182px; height:266px; overflow:hidden; margin-right:10px; float:left; display:inline; position:relative; cursor:pointer; }
+.con05 ul li .border{ width:172px; height:233px; border:5px solid #333; position:absolute; left:0; top:0; display:none;}
+.con05 ul li img{ width:182px; height:243px; filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;}
+.con05 ul li strong{ color:#999; overflow:hidden; height:18px; line-height:18px; display:block; font-weight:normal; text-align:center;}
+.con05 ul li:hover img{filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+.con05 .turnLeft,
+.con05 .turnRight{ position:absolute; top:9px; width:30px; height:16px; display:block; overflow:hidden; background:url(../images/btn30-16.gif) 0 0 no-repeat;}
+.con05 .turnLeft { left:70px;}
+.con05 .turnRight{ left:110px; background-position:0 -16px;}
+.con05 .disable{filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity: 0.3;opacity: 0.3; cursor:default;}
+.con05 .current img{opacity:1;}
+.con05 .current strong{ color:#000; font-weight:bold;}
+.con05 .current .border{ display:block;}
+.con06{ position:relative;}
+.con06 .link{ width:100px; float:left;}
+.con06 .link a{ display:block; width:70px; text-indent:10px; background:#f1f1f1; padding:3px 5px; margin-bottom:5px; border-radius:3px;}
+.con06 .link a.current{ background:#ddd;}
+.con06 .filter{ position:absolute; left:100px; top:5px;}
+.con06 .filter label{ margin-right:10px;}
+.con06 .table{ float:left; width:850px;}
+.con06 .table td.t3{ text-align:left;}
+.con07{ position:relative;}
+.con07 fieldset em.title{ width:50px; text-align:left; font-weight:bold;}
+.con07 fieldset div.code{ position:absolute; right:13px; top:13px; width:430px; height:100px;}
+.con07 fieldset div.code a{ float:right; margin:0 0 5px 5px;}
+.con07 fieldset div.code textarea{width:424px; height:105px; color:#ccc;}
+.con07 #colorSelector{ padding:8px; height:20px; width:20px; overflow:hidden; position:relative; top:-6px;}
+.con07 #colorSelector div{ width:20px; height:20px; background:#333;}
+.con07 #colorSelector span{ width:36px; height:36px; background:url(../images/colorpicker/select2.png); position:absolute; left:0; top:0; cursor:pointer;}
+.con08{ width:950px; height:210px; position:relative; overflow:hidden; border:0;}
+.con08 .turnLeft,
+.con08 .turnRight{ position:absolute; top:9px; width:30px; height:16px; display:block; overflow:hidden; background:url(../images/btn30-16.gif) 0 0 no-repeat;}
+.con08 .turnLeft { left:70px;}
+.con08 .turnRight{ left:110px; background-position:0 -16px;}
+.con08 .disable{filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity: 0.3;opacity: 0.3; cursor:default;}
+.con08 ul{ height:260px; }
+.con08 ul li { width:110px; overflow:hidden; float:left; display:inline; margin-right:10px; position:relative;}
+.con08 ul li a img{ width:110px; height:147px; display:block;}
+.con08 ul li a span{ height:20px; line-height:20px; display:block; text-align:center; overflow:hidden;}
+.con09 div{ background:url(../images/bgReader.gif);}
+.con09 div embed{ float:none; margin:0 auto;}
+.con10{ padding-top:9px;}
+.con10 .head{ width:150px; float:left;}
+.con10 .head img{ display:block; margin-bottom:5px;}
+.con10 .head a.btnWS{ text-align:center; overflow:hidden; position:relative; width:148px; padding-left:0; padding-right:0; text-align:center; display:inline-block;}
+.con10 .head a.btnWS .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:40px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer;}
+.con10 .head a.btnWS span{ display:block; width:148px; text-align:center;}
+.con10 .info{ width:750px; padding:10px; float:right; margin-left:30px;}
+.con10 .info fieldset div{ margin:8px 0;}
+.con11{ padding-top:9px;}
+.con11 .head{ width:150px; float:left;}
+.con11 .head img{ display:block; margin-bottom:5px;}
+.con11 .head a.btnWS{ text-align:center; overflow:hidden; position:relative; width:148px; padding-left:0; padding-right:0; text-align:center; display:inline-block;}
+.con11 .head a.btnWS .inputFile{ position:absolute; right:0; top:0; font-size:35px; height:40px; filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0; cursor:pointer;}
+.con11 .head a.btnWS span{ display:block; width:148px; text-align:center;}
+.con11 .info{ width:750px; padding:10px; float:right; margin-left:30px;}
+.con11 fieldset div{ margin:8px 0;}
+.con11 fieldset h6{ margin-bottom:10px; color:#333;}
+.con11 fieldset div.top select{ height:38px; line-height:38px; font-size:16px; width:280px;}
+.con11 fieldset div.action{ text-align:center; height:40px; margin-top:20px;}
+.con11 fieldset div.action em{ float:none; display:inline-block;}
+.con11 fieldset div.clip em span{ height:15px; width:20px; margin:0 4px; overflow:hidden; background-image:url(../images/icon/mgzClip.gif); background-repeat:no-repeat; float:none; display:inline-block;}
+.con11 fieldset div.clip em.type1 span{ background-position:0 0;}
+.con11 fieldset div.clip em.type2 span{ background-position:0 -15px; }
+.con11 #category{ position:relative;}
+.con11 #category .selectBox{ position:absolute; width:456px; padding:10px; background:#787E84; color:#fff; border:1px solid #eee; left:105px; top:16px; border-radius:0 0 10px 10px; overflow:hidden;}
+.con11 #category .selectBox label{ width:90px; height:24px; line-height:24px; display:block; float:left; margin-bottom:6px;}
+.con12 fieldset div em.title{ width:55px; text-align:left;}
+.con12 fieldset div em strong{ color:#155175}
+.con12 fieldset div em a{ padding-left:10px; padding-right:10px; height:18px; line-height:18px;}
+.con12 fieldset hr{ margin:10px 0 0 0;}
+.con13{ padding-top:8px;}
+.con13 .tagList{ position:relative;}
+.con13 .pic { width:460px; float:left;}
+.con13 .pic img{ width:460px;}
+.con13 .text{ width:460px; float:left; margin-left:30px;}
+.con13 .text .input{ width:454px; margin-bottom:10px;}
+.con13 .text textarea{ height:350px;}
+.con13 .text .ctrl label{ float:right;}
+.con13 .text .changePage{ margin-top:20px; text-align:left;}
+.con13 .text .changePage a{ display:inline-block; float:left; width:28px; text-align:center; margin:0 4px 4px 0; height:18px; line-height:18px;}
+.con19 .btn1{ width:94px;}
+.con21{ margin-bottom:15px;}
+.con23 fieldset div{ margin:8px 0;}
+.con23 fieldset div em.title{ width:55px;}
+.con24 .table .t2{ text-align:left;}
+.con25{ padding-top:9px; margin-bottom:20px;}
+.con25 fieldset div.top select{ height:38px; line-height:38px; font-size:16px; margin-right:10px;}
+.con26 .doorList .item{ padding:5px 0;}
+.con26 .doorList .item fieldset div{ margin-bottom:10px;}
+.con26 .doorList .item1 textarea{ height:86px;}
+.con26 .doorList .item3 .table .t4{ overflow:hidden;}
+.con26 .doorList .item3 .table .t4 input.g50{ height:14px; line-height:14px; width:60px; background:#900; font-size:11px; color:#fff; position:relative; top:0; left:2px;}
+.con26 .doorList .item3 .table td.editOn{ padding:0;}
+.con26 .doorList .item3 .table .t5 .btnOn{ background:#900;}
+.con26 .doorList .item4 .conEdit{ width:950px; height:300px; background:#f9f9f9;}
+
+.con28 table .t2 img{ width:50px; height:50px;}
+.con28 table .t2 p{ font-size:9px; height:12px; line-height:12px; text-align:center;}
+.con28 table .sub{ position:relative;}
+.con28 table .subTable{ position:absolute; left:-923px; top:25px; width:978px; border:2px solid #000;}
+.con28 table .subTable td{ background:#000; border:1px solid #666; color:#fff;}
+.con28 table .subTable tbody td{ background:#333;}
+.con29 div.btn{ position:absolute; padding:0 10px 0 70px; left:790px; top:16px;}
+.con29 div.btn em{ display:block; float:none;}
+.con29 div.btn a{ margin-bottom:10px;}
+.con32 textarea{ height:60px;}
+
+.con34 .choiseApp em.g10{ width:auto; margin-right:20px; font-size:16px;}
+
+.con36 .list{ height:300px; display:none; overflow-y:scroll; background:#C8CFD3;}
+.con36 .list div{ display:block; border-bottom:1px dotted #fff; padding:0 10px;}
+.con36 .list div strong{ font-size:16px; line-height:30px; display:block; text-indent:8px;}
+.con36 .list div strong a{ color:#08c; margin:0; padding:0;}
+.con36 .list div strong a:hover{ color:#069; background:none;}
+.con36 .list div a{ margin:0 14px 10px 0; padding:2px 8px; zoom: 1; display: -moz-inline-stack; display: inline-block; *display: inline; cursor:pointer;}
+.con36 .list div a:hover{background:#BDC4C9; color:#fff;}
+.con36 .list div a.current{ background:#B3B9BE; color:#fff;}
+.con36 .selectList{ height:auto; overflow:hidden; background:#B5BFC4; display:block;}
+.con36 .selectList div a.selected{ background:#737980; color:#fff;}
+.con36 .selectList div a.current{ background:none; color:#454b52;}
+.con36 .selectList div strong{ font-size:14px; line-height:40px;}
+.con36 textarea{ height:60px;}
+.con36 .actionArea{ margin-top:15px;}
+
+.con37{ text-align:center;}
+.con37 a{ margin:0 30px;}
+
+/*选择分类*/
+.con38{ overflow:hidden; padding-left:30px;}
+.con38 dl{ width:118px; margin-right:10px; float:left; }
+.con38 dl a{ width:118px; color:#666; height:32px; line-height:32px; display:block; text-align:center;}
+.con38 dl dt,
+.con38 dl dd{ margin-bottom:10px;}
+.con38 dl dt a{ color:#fff; height:29px; cursor:default; line-height:24px; font-size:16px; letter-spacing:6px; border-top-width:3px; border-style:solid;}
+.con38 dl dd a{ background:#eee; color:#333; font-size:14px; border:2px solid #eee; width:114px; height:28px; line-height:28px; }
+.con38 dl dd a.current{ border-color:#08c; color:#08c;}
+.con38 dl dd a:hover{ color:#08c;}
+
+.con39{ width:570px; margin:40px auto 10px auto;}
+
+
+
+
+
+
+
+.copyright{ margin-bottom:30px; text-align:center; font-size:11px; color:#333;}
+
+
+
+

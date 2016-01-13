@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6 ieOld"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ieOld"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ieOld"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="../style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.6.2.min.js"></script>
+<script src="../js/jquery.inputfocus.js"></script>
+<script src="../js/jquery.coverImg.js"></script>
+<script>
+;(function($){
+jQuery.autoLayout = function(id) {
+	
+var $item = $(id);
+var winHeight = $(window).height();
+var winWidth = $(window).width();
+$(window).bind("resize", fnResize);
+//添加文字遮罩
+$item.each(function(){
+	$(this).find(".inner").append("<div class='textMask png'></div>");
+});
+//处理排版
+fnResize();
+//设置旋转后背景和左右填充
+function fnResize(){
+	winWidth = $(window).width();
+	if(winWidth>768){
+		$("body>div").removeClass("h").addClass("w");
+		$("body>p.footer").css({width:1024});
+	}else{
+		$("body>div").removeClass("w").addClass("h");
+		$("body>p.footer").css({width:768});
+	}
+	fnSetImg();
+}
+
+
+
+
+
+function fnSetImg(){
+	$item.each(function(){
+		var W = $(this).width();
+		var H = $(this).height();
+		var inW = $(this).find(".inner").innerWidth();
+		var inH = $(this).find(".inner").innerHeight();
+		//重设Title样式
+		$(this).find(".inner").removeClass("title");
+		$(this).find("h2").css({width:inW*1.0});
+		$(this).find(".img").insertAfter($(this).find("h2"));
+		//显示区域判断
+		if( W*H < 220000){
+			//宽高比例判断
+			if( inW/inH > 1.2 ){
+				$(this).find(".img").css({width:inW*0.4,height:inH-65,float:"right",margin:"0 0 15px 15px"});
+			}else if( inW/inH > 0.8 && $(this).find(".img").hasClass("size21")){
+				$(this).find(".img").css({width:inW*0.5,height:inH*0.9-40,float:"right",margin:"0 0 15px 15px"});
+			}else{
+				$(this).find("h2").insertAfter($(this).find(".img"));
+				$(this).find(".img").css({width:inW*1.0,height:inH*0.4,float:"none",margin:"0 0 15px 0"});
+			}
+		}else{
+			if( $(this).find(".img").hasClass("size11") ){
+				$(this).find(".img").css({width:inW*0.5,height:inW*0.5,float:"right",margin:"0 0 15px 15px"});
+			}else if( $(this).find(".img").hasClass("size12") ){
+				$(this).find("h2").insertAfter($(this).find(".img"));
+				$(this).find(".img").css({width:inW*1.0,height:inW*0.6,float:"none",margin:"0 0 15px 0"});
+			}else if( $(this).find(".img").hasClass("size21") ){
+				$(this).find(".img").css({width:inW*0.5,height:inH*0.8,float:"right",margin:"0 0 15px 15px"});
+			}
+		}
+		//判断显示为全图模式
+		if(W*H > 110000){
+			if( ($(this).find(".img").hasClass("size22")) ||
+				(W/H > 1.5 && $(this).find(".img").hasClass("size12")) ||
+				(W/H < 0.67 && $(this).find(".img").hasClass("size21"))){
+				$(this).find(".inner").addClass("title").find(".img").css({width:inW*1.0,height:inH*1.0}).end().find("h2").css({width:inW*1.0-20});
+				$(this).find(".textMask").remove();
+			}
+		}
+		$(this).find(".img>img").coverImg();
+    });
+}
+
+
+
+}})(jQuery);
+
+$(function(){
+	$.autoLayout(".item");
+})
+
+</script>
+<!--[if lt IE 7]>
+<script src="../js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="main">
+<!--header-->
+<div class="header clearFix">
+	<div class="outer png">
+        <div class="inner png">
+            <h1 class="logo" id="logo"><a class="png" href="javascript:void(0)" title="(SEO)世界新杂志 发现新内容">(SEO)麦米网Magme</a></h1>
+            <!--nav-->
+            <ul class="menu" id="menu">
+                <li><a href="magazine.html">杂志阅读</a></li>
+                <li class="current"><a href="event.html">内容精选</a></li>
+                <li><a href="mymagme.html">我的麦米</a></li>
+            </ul>
+            <div class="search" id="headerSearch">
+            	<input class="in" type="text" tips="请输入搜索内容" /><a class="btn" href="javascript:void(0)">搜索</a>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+    	<div class="inner">
+            <ul class="classification item clearFix">
+                <li class="current"><a href="javascript:void(0)">分类分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+                <li><a href="javascript:void(0)">分类</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--body-->
+<div class="body clearFix">
+    <!--conTagWall-->
+	<div class="outer">
+        <!--eventList-->
+        <div class="event typeC">
+            <div class="item L1">
+                <a class="inner" href="reader.html">
+                    <h2>梦园</h2>
+                    <div class="img size22" style="background-image:url(http://static.magme.cn/fpage/event/20120424/1335254941088.jpg)"><img src="http://static.magme.cn/fpage/event/20120424/1335254941088.jpg" /></div>
+                    <div class="con png">
+                        <p>偶尔，想象着自己躺在那片花海，沐浴着阳光，聆听着虫鸣鸟叫。忙碌、浮躁、束缚，摧残着人们的心智，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠，也让人慢慢变冷漠……</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item L2">
+                <a class="inner" href="reader.html">
+                    <h2>都市潮流“潜伏者”</h2>
+                    <div class="img size11" style="background-image:url(http://static.magme.cn/fpage/event/20120425/1335339586950.jpg)"><img src="http://static.magme.cn/fpage/event/20120425/1335339586950.jpg" /></div>
+                    <div class="con png">
+                        <p>历经“布局、起势、突破、跨越”四个阶段，迈入成立五周年的长安马自达“内外格局”已悄然升级。迈入成立五周年的长安马自达“内外格局”已悄然升级。迈入成立五周年的长安马自达“内外格局”已悄然升级。</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item L3">
+                <a class="inner" href="reader.html">
+                    <h2>省一万元去非洲</h2>
+                    <div class="img size12" style="background-image:url(http://static.magme.cn/fpage/event/20120425/1335336207184.jpg)"><img src="http://static.magme.cn/fpage/event/20120425/1335336207184.jpg" /></div>
+                    <div class="con png">
+                        <p>全球航空联盟天合联盟推出非洲套票，根据旅程提供最高相当于普通机票75%的折扣，这样你的非洲之行可以省下一大笔钱了。75%的折扣，这样你的非洲之行可以省下一大笔钱了。</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item L4">
+                <a class="inner" href="reader.html">
+                    <h2>色彩游戏</h2>
+                    <div class="img size21" style="background-image:url(http://static.magme.cn/fpage/event/20120423/1335171371400.jpg)"><img src="http://static.magme.cn/fpage/event/20120423/1335171371400.jpg" /></div>
+                    <div class="con png">
+                        <p>绚烂的季节，激发出更多的色彩创意，各种白色花卉与彩色玻璃瓶的组合，既衬托出白的纯洁，也映射着彩的多姿瓶的组合，既衬托出白的纯洁，也映射着彩的多姿。</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item L5">
+                <a class="inner" href="reader.html">
+                    <h2>佛罗伦萨（Florence)</h2>
+                    <div class="img size11" style="background-image:url(http://static.magme.cn/fpage/event/20120424/1335255988879.jpg)"><img src="http://static.magme.cn/fpage/event/20120424/1335255988879.jpg" /></div>
+                    <div class="con png">
+                        <p>被译作“冷翡翠”，意大利语中意为“鲜花之城”。是极为著名的世界艺术之都，欧洲文化中心，欧洲文艺复兴运动的发源地，歌剧的诞生洲文化中心，欧洲文艺复兴运动的发源地，歌剧的诞生地……</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--changePage-->
+        <div class="changePage">
+            <a class="pre" href="javascript:void(0)" title="上一页"></a>
+            <a class="next" href="javascript:void(0)" title="下一页"></a>
+        </div>
+    </div>
+    <a class="foot feedBack">意见反馈</a>
+    <a class="foot footShare">分享应用</a>
+    <a class="foot footMagme">麦米官方微博</a>
+</div>
+
+
+</div>
+</body>
+</html>

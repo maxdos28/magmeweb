@@ -1,0 +1,1578 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/pop.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/systemProp.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.tagbox.js"></script>
+<script src="js/jquery.lightbox.js"></script>
+<!--[if lte IE 6]>
+<link href="style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js" charset="utf-8"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+<script>
+	$(function(){
+		$("#selectDate").unbind("focus").focus(function(){
+			$(this).next().slideDown(400);
+		});
+		$("#selectDate").blur(function(){
+			setTimeout(function(){$("#selectDateBox").slideUp(200)},100)
+		});
+		$("#selectDateBox a").bind('click',function(){
+			$("#selectDate").val($(this).html());
+		})
+	});
+</script>
+
+<style>
+.body{ background:#666}
+#fancybox-wrap {  display:block; position:static; margin:20px auto;}
+#fancybox-content {  display:block; width:auto;}
+#fancybox-content .popContent{ display:block;}
+
+
+
+</style>
+</head>
+<body>
+<div class="main">
+<div class="body">
+
+<a href="javascript:$.lightBox('亲爱的米客，您在xxx日麦米杂志连连看中夺得第x名，获得精美礼品一份，麦米客服人员会根据您的有效联系方式与您即时联系。<br /><br />');">弹出</a>
+
+
+
+
+
+
+
+
+<div class="popContent popRegister" style="display:none;">
+	<div class="content">
+    	<fieldset>
+        	<h6>表单名称</h6>
+            <div>
+            	<em class="title">每行一个</em><em><input class="input g150" type="text" tips="提示内容" /></em>
+            </div>
+            <div class="auto">
+            	<em class="title">更换头像</em><em><img src="" width="150" height="150" style="background:#ccc;" /><input type="file" class="clear" /></em>
+            </div>
+            <div>
+            	<em class="title">每行多个</em><em><input class="input g130" type="text" tips="提示" /></em><em class="title">每行多个</em><em><input class="input g130" type="text" tips="提示" /></em>
+            </div>
+	  		<div>
+            	<em class="title">每行多个（对齐）</em><em><input class="input g130" type="text" tips="提示" /></em><em class="title">每行多个</em><em><input class="input g130" type="text" tips="提示" /></em>
+            </div>
+            <div>
+            	<em class="title">每行多个（不对齐）</em><em class="g170"><input class="input g130" type="text" tips="提示" /></em><em>每行多个</em><em><input class="input g130" type="text" tips="提示" /></em>
+            </div>
+            <div>
+            	<em class="title">每行多个</em><em><input class="input g50" type="text" tips="提示" /></em>
+                <em>每行多个</em><em><input class="input g50" type="text" tips="提示" /></em>
+            	<em>每行多个</em><em><input class="input g50" type="text" tips="提示" /></em>
+              <em>每行多个</em><em><input class="input g50" type="text" tips="提示" /></em>
+            </div>
+            <div>
+            	<em class="title">密码</em><em><input class="input g150" type="password" tips="提示内容" /></em>
+            </div>
+            <div>
+            	<em class="title">重复密码</em><em><input class="input g150" type="password" tips="提示内容" /></em>
+            </div>
+            <div>
+            	<em class="title">单选</em><em><label><input type="radio" />男</label></em><em><label><input type="radio" />女</label></em>
+            </div>
+            <div>
+            	<em class="title">多选</em>
+                <em><label><input type="checkbox" />选项一</label></em>
+                <em><label><input type="checkbox" />选项二</label></em>
+                <em><label><input type="checkbox" />选项三</label></em>
+                <em><label><input type="checkbox" />选项四</label></em>
+                <em><label><input type="checkbox" />选项五</label></em>
+            </div>
+            <div>
+            	<em class="title">多选</em>
+                <em><label><input type="checkbox" />选项六</label></em>
+                <em><label><input type="checkbox" />选项七</label></em>
+                <em><label><input type="checkbox" />选项八</label></em>
+                <em><label><input type="checkbox" />选项九</label></em>
+                <em><label><input type="checkbox" />选项十</label></em>
+            </div>
+            <div>
+            	<em class="title">跨行排列</em><em><input class="input g420" type="text" tips="text" /></em>
+            </div>
+            <div>
+            	<em class="title">跨行排列</em><em><textarea rows="4" class="input g420" type="text" tips="textArea"></textarea></em>
+            </div>
+            <div>
+            	<em class="title">下拉</em>
+                <em><select class="g150"></select></em>
+            </div>
+            <div>
+            	<em class="title"></em><em><label><input type="checkbox" />我已同意并遵守</label></em><em><a href="javascript:void(0)">注册协议</a></em>
+            </div>
+            <div>
+            	<em class="title">&nbsp;</em><em><input type="button" value="提交" /></em><em><input type="reset" value="取消" /></em>
+            </div>
+            <div>
+                <em><input type="button" class="btnOS" value="确定确定" /></em>
+                <em><input type="button" class="btnBS" value="取消" /></em>
+                <em><input type="button" class="btnWS" value="返回" /></em>
+                <em><input type="button" class="btnOB" value="确定" /></em>
+                <em><input type="button" class="btnBB" value="取消" /></em>
+                <em><input type="button" class="btnWB" value="返回" /></em>
+            </div>
+            <div>
+                <em><a class="btnOS" href="javascript:void(0)">确定确定</a></em>
+                <em><a class="btnBS" href="javascript:void(0)">取消</a></em>
+                <em><a class="btnWS" href="javascript:void(0)">返回</a></em>
+                <em><a class="btnOB" href="javascript:void(0)">确定</a></em>
+                <em><a class="btnBB" href="javascript:void(0)">取消</a></em>
+                <em><a class="btnWB" href="javascript:void(0)">返回</a></em>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
+<div class="popContent popNewMessage" style="display:none;">
+	<div class="content">
+    	<fieldset>
+        	<h6>新消息</h6>
+            <div>
+            	<em class="title">收件人</em><em><input class="input g290" type="text" tips="提示内容" /></em>
+            </div>
+            <div>
+            	<em class="title">消息</em><em><textarea rows="3" class="input g290" type="text" tips="提示内容"></textarea></em>
+            </div>
+            <div>
+            	<em class="title">&nbsp;</em><em><a href="#" class="btnBS">发送</a></em><em><a href="#" class="btnWS" >取消</a></em>
+            </div>
+        </fieldset>
+	</div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:320px;">
+    <a class="del" title="关闭"></a>
+    <div id="fancybox-content" style="height:373px;">
+        <div class="popContent" id="uploadUserAvatarDialog">
+            <fieldset>
+                <h6>更换头像</h6>
+                <form method="post" action="" onsubmit="return false;">
+                    <div class="imgArea">
+                        <a href="#" class="hide"><span><img src="images/tempMagezineBig4.jpg" /></span></a>
+                    </div>
+                    <div class="tCenter">
+                        <a id="submit" href="#" class="btnBS" >确定</a>
+                        <a id="cancel" href="#" class="btnWS" >取消</a>
+                        <a class="btnOB" href="#"><span>上传头像</span><input type="file" class="inputFile" /></a>
+                        <span class="tipsError" id="tipsError">请选择头像</span>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:230px;">
+        <div class="popContent" id="editTagDialog">
+            <fieldset>
+	        	<h6>编辑标签</h6>
+	        	<form method="post" id="editTagForm">
+	        	<input type="hidden" name="id">
+	            <div>
+	            	<em class="title">标题</em>
+	            	<em><input type="text" class="input g350" name="title"></em>
+	            </div>
+	            <div>
+	            	<em class="title">关键字</em>
+	            	<em><input type="text" class="input g350" name="keyword"></em>
+	            </div>
+	            <div>
+	            	<em class="title">描述</em>
+	            	<em><textarea class="input g350" name="description"></textarea></em>
+	            </div>
+	            <div>
+	            	<em class="title"></em>
+	            	<a id="editTagFormDeleteBtn" href="javascript:void(0)" class="btnOS">删除</a>
+	                <em ><a id="editTagFormSubmitBtn" href="javascript:void(0)" class="btnBS" >修改</a></em>
+	                <em ><a id="editTagFormCancelBtn" href="javascript:void(0)" class="btnWS" >取消</a></em>
+	                <em id ="tipError" class="tipsError">请填写相关信息</em>
+	            </div>
+	            </form>
+	        </fieldset>
+        </div>
+    </div>
+</div>
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:230px;">
+        <div class="popContent" id="editTagDialog">
+            <fieldset>
+	        	<h6>广告位内容编辑</h6>
+	        	<form method="post" id="editTagForm">
+	        	<input type="hidden" name="id">
+	            <div>
+	            	<em class="title">名称</em>
+	            	<em><input type="text" class="input g350" name="title"></em>
+	            </div>
+	            <div>
+	            	<em class="title">品牌</em>
+	            	<em><input type="text" class="input g350" name="keyword"></em>
+	            </div>
+	            <div>
+	            	<em class="title">描述</em>
+	            	<em><textarea class="input g350" name="description"></textarea></em>
+	            </div>
+	            <div>
+	            	<em class="title"></em>
+	            	<a id="editTagFormDeleteBtn" href="javascript:void(0)" class="btnOS">删除</a>
+	                <em ><a id="editTagFormSubmitBtn" href="javascript:void(0)" class="btnBS" >修改</a></em>
+	                <em ><a id="editTagFormCancelBtn" href="javascript:void(0)" class="btnWS" >取消</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+        </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:255px;">
+        <div id="createPublicationDialog"  class="popContent">
+            <fieldset>
+            	<h6>创建杂志</h6>
+                <form method="post" id="createPublicationDialogForm">
+                <div>
+                    <em class="title">杂志名称</em>
+                    <em><input type="text" class="input g330" name="name"></em>
+                </div>
+                <div>
+                    <em class="title">类目</em>
+                    <em>
+                        <select name="categoryId">
+                           <#if categoryList??>
+                                <#list categoryList as childcategory>
+                                    <option value="${childcategory.id}">${childcategory.name}</option>
+                                </#list>
+                            </#if>
+                        </select>
+                    </em>
+                </div>
+	            <div class="clip">
+	            	<em class="title">是否切割</em>
+	            	<em class="type1"><label><input type="radio" checked="true"><span></span></label></em>
+	            	<em class="type2"><label><input type="radio" ><span></span></label></em>
+	            </div>
+                <div>
+                    <em class="title">描述</em>
+                    <em><input type="text" class="input g330" name="description"></em>
+                </div>
+                
+                <div>
+                    <em class="title">语言</em>
+                    <em>
+                     <select name="languageId">
+                        <option  value="1">中文</option>
+                        <option  value="2">英语</option>
+                     </select>
+                    </em>
+                </div>
+                
+                <div>
+                	<em class="title"></em>
+                    <em ><a href="#"  class="btnBS" id ="createPublicationSubmit">确定</a></em>
+                    <em ><a href="#"  class="btnWS">取消</a></em>
+                    <em id ="tipError" class="tipsError">请填写相关信息</em>
+                </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="fancybox-wrap" class="pop" style="width:600px;">
+	<del id="fancybox-close" title="关闭"></del>
+    <div id="fancybox-content" style="height:498px;">
+        <div id="userInfoDialog" class="popContent">
+	    	<fieldset>
+            	<h6>编辑账号</h6>
+	        	<form id="editForm" method="post" action="" onsubmit="return false;">
+                <div class="important">
+	            	<em class="title">原密码</em>
+                    
+	            	<em><input id="oldPassword" name="oldPassword" class="input g130" type="password"></em>
+                    <em class="tips">不需要修改密码，请留空</em>
+	            </div>
+                <div class="important">
+	            	<em class="title">新密码</em>
+	            	<em class="g180"><input id="password" name="password" class="input g130" type="password"></em>
+	            	<em class="title">确认密码</em>
+	            	<em><input id="password2" name="password2" class="input g130" type="password"></em>
+	            </div>
+                <hr />
+	            <div>
+	            	<em class="title">用户名</em>
+	            	<em class="g180"><input id="userName" name="userName" value="test" class="input g130" type="text" disabled=""></em>
+	            	<em class="title">昵称</em>
+	            	<em><input id="nickName" name="nickName" value="tell" class="input g130" type="text"></em>
+	            </div>
+	            <div>
+	            	<em class="title">邮箱</em>
+	            	<em class="g180"><input id="email" name="email" value="test123@126.com" class="input g130" type="text"></em>
+	            	<em class="title">联系电话</em>
+	            	<em><input id="phone" name="phone" value="138796465498" class="input g130" type="text"></em>
+	            </div>
+	            <div>
+	            	<em class="title">性别</em>
+	            	<em class="g40"><label><input type="radio" name="gender" value="1" checked="true">男</label></em>
+	            	<em class="g40"><label><input type="radio" name="gender" value="2">女</label></em>
+	            	<em class="g90"><label><input type="radio" name="gender" value="0">保密</label></em>
+	            	<em class="title">生日</em>
+	            	<em><input id="birthdate" name="birthdate" value="" class="input g130" type="text"></em>
+	            	<em>(1985-01-11)</em>
+	            </div>
+                <hr />
+	            <div>
+	            	<em class="title">职业</em>
+	            	<em class="g180"><input id="occupation" name="occupation" value="学生" class="input g130" type="text"></em>
+	            	<em class="title">教育水平</em>
+	            	<em><select id="education" name="education" class="g70" >
+                    	<option>博士</option>
+                    	<option>研究生</option>
+                    	<option>本科</option>
+                    	<option>专科</option>
+                    	<option>高中</option>
+                    </select></em>
+	            </div>
+	            <div>
+	            	<em class="title">星座</em>
+	            	<em class="g180"><select id="astro" name="astro" class="g90" >
+                    	<option selected="selected">自动选择</option>
+                    	<option>水瓶座</option>
+                    	<option>双鱼座</option>
+                    	<option>白羊座</option>
+                    	<option>金牛座</option>
+                    	<option>双子座</option>
+                    	<option>巨蟹座</option>
+                    	<option>狮子座</option>
+                    	<option>处女座</option>
+                    	<option>天枰座</option>
+                    	<option>天蝎座</option>
+                    	<option>射手座</option>
+                    	<option>摩羯座</option>
+                    </select>
+                    </em>
+	            	<em class="title">血型</em>
+	            	<em><input id="bloodType" name="bloodType" value="" class="input g60" type="text"></em>
+	            </div>
+	            <div>
+	            	<em class="title">爱好</em>
+	            	<em><input id="hobbies" name="hobbies" rows="4" class="input g380" value="12321" type="text"></em>
+	            </div>
+                <hr />
+	            <div>
+	            	<em class="title">省份</em>
+	            	<em><select id="province" name="province" >
+                    	<option selected="selected">请选择</option>
+                    </select>
+                    </em>
+	            	<em>城市</em>
+	            	<em><select id="city" name="city" >
+                    	<option selected="selected">请选择</option>
+                    </select></em>
+	            </div>
+	            <div>
+	            	<em class="title">地址</em>
+	            	<em><input id="address" name="address" value="上海" class="input g380" type="text"></em>
+	            </div>
+	            <div>
+                	<em class="title"></em>
+	                <em><a id="submit" href="#" class="btnBS">确定</a></em>
+	                <em><a id="cancel" href="#" class="btnWS">取消</a></em>
+	                <em id="tipError" class="tipsError">请填写相关信息</em>
+	            </div>
+	            </form>
+	        </fieldset>
+		</div>
+    </div>
+</div>
+
+
+
+<div id="fancybox-wrap" class="pop" style="width:600px;">
+	<del id="fancybox-close" title="关闭"></del>
+    <div id="fancybox-content" style="height:370px;">
+        <div id="uploadIssueDialog" class="popContent">
+	    	<fieldset>
+	    		<h6>上传期刊</h6>
+	        	<form method="post" id="uploadIssueForm"  enctype="multipart/form-data">
+	            <div>
+	            	<em class="title">文件</em>
+	            	<em><input type="file" id="issueFile" name="issueFile" /></em>
+	            </div>
+	            <div>
+	            	<em class="title">关键词</em>
+	            	<em><input type="text" class="input" name="keyword" /></em>
+	            </div>
+	            <div>
+	            	<em class="title">发布日期</em>
+	            	<em><input type="text" id="publishDate" name="publishDate" class="input" /></em>
+	            	<em>(1985-03-21)</em>
+	            </div>
+	            <div>
+	            	<em class="title">杂志名称</em>
+	            	<em><select id="publicationId" name="publicationId"></select></em>
+	            </div>
+	            <div>
+	            	<em class="title">期刊号</em>
+                    <em class="g100"><select id="astro" name="astro" class="g70" >
+                    	<option selected="selected">2010</option>
+                    	<option>2011</option>
+                    	<option>2012</option>
+                    	<option>2013</option>
+                    	<option>2014</option>
+                    </select>
+                    &nbsp;年
+                    </em>
+                    <em class="g80"><select id="astro" name="astro" class="g50" >
+                    	<option selected="selected">1</option>
+                    	<option>2</option>
+                    	<option>3</option>
+                    	<option>4</option>
+                    	<option>5</option>
+                    	<option>6</option>
+                    	<option>7</option>
+                    	<option>8</option>
+                    	<option>9</option>
+                    	<option>10</option>
+                    	<option>11</option>
+                    	<option>12</option>
+                    </select>
+                    &nbsp;月
+                    </em>
+	            	<em class="date"><input type="text" class="g70 input" id="selectDate" />
+                    	<div id="selectDateBox">
+                        	<a href="javascript:void(0)">1</a>
+                        	<a href="javascript:void(0)">2</a>
+                        	<a href="javascript:void(0)">3</a>
+                        	<a href="javascript:void(0)">4</a>
+                        	<a href="javascript:void(0)">5</a>
+                        	<a href="javascript:void(0)">6</a>
+                        	<a href="javascript:void(0)">7</a>
+                        	<a href="javascript:void(0)">8</a>
+                        	<a href="javascript:void(0)">9</a>
+                        	<a href="javascript:void(0)">10</a>
+                        	<a href="javascript:void(0)">11</a>
+                        	<a href="javascript:void(0)">12</a>
+                        	<a href="javascript:void(0)">13</a>
+                        	<a href="javascript:void(0)">14</a>
+                        	<a href="javascript:void(0)">15</a>
+                        	<a href="javascript:void(0)">16</a>
+                        	<a href="javascript:void(0)">17</a>
+                        	<a href="javascript:void(0)">18</a>
+                        	<a href="javascript:void(0)">19</a>
+                        	<a href="javascript:void(0)">20</a>
+                        	<a href="javascript:void(0)">21</a>
+                        	<a href="javascript:void(0)">22</a>
+                        	<a href="javascript:void(0)">23</a>
+                        	<a href="javascript:void(0)">24</a>
+                        	<a href="javascript:void(0)">25</a>
+                        	<a href="javascript:void(0)">26</a>
+                        	<a href="javascript:void(0)">27</a>
+                        	<a href="javascript:void(0)">28</a>
+                        	<a href="javascript:void(0)">29</a>
+                        	<a href="javascript:void(0)">30</a>
+                        	<a href="javascript:void(0)">31</a>
+                            <a href="javascript:void(0)" class="text clear">增刊</a>
+                            <a href="javascript:void(0)" class="text">增刊22</a>
+                            <a href="javascript:void(0)" class="text">增刊23</a>
+                            <a href="javascript:void(0)" class="text">增刊245</a>
+                        </div>
+                    </em>
+	            </div>
+	            <div>
+	            	<em class="title">描述</em>
+	            	<em><textarea rows="4" class="input g400" name="description"></textarea></em>
+	            </div>
+	            <div>
+                	<em class="title"><input type="hidden" name="fileName" id="fileName" value=""/></em>
+	                <em ><a id ="uploadIssueSubmit" href="javascript:void(0)" class="btnBS">确定</a></em>
+	                <em ><a id="cancel" href="javascript:void(0)" class="btnWS" >取消</a></em>
+	                <em id ="tipError" class="tipsError">请填写相关信息</em>
+	            </div>
+	            
+	            </form>
+	        </fieldset>
+		</div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:290px;">
+        <div id="editPublicationDialog"  class="popContent">
+	    	<fieldset>
+	    		<h6>编辑杂志信息</h6>
+	        	<form method="post" id="editPublicationDialogForm">
+	            <div>
+	            	<em class="title">杂志名称</em>
+	            	<em><input id="publicationName" type="text" name="name" class="input g240" value=""></em>
+	            </div>
+	            <div>
+	            	<em class="title">类目</em>
+	            	<em>
+	            	    <select class="col-8" id="categoryId" name="categoryId" value="">
+	            	       <#if categoryList??>
+	            	            <#list categoryList as childcategory>
+								    <option  value="${childcategory.id}">${childcategory.name}</option>
+								</#list>
+							</#if>
+						</select>
+					</em>
+	            </div>
+				<div class="clip">
+					<em class="title">杂志形状</em>
+					<em class="type1">
+						<label>
+							<input type="radio" name="whratio" value="0" checked="true">
+							<span></span>
+						</label>
+					</em>
+	            	<em class="type2">
+	            		<label>
+	            			<input type="radio" name="whratio" value="1"  >
+	            			<span></span>
+            			</label>
+    				</em>
+				</div>
+	                       
+	            <div>
+	            	<em class="title">描述</em>
+	            	<em><input id="description" type="text" name="description" class="input g240" value=""></em>
+	            </div>
+	            
+	            <div>
+                	<em class="title"> 期刊类型</em>
+                    <em>
+	                     <select name="issueType" id="issueType">
+	                        <option  value="2">周刊</option>
+	                        <option  value="3">半月刊</option>
+	                        <option  value="4">月刊</option>
+	                        <option  value="5">双月刊</option>
+	                        <option  value="6">季刊</option>
+	                        <option  value="7">半年刊</option>
+	                        <option  value="1">日报</option>
+	                        <option  value="20">其它</option>
+	                     </select>
+                    </em>
+                </div>
+	            
+	            <div>
+	            	<em class="title">语言</em>
+	            	<em>
+	            	 <select class="col-8" id="languageId" name="languageId" value="">
+						<option  value="1">中文</option>
+						<option  value="2">英语</option>
+					 </select>
+					</em>
+	            </div>
+	            
+	            <div>
+                	<em class="title"></em>
+	                <em><a href="javascript:void(0)" class="btnBS" id ="editPublicationSubmit">确定</a></em>
+	                <em><a id="cancel" href="javascript:void(0)" class="btnWS" >取消</a></em>
+	                <em id ="tipError" class="tipsError">请填写相关信息</em>
+	                <input type="hidden" name="id" value="">
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:265px;">
+        <div id="editIssueDialog" class="popContent">
+	    	<fieldset>
+	        	<h6>编辑杂志信息</h6>
+	        	<form method="post" id="editIssueForm">
+	            <div>
+	            	<em class="title">关键词</em>
+	            	<em><input type="text" name="keyword" class="input g220" /></em>
+	            </div>
+	            <div>
+	            	<em class="title">发布日期</em>
+	            	<em><input type="text" name="publishDate" class="input g220" /></em><em>(1985-03-21)</em>
+	            </div>
+	            <div>
+	            	<em class="title">期刊号</em>
+	            	<em><input type="text" name="issueNumber" class="input g220" /></em>
+	            </div>
+	            <!-- 
+	            <div>
+	            	<em class="title">是否切割</em>
+	            	<em><select class="col-8" name="chop">
+							<option  value="0">否</option>
+							<option  value="1">是</option>
+						</select>
+					</em>
+	            </div>
+	            -->
+	            <div>
+	            	<em class="title">描述</em>
+	            	<em><textarea rows="4" class="input g280" name="description" value=""></textarea></em>
+	            </div>
+	            <!--
+	            <div>
+	            	<em class="title">文件名</em>
+	            	<em><input type="text" name="fileName" id="fileName" value=""/></em>
+	            </div>
+	            <input type="hidden" name="publicationId" id="publicationId" value=""/>-->
+	            <!-- 
+	             <div>
+	            	<em class="title">杂志名称</em>
+	            	<em>
+	            	   <select class="col-8" name="publicationId">
+	            	       <#if publicationList??>
+	            	            <#list publicationList as publication>
+								    <option  value="${publication.id}">${publication.name}</option>
+								</#list>
+							</#if>
+						</select>
+					</em>
+	            </div>-->
+	            <!-- 
+	             <div>
+	            	<em class="title">语言</em>
+	            	<em> 
+		            	<select class="col-8" name="languageId" value="">
+							<option  value="1">中文</option>
+							<option  value="2">英语</option>
+						 </select>
+					 </em>
+	            </div>
+	            -->
+	            <div>
+                	<em class="title"></em>
+	                <em><a href="javascript:void(0)" class="btnBS" id ="editIssueFormSubmit">确定</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS" >取消</a></em>
+	                <em id ="tipError" class="tipsError">请填写相关信息</em>
+	                <input type="hidden" name="id" value=""></input>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:600px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:475px;">
+        <div id="editPublisherDialog" class="popContent">
+	    	<fieldset>
+	        	<h6>编辑账户信息</h6>
+	        	<form id="editPublisherForm" method="post" action="" onsubmit="return false;">
+	            <div>
+	            	<em class="title">用户名</em>
+	            	<em class="g200"><input id="userName" name="userName" value="" class="input g150" type="text" disabled/></em>
+	            	<em class="title">杂志社名称</em>
+	            	<em><input id="publishName" name="publishName" value="" class="input g150" type="text" disabled/></em>
+	            </div>
+	            <div>
+	            	<em class="title">邮箱</em>
+	            	<em class="g200"><input id="email" name="email" value="" class="input g150" type="text" /></em>
+	            	<em class="title">法人</em>
+	            	<em><input id="owner" name="owner" value="" class="input g150" type="text" /></em>
+	            </div>
+                <hr />
+	            <div>
+	            	<em class="title">联系人1</em>
+	            	<em class="g200"><input id="contact1" name="contact1" value="" class="input g150" type="text"/></em>
+	            	<em class="title">联系人电话1</em>
+	            	<em><input id="contactPhone1" name="contactPhone1" value="" class="input g150" type="text"/></em>
+	            </div>
+	            <div>
+	            	<em class="title">联系人2</em>
+	            	<em class="g200"><input id="contact2" name="contact2" value="" class="input g150" type="text"/></em>
+	            	<em class="title">联系人电话2</em>
+	            	<em><input id="contactPhone2" name="contactPhone2" value="" class="input g150" type="text"/></em>
+	            </div>
+	            <div>
+	            	<em class="title">公司电话</em>
+	            	<em class="g200"><input id="companyPhone" name="companyPhone" value="" class="input g150" type="text"/></em>
+	            	<em class="title">传真号</em>
+	            	<em><input id="fax" name="fax" value="" class="input g150" type="text"/></em>
+	            </div>
+	            <div>
+	            	<em class="title">省份</em>
+	            	<em class="g200"><input id="provinceId" name="provinceId" value="" class="input g150" type="text" /></em>
+	            	<em class="title">城市</em>
+	            	<em><input id="cityId" name="cityId" value="" class="input g150" type="text"/></em>
+	            </div>
+	            <div>
+	            	<em class="title">网站地址</em>
+	            	<em class="g200"><input id="provinceId" name="provinceId" value="" class="input g150" type="text" /></em>
+	            	<em class="title">常用联系方式</em>
+                    <em><select class="g70"><option value="0">请选择</option></select></em>
+	            	<em><input value="" class="input g80" type="text"/></em>
+	            </div>
+	            <div>
+	            <em class="title">街道地址</em>
+	            	<em><input id="address" name="address" value="" class="input g450" type="text" /></em>
+	            </div>
+                <hr />
+	            <div class="important">
+	            	<em class="title">原密码</em>
+	            	<em><input id="oldPassword" name="oldPassword" class="input g150" type="password" /></em>
+	            </div>
+	            <div class="important">
+	            	<em class="title">新密码</em>
+	            	<em class="g200"><input id="password" name="password" class="input g150" type="password"/></em>
+	            	<em class="title">确认密码</em>
+	            	<em><input id="password2" name="password2" class="input g150" type="password"/></em>
+	            </div>
+	            <div>
+	            	<em class="title"></em>
+	                <em ><a id="editPublisherFormSubmit" href="#" class="btnBS" >确定</a></em>
+	                <em ><a id="cancel" href="#" class="btnWS" >取消</a></em>
+	                <em id ="tipError" class="tipsError">请填写相关信息</em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:798px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:335px;">
+        <div id="shareEventDialog" class="popContent" >
+             <h6><span>分享该标签到</span><div id='ckepop'><a class='jiathis_button_tsina'></a><a class='jiathis_button_tqq'></a><a class='jiathis_button_renren'></a><a class='jiathis_button_kaixin'></a></div></h6>
+             <div class="left">
+             	<a class="img" href="javascript:void(0)"><img src="images/temp/temphome4.jpg" /></a>
+                <h5>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</h5>
+                <h6><span class="create">创建于 2011/09/02 15:52:19</span><span class="fav" onclick="">99</span><span class="top">99</span><span class="chat">99</span></h6>
+             </div>
+             <div class="right">
+             	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>用户名-很长很长很长很长很长很长很长很长很长很长很长很长</h3>
+                <a class="btn addFriend">加为好友</a>
+                <a class="btn message">站内短信</a>
+                <h5>用户自定义标签</h5>
+                <ul class="clear clearFix listB listTag">
+                    <li><a href="javascript:void(0)" class="tag1">标签标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag2">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag3">标签签</a></li>
+                    <li><a href="javascript:void(0)" class="tag4">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag5">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag6">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                </ul>
+                <div class="addTag"><input type="text" class="input" tips="添加我的标签，多标签请使用逗号分隔" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >添加</a></div>
+             </div>
+             <div class="clear"></div>
+	    </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:596px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:335px;">
+        <div id="shareMgzDialog" class="popContent" >
+             <h6><span>分享该杂志到</span><div id='ckepop'><a class='jiathis_button_tsina'></a><a class='jiathis_button_tqq'></a><a class='jiathis_button_renren'></a><a class='jiathis_button_kaixin'></a></div></h6>
+             <div class="left">
+             	<a class="img" href="javascript:void(0)"><img src="images/temp/tempKanmi3.jpg" /></a>
+                <h5>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</h5>
+                <h6><span class="fav" onclick="">99</span><span class="fans">99</span><span class="chat">99</span><span class="mgz" onclick="">往期杂志</span></h6>
+             </div>
+             <div class="right">
+             	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>杂志名杂志名杂志名</h3>
+                <a class="btn" id="btnSendMsgMgz">给它意见</a>
+                <a class="btn">我要关注</a>
+                <a class="btn">我要订阅</a>
+                <a class="btn">我要收藏</a>
+                <div class="sendMsg" id="sendMsgMgz">
+                    <input type="text" class="input" tips="请输入消息内容" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >发送</a>
+                </div>
+                <script>
+                $(function() {
+                    //弹出站内消息发送框
+                    $("#btnSendMsgMgz").click(function(){
+                        if($(this).nextAll(".sendMsg").hasClass("current")){
+                            $(this).nextAll(".sendMsg").slideUp(300).removeClass("current");
+                        }else{
+                            $(this).nextAll(".sendMsg").slideDown(300).addClass("current");
+                        }
+                    });
+                    $("#sendMsgMgz a").click(function(){
+                        $(this).parent().fadeOut(500).removeClass("current");
+                        setTimeout(function(){$.jqueryInputTips()},500);
+                    });
+                });
+                </script>
+                <h5>用户自定义标签</h5>
+                <ul class="clear clearFix listB listTag">
+                    <li><a href="javascript:void(0)" class="tag1">标签标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag2">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag3">标签签</a></li>
+                    <li><a href="javascript:void(0)" class="tag4">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag5">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag6">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                </ul>
+                <div class="addTag"><input type="text" class="input" tips="添加我的标签，多标签请使用逗号分隔" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >添加</a></div>
+             </div>
+             <div class="clear"></div>
+	    </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:596px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:335px;">
+        <div id="shareTagDialog" class="popContent" >
+             <h6><span>分享该标签到</span><div id='ckepop'><a class='jiathis_button_tsina'></a><a class='jiathis_button_tqq'></a><a class='jiathis_button_renren'></a><a class='jiathis_button_kaixin'></a></div></h6>
+             <div class="left">
+             	<a class="img" href="javascript:void(0)"><img src="images/temp/tempTag4.jpg" /></a>
+                <h5>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</h5>
+                <h6><span class="fav" onclick="">99</span><span class="top">99</span><span class="chat">99</span><span class="addFav" onclick="">我要收藏</span></h6>
+             </div>
+             <div class="right">
+             	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>用户昵称</h3>
+                <a class="btn message" id="btnSendMsgTag">站内短信</a>
+                <a class="btn addFriend">加为好友</a>
+                <div class="sendMsg" id="sendMsgTag">
+                    <input type="text" class="input" tips="请输入消息内容" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >发送</a>
+                </div>
+				<script>
+                $(function() {
+                    //弹出站内消息发送框
+                    $("#btnSendMsgTag").click(function(){
+                        if($(this).nextAll(".sendMsg").hasClass("current")){
+                            $(this).nextAll(".sendMsg").slideUp(300).removeClass("current");
+                        }else{
+                            $(this).nextAll(".sendMsg").slideDown(300).addClass("current");
+                        }
+                    });
+                    $("#sendMsgTag a").click(function(){
+                        $(this).parent().fadeOut(500).removeClass("current");
+                        setTimeout(function(){$.jqueryInputTips()},500);
+                    });
+                });
+                </script>
+                <h5>用户自定义标签</h5>
+                <ul class="clear clearFix listB listTag">
+                    <li><a href="javascript:void(0)" class="tag1">标签标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag2">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag3">标签签</a></li>
+                    <li><a href="javascript:void(0)" class="tag4">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag5">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag6">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                </ul>
+                <div class="addTag"><input type="text" class="input" tips="添加我的标签，多标签请使用逗号分隔" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >添加</a></div>
+             </div>
+             <div class="clear"></div>
+	    </div>
+    </div>
+</div>
+
+
+<div class="pop" id="fancybox-wrap" style="width:596px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:335px;">
+        <div id="shareTagDialog" class="popContent" >
+             <h6><span>分享该标签到</span><div id='ckepop'><a class='jiathis_button_tsina'></a><a class='jiathis_button_tqq'></a><a class='jiathis_button_renren'></a><a class='jiathis_button_kaixin'></a></div></h6>
+             <div class="left">
+             	<a class="img" href="javascript:void(0)"><img src="images/temp/tempTag4.jpg" /></a>
+                <textarea class="input" type="text">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文</textarea>
+                <h6><span class="fav" onclick="">99</span><span class="top">99</span><span class="chat">99</span><span class="addFav" onclick="">取消收藏</span></h6>
+             </div>
+             <div class="right">
+             	<div class="head"><img src="images/head60.gif" /></div>
+                <h3>用户昵称</h3>
+                <a class="btn message">站内短信</a>
+                <a class="btn addFriend">加为好友</a>
+                <h5>用户自定义标签</h5>
+                <ul class="clear clearFix listB listTag">
+                    <li><a href="javascript:void(0)" class="tag1">标签标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag2">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag3">标签签</a></li>
+                    <li><a href="javascript:void(0)" class="tag4">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag5">标签</a></li>
+                    <li><a href="javascript:void(0)" class="tag6">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标</a></li>
+                    <li><a href="javascript:void(0)">标签签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签</a></li>
+                    <li><a href="javascript:void(0)">标签标签</a></li>
+                </ul>
+                <div class="addTag"><input type="text" class="input" tips="添加我的标签，多标签请使用逗号分隔" /><a id="addsubmit" href="javascript:void(0)" class="btnBS" >保存</a></div>
+             </div>
+             <div class="clear"></div>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:215px;">
+        <div id="feedBackDialog" class="popContent" >
+             <fieldset class="formFeedback">
+             	<h6>意见反馈</h6>
+                <p>您好，欢迎提出宝贵建议和意见，您留下的每个字都将被用来改善我们的服务。</p>
+                <div>
+                    <em class="title">意见类别：</em>
+                    <em><select id="education" name="education" class="g200" >
+                        <option selected="selected">请选择</option>
+                        <option>现有功能改进</option>
+                        <option>新功能增加</option>
+                        <option>其它</option>
+                    </select></em>
+                </div>
+                <div>
+                    <em class="title">意见内容：</em>
+                    <em><textarea class="input g340" /></textarea></em>
+                </div>
+                <div>
+                    <em class="title">&nbsp;</em>
+                    <em><a href="javascript:void(0)" class="btnBS" >提交</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS" >取消</a></em>
+                </div>
+            </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:300px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:110px;">
+        <div id="viewAdType" class="popContent">
+	    	<fieldset>
+	        	<h6>请选择您想预览的广告类型</h6>
+	        	<form method="post" id="editIssueForm">
+	            <div>
+                    <em class="g80"><label><input type="radio" />图片</label></em>
+                    <em class="g80"><label><input type="radio" />视频</label></em>
+                    <em><label><input type="radio" />链接</label></em>
+                </div>
+                <div>
+	                <em><a href="javascript:void(0)" class="btnBS">预览</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS">取消</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:390px;">
+        <div id="addAdvertiseDialog" class="popContent">
+	    	<fieldset>
+	        	<h6>修改广告</h6>
+                 <form>
+	         		<div id="addAdIdTab">
+		            	<em class="title">选择已有素材</em>
+		            	<em>
+		            		<select id="addAdId" name="addAdId">
+		            		    <option  value="0">请选择</option>
+		            		    <#if adList??>
+		            		       <#list adList as ad>
+										<option  value="${ad.id}">${ad.title}</option>
+								   </#list>
+								</#if>
+							</select>
+						</em>
+		            </div>
+                    <hr />
+		            <div>
+		            	<em class="title">标题</em>
+		            	<em><input type="text" name="title" class="input g280" /><font color="red">*</font></em>
+		            </div>
+		            <div>
+		            	<em class="title">广告类型</em>
+		            	<em class="g80"><label><input type="radio" />图片</label></em>
+                        <em class="g80"><label><input type="radio" />视频</label></em>
+                        <em><label><input type="radio" />链接</label></em>
+		            </div>
+		            <div>
+		            	<em class="title">上传图片</em>
+		            	<em><input type="file" id="jpgFile" name="jpgFile" class="g290"  /></em>
+		            </div>
+		            <div>
+		            	<em class="title">图片链接</em>
+		            	<em><input type="text" name="mediaurl" class="input g280 disabled" disabled="disabled" value="禁用样式" /></em>  
+		            </div>
+		            <div  id="startTime">
+		            	<em class="title">有效期</em>
+		            	<em class="g50"><label><input type="radio" />永久</label></em>
+                        <em><label><input type="radio" />限时</label></em>
+                        <em><input type="text" class="input g80" />--</em>
+                        <em><input type="text" class="input g80" /></em>
+		            </div>
+		            <div>
+		            	<em class="title">描述</em>
+		            	<em><textarea class="input g280" /></textarea></em>
+		            </div>
+		            <div>
+                        <input type="hidden" id="adposIds" name="adposIds" value=""/>
+                        <input type="hidden" id="adId" name="adId" value=""/>
+                        <input type="hidden" name="fileName" id="fileName" value=""/>
+                        <em class="title"></em>
+		                <em ><a id="addsubmit" href="javascript:void(0)" class="btnBS" >确定</a></em>
+		                <em ><a id="addcancel" href="javascript:void(0)" class="btnWS" >取消</a></em>
+		                <em id ="tipError" class="tipsError">请填写相关信息</em>
+		            </div>
+	           </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:505px;">
+        <div id="viewAdDetail" class="popContent">
+	    	<fieldset>
+	        	<h6>广告详细信息</h6>
+	        	<form method="post">
+	            <div>
+                	<em class="title">广告位编号</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告位添加人</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告所属期刊</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+                <hr />
+	            <div>
+                	<em class="title">广告编号</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告内容添加人</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告标题</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">广告类型</em>
+                    <em><input type="text" class="input g280" /></em>
+                </div>
+	            <div>
+                	<em class="title">有效期</em>
+                    <em><input type="text" class="input g130" />--</em>
+                    <em><input type="text" class="input g130" /></em>
+                </div>
+                <div>
+                    <em class="title">描述</em>
+                    <em><textarea class="input g280" /></textarea></em>
+                </div>
+                <div>
+                    <em class="title">广告状态</em>
+                    <em>待发布</em>
+                </div>
+                <div>
+                    <em class="title"></em>
+                    <em><a href="javascript:void(0)" class="btnWS">关闭</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:280px;">
+        <div id="postAd" class="popContent">
+	    	<fieldset>
+	        	<h6>您的发布内容将会通过系统消息以及Email发送给对方</h6>
+	        	<form method="post">
+	            <div>
+                    <em><textarea class="input g400" /></textarea></em>
+                </div>
+	            <div>
+                    <em class="g60"><label><input type="radio" />同意</label></em>
+                    <em><label><input type="radio" />反对</label></em>
+                </div>
+                <div>
+                    <em ><a id="addsubmit" href="javascript:void(0)" class="btnBS" >确定</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS">关闭</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+<script>
+$(function(){
+	$.jquerytagbox("#popLoginTab",0);
+})
+</script>
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:280px;">
+        <div id="popLoginRegister" class="popContent">
+	    	<div class="jqueryTagBox" id="popLoginTab">
+                <div class="ctrl">
+                    <div>登录</div>
+                    <div>注册</div>
+                </div>
+                <div class="doorList">
+                    <div class="item">
+                        <form id="popLoginForm" action="" onsubmit="return false;" method="post">
+                            <ul class="select">
+                                <li class="current"><a href="javascript:void(0)"><img src="images/icon/sns32/32-magme.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_qq"><img src="images/icon/sns32/32-qq.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_renren"><img src="images/icon/sns32/32-renren.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_weibo"><img src="images/icon/sns32/32-weibo.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_baidu"><img src="images/icon/sns32/32-baidu.gif" /></a></li>
+                                <li><a href="javascript:void(0)" name="login_kqixin"><img src="images/icon/sns32/32-kaixin001.gif" /></a></li>
+                            </ul>
+                            <div class="con">
+                                <fieldset>
+                                    <div>
+                                        <em class="title" >用户名/邮箱</em>
+                                        <em><input class="input" name="userName" type="text" /></em>
+                                        <em class="tipsRight" style="display:block;"></em>
+                                        <em class="tipsError" style="display:block;">请填写相关信息</em>
+                                    </div>
+                                    <div>
+                                        <em class="title" >密码</em>
+                                        <em><input class="input" name="password" type="password" /></em>
+                                        <em class="tipsWrong" style="display:block;"></em>
+                                    </div>
+                                    <div>
+                                        <em class="title" ></em>
+                                        <em class="m0"><a class="btnOS" name="signIn" href="#" >登录</a></em>
+                                        <em class="remanber"><label><input type="checkbox" checked/>下次自动登录</label></em>
+                                        <em class="tipsError">请填写相关信息</em>
+                                    </div>
+                                    <div>
+                                        <em class="title" ></em>
+                                        <em><a id="popForgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+                                        <em><a id="popNewUserReg"href="javascript:void(0)">新用户注册</a></em>
+                                        <script>
+                                        	$(function(){
+												$("#popNewUserReg").click(function(){
+													$("#popLoginTab>.ctrl>div:eq(1)").click();
+												})
+											})
+                                        </script>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </form>                        
+                    </div>
+                    <div class="item">
+                        <form id="popRegisterForm" action="" onsubmit="return false;" method="post">
+                            <div class="con">
+                                <fieldset>
+                                    <div>
+                                        <em class="title" >用户名</em>
+                                        <em><input class="input" name="userName" type="text" /></em>
+                                        <em class="tipsRight" style="display:block;"></em>
+                                        <em class="tipsError" style="display:block;">请填写相关信息</em>
+                                    </div>
+                                    <div>
+                                        <em class="title" >邮箱</em>
+                                        <em><input class="input" name="email" type="text" /></em>
+                                        <em class="tipsWrong" style="display:block;"></em>
+                                    </div>
+                                    <div>
+                                        <em class="title" >密码</em>
+                                        <em><input class="input" name="password" type="password" /></em>
+                                    </div>
+                                    <div>
+                                        <em class="title" >确认密码</em>
+                                        <em><input class="input" name="password" type="password" /></em>
+                                        <em class="tipsRight"></em>
+                                    </div>
+                                    <div>
+                                        <em class="title" ></em>
+                                        <em class="m0"><a class="btnBS" name="subimt" href="#" >注册</a></em>
+                                        <em class="loading"></em>
+                                        <em class="tipsError" style="display:block;">请填写相关信息</em>
+                                    </div>
+                                </fieldset>
+                            </div>
+                         </form>                                   
+                    </div>
+                </div>
+        	</div>
+    	</div>
+    </div>
+</div>
+
+
+
+
+<div class="pop" id="fancybox-wrap" style="width:450px;">
+    <del title="关闭"></del>
+    <div id="fancybox-content" style="height:385px;">
+        <div id="addAd" class="popContent">
+	    	<fieldset>
+	        	<h6>添加广告</h6>
+	        	<form method="post">
+	            <div>
+                	<em class="title">所属类别</em>
+                    <em><select class="g250"></select></em>
+                </div>
+	            <div>
+                	<em class="title">位置</em>
+                    <em><select class="g250"></select></em>
+                </div>
+	            <div>
+                	<em class="title">上传图片</em>
+                    <em><input type="file" class="g250" /></em>
+                </div>
+	            <div>
+                	<em class="title">开始时间</em>
+                    <em><input type="text" class="input g250" /></em>
+                </div>
+	            <div>
+                	<em class="title">结束时间</em>
+                    <em><input type="text" class="input g250" /></em>
+                </div>
+	            <div>
+                	<em class="title">链接</em>
+                    <em><input type="text" class="input g250" /></em>
+                </div>
+	            <div>
+                	<em class="title">描述</em>
+                    <em><textarea class="input g250"></textarea></em>
+                </div>
+                <div>
+                	<em class="title"></em>
+                    <em><a id="addsubmit" href="javascript:void(0)" class="btnBS" >确定</a></em>
+                    <em><a href="javascript:void(0)" class="btnWS">关闭</a></em>
+	            </div>
+	            </form>
+	        </fieldset>
+	    </div>
+    </div>
+</div>
+
+
+
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+</div>
+</div>
+
+</body>
+</html>

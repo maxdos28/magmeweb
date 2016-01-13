@@ -1,0 +1,76 @@
+@charset "utf-8";
+@import url("conMessage.css");
+@import url("conUser.css");
+@import url("channelKanmi.css");
+@import url("channelMagazine.css");
+
+
+.header .menu .magazine a,
+.header .menu .kanmi a { background:none;}
+.header .menu .home a:hover,
+.header .menu .magazine a:hover,
+.header .menu .kanmi a:hover { background:#263A4D;}
+
+body{padding-top:100px;}
+.body{ zoom:1; margin:0 auto 50px auto; width:928px; background:#f3f3f3; box-shadow:0px 2px 3px rgba(0,0,0,0.1),0px 0px 2px rgba(0,0,0,0.1); position:relative;}
+.body:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+html.ie6 .body{ border:1px solid #eee;}
+html.ie6 .noBg{ border:0;}
+html body .nullInfo{ background:url(../images/icon/64mail.gif) 200px 120px no-repeat; height:300px; padding-top:0; line-height:300px; text-indent:270px; font-size:26px; color:#ddd;}
+
+
+.body .titleBar{ position:absolute; left:8px; top:-30px;}
+.body .titleBar h2{ color:#7f8690; font-size:14px; line-height:24px;}
+html.ie6 .body .titleBar{ top:0; margin-top:-30px; margin-bottom:30px;}
+
+
+.body .itemUser { width:220px; height:auto; background:none; padding:0; margin:8px; box-shadow:none; max-height:305px; overflow:hidden;}
+.bodyUser .itemUser{ height:80px; overflow:visible;}
+.bodyUser .itemUser .userInfo { background-position:-220px 0;}
+.body .itemUser .tagList { background:none;}
+.body .itemUser .tagList ul { padding-bottom:0;}
+.body .userInfo { background:url(../images/bgUserInfo.gif) 0 0 no-repeat; padding:10px; height:70px; margin-bottom:3px; position:relative;}
+.body .userInfo a.img { float:left; width:60px; height:60px; display:block; overflow:hidden; border-radius:3px; box-shadow:0 1px 0px rgba(255,255,255,0.6); margin:0 9px 10px 0; _display:inline;}
+.body .userInfo a.img img { display:block; width:60px; height:60px; display:block;}
+.body .userInfo strong.name { color:#7f8690; font-size:14px; display:block; float:right; height:16px; line-height:16px; margin-bottom:6px; width:126px; overflow:hidden; text-shadow:0 1px 0 #fff}
+.body .userInfo .atten { background:url(../images/bgAtten.png) 0 0 no-repeat; float:left; padding:4px 5px 5px 6px; width:120px; height:30px; margin-bottom:10px; overflow:hidden;}
+.body .userInfo .atten li { float:left; width:40px; overflow:hidden;}
+.body .userInfo .atten li.current{ background:#DDE1E6; border-radius:3px;}
+.body .userInfo .atten li.current a:hover strong,
+.body .userInfo .atten li.current a strong{ color:#1E3046;}
+.body .userInfo .atten li.current a span{ color:#7f8690;}
+.body .userInfo .atten li a { display:block; width:100%;}
+.body .userInfo .atten li a strong { font-weight:normal; display:block; line-height:15px; height:15px; text-align:center; font-size:16px; color:#7f8690; text-shadow:0 1px 0 #fff}
+.body .userInfo .atten li a span { display:block; height:15px; line-height:15px; overflow:hidden; text-align:center; color:#b6c0ca; text-shadow:0 1px 0 #fff}
+.body .userInfo .atten li a:hover span { color:#98a1ab;}
+.body .userInfo .atten li a:hover strong { color:#515a67;}
+.body .userInfo .tool { position:absolute; left:5px; top:70px; width:70px; overflow:hidden;}
+.body .userInfo .tool .inner { background:url(../images/topPoint.gif) center 0 no-repeat; padding-top:3px; margin-top:-100px;}
+.body .userInfo .tool a { display:block; height:24px; line-height:24px; overflow:hidden; text-align:center; width:100%; color:#fff; background:#111; padding:0; margin:0; border-bottom:1px solid #000;}
+.body .userInfo .tool a.atten { border-top:1px solid #222; border-bottom:0;}
+.body .userInfo .tool a:hover { color:#eee; background:#181818;}
+
+
+.conLeft { width:160px; padding:15px 0 0 0;}
+.conLeft .userInfo { padding:0 0 0 15px; background:none; height:auto;}
+.conLeft .userInfo strong.name { font-size:16px; margin-bottom:8px; float:none;}
+.conLeft .userInfo a.img { float:none; width:130px; height:130px; display:block; margin:0 0 10px 0; position:relative; background:#fff;}
+.conLeft .userInfo a.img img { width:130px; height:130px; border-radius:3px;}
+.conLeft .userInfo a.img em { position:absolute; right:0; bottom:0; z-index:10; display:inline-block; padding:0 6px; height:20px; line-height:20px; text-align:center; border-radius:3px 0 3px 0; background:#000; color:#fff; font-size:12px; opacity:0.5;}
+.conLeft .tool { padding:0; margin-left:0; background:url(../images/line2px.gif) 0 bottom repeat-x; padding-bottom:2px;}
+.conLeft .tool a { float:none; display:block; text-indent:15px; height:30px; line-height:30px; background:url(../images/line2px.gif) 0 0 repeat-x #ededed; color:#98a1ab;}
+.conLeft .tool a:hover {color:#515a67;}
+.conLeft .tool a.current{ background-color:#E7EAED;}
+.conMiddleRight h2 { font-size:28px; font-weight:normal; margin-bottom:15px; color:#e7e7e7; height:40px; line-height:40px; overflow:hidden;}
+.conMiddleRight { padding-bottom:20px; min-height:500px;}
+
+
+.conMyConfig fieldset.new div { padding:6px 0;}
+.conMyConfig fieldset.new .title { width:80px;}
+
+.conMyTag { min-height:400px; height:auto; _height:400px;}
+
+
+
+
+

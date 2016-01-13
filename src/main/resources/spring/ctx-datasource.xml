@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<beans default-autowire="byName" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/data/mongo 
+	http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+  default-lazy-init="true">    
+
+	<bean id="magmecnDatasource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${connection.driver_class}"/>
+		<property name="jdbcUrl" value="${connection.url}"/>
+		<property name="maxIdleTime" value="${pool.c3p0.max_idle_time}" />
+		<property name="initialPoolSize" value="${pool.c3p0.min_size}" />
+		<property name="checkoutTimeout" value="${pool.c3p0.checktimeout}" />
+        <property name="testConnectionOnCheckin" value="true" />
+        <property name="preferredTestQuery"       value = "SELECT 1"/>
+        <property name="idleConnectionTestPeriod" value ="${pool.c3p0.idleConnectionTestPeriod}"/>
+		<property name="properties">
+			<props>
+				<prop key="user">${connection.username}</prop>
+				<prop key="password">${connection.password}</prop>
+				<prop key="c3p0.acquire_increment">${pool.c3p0.acquire_increment}</prop>
+				<prop key="c3p0.max_size">${pool.c3p0.max_size}</prop>
+				<prop key="c3p0.min_size">${pool.c3p0.min_size}</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="magmecnDatasourceStat" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${connection.stat.driver_class}"/>
+		<property name="jdbcUrl" value="${connection.stat.url}"/>
+		<property name="maxIdleTime" value="${pool.c3p0.max_idle_time}" />
+		<property name="initialPoolSize" value="${pool.c3p0.min_size}" />
+		<property name="checkoutTimeout" value="${pool.c3p0.checktimeout}" />
+        <property name="testConnectionOnCheckin" value="true" />
+        <property name="preferredTestQuery"       value = "SELECT 1"/>
+        <property name="idleConnectionTestPeriod" value ="${pool.c3p0.idleConnectionTestPeriod}"/>
+		<property name="properties">
+			<props>
+				<prop key="user">${connection.stat.username}</prop>
+				<prop key="password">${connection.stat.password}</prop>
+				<prop key="c3p0.acquire_increment">${pool.c3p0.acquire_increment}</prop>
+				<prop key="c3p0.max_size">${pool.c3p0.max_size}</prop>
+				<prop key="c3p0.min_size">${pool.c3p0.min_size}</prop>
+			</props>
+		</property>
+	</bean>	
+	<bean id="magmecnDatasourceMobileStat" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${connection.mobileStat.driver_class}"/>
+		<property name="jdbcUrl" value="${connection.mobileStat.url}"/>
+		<property name="maxIdleTime" value="${pool.c3p0.max_idle_time}" />
+		<property name="initialPoolSize" value="${pool.c3p0.min_size}" />
+		<property name="checkoutTimeout" value="${pool.c3p0.checktimeout}" />
+        <property name="testConnectionOnCheckin" value="true" />
+        <property name="preferredTestQuery"       value = "SELECT 1"/>
+        <property name="idleConnectionTestPeriod" value ="${pool.c3p0.idleConnectionTestPeriod}"/>
+		<property name="properties">
+			<props>
+				<prop key="user">${connection.mobileStat.username}</prop>
+				<prop key="password">${connection.mobileStat.password}</prop>
+				<prop key="c3p0.acquire_increment">${pool.c3p0.acquire_increment}</prop>
+				<prop key="c3p0.max_size">${pool.c3p0.max_size}</prop>
+				<prop key="c3p0.min_size">${pool.c3p0.min_size}</prop>
+			</props>
+		</property>
+	</bean>	
+	
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ibatis/sql-map-config.xml</value>
+        </property>
+        <property name="dataSource">
+            <ref bean="magmecnDatasource" />
+        </property>        
+    </bean>
+    
+	<bean id="sqlMapClientStat" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ibatis/sql-map-config.xml</value>
+        </property>
+        <property name="dataSource">
+            <ref bean="magmecnDatasourceStat" />
+        </property>        
+    </bean> 
+    
+	<bean id="sqlMapClientMobileStat" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ibatis/sql-map-config.xml</value>
+        </property>
+        <property name="dataSource">
+            <ref bean="magmecnDatasourceMobileStat" />
+        </property>        
+    </bean>    
+    
+    <bean id="sqlMapClientTemplate" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+        <property name="sqlMapClient">
+            <ref bean="sqlMapClient" />
+        </property>
+    </bean>
+        
+    <bean id="sqlMapClientTemplateStat" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+        <property name="sqlMapClient">
+            <ref bean="sqlMapClientStat" />
+        </property>
+    </bean>
+    <bean id="sqlMapClientTemplateMobileStat" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+        <property name="sqlMapClient">
+            <ref bean="sqlMapClientMobileStat" />
+        </property>
+    </bean>
+    
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource">
+            <ref local="magmecnDatasource"/>
+        </property>
+    </bean>
+
+	<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+         <property name="transactionManager" ref="transactionManager" />
+         <property name="transactionAttributes">
+              <props>
+                   <prop key="*">PROPAGATION_REQUIRED</prop>
+                   <prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="load*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="query*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="search*">PROPAGATION_REQUIRED,readOnly</prop>
+              </props>
+         </property>
+     </bean>
+
+     <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+         <property name="beanNames">
+              <list>
+                   <value>*ServiceImpl</value>
+              </list>
+         </property>
+         <property name="interceptorNames">
+              <list>
+                   <value>transactionInterceptor</value>
+              </list>
+         </property>
+     </bean>
+</beans>

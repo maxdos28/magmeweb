@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Magme</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css" />
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/channelKanmi.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-new.min.js"></script>
+<script src="js/useFunction.js"></script>
+<script src="js/global.js"></script>
+<script src="js/jquery.inputfocus.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/jquery.kanmifolder.lewis.js"></script>
+<script>
+$(function(){
+	$.kanmifolder();
+	//杂志商提示
+	$userTips = $(".body .bodyKanmi .item .tips");
+	$(".body .bodyKanmi .item .tips del").live("click",function(){
+		$(".body .bodyKanmi .item .tips").fadeOut(300);
+	});
+});
+</script>
+<!--[if lte IE 6]>
+<link href="style/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.png');
+  document.execCommand("BackgroundImageCache",false,true);
+</script>
+<![endif]-->
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="inner">
+        <!--logo-->
+        <h1 class="logo"><a href="javascript:void(0)">麦米-Magme</a></h1>
+        <!--nav-->
+        <ul class="nav">
+            <li class="home"><a href="index.html">首页</a></li>
+            <li class="kanmi"><a href="kanmi.html">杂志</a></li>
+            <li class="qiemi"><a href="qiemi.html">发现</a></li>
+            <li class="sns"><a href="sns.html">米客中心</a></li>
+        </ul>
+        <!--userBar-->
+        <ul class="userBar" id="logInForm">
+            <li class="reg"><a class="sub" href="javascript:void(0)">注册</a>
+                <div class="box">
+                	<sub></sub>
+                	<div class="con">
+                        <fieldset class="png">
+                            <div class="input">
+                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名" /></em>
+                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="email" name="email" type="text" tipsSpan="邮箱" /></em>
+                                <em id="checkEmail" class="tipsWrong" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+                            </div>
+                            <div class="input">
+                            	<em><input class="in" id="password" name="password" type="password" tipsSpan="确认密码" /></em>
+                                <em id="checkPassword" class="tipsRight"></em>
+                            </div>
+                            <!--<div code="getcode">
+                                <em class="m0"><input code="getcode" class="input g60" id="authcode" name="authcode" type="text" tipsSpan="验证码" /></em>
+                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="reqisterCode"><img code="getcode" id="reqisterCode" src="images/code.gif" class="code" style="background:#ccc;" />看不清？换一个</a></em>
+                            </div>-->
+                            <div class="last">
+                                <em class="m0"><a class="btnBS" id="submit" name="subimt" href="#" >注册</a></em>
+                                <em class="loading"></em>
+                                <em class="tipsError">请填写相关信息</em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>            </li>
+            <li class="login"><a class="sub" href="javascript:void(0)">登录</a>
+            	<div class="box">
+                	<sub></sub>
+                	<ul class="select">
+                    	<li class="current"><a href="javascript:void(0)"><img src="images/icon/sns32/32-magme.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qq.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-renren.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-weibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-163weibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-douban.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-sohuweibo.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-baidu.gif" /></a></li>
+                    	<li><a href="javascript:void(0)"><img src="images/icon/sns32/32-qqweibo.gif" /></a></li>
+                    </ul>
+                	<div class="con">
+                        <fieldset class="png">
+                            <div class="input">
+                                <em><input class="in" id="userName" name="userName" type="text" tipsSpan="用户名/邮箱" /></em>
+                                <em id="checkName" class="tipsRight" style="display:block;"></em>
+                            </div>
+                            <div class="input">
+                                <em><input class="in" id="password" name="password" type="password" tipsSpan="密码" /></em>
+                                <em class="tipsWrong" style="display:block;"></em>
+                            </div>
+                            <!--<div code="getcode">
+                                <em class="m0"><input code="getcode" class="input g60" name="authcode" type="text" tipsSpan="验证码" /></em>
+                                <em class="code"><a name="getAuthcode" href="javascript:void(0)" code="loginCode"><img code="getcode" id="loginCode" src="images/code.gif" class="code" style="background:#ccc;"/>看不清？换一个</a></em>
+                            </div>-->
+                            <div>
+                                <em class="m0"><a class="btnOS" id="signIn" name="signIn" href="#" >登录</a></em>
+                                <em class="loading"></em>
+                                <em class="remanber"><label><input type="checkbox" />下次自动登录</label></em>
+                                <em class="tipsError">请填写相关信息</em>
+                            </div>
+                            <div class="last">
+                                <em><a id="forgetPassword" href="javascript:void(0)">忘记密码？</a></em>
+                                <em><a href="javascript:void(0)">新用户注册</a></em>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <a class="userFeedBack" href="javascript:void(0)">意见反馈</a>
+</div>
+<!--body-->
+<div class="body">
+	<div class="body1000">
+	<!--topBar-->
+	<div class="topBar clearFix">
+        <ul class="subNav">
+            <li class="current"><a href="javascript:void(0)">最新</a></li>
+            <li><a href="kanmi.html">推荐</a></li>
+            <li><a href="javascript:void(0)">热门</a></li>
+        </ul>
+    	<div class="search">
+        	<input type="text" tips="输入您想看的杂志" class="text" /><input type="submit" class="btn" value="" />
+        </div>
+    </div>
+	<!--bodyContent-->
+	<div class="bodyContent bodyKanmi clearFix">
+    	<div class="inner clearFix">
+        	<div class="desk">
+            	<div class="item typeNav">
+                     <ul class="listB">
+                        <li><a href="javascript:void(0)" class="title">杂志：</a></li>
+                        <li><a href="javascript:void(0)">全部</a></li>
+                        <li><a href="javascript:void(0)" class="current">女性</a></li>
+                        <li><a href="javascript:void(0)">男性</a></li>
+                        <li><a href="javascript:void(0)">汽车</a></li>
+                        <li><a href="javascript:void(0)">旅游</a></li>
+                        <li><a href="javascript:void(0)">商业</a></li>
+                        <li><a href="javascript:void(0)">财经</a></li>
+                        <li><a href="javascript:void(0)">时尚</a></li>
+                        <li><a href="javascript:void(0)">娱乐</a></li>
+                        <li><a href="javascript:void(0)">生活</a></li>
+                        <li><a href="javascript:void(0)">家居</a></li>
+                        <li><a href="javascript:void(0)">数码</a></li>
+                        <li><a href="javascript:void(0)">游戏</a></li>
+                        <li><a href="javascript:void(0)">动漫</a></li>
+                        <li><a href="javascript:void(0)">漫画</a></li>
+                        <li><a href="javascript:void(0)">情感</a></li>
+                        <li><a href="javascript:void(0)">外文</a></li>
+                    </ul>
+                    <div class="clear scroll-pane">
+                        <ul class="listB listTag">
+                            <li><a href="javascript:void(0)" class="title">其他：</a></li>
+                            <li><a href="javascript:void(0)" class="tag1">标签标签</a></li>
+                            <li><a href="javascript:void(0)" class="tag2">标签</a></li>
+                            <li><a href="javascript:void(0)" class="tag3">标签签</a></li>
+                            <li><a href="javascript:void(0)" class="tag4">标签</a></li>
+                            <li><a href="javascript:void(0)" class="tag5">标签</a></li>
+                            <li><a href="javascript:void(0)" class="tag6">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签</a></li>
+                            <li><a href="javascript:void(0)">标签标签</a></li>
+                            <li><a href="javascript:void(0)">更多标签</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi3.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click autoMove"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                    <div class="tips" style="display:block;">文字文字文字文字文字文字<del></del></div>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi7.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名很长很长很长很长很长很长</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi3.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi7.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名很长很长很长很长很长很长</a><strong>2011-11-11</strong></h5>
+                </div>
+            </div>
+        	<div class="desk">
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi16.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi18.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi3.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名很长很长很长很长很长很长</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi5.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi7.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+            </div>
+        	<div class="desk">
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi16.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi18.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi3.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名很长很长很长很长很长很长</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi5.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi7.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+            </div>
+        	<div class="desk">
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi16.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi18.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi3.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名很长很长很长很长很长很长</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi5.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi7.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+            </div>
+        	<div class="desk">
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi16.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi18.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi3.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名很长很长很长很长很长很长</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi5.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi7.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+            </div>
+        	<div class="desk">
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi16.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi18.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi3.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名很长很长很长很长很长很长</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi5.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+                <div class="item">
+                    <a href="javascript:void(0)" class="img"><img src="images/temp/tempKanmi7.jpg" /></a>
+                    <h6><span class="fav">99</span><span class="click"><a href="javascript:void(0)">点我试试</a></span></h6>
+                    <h5><span class="head"><a href="javascript:void(0)"><img src="images/head30.gif" /></a></span><a>杂志名</a><strong>2011-11-11</strong></h5>
+                </div>
+            </div>
+            <div class="loadMore">正在加载更多内容</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<!--footer-->
+<div class="footer footerMini footerStatic">
+	<div class="inner">
+    	<p>Copyright &copy; 2011 麦米版权所有 | 沪ICP备 <a href="http://www.miibeian.gov.cn" target="_blank">10217320</a></p>
+        <div class="nav">
+        	<ul class="m1">
+            	<li><a href="javascript:void(0)">公司信息</a>
+                	<ul>
+                        <li><a href="static_join_us.html">关于我们</a></li>
+                        <li><a href="static_about_us.html">加入我们</a></li>
+                        <li><a href="static_bulletin.html">麦米号外</a></li>
+                        <li><a href="static_policy.html">法律声明</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m2">
+            	<li><a href="javascript:void(0)">商务合作</a>
+               		<ul>
+                        <li><a href="javascript:void(0)">上传杂志</a></li>
+                        <li><a href="javascript:void(0)">合作媒体</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m3">
+            	<li><a href="javascript:void(0)">获取更新</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">邮件订阅</a></li>
+                        <li><a href="javascript:void(0)">麦米RSS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        	<ul class="m4">
+            	<li><a href="javascript:void(0)">帮助中心</a>
+                	<ul>
+                        <li><a href="javascript:void(0)">意见反馈</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

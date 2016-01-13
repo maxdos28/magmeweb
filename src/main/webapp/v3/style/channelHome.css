@@ -1,0 +1,106 @@
+﻿@charset "utf-8";
+@import url("conM1.css");
+
+
+/*设置导航位置*/
+body{ padding-top:120px;}
+.header .menu .home a,
+.header .menu .home a:hover{ background:#334455;}
+
+/*顶部工具条去除*/
+.bodyHome .item{ width:200px; height:200px; padding:10px 10px 15px 10px; margin:8px 8px 3px 8px; float:left; background-position:0 0; background-repeat:no-repeat; position:relative; overflow:hidden;}
+.bodyHome .item img{ width:200px; height:200px; background:#f1f1f1; border:none; display:block;}
+.bodyHome .item .info{ position:relative; left:0; bottom:24px; height:24px; overflow:hidden; color:#fff; background:url(../images/bgHomeItemFooter.png) 0 0 repeat-x;}
+.bodyHome .item .info h5{ padding-left:6px; height:24px; line-height:24px; font-weight:normal; overflow:hidden; }
+.bodyHome .item .info h6{ height:20px; line-height:20px; font-weight:normal; overflow:hidden; color:#ccc; display:none;}
+.bodyHome .item .info p{ line-height:20px; overflow:hidden; display:none;}
+.bodyHome .item .info .tools{ overflow:hidden; display:none; position:absolute; left:0; bottom:0; padding:10px;}
+.bodyHome .item .info .tools em{ height:24px; line-height:24px; width:24px; text-indent:-99em; display:inline-block; float:left; margin-right:5px; background-position:0 center; background-repeat:no-repeat; cursor:pointer;}
+.bodyHome .item .info .tools em:hover{ color:#fff;}
+.bodyHome .item .info .tools em.iconHeart{ background-image:url(../images/icon/heart24Gray.png);}
+.bodyHome .item .info .tools em.iconHeart:hover{ background-image:url(../images/icon/heart24White.png);}
+.bodyHome .item .info .tools em.favCurrent,
+.bodyHome .item .info .tools em.favCurrent:hover{ background-image:url(../images/icon/heart24Red.png);}
+.bodyHome .item .info .tools em.iconShare{ background-image:url(../images/icon/share24Gray.png);}
+.bodyHome .item .info .tools em.iconShare:hover{ background-image:url(../images/icon/share24White.png);}
+.bodyHome .item .info .tools em.iconDetail{ background-image:url(../images/icon/more24Gray.png); float:right; margin-right:0}
+.bodyHome .item .info .tools em.iconDetail:hover{ background-image:url(../images/icon/more24White.png);}
+.bodyHome .item .infoCurrent{ background:url(../images/alpha60.png) 0 0 repeat; padding:10px;}
+.bodyHome .item .infoCurrent h5{ padding-left:0; font-size:16px; height:auto; line-height:25px; margin-bottom:10px;}
+.bodyHome .item .infoCurrent h6,
+.bodyHome .item .infoCurrent p,
+.bodyHome .item .infoCurrent .tools{ display:block;}
+.bodyHome .size11{ background-image:url(../images/size1120120502.gif);}
+.bodyHome .size12{ background-image:url(../images/size1220120502.gif); width:436px;}
+.bodyHome .size21{ background-image:url(../images/size2120120502.gif); height:436px;}
+.bodyHome .size22{ background-image:url(../images/size2220120502.gif); height:436px; width:436px;}
+.bodyHome .size12 img{ width:436px;}
+.bodyHome .size21 img{ height:436px;}
+.bodyHome .size22 span{ width:436px;}
+.bodyHome .size22 img{ width:436px; height:436px;}
+.bodyHome .size11 .infoCurrent,
+.bodyHome .size12 .infoCurrent{ height:180px; bottom:200px;}
+.bodyHome .size21 .infoCurrent,
+.bodyHome .size22 .infoCurrent{ height:416px; bottom:436px;}
+.bodyHome .size22 .infoCurrent{ padding:30px; height:376px;}
+.bodyHome .size11 .infoCurrent p{ height:60px;}
+.bodyHome .size12 .infoCurrent p{ height:80px;}
+.bodyHome .size21 .infoCurrent p{ height:300px;}
+.bodyHome .size22 .infoCurrent p{ height:300px; line-height:25px;}
+.bodyHome .size11 .infoCurrent .tools,
+.bodyHome .size21 .infoCurrent .tools{ width:180px;}
+.bodyHome .size12 .infoCurrent .tools,
+.bodyHome .size22 .infoCurrent .tools{ width:416px;}
+
+
+
+.header .nav { min-height:0; top:59px; height:49px; background-image:url(../images/navBg20120331.png);}
+.header .nav .navInner{ background:none;}
+.header .nav .navInner .navRight { padding:0; width:100%; position:relative; overflow:visible; height:52px;}
+.header .nav .navInner .navRight .rssFeed{ position:absolute; right:78px; top:18px; width:65px; height:16px; background:url(../images/icon/rss.gif) 0 0 no-repeat; display:block; text-indent:-999em; }
+.header .nav .navInner .navRight .rssFeed:hover{ background-position:0 -20px;}
+.header .nav .navInner .navRight .rssTo{ position:absolute; right:2px; top:18px; width:35px; height:16px; padding-left:25px; display:block; cursor:pointer; background:url(../images/icon/rssTo.gif) 0 0 no-repeat; text-indent:-999em; }
+.header .nav .navInner .navRight .rssTo.hover,
+.header .nav .navInner .navRight .rssTo:hover{ background-position:0 -20px;}
+.header .nav .navInner .navRight .rssTo p{ width:78px; position:absolute; display:none; right:0; top:16px; z-index:9; background:#fff; border-radius:3px; border:1px solid #ddd; text-indent:0;}
+.header .nav .navInner .navRight .rssTo p a{ width:40px; height:14px; display:block; padding-left:20px; background:url(../images/icon/add_Gray.gif) 2px center no-repeat #fff; padding:4px 0 4px 20px;}
+.header .nav .navInner .navRight .rssTo p a:hover{ background-image:url(../images/icon/add.gif)}
+.header .nav .navInner .navRight .item{ display:block;}
+.header .nav .navInner .navRight .classification { width:100%; padding:0;}
+.header .nav .navInner .navRight .classification li{ float:left; height:31px; padding:12px 28px 16px 28px; margin-right:1px; border-top:3px solid transparent;}
+.header .nav .navInner .navRight .classification li a { color:#666; font-size:16px; line-height:20px; display:block;}
+.header .nav .navInner .navRight .classification li a:hover { color:#000;}
+.header .nav .navInner .navRight .classification li.current{ background:url(../images/icon/menuNavArraw.png) center bottom no-repeat;}
+.header .nav .navInner .navRight .classification li.customize a{ font-size:12px; color:#ccc;}
+.header .nav .navInner .navRight .classification li.customize a:hover{ color:#666;}
+
+
+
+
+.topTag{ width:1198px; margin-bottom:5px;}
+.topTag ul{ padding-left:25px;}
+.topTag ul li{ float:left;}
+.topTag ul li a{ color:#A7AEB4; padding:4px 10px; display:inline-block;}
+.topTag ul li a:hover{ color:#7A868F;}
+.topTag ul li a.current{ color:#223547;}
+.topTag ul li.title a{ color:#A42323; cursor:default;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

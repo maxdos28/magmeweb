@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+		http://www.directwebremoting.org/schema/spring-dwr
+		http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd"
+	default-lazy-init="false">
+
+    <description>Spring公共配置文件</description>
+    
+    <!-- 定义受环境影响易变的变量 -->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <value>classpath:system.properties</value>
+                <value>classpath:qq.properties</value>
+                <value>classpath:third.properties</value>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- 使用annotation 自动注册bean,并保证@Required,@Autowired的属性被注入 -->
+    <context:component-scan base-package="cn.magme">
+   		<context:include-filter type="regex" expression="cn\.magme\.mongo\.dao\..*DaoImpl"/>
+    	<context:include-filter type="regex" expression="cn\.magme\.dao\..*DaoImpl"/>
+    	<context:include-filter type="regex" expression="cn\.magme\.dao\..*DAOImpl"/>
+    	<context:include-filter type="regex" expression="cn\.magme\.service\..*ServiceImpl"/>
+    	<context:include-filter type="regex" expression="cn\.magme\.web\.manager\.cache\..*CacheService"/>
+    	<context:include-filter type="regex" expression="cn\.magme\.job\..*Job"/>  
+    </context:component-scan>
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+    
+    <bean id="systemProp" class="cn.magme.common.SystemProp">
+    	<property name="domain" value="${domain}" /> 
+        <property name="appServerUrl" value="${app.server.url}" />                                
+		<property name="pageCacheTimeout" value="${pageCacheTimeout}" />
+		<property name="magLocalUrl" value="${mag.local.url}" />
+		<property name="magLocalUrlTmp" value="${mag.local.url.tmp}" />
+		<property name="magLocalPdf" value="${mag.local.url.pdf}" />
+		<property name="magJobPwd" value="${mag.job.pwd}" />
+		<property name="magJobUser" value="${mag.job.user}" />
+		<property name="magJobIp" value="${mag.job.ip}" />
+		<property name="adLocalUrl" value="${mag.local.url.ad}" />
+		<property name="adServerUrl" value="${ad.server.url}" />
+		<property name="reDealJpgSwfCmd" value="${reDealJpgSwfCmd}" />
+		<property name="sampleLocalUrl" value="${sample.local.url}" />
+		<property name="sampleLocalUrlTmp" value="${sample.local.url.tmp}" />
+		<property name="profileLocalUrl" value="${profile.local.url}" />
+		<property name="profileLocalUrlTmp" value="${profile.local.url.tmp}" />
+		<property name="publishProfileLocalUrl" value="${publish.profile.local.url}" />
+		<property name="publishProfileLocalUrlTmp" value="${publish.profile.local.url.tmp}" />
+		<property name="imageLocalUrl" value="${image.local.url}" />
+		
+		<property name="indexPublicationLocalUrl" value="${index.publication.local.url}" />
+		<property name="indexCommentLocalUrl" value="${index.comment.local.url}" />
+		<property name="indexUserLocalUrl" value="${index.user.local.url}" />
+		<property name="indexPublisherLocalUrl" value="${index.publisher.local.url}" />
+		<property name="indexIssueLocalUrl" value="${index.issue.local.url}" />
+		<property name="indexUserImageLocalUrl" value="${index.userimage.local.url}" />
+		<property name="indexCreativeLocalUrl" value="${index.creative.local.url}" />
+		<property name="indexSnsLucenePathLocalUrl" value="${index.sns.lucene.path.local.url}" />
+		<property name="indexFpageEventLocalUrl" value="${index.fpage.event.lucene.path.local.url}" />
+		<property name="indexPhoenixArticleLocalUrl" value="${index.phoenixarticle.local.url}" />
+		
+		
+		<property name="iosPushPathLocalUrl" value="${ios.push.path.local.url}" />
+		
+		<property name="magServerUrl" value="${mag.server.url}" />
+		<property name="sampleServerUrl" value="${sample.server.url}" />
+		<property name="profileServerUrl" value="${profile.server.url}" />
+		<property name="profileServerUrlTmp" value="${profile.server.url.tmp}" />
+		<property name="publishProfileServerUrl" value="${publish.profile.server.url}" />
+		<property name="publishProfileServerUrlTmp" value="${publish.profile.server.url.tmp}" />
+		<property name="staticServerUrl" value="${static.server.url}" />
+		<property name="statServerUrl" value="${stat.server.url}" />
+		<property name="tagLocalUrl" value="${tag.local.url}" />
+		<property name="tagServerUrl" value="${tag.server.url}" />
+		<property name="swfCmd" value="${swfCmd}" />
+		<property name="swfCmdErrAppend" value="${swfCmdErrAppend}" />
+		<property name="pdfToJpg" value="${pdfToJpg}" />
+		<property name="pdfNormal" value="${pdfNormal}" />
+		<property name="pdfChop" value="${pdfChop}" />
+		<property name="pdfMerge" value="${pdfMerge}" />
+		<property name="issueWidth" value="${issueWidth}" />
+		<property name="backIssueWidth" value="${backIssueWidth}" />
+		
+		<property name="issueWidth1" value="${issueWidth1}" />
+		<property name="issueHeight1" value="${issueHeight1}" />
+		<property name="issueWidth2" value="${issueWidth2}" />
+		<property name="issueHeight2" value="${issueHeight2}" />
+		<property name="issueWidth3" value="${issueWidth3}" />
+		<property name="issueHeight3" value="${issueHeight3}" />
+		
+		<property name="eventLocalUrl" value="${event.local.url}" />
+		<property name="eventServerUrl" value="${event.server.url}" />
+		
+		<property name="fpageLocalUrl" value="${fpage.local.url}" />
+		<property name="fpageServerUrl" value="${fpage.server.url}" />
+		<property name="creativeImgUrl" value="${creative.img.url}" />
+		<property name="creativeImgServerUrl" value="${creative.img.server.url}" />
+		<property name="fileFilterPath" value="${file.filter.path}" />
+		
+		<property name="adProfileServerUrl" value="${ad.profile.server.url}" />
+		<property name="adProfileServerUrlTmp" value="${ad.profile.server.url.tmp}" />
+		<property name="adProfileLocalUrl" value="${ad.profile.local.url}" />
+		<property name="adProfileLocalUrlTmp" value="${ad.profile.local.url.tmp}" />
+		
+		<property name="flvTransferCmd" value="${flvTransferCmd}" />
+		
+		<property name="swfReTransferCmd" value="${swfReTransferCmd}" />
+		<property name="tmpswfDir" value="${mag.local.url.tmpswf}" />
+		<property name="xpdfLanguageDir" value="${xpdflanguagedir}" />
+		<property name="staticLocalUrl" value="${staticLocalUrl}" />
+		
+		<property name="isStat" value="${isStat}" />
+		
+		<property name="activityAlbumLocalUrl" value="${activityAlbumLocalUrl}" />
+		<property name="activityAlbumServerUrl" value="${activityAlbumServerUrl}" />
+		
+		<property name="pageDLocalUrl" value="${pageDLocalUrl}" />
+		<property name="pageDServerUrl" value="${pageDServerUrl}" />
+		
+		<property name="newPublisherServerUrl" value="${newPublisherServerUrl}" />
+		<property name="newPublisherLocalUrl" value="${newPublisherLocalUrl}" />	
+		<property name="interactiveContentLocalUrl" value="${interactive.local.url}" />	
+		<property name="interactiveContentServerUrl" value="${interactive.server.url}" />	
+        <property name="systemVersion" value="${systemVersion}" />		
+        <property name="jpgTranferCmd" value="${jpgTranferCmd}" />	
+        
+         <property name="noPrintPdf" value="${mag.local.url.noprintpdf}" />		
+        <property name="friendLinkImage" value="${friend.link.local.url}" />
+        <property name="friendLinkImageUrl" value="${friend.link.server.url}" />	
+        <property name="videoTransferToMp4" value="${videoTransferToMp4}" />	
+        <property name="siteMapPath" value="${siteMapPath}" />	
+        <property name="appleReceiptUrl" value="${apple.receipt.url}" />	
+        <property name="appleSandBoxUrl" value="${apple.receipt.sandbox_url}" />	
+        <property name="kaiJieAppUrl" value="${kaiJieAppUrl}" />	
+        <property name="phoenixFilePath" value="${phoenix.file.path}" />	
+        <property name="magicEditorPath" value="${magic.editor.path}" />	
+    </bean>
+    
+    <bean id="qqConfig" class="cn.magme.common.QQConfig">
+    	<property name="step1Url" value="${step1.url}"></property>
+    	<property name="step3Url" value="${step3.url}"></property>
+    	<property name="step5Url" value="${step5.url}"></property>
+    	<property name="appid" value="${appid}"></property>
+    	<property name="appkey" value="${appkey}"></property>
+    	<property name="callback" value="${callback}"></property>
+    	<property name="getUserInfoUrl" value="${get.user.info.url}"></property>
+    </bean>    
+    
+    <bean id="thirdConfig" class="cn.magme.common.ThirdConfig">
+    	<property name="baiduAppid" value="${baidu.appid}"></property>
+    	<property name="baiduApiKey" value="${baidu.apikey}"></property>
+    	<property name="baiduSecret" value="${baidu.secret}"></property>
+    	<property name="baiduRedirectUri" value="${baidu.redirect.uri}"></property>
+    
+        <property name="sinaAppKey" value="${sina.app.key}"></property>
+    	<property name="sinaAppSecret" value="${sina.app.secret}"></property>
+    	<property name="sinaRedirectUri" value="${sina.redirect.uri}"></property>
+    	
+    	<property name="rrAppid" value="${rr.appid}"></property>
+    	<property name="rrApiKey" value="${rr.apikey}"></property>
+    	<property name="rrSecret" value="${rr.secret}"></property>
+    	<property name="rrOauthTokenEndpoint" value="${rr.oauth.token.endpoint}"></property>
+        <property name="rrGrantType" value="${rr.grant.type}"></property>
+        <property name="rrResponseType" value="${rr.response.type}"></property>
+        <property name="rrRedirectUri" value="${rr.redirect.uri}"></property>
+           
+    	<property name="kxAppid" value="${kx.appid}"></property>
+    	<property name="kxApiKey" value="${kx.apikey}"></property>
+    	<property name="kxSecret" value="${kx.secret}"></property>
+    	<property name="kxOauthTokenEndpoint" value="${kx.oauth.token.endpoint}"></property>
+        <property name="kxGrantType" value="${kx.grant.type}"></property>
+        <property name="kxResponseType" value="${kx.response.type}"></property>
+        <property name="kxRedirectUri" value="${kx.redirect.uri}"></property>   
+        <property name="kxUserJsonUri" value="${kx.user.json.uri}"></property>
+    </bean>
+    
+    
+    <bean id="familyNameMapEntity" class="cn.magme.web.entity.FamilyNameMapEntity">
+        <property name="familyNameMap">
+	    	<map>
+	    	   <entry key="car" value="汽车／旅游／人文 " />  
+	    	   <entry key="fashion" value="时尚／娱乐／生活" />
+	    	   <entry key="beauty" value="商业／财经／科技" /> 
+	    	</map>
+    	</property>
+    </bean>  
+    
+    <bean id="smsSendResultJob" class="cn.magme.job.SmsSendResultJob"></bean>
+    <bean id="lookArticleReleaseJob" class="cn.magme.job.LookArticleReleaseJob"></bean>
+    <bean id="neteaseCloudJob" class="cn.magme.job.NeteaseCloudJob"></bean>
+	<bean id="jobTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	   <property name="targetObject">
+	       <ref bean="smsSendResultJob"/>
+	   </property>
+	   <property name="targetMethod">
+	       <value>report</value>
+	   </property>
+	</bean>
+	<bean id="jobTask2" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	   <property name="targetObject">
+	       <ref bean="lookArticleReleaseJob"/>
+	   </property>
+	   <property name="targetMethod">
+	       <value>releaseArticle</value>
+	   </property>
+	</bean>
+	<bean id="jobTask3" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	   <property name="targetObject">
+	       <ref bean="neteaseCloudJob"/>
+	   </property>
+	   <property name="targetMethod">
+	       <value>readTask</value>
+	   </property>
+	</bean>
+	
+	<bean id="doTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	   <property name="jobDetail">
+	     <ref bean="jobTask"/>
+	   </property>
+	   
+	   <property name="cronExpression" value="0 0/30 * * * ?">
+	   </property>
+	</bean>
+	<bean id="doTime2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	   <property name="jobDetail">
+	     <ref bean="jobTask2"/>
+	   </property>
+	   <property name="cronExpression" value="0 45 6,11,16 * * ?">
+	   </property>
+	</bean>
+	<bean id="doTime3" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	   <property name="jobDetail">
+	     <ref bean="jobTask3"/>
+	   </property>
+	   <property name="cronExpression" value="0 0/5 * * * ?">
+	   </property>
+	</bean>
+	
+	<bean id="startQuartz" lazy-init="false" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="doTime"/>
+				<ref bean="doTime2"/>
+				<ref bean="doTime3"/>
+			</list>
+		</property>
+	</bean> 
+</beans>
