@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -15,31 +15,7 @@
     <version>1.0</version>
 	<relativePath>../magmecn/pom.xml</relativePath>
   </parent>
-  <repositories>
-		<repository>
-			<id>central</id>
-			<url>http://192.168.1.112:8081/nexus/content/groups/public</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-		    <id>internal</id>
-		    <url>http://192.168.1.112:8081/nexus/content/groups/internal
-		    </url>
-		    <releases>
-		     <enabled>true</enabled>
-		     <updatePolicy>never</updatePolicy>
-		    </releases>
-		    <snapshots>
-		     <enabled>true</enabled>
-		     <updatePolicy>always</updatePolicy>
-		    </snapshots>
-		</repository>
-	</repositories>
+ 
 
 	<dependencies>
 		<!--   自己的工程    -->
